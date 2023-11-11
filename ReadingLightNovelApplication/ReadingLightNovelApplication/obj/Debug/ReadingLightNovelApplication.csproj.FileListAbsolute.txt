@@ -1,0 +1,15 @@
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\bin\Debug\ReadingLightNovelApplication.exe.config
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\bin\Debug\ReadingLightNovelApplication.exe
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\bin\Debug\ReadingLightNovelApplication.pdb
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.csproj.AssemblyReference.cache
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormMain.resources
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.LayoutLogged.resources
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.Properties.Resources.resources
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.csproj.GenerateResource.cache
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.csproj.CoreCompileInputs.cache
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.exe
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.pdb
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\bin\Debug\Guna.UI2.dll
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.csproj.CopyComplete
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.XuongNhap.resources
+D:\CNTT5 year 3\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormHome.resources
