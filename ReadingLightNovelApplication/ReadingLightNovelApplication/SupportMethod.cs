@@ -70,7 +70,7 @@ namespace ReadingLightNovelApplication
 		}
 
 		//func Load form into panel
-		public void openChildForm(Form activeForm, Form formName, Panel panelName)
+		public void openChildFormDockTop(Form activeForm, Form formName, Panel panelName)
         {
             if (activeForm != null)
                 activeForm.Close();
@@ -84,5 +84,31 @@ namespace ReadingLightNovelApplication
             formName.Show();
         }
 
+		public void openChildFormDockFill(Form activeForm, Form formName, Panel panelName)
+		{
+			if (activeForm != null)
+				activeForm.Close();
+			activeForm = formName;
+			formName.TopLevel = false;
+			formName.FormBorderStyle = FormBorderStyle.None;
+			formName.Dock = DockStyle.Fill;
+			panelName.Controls.Add(formName);
+			panelName.Tag = formName;
+			formName.BringToFront();
+			formName.Show();
+		}
+
+
+		//func get form main
+		public ContainerControl getFormMain(ContainerControl container)
+		{
+			ContainerControl containerControl = container as ContainerControl;
+			while (containerControl != null)
+			{
+				containerControl = container as ContainerControl;
+				return getFormMain(containerControl.ParentForm);
+			}
+			return containerControl;
+		}
     }
 }

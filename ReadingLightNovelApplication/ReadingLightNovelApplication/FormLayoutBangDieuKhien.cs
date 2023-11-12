@@ -10,15 +10,11 @@ using System.Windows.Forms;
 
 namespace ReadingLightNovelApplication
 {
-    public partial class LayoutLogged : Form
-    {
-        private Form activeForm = null;
-        SupportMethod SupportMethod = new SupportMethod();
-        public LayoutLogged()
-        {
-            InitializeComponent();
-        }
-
-		
+	public partial class FormLayoutBangDieuKhien : Form
+	{
+		public FormLayoutBangDieuKhien()
+		{
+			InitializeComponent();
+		}
 	}
 }

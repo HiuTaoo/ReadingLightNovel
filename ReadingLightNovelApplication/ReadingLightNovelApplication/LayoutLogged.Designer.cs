@@ -33,12 +33,12 @@
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.btnHuongDan = new Guna.UI2.WinForms.Guna2Button();
 			this.btnDanhSach = new Guna.UI2.WinForms.Guna2Button();
-			this.btnLogo = new Guna.UI2.WinForms.Guna2ImageButton();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.panel7 = new System.Windows.Forms.Panel();
+			this.btnLogo = new Guna.UI2.WinForms.Guna2ImageButton();
 			this.panel1.SuspendLayout();
 			this.panelHeaderLayoutLogged.SuspendLayout();
 			this.panel6.SuspendLayout();
@@ -92,7 +92,7 @@
 			this.btnHuongDan.ForeColor = System.Drawing.Color.Black;
 			this.btnHuongDan.Location = new System.Drawing.Point(243, 0);
 			this.btnHuongDan.Name = "btnHuongDan";
-			this.btnHuongDan.Size = new System.Drawing.Size(121, 46);
+			this.btnHuongDan.Size = new System.Drawing.Size(121, 32);
 			this.btnHuongDan.TabIndex = 18;
 			this.btnHuongDan.Text = "Hướng dẫn";
 			// 
@@ -109,24 +109,9 @@
 			this.btnDanhSach.ForeColor = System.Drawing.Color.Black;
 			this.btnDanhSach.Location = new System.Drawing.Point(129, 0);
 			this.btnDanhSach.Name = "btnDanhSach";
-			this.btnDanhSach.Size = new System.Drawing.Size(114, 46);
+			this.btnDanhSach.Size = new System.Drawing.Size(114, 32);
 			this.btnDanhSach.TabIndex = 17;
 			this.btnDanhSach.Text = "Danh sách";
-			// 
-			// btnLogo
-			// 
-			this.btnLogo.BackColor = System.Drawing.Color.Transparent;
-			this.btnLogo.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-			this.btnLogo.Dock = System.Windows.Forms.DockStyle.Left;
-			this.btnLogo.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-			this.btnLogo.Image = global::ReadingLightNovelApplication.Properties.Resources.logo;
-			this.btnLogo.ImageOffset = new System.Drawing.Point(0, 0);
-			this.btnLogo.ImageRotate = 0F;
-			this.btnLogo.Location = new System.Drawing.Point(22, 0);
-			this.btnLogo.Name = "btnLogo";
-			this.btnLogo.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-			this.btnLogo.Size = new System.Drawing.Size(107, 46);
-			this.btnLogo.TabIndex = 16;
 			// 
 			// panel4
 			// 
@@ -170,6 +155,21 @@
 			this.panel7.Name = "panel7";
 			this.panel7.Size = new System.Drawing.Size(1418, 772);
 			this.panel7.TabIndex = 0;
+			// 
+			// btnLogo
+			// 
+			this.btnLogo.BackColor = System.Drawing.Color.Transparent;
+			this.btnLogo.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+			this.btnLogo.Dock = System.Windows.Forms.DockStyle.Left;
+			this.btnLogo.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+			this.btnLogo.Image = global::ReadingLightNovelApplication.Properties.Resources.logo;
+			this.btnLogo.ImageOffset = new System.Drawing.Point(0, 0);
+			this.btnLogo.ImageRotate = 0F;
+			this.btnLogo.Location = new System.Drawing.Point(22, 0);
+			this.btnLogo.Name = "btnLogo";
+			this.btnLogo.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+			this.btnLogo.Size = new System.Drawing.Size(107, 46);
+			this.btnLogo.TabIndex = 16;
 			// 
 			// LayoutLogged
 			// 

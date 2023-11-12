@@ -52,6 +52,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormDatLaiMatKhauB1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDatLaiMatKhauB1.Designer.cs">
+      <DependentUpon>FormDatLaiMatKhauB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDienDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDienDangKy.Designer.cs">
+      <DependentUpon>FormDienDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDienDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDienDangNhap.Designer.cs">
+      <DependentUpon>FormDienDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayoutBangDieuKhien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayoutBangDieuKhien.Designer.cs">
+      <DependentUpon>FormLayoutBangDieuKhien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayoutDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayoutDangNhap.Designer.cs">
+      <DependentUpon>FormLayoutDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +97,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupportMethod.cs" />
+    <EmbeddedResource Include="FormDatLaiMatKhauB1.resx">
+      <DependentUpon>FormDatLaiMatKhauB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDienDangKy.resx">
+      <DependentUpon>FormDienDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDienDangNhap.resx">
+      <DependentUpon>FormDienDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayoutDangNhap.resx">
+      <DependentUpon>FormLayoutDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

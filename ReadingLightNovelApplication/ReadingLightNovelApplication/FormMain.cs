@@ -22,7 +22,23 @@ namespace ReadingLightNovelApplication
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            SupportMethod.openChildForm(this.activeForm, new LayoutLogged(), this.panelMain);
+			//SupportMethod.openChildForm(this.activeForm, new LayoutLogged(), this.panelMain);
+			SupportMethod.openChildFormDockTop(this.activeForm, new FormLayoutDangNhap(), this.panelMain);
+		}
+
+        public Form getActiveForm()
+        {
+            return activeForm;
+        }
+
+        public ContainerControl getControl(string nameControl)
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c.Name == nameControl)
+                    return (ContainerControl)c;
+            }
+            return null;
         }
     }
 }
