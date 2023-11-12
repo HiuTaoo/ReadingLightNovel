@@ -31,14 +31,7 @@ namespace ReadingLightNovelApplication
             return activeForm;
         }
 
-        public ContainerControl getControl(string nameControl)
-        {
-            foreach (Control c in this.Controls)
-            {
-                if (c.Name == nameControl)
-                    return (ContainerControl)c;
-            }
-            return null;
-        }
-    }
+        
+
+	}
 }

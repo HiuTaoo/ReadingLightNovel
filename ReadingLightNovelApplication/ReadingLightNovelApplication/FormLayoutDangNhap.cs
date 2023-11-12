@@ -20,7 +20,6 @@ namespace ReadingLightNovelApplication
 		public FormLayoutDangNhap()
 		{
 			InitializeComponent();
-			FormMain FormMain = (FormMain)SupportMethod.getFormMain(this);
 
 		}
 
@@ -30,6 +29,9 @@ namespace ReadingLightNovelApplication
 
 		}
 
-		
+		private void guna2Button3_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

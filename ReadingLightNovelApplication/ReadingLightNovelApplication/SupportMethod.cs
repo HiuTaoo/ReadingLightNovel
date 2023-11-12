@@ -100,15 +100,32 @@ namespace ReadingLightNovelApplication
 
 
 		//func get form main
-		public ContainerControl getFormMain(ContainerControl container)
+		public Form getFormMain(Form container)
 		{
-			ContainerControl containerControl = container as ContainerControl;
-			while (containerControl != null)
+			Form containerControl = container;
+			while (containerControl.ParentForm != null)
 			{
-				containerControl = container as ContainerControl;
 				return getFormMain(containerControl.ParentForm);
 			}
 			return containerControl;
 		}
-    }
+
+		public Panel getPanel(Form formName ,string namepanel)
+		{
+			foreach (Panel c in formName.Controls.OfType<Panel>())
+			{
+				if (c.Name == namepanel)
+					return c;
+			}
+			return null;
+		}
+
+		/*public void loadNewChildForm(dynamic formContainer, dynamic formName, Panel panelName)
+		{
+			Form form = formContainer.activeForm;
+			panelName.Controls.Clear();
+			SupportMethod.openChildFormDockTop(form, formName, panelName);
+		}*/
+
+	}
 }
