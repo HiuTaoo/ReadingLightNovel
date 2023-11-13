@@ -172,7 +172,7 @@
             this.panel6.Size = new System.Drawing.Size(1260, 617);
             this.panel6.TabIndex = 1;
             // 
-            // panelMain
+            // panelNoiDung
             // 
             this.panelNoiDung.AutoScroll = true;
             this.panelNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -215,7 +215,7 @@
         private Guna.UI2.WinForms.Guna2Button btnHuongDan;
         private Guna.UI2.WinForms.Guna2Button btnDanhSach;
         private Guna.UI2.WinForms.Guna2ImageButton btnLogo;
-		private System.Windows.Forms.Panel panelNoiDung;
-		private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelNoiDung;
 	}
 }
