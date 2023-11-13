@@ -70,6 +70,12 @@
     <Compile Include="FormDienDangNhap.Designer.cs">
       <DependentUpon>FormDienDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLayoutBangDieuKhien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,18 @@
     <Compile Include="LayoutLogged.Designer.cs">
       <DependentUpon>LayoutLogged.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nhap-2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nhap-2.Designer.cs">
+      <DependentUpon>Nhap-2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nhap.Designer.cs">
+      <DependentUpon>Nhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupportMethod.cs" />
@@ -106,6 +124,9 @@
     <EmbeddedResource Include="FormDienDangNhap.resx">
       <DependentUpon>FormDienDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLayoutDangNhap.resx">
       <DependentUpon>FormLayoutDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +135,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LayoutLogged.resx">
       <DependentUpon>LayoutLogged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhap-2.resx">
+      <DependentUpon>Nhap-2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nhap.resx">
+      <DependentUpon>Nhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

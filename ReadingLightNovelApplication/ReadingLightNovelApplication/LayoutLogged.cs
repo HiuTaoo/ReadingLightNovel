@@ -19,6 +19,9 @@ namespace ReadingLightNovelApplication
             InitializeComponent();
         }
 
-		
+		private void LayoutLogged_Load(object sender, EventArgs e)
+		{
+            SupportMethod.openChildFormDockTop(this.activeForm, new FormHome(), this.panelNoiDung);
+		}
 	}
 }

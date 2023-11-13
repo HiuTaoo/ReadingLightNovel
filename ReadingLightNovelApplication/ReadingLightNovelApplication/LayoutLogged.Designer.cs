@@ -36,9 +36,9 @@
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.panel6 = new System.Windows.Forms.Panel();
-			this.panel7 = new System.Windows.Forms.Panel();
 			this.btnLogo = new Guna.UI2.WinForms.Guna2ImageButton();
+			this.panelNoiDung = new System.Windows.Forms.Panel();
+			this.panel6 = new System.Windows.Forms.Panel();
 			this.panel1.SuspendLayout();
 			this.panelHeaderLayoutLogged.SuspendLayout();
 			this.panel6.SuspendLayout();
@@ -92,7 +92,7 @@
 			this.btnHuongDan.ForeColor = System.Drawing.Color.Black;
 			this.btnHuongDan.Location = new System.Drawing.Point(243, 0);
 			this.btnHuongDan.Name = "btnHuongDan";
-			this.btnHuongDan.Size = new System.Drawing.Size(121, 32);
+			this.btnHuongDan.Size = new System.Drawing.Size(121, 46);
 			this.btnHuongDan.TabIndex = 18;
 			this.btnHuongDan.Text = "Hướng dẫn";
 			// 
@@ -109,7 +109,7 @@
 			this.btnDanhSach.ForeColor = System.Drawing.Color.Black;
 			this.btnDanhSach.Location = new System.Drawing.Point(129, 0);
 			this.btnDanhSach.Name = "btnDanhSach";
-			this.btnDanhSach.Size = new System.Drawing.Size(114, 32);
+			this.btnDanhSach.Size = new System.Drawing.Size(114, 46);
 			this.btnDanhSach.TabIndex = 17;
 			this.btnDanhSach.Text = "Danh sách";
 			// 
@@ -137,25 +137,6 @@
 			this.panel2.Size = new System.Drawing.Size(1418, 13);
 			this.panel2.TabIndex = 0;
 			// 
-			// panel6
-			// 
-			this.panel6.AutoScroll = true;
-			this.panel6.Controls.Add(this.panel7);
-			this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel6.Location = new System.Drawing.Point(0, 72);
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(1418, 772);
-			this.panel6.TabIndex = 1;
-			// 
-			// panel7
-			// 
-			this.panel7.AutoScroll = true;
-			this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel7.Location = new System.Drawing.Point(0, 0);
-			this.panel7.Name = "panel7";
-			this.panel7.Size = new System.Drawing.Size(1418, 772);
-			this.panel7.TabIndex = 0;
-			// 
 			// btnLogo
 			// 
 			this.btnLogo.BackColor = System.Drawing.Color.Transparent;
@@ -171,6 +152,25 @@
 			this.btnLogo.Size = new System.Drawing.Size(107, 46);
 			this.btnLogo.TabIndex = 16;
 			// 
+			// panelNoiDung
+			// 
+			this.panelNoiDung.AutoSize = true;
+			this.panelNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panelNoiDung.Location = new System.Drawing.Point(0, 0);
+			this.panelNoiDung.Name = "panelNoiDung";
+			this.panelNoiDung.Size = new System.Drawing.Size(1418, 772);
+			this.panelNoiDung.TabIndex = 0;
+			// 
+			// panel6
+			// 
+			this.panel6.AutoScroll = true;
+			this.panel6.Controls.Add(this.panelNoiDung);
+			this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel6.Location = new System.Drawing.Point(0, 72);
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new System.Drawing.Size(1418, 772);
+			this.panel6.TabIndex = 1;
+			// 
 			// LayoutLogged
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -182,10 +182,12 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "LayoutLogged";
 			this.Text = "LayoutLogged";
+			this.Load += new System.EventHandler(this.LayoutLogged_Load);
 			this.panel1.ResumeLayout(false);
 			this.panelHeaderLayoutLogged.ResumeLayout(false);
 			this.panelHeaderLayoutLogged.PerformLayout();
 			this.panel6.ResumeLayout(false);
+			this.panel6.PerformLayout();
 			this.ResumeLayout(false);
 
         }
@@ -201,7 +203,7 @@
         private Guna.UI2.WinForms.Guna2Button btnHuongDan;
         private Guna.UI2.WinForms.Guna2Button btnDanhSach;
         private Guna.UI2.WinForms.Guna2ImageButton btnLogo;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
+		private System.Windows.Forms.Panel panelNoiDung;
+		private System.Windows.Forms.Panel panel6;
 	}
 }

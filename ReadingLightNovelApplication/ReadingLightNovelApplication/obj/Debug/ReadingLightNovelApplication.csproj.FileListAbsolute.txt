@@ -30,3 +30,6 @@ D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelAp
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.csproj.CopyComplete
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.exe
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.pdb
+D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormHome.resources
+D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.Nhap.resources
+D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.Nhap_2.resources
