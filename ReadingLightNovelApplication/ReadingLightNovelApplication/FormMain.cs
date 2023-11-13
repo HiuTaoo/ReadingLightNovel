@@ -31,7 +31,9 @@ namespace ReadingLightNovelApplication
             return activeForm;
         }
 
-        
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
 
-	}
+        }
+    }
 }
