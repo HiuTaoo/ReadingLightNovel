@@ -10,23 +10,18 @@ using System.Windows.Forms;
 
 namespace ReadingLightNovelApplication
 {
-    public partial class LayoutLogged : Form
+    public partial class FormContent : Form
     {
         private Form activeForm = null;
         SupportMethod SupportMethod = new SupportMethod();
-        public LayoutLogged()
+        public FormContent()
         {
             InitializeComponent();
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
+        private void FormContent_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void LayoutLogged_Load(object sender, EventArgs e)
-        {
-            SupportMethod.openChildFormDockTop(this.activeForm, new FormContent(), this.panelMain);
+            SupportMethod.openChildFormDockTop(this.activeForm, new FormProperties(), this.panelContent);
         }
     }
 }

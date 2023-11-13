@@ -1,6 +1,6 @@
 ﻿namespace ReadingLightNovelApplication
 {
-    partial class FormMain
+    partial class FormContent
     {
         /// <summary>
         /// Required designer variable.
@@ -28,39 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelMain = new System.Windows.Forms.Panel();
+            this.panelContent = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.SuspendLayout();
             // 
-            // panelMain
+            // panelContent
             // 
-            this.panelMain.AutoScroll = true;
-            this.panelMain.BackColor = System.Drawing.Color.Transparent;
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.ForeColor = System.Drawing.Color.Black;
-            this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1260, 675);
-            this.panelMain.TabIndex = 1;
-            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
+            this.panelContent.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelContent.AutoSize = true;
+            this.panelContent.Location = new System.Drawing.Point(145, -89);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(952, 628);
+            this.panelContent.TabIndex = 1;
             // 
-            // FormMain
+            // FormContent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 675);
-            this.Controls.Add(this.panelMain);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FormMain";
-            this.Text = "Light novel";
-            this.Load += new System.EventHandler(this.FormMain_Load);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1242, 628);
+            this.Controls.Add(this.panelContent);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FormContent";
+            this.Text = "FormContent";
+            this.Load += new System.EventHandler(this.FormContent_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelMain;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel panelContent;
     }
 }
-
