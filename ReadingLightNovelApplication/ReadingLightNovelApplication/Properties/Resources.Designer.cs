@@ -73,6 +73,26 @@ namespace ReadingLightNovelApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _271886390_341942914599355_2016043603005971576_n {
+            get {
+                object obj = ResourceManager.GetObject("271886390_341942914599355_2016043603005971576_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _274033549_1108566083289066_6781424345818665545_n {
+            get {
+                object obj = ResourceManager.GetObject("274033549_1108566083289066_6781424345818665545_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ảnh_chụp_màn_hình_2023_08_11_204349 {
             get {
                 object obj = ResourceManager.GetObject("Ảnh chụp màn hình 2023-08-11 204349", resourceCulture);

@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProperties));
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2Panel48 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblSoTu = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.lblView = new System.Windows.Forms.Label();
@@ -120,15 +115,17 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTheLoai = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2Panel48 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblSoTu = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.panel4.SuspendLayout();
-            this.guna2Panel48.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panelStatus.SuspendLayout();
             this.guna2Panel51.SuspendLayout();
@@ -163,56 +160,10 @@
             this.panelName.SuspendLayout();
             this.panelRead.SuspendLayout();
             this.panelImg.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.guna2Panel48.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.Controls.Add(this.guna2Panel48);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(286, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(114, 73);
-            this.panel4.TabIndex = 18;
-            // 
-            // guna2Panel48
-            // 
-            this.guna2Panel48.Controls.Add(this.lblSoTu);
-            this.guna2Panel48.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel48.Location = new System.Drawing.Point(0, 36);
-            this.guna2Panel48.Name = "guna2Panel48";
-            this.guna2Panel48.Size = new System.Drawing.Size(114, 37);
-            this.guna2Panel48.TabIndex = 1;
-            // 
-            // lblSoTu
-            // 
-            this.lblSoTu.AutoSize = true;
-            this.lblSoTu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoTu.Location = new System.Drawing.Point(23, 6);
-            this.lblSoTu.Name = "lblSoTu";
-            this.lblSoTu.Size = new System.Drawing.Size(60, 23);
-            this.lblSoTu.TabIndex = 0;
-            this.lblSoTu.Text = "50000";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(114, 36);
-            this.panel5.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(31, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 19);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Số từ";
             // 
             // panel9
             // 
@@ -326,8 +277,8 @@
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.panel8);
             this.panel10.Controls.Add(this.panel4);
+            this.panel10.Controls.Add(this.panel8);
             this.panel10.Controls.Add(this.panel6);
             this.panel10.Controls.Add(this.panel2);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1083,6 +1034,55 @@
             this.guna2Panel6.Size = new System.Drawing.Size(203, 18);
             this.guna2Panel6.TabIndex = 0;
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel4.Controls.Add(this.guna2Panel48);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Location = new System.Drawing.Point(282, -1);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(116, 74);
+            this.panel4.TabIndex = 23;
+            // 
+            // guna2Panel48
+            // 
+            this.guna2Panel48.Controls.Add(this.lblSoTu);
+            this.guna2Panel48.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel48.Location = new System.Drawing.Point(0, 36);
+            this.guna2Panel48.Name = "guna2Panel48";
+            this.guna2Panel48.Size = new System.Drawing.Size(116, 38);
+            this.guna2Panel48.TabIndex = 1;
+            // 
+            // lblSoTu
+            // 
+            this.lblSoTu.AutoSize = true;
+            this.lblSoTu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoTu.Location = new System.Drawing.Point(23, 6);
+            this.lblSoTu.Name = "lblSoTu";
+            this.lblSoTu.Size = new System.Drawing.Size(60, 23);
+            this.lblSoTu.TabIndex = 0;
+            this.lblSoTu.Text = "50000";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(116, 36);
+            this.panel5.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(32, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(45, 19);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Số từ";
+            // 
             // guna2ImageButton6
             // 
             this.guna2ImageButton6.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -1158,7 +1158,7 @@
             this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(256, 296);
-            this.guna2ImageButton1.Image = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
+            this.guna2ImageButton1.Image = global::ReadingLightNovelApplication.Properties.Resources._271886390_341942914599355_2016043603005971576_n;
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
             this.guna2ImageButton1.ImageSize = new System.Drawing.Size(256, 296);
@@ -1173,7 +1173,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(952, 628);
+            this.ClientSize = new System.Drawing.Size(952, 1102);
             this.Controls.Add(this.panelView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTomTat);
@@ -1183,11 +1183,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormProperties";
             this.Text = "FormProperties";
-            this.panel4.ResumeLayout(false);
-            this.guna2Panel48.ResumeLayout(false);
-            this.guna2Panel48.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panelStatus.ResumeLayout(false);
@@ -1243,18 +1238,17 @@
             this.panelName.PerformLayout();
             this.panelRead.ResumeLayout(false);
             this.panelImg.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.guna2Panel48.ResumeLayout(false);
+            this.guna2Panel48.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel4;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel48;
-        private System.Windows.Forms.Label lblSoTu;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblView;
@@ -1347,5 +1341,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnTheLoai;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private System.Windows.Forms.Panel panel4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel48;
+        private System.Windows.Forms.Label lblSoTu;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label9;
     }
 }

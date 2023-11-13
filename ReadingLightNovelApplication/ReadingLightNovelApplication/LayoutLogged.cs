@@ -26,7 +26,7 @@ namespace ReadingLightNovelApplication
 
         private void LayoutLogged_Load(object sender, EventArgs e)
         {
-            SupportMethod.openChildFormDockTop(this.activeForm, new FormContent(), this.panelMain);
+            SupportMethod.openChildFormDockTop(this.activeForm, new FormContent(), this.panelNoiDung);
         }
     }
 }

@@ -38,7 +38,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panelMain = new System.Windows.Forms.Panel();
+            this.panelNoiDung = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelHeaderLayoutLogged.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -164,7 +164,7 @@
             // panel6
             // 
             this.panel6.AutoScroll = true;
-            this.panel6.Controls.Add(this.panelMain);
+            this.panel6.Controls.Add(this.panelNoiDung);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 58);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -172,16 +172,16 @@
             this.panel6.Size = new System.Drawing.Size(1260, 617);
             this.panel6.TabIndex = 1;
             // 
-            // panelMain
+            // panelNoiDung
             // 
-            this.panelMain.AutoScroll = true;
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1260, 617);
-            this.panelMain.TabIndex = 0;
-            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            this.panelNoiDung.AutoScroll = true;
+            this.panelNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelNoiDung.Location = new System.Drawing.Point(0, 0);
+            this.panelNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelNoiDung.Name = "panelNoiDung";
+            this.panelNoiDung.Size = new System.Drawing.Size(1260, 617);
+            this.panelNoiDung.TabIndex = 0;
+            this.panelNoiDung.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // LayoutLogged
             // 
@@ -216,6 +216,6 @@
         private Guna.UI2.WinForms.Guna2Button btnDanhSach;
         private Guna.UI2.WinForms.Guna2ImageButton btnLogo;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Panel panelNoiDung;
 	}
 }
