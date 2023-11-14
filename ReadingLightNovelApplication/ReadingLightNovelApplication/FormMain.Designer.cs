@@ -33,7 +33,6 @@
             // 
             // panelMain
             // 
-            this.panelMain.AutoScroll = true;
             this.panelMain.BackColor = System.Drawing.Color.Transparent;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.ForeColor = System.Drawing.Color.Black;

@@ -59,6 +59,7 @@
             this.guna2Panel32 = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel33 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel34 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel35 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel36 = new Guna.UI2.WinForms.Guna2Panel();
@@ -72,6 +73,7 @@
             this.guna2Panel39 = new Guna.UI2.WinForms.Guna2Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel40 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel41 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel42 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel43 = new Guna.UI2.WinForms.Guna2Panel();
@@ -83,6 +85,7 @@
             this.guna2Panel25 = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel26 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel27 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel28 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel29 = new Guna.UI2.WinForms.Guna2Panel();
@@ -99,6 +102,7 @@
             this.panelButton = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
@@ -106,6 +110,7 @@
             this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel19 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel20 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel21 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel22 = new Guna.UI2.WinForms.Guna2Panel();
@@ -117,6 +122,7 @@
             this.panelName = new Guna.UI2.WinForms.Guna2Panel();
             this.panelRead = new Guna.UI2.WinForms.Guna2Panel();
             this.panelImg = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTheLoai = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
@@ -129,12 +135,6 @@
             this.panelSame = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panelComment = new System.Windows.Forms.Panel();
             this.panel9.SuspendLayout();
@@ -485,6 +485,20 @@
             this.guna2Panel33.Size = new System.Drawing.Size(70, 61);
             this.guna2Panel33.TabIndex = 0;
             // 
+            // guna2ImageButton5
+            // 
+            this.guna2ImageButton5.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2ImageButton5.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton5.Image = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
+            this.guna2ImageButton5.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton5.ImageRotate = 0F;
+            this.guna2ImageButton5.Location = new System.Drawing.Point(10, 10);
+            this.guna2ImageButton5.Name = "guna2ImageButton5";
+            this.guna2ImageButton5.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton5.Size = new System.Drawing.Size(47, 41);
+            this.guna2ImageButton5.TabIndex = 4;
+            // 
             // guna2Panel34
             // 
             this.guna2Panel34.Dock = System.Windows.Forms.DockStyle.Right;
@@ -605,6 +619,20 @@
             this.guna2Panel40.Size = new System.Drawing.Size(70, 61);
             this.guna2Panel40.TabIndex = 0;
             // 
+            // guna2ImageButton6
+            // 
+            this.guna2ImageButton6.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2ImageButton6.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton6.Image = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
+            this.guna2ImageButton6.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton6.ImageRotate = 0F;
+            this.guna2ImageButton6.Location = new System.Drawing.Point(10, 10);
+            this.guna2ImageButton6.Name = "guna2ImageButton6";
+            this.guna2ImageButton6.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton6.Size = new System.Drawing.Size(47, 41);
+            this.guna2ImageButton6.TabIndex = 4;
+            // 
             // guna2Panel41
             // 
             this.guna2Panel41.Dock = System.Windows.Forms.DockStyle.Right;
@@ -653,6 +681,7 @@
             this.btnRead.Size = new System.Drawing.Size(143, 41);
             this.btnRead.TabIndex = 0;
             this.btnRead.Text = "Đọc Tiếp";
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
             // guna2Panel4
             // 
@@ -686,7 +715,7 @@
             this.btnContinue.ForeColor = System.Drawing.Color.White;
             this.btnContinue.Location = new System.Drawing.Point(15, 0);
             this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(210, 36);
+            this.btnContinue.Size = new System.Drawing.Size(210, 41);
             this.btnContinue.TabIndex = 1;
             this.btnContinue.Text = "Tắt nhận thông báo!";
             // 
@@ -723,6 +752,20 @@
             this.guna2Panel26.Name = "guna2Panel26";
             this.guna2Panel26.Size = new System.Drawing.Size(70, 61);
             this.guna2Panel26.TabIndex = 0;
+            // 
+            // guna2ImageButton4
+            // 
+            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton4.Image = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
+            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton4.ImageRotate = 0F;
+            this.guna2ImageButton4.Location = new System.Drawing.Point(10, 10);
+            this.guna2ImageButton4.Name = "guna2ImageButton4";
+            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton4.Size = new System.Drawing.Size(47, 41);
+            this.guna2ImageButton4.TabIndex = 4;
             // 
             // guna2Panel27
             // 
@@ -886,6 +929,20 @@
             this.guna2Panel12.Size = new System.Drawing.Size(74, 61);
             this.guna2Panel12.TabIndex = 0;
             // 
+            // guna2ImageButton2
+            // 
+            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.Image = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
+            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton2.ImageRotate = 0F;
+            this.guna2ImageButton2.Location = new System.Drawing.Point(14, 10);
+            this.guna2ImageButton2.Name = "guna2ImageButton2";
+            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.Size = new System.Drawing.Size(44, 41);
+            this.guna2ImageButton2.TabIndex = 4;
+            // 
             // guna2Panel16
             // 
             this.guna2Panel16.Dock = System.Windows.Forms.DockStyle.Right;
@@ -951,6 +1008,20 @@
             this.guna2Panel19.Name = "guna2Panel19";
             this.guna2Panel19.Size = new System.Drawing.Size(70, 61);
             this.guna2Panel19.TabIndex = 0;
+            // 
+            // guna2ImageButton3
+            // 
+            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.Image = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
+            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton3.ImageRotate = 0F;
+            this.guna2ImageButton3.Location = new System.Drawing.Point(10, 10);
+            this.guna2ImageButton3.Name = "guna2ImageButton3";
+            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.Size = new System.Drawing.Size(47, 41);
+            this.guna2ImageButton3.TabIndex = 4;
             // 
             // guna2Panel20
             // 
@@ -1063,6 +1134,21 @@
             this.panelImg.Name = "panelImg";
             this.panelImg.Size = new System.Drawing.Size(203, 385);
             this.panelImg.TabIndex = 0;
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(256, 296);
+            this.guna2ImageButton1.Image = global::ReadingLightNovelApplication.Properties.Resources._271886390_341942914599355_2016043603005971576_n;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(256, 296);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(0, 89);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(256, 296);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(203, 241);
+            this.guna2ImageButton1.TabIndex = 9;
             // 
             // guna2Panel1
             // 
@@ -1183,91 +1269,6 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Có thể bạn quan tâm";
             // 
-            // guna2ImageButton6
-            // 
-            this.guna2ImageButton6.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2ImageButton6.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton6.Image = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
-            this.guna2ImageButton6.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton6.ImageRotate = 0F;
-            this.guna2ImageButton6.Location = new System.Drawing.Point(10, 10);
-            this.guna2ImageButton6.Name = "guna2ImageButton6";
-            this.guna2ImageButton6.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton6.Size = new System.Drawing.Size(47, 41);
-            this.guna2ImageButton6.TabIndex = 4;
-            // 
-            // guna2ImageButton5
-            // 
-            this.guna2ImageButton5.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2ImageButton5.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton5.Image = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
-            this.guna2ImageButton5.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton5.ImageRotate = 0F;
-            this.guna2ImageButton5.Location = new System.Drawing.Point(10, 10);
-            this.guna2ImageButton5.Name = "guna2ImageButton5";
-            this.guna2ImageButton5.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton5.Size = new System.Drawing.Size(47, 41);
-            this.guna2ImageButton5.TabIndex = 4;
-            // 
-            // guna2ImageButton4
-            // 
-            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Image = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
-            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton4.ImageRotate = 0F;
-            this.guna2ImageButton4.Location = new System.Drawing.Point(10, 10);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Size = new System.Drawing.Size(47, 41);
-            this.guna2ImageButton4.TabIndex = 4;
-            // 
-            // guna2ImageButton3
-            // 
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Image = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
-            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton3.ImageRotate = 0F;
-            this.guna2ImageButton3.Location = new System.Drawing.Point(10, 10);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Size = new System.Drawing.Size(47, 41);
-            this.guna2ImageButton3.TabIndex = 4;
-            // 
-            // guna2ImageButton2
-            // 
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Image = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.Location = new System.Drawing.Point(14, 10);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Size = new System.Drawing.Size(44, 41);
-            this.guna2ImageButton2.TabIndex = 4;
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(256, 296);
-            this.guna2ImageButton1.Image = global::ReadingLightNovelApplication.Properties.Resources._271886390_341942914599355_2016043603005971576_n;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(256, 296);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(0, 89);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(256, 296);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(203, 241);
-            this.guna2ImageButton1.TabIndex = 9;
-            // 
             // panel16
             // 
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1308,6 +1309,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormProperties";
             this.Text = "FormProperties";
+            this.Load += new System.EventHandler(this.FormProperties_Load);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panelStatus.ResumeLayout(false);

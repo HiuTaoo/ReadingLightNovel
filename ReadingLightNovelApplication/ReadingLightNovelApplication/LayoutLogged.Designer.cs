@@ -37,11 +37,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panelNoiDung = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelHeaderLayoutLogged.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -161,35 +159,21 @@
             this.panel2.Size = new System.Drawing.Size(1260, 10);
             this.panel2.TabIndex = 0;
             // 
-            // panel6
-            // 
-            this.panel6.AutoScroll = true;
-            this.panel6.Controls.Add(this.panelNoiDung);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 58);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1260, 617);
-            this.panel6.TabIndex = 1;
-            // 
             // panelNoiDung
             // 
-            this.panelNoiDung.AutoScroll = true;
             this.panelNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNoiDung.Location = new System.Drawing.Point(0, 0);
+            this.panelNoiDung.Location = new System.Drawing.Point(0, 58);
             this.panelNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelNoiDung.Name = "panelNoiDung";
             this.panelNoiDung.Size = new System.Drawing.Size(1260, 617);
-            this.panelNoiDung.TabIndex = 0;
-            this.panelNoiDung.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            this.panelNoiDung.TabIndex = 1;
             // 
             // LayoutLogged
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1260, 675);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panelNoiDung);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -199,7 +183,6 @@
             this.panel1.ResumeLayout(false);
             this.panelHeaderLayoutLogged.ResumeLayout(false);
             this.panelHeaderLayoutLogged.PerformLayout();
-            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -215,7 +198,6 @@
         private Guna.UI2.WinForms.Guna2Button btnHuongDan;
         private Guna.UI2.WinForms.Guna2Button btnDanhSach;
         private Guna.UI2.WinForms.Guna2ImageButton btnLogo;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panelNoiDung;
-	}
+    }
 }

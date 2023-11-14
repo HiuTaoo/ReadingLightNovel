@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace ReadingLightNovelApplication
 {
-    internal class SupportMethod
+     class SupportMethod
     {
 		string strConnect = "Data Source=DESKTOP-EAAUDNC\\USERNAME;" +
 			"Initial Catalog=ReadingLightNovel;Integrated Security=True";
 		SqlConnection sqlConnect = null;
 
 		//Connect to database
-		private void OpenConnect()
+		 void OpenConnect()
 		{
 			sqlConnect = new SqlConnection(strConnect);
 			if (sqlConnect.State != ConnectionState.Open)
@@ -24,7 +24,7 @@ namespace ReadingLightNovelApplication
 		}
 
 		//Close database
-		private void CloseConnect()
+		 void CloseConnect()
 		{
 			if (sqlConnect.State != ConnectionState.Closed)
 				sqlConnect.Close();
@@ -58,7 +58,7 @@ namespace ReadingLightNovelApplication
 		}
 
 		//Charge data of database by SQL query command
-		public void DataChanger(string commandText)
+		public void DataChange(string commandText)
 		{
 			OpenConnect();
 			SqlCommand sqlcommand = new SqlCommand(commandText);

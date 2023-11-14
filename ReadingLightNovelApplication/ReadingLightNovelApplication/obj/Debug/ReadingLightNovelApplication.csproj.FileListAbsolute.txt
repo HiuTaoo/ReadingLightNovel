@@ -86,3 +86,6 @@ D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelAp
 D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormHome.resources
 D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.Nhap_2.resources
 D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.Nhap.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormChucNang.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormChangeFont.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormProfile.resources
