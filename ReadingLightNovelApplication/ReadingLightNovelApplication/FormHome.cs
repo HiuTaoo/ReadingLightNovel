@@ -12,16 +12,14 @@ namespace ReadingLightNovelApplication
 {
 	public partial class FormHome : Form
 	{
-		Nhap nhap = new Nhap();
+		private Form activeForm = null;
+		SupportMethod SupportMethod = new SupportMethod();
 		public FormHome()
 		{
 			InitializeComponent();
 		}
 
-		private void FormHome_Load(object sender, EventArgs e)
-		{
-			panelRightHome.Controls.Add(nhap.GetPanel("panelTruyenVuaDoc"));
-		}
+		
 
 		private void panelLeftHome_Paint(object sender, PaintEventArgs e)
 		{
@@ -31,6 +29,30 @@ namespace ReadingLightNovelApplication
 		private void guna2Button14_Click(object sender, EventArgs e)
 		{
 
+		}
+
+		private void guna2Panel5_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void guna2Button14_Click_1(object sender, EventArgs e)
+		{
+		}
+
+		private void guna2Panel47_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void guna2Panel44_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void FormHome_Load(object sender, EventArgs e)
+		{
+			//SupportMethod.openChildFormDockTop(activeForm, new Nhap(), this.panelMoi);
 		}
 	}
 }

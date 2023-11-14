@@ -16,5 +16,15 @@ namespace ReadingLightNovelApplication
 		{
 			InitializeComponent();
 		}
+
+		private void panelLeftHome_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void flpTopTruyen_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
 	}
 }
