@@ -33,5 +33,15 @@ namespace ReadingLightNovelApplication
 			}
 			return null;
 		}
+
+		private void guna2Button17_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void guna2Panel48_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
 	}
 }
