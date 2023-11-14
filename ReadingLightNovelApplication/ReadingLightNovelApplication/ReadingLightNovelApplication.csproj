@@ -52,6 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormComment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormComment.Designer.cs">
+      <DependentUpon>FormComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCommentArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCommentArea.Designer.cs">
+      <DependentUpon>FormCommentArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormContent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,17 +106,41 @@
     <Compile Include="FormLayoutDangNhap.Designer.cs">
       <DependentUpon>FormLayoutDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormList.Designer.cs">
+      <DependentUpon>FormList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListVol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListVol.Designer.cs">
+      <DependentUpon>FormListVol.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMainReading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainReading.Designer.cs">
+      <DependentUpon>FormMainReading.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProperties.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormProperties.Designer.cs">
       <DependentUpon>FormProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuggest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuggest.Designer.cs">
+      <DependentUpon>FormSuggest.cs</DependentUpon>
     </Compile>
     <Compile Include="LayoutLogged.cs">
       <SubType>Form</SubType>
@@ -127,6 +163,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupportMethod.cs" />
+    <EmbeddedResource Include="FormComment.resx">
+      <DependentUpon>FormComment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommentArea.resx">
+      <DependentUpon>FormCommentArea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormContent.resx">
       <DependentUpon>FormContent.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,11 +187,23 @@
     <EmbeddedResource Include="FormLayoutDangNhap.resx">
       <DependentUpon>FormLayoutDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormList.resx">
+      <DependentUpon>FormList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListVol.resx">
+      <DependentUpon>FormListVol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMainReading.resx">
+      <DependentUpon>FormMainReading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProperties.resx">
       <DependentUpon>FormProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuggest.resx">
+      <DependentUpon>FormSuggest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LayoutLogged.resx">
       <DependentUpon>LayoutLogged.cs</DependentUpon>
@@ -198,6 +252,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\274033549_1108566083289066_6781424345818665545_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artist.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

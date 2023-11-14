@@ -54,6 +54,35 @@ D:\Workspace\BTL-2023\LTTQ\LTTQ\ReadingLightNovel\ReadingLightNovelApplication\R
 D:\Workspace\BTL-2023\LTTQ\LTTQ\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\bin\Debug\ReadingLightNovelApplication.pdb
 D:\Workspace\BTL-2023\LTTQ\LTTQ\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\bin\Debug\Guna.UI2.dll
 D:\Workspace\BTL-2023\LTTQ\LTTQ\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.csproj.CopyComplete
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\bin\Debug\ReadingLightNovelApplication.exe.config
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\bin\Debug\ReadingLightNovelApplication.exe
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\bin\Debug\ReadingLightNovelApplication.pdb
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\bin\Debug\Guna.UI2.dll
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.csproj.AssemblyReference.cache
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormContent.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormDatLaiMatKhauB1.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormDienDangKy.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormDienDangNhap.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormLayoutDangNhap.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormMain.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormProperties.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.LayoutLogged.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.Properties.Resources.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.csproj.GenerateResource.cache
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.csproj.CoreCompileInputs.cache
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.csproj.CopyComplete
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.exe
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.pdb
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormListVol.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormSuggest.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormCommentArea.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormComment.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormMainReading.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormList.resources
 >>>>>>> c9881cf925b2c83f00185e1594f0e9ba0e1037ee
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormContent.resources
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormProperties.resources
+>>>>>>> c44b413eb11fd600196600d933575ea9d2eca4df
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormHome.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.Nhap_2.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.Nhap.resources
