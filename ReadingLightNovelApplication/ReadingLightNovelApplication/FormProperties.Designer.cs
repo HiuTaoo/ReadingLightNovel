@@ -41,6 +41,11 @@
             this.lblTacGia = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.guna2Panel48 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblSoTu = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.guna2Panel49 = new Guna.UI2.WinForms.Guna2Panel();
             this.lvlRating = new System.Windows.Forms.Label();
@@ -115,23 +120,32 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnTheLoai = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.guna2Panel48 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblSoTu = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.panelReview = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panelVol = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panelSame = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panelComment = new System.Windows.Forms.Panel();
             this.panel9.SuspendLayout();
             this.panelStatus.SuspendLayout();
             this.guna2Panel51.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panelTacGia.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.guna2Panel48.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.guna2Panel49.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -160,9 +174,10 @@
             this.panelName.SuspendLayout();
             this.panelRead.SuspendLayout();
             this.panelImg.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.guna2Panel48.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panelReview.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panelSame.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel9
@@ -286,6 +301,55 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(952, 73);
             this.panel10.TabIndex = 10;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel4.Controls.Add(this.guna2Panel48);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Location = new System.Drawing.Point(282, -1);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(116, 74);
+            this.panel4.TabIndex = 23;
+            // 
+            // guna2Panel48
+            // 
+            this.guna2Panel48.Controls.Add(this.lblSoTu);
+            this.guna2Panel48.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel48.Location = new System.Drawing.Point(0, 36);
+            this.guna2Panel48.Name = "guna2Panel48";
+            this.guna2Panel48.Size = new System.Drawing.Size(116, 38);
+            this.guna2Panel48.TabIndex = 1;
+            // 
+            // lblSoTu
+            // 
+            this.lblSoTu.AutoSize = true;
+            this.lblSoTu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoTu.Location = new System.Drawing.Point(23, 6);
+            this.lblSoTu.Name = "lblSoTu";
+            this.lblSoTu.Size = new System.Drawing.Size(60, 23);
+            this.lblSoTu.TabIndex = 0;
+            this.lblSoTu.Text = "50000";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(116, 36);
+            this.panel5.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(32, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(45, 19);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Số từ";
             // 
             // panel6
             // 
@@ -696,7 +760,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(25, 11);
+            this.label8.Location = new System.Drawing.Point(26, 11);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 20);
             this.label8.TabIndex = 0;
@@ -748,7 +812,7 @@
             this.lblAnother1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAnother1.AutoSize = true;
             this.lblAnother1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnother1.Location = new System.Drawing.Point(19, 7);
+            this.lblAnother1.Location = new System.Drawing.Point(25, 7);
             this.lblAnother1.Name = "lblAnother1";
             this.lblAnother1.Size = new System.Drawing.Size(80, 20);
             this.lblAnother1.TabIndex = 0;
@@ -1034,54 +1098,90 @@
             this.guna2Panel6.Size = new System.Drawing.Size(203, 18);
             this.guna2Panel6.TabIndex = 0;
             // 
-            // panel4
+            // panelReview
             // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.Controls.Add(this.guna2Panel48);
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Location = new System.Drawing.Point(282, -1);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(116, 74);
-            this.panel4.TabIndex = 23;
+            this.panelReview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelReview.Controls.Add(this.panel13);
+            this.panelReview.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelReview.Location = new System.Drawing.Point(0, 801);
+            this.panelReview.Name = "panelReview";
+            this.panelReview.Size = new System.Drawing.Size(952, 132);
+            this.panelReview.TabIndex = 12;
             // 
-            // guna2Panel48
+            // panel13
             // 
-            this.guna2Panel48.Controls.Add(this.lblSoTu);
-            this.guna2Panel48.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel48.Location = new System.Drawing.Point(0, 36);
-            this.guna2Panel48.Name = "guna2Panel48";
-            this.guna2Panel48.Size = new System.Drawing.Size(116, 38);
-            this.guna2Panel48.TabIndex = 1;
+            this.panel13.Controls.Add(this.label10);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(950, 35);
+            this.panel13.TabIndex = 1;
             // 
-            // lblSoTu
+            // label10
             // 
-            this.lblSoTu.AutoSize = true;
-            this.lblSoTu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoTu.Location = new System.Drawing.Point(23, 6);
-            this.lblSoTu.Name = "lblSoTu";
-            this.lblSoTu.Size = new System.Drawing.Size(60, 23);
-            this.lblSoTu.TabIndex = 0;
-            this.lblSoTu.Text = "50000";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(26, 8);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(99, 20);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Review mới";
             // 
-            // panel5
+            // panel14
             // 
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(116, 36);
-            this.panel5.TabIndex = 0;
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 933);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(952, 19);
+            this.panel14.TabIndex = 13;
             // 
-            // label9
+            // panelVol
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(32, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 19);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Số từ";
+            this.panelVol.AutoSize = true;
+            this.panelVol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelVol.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelVol.Location = new System.Drawing.Point(0, 952);
+            this.panelVol.Name = "panelVol";
+            this.panelVol.Size = new System.Drawing.Size(952, 2);
+            this.panelVol.TabIndex = 14;
+            // 
+            // panel15
+            // 
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(0, 954);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(952, 16);
+            this.panel15.TabIndex = 15;
+            // 
+            // panelSame
+            // 
+            this.panelSame.AutoSize = true;
+            this.panelSame.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSame.Controls.Add(this.panel17);
+            this.panelSame.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSame.Location = new System.Drawing.Point(0, 970);
+            this.panelSame.Name = "panelSame";
+            this.panelSame.Size = new System.Drawing.Size(952, 37);
+            this.panelSame.TabIndex = 16;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.label12);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(950, 35);
+            this.panel17.TabIndex = 0;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(26, 8);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(173, 20);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Có thể bạn quan tâm";
             // 
             // guna2ImageButton6
             // 
@@ -1168,12 +1268,37 @@
             this.guna2ImageButton1.Size = new System.Drawing.Size(203, 241);
             this.guna2ImageButton1.TabIndex = 9;
             // 
+            // panel16
+            // 
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel16.Location = new System.Drawing.Point(0, 1007);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(952, 20);
+            this.panel16.TabIndex = 17;
+            // 
+            // panelComment
+            // 
+            this.panelComment.AutoSize = true;
+            this.panelComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelComment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelComment.Location = new System.Drawing.Point(0, 1027);
+            this.panelComment.Name = "panelComment";
+            this.panelComment.Size = new System.Drawing.Size(952, 2);
+            this.panelComment.TabIndex = 18;
+            // 
             // FormProperties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(952, 1102);
+            this.Controls.Add(this.panelComment);
+            this.Controls.Add(this.panel16);
+            this.Controls.Add(this.panelSame);
+            this.Controls.Add(this.panel15);
+            this.Controls.Add(this.panelVol);
+            this.Controls.Add(this.panel14);
+            this.Controls.Add(this.panelReview);
             this.Controls.Add(this.panelView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTomTat);
@@ -1193,6 +1318,11 @@
             this.panelTacGia.ResumeLayout(false);
             this.panelTacGia.PerformLayout();
             this.panel10.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.guna2Panel48.ResumeLayout(false);
+            this.guna2Panel48.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.guna2Panel49.ResumeLayout(false);
             this.guna2Panel49.PerformLayout();
@@ -1238,11 +1368,12 @@
             this.panelName.PerformLayout();
             this.panelRead.ResumeLayout(false);
             this.panelImg.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.guna2Panel48.ResumeLayout(false);
-            this.guna2Panel48.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panelReview.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panelSame.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1346,5 +1477,16 @@
         private System.Windows.Forms.Label lblSoTu;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panelReview;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panelVol;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panelSame;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panelComment;
     }
 }

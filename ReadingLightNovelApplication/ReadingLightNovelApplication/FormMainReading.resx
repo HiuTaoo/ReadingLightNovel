@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblContent.Text" xml:space="preserve">
+    <value>I wake up from the alarm.
+The time is 12 noon.
+When I looked at the monkey family, the two child monkeys were playing around an open space, but the big monkey was gone. It might have gone out to obtain food. 
+If those monkeys left, I could use that opening to escape, but it looks like the hopes for that are slim. 
+What’s left is to escape in the dead of the night by slipping in the darkness.
+There’s no choice of fighting those monkeys. If it is just those child monkeys, magic scrolls could do the job, but that will definitely create a hellish situation where the giant monkey searches every corner for humans with bloodshot eyes.
+There’s also me simply not wanting to kill animals. 
+“Let’s train my Spirit Abilities…” (Hikaru)
+In the end, that’s all I can do right now.
+The Abilities have Proficiencies and this is how they look right now. 
+ 
+[Dark Spirit Ability]
+Tier 1 Ability
+・Revelation of Darkness [Dark Mist] Proficiency 89
+・View of Darkness [Dark Vision] Proficiency 15
+・Transformation of Darkness [Shadow Runner] Proficiency 0
+ 
+I have been using my Abilities till dawn yesterday while walking, so I feel like they have gone up a decent degree. 
+Training is good, but it seems like using them in actual practice is easier to raise them. 
+On top of that, I got a new Ability. 
+Looks like it is a humanoid made of darkness… In other words, creating a decoy with darkness and have it run. 
+“Decoy…! I can use this…!” (Hikaru)
+It is a new Ability, so I want to use it at once. 
+I have already confirmed that there’s no problem in using Abilities inside the barrier. 
+“[Shadow Runner]!” (Hikaru)
+Reacting to the activation of my Ability, darkness slowly appears from empty space and grows into a humanoid shape. 
+Maybe because my Proficiency is low, even when it is called a runner, it isn’t an athlete but the shadow of a small child. 
+It is in the shape of a human, but there’s no density to it. 
+It began to run straight, but at the same time as it touched the film of the barrier, it disappeared. It is impossible to have Spirit Abilities affect the other side of the barrier, so it can’t be helped that it would result in this. 
+It doesn’t even serve as a false threat. It really is just an ability that makes a shadow run. 
+But it does look useful as a decoy. It can at least serve as a means to escape from this forest. 
+That hint really was an important hint. 
+“Alright, gotta train!” (Hikaru)
+The situation is difficult, but it looks like it is still too soon to give up. 
+◇◆◆◆◇
+The Barrier Stone runs out at 5:30pm.
+The current time is 5:00pm.
+In the 5 hours since then, I continued training my spells, and there have been quite the good results. 
+ 
+[Dark Spirit Ability]
+Tier 1 Ability
+・View of Darkness [Dark Vision] Proficiency 17
+・Transformation of Darkness [Shadow Runner] Proficiency 30
+Tier 2 Ability 
+・Revelation of Darkness [Dark Mist] Proficiency 22
+ 
+Dark Mist’s Proficiency reached its max value and has raised to Tier 2. 
+Those tiers must be like the levels of the abilities, and when the Proficiency reaches 100, it goes to the next level.
+Dark Vision has no effect when I use it at daytime, and the Proficiency barely increases, so I didn’t use it. It is also because the priority is low. 
+“[Dark Mist]!” (Hikaru)
+With my voice as the trigger, darkness appeared from empty space, and it eats away the light. 
+Most likely because it has tiered up, I can now create pretty dense darkness with Dark Mist. The darkness can now cover all the barriers, so it can’t even be compared to the beginning. The darkness is also coming out a lot faster now.
+With this, I might be able to go out without the monkeys noticing.
+“…But it isn’t getting as dark as I thought it would.” (Hikaru)
+Maybe because of the season, even at 5:00pm, the sky is maintaining its brightness. It is a situation where I can’t call it evening at all. 
+As for the monkey family, the giant monkey carried back a whole lot of food and they are having dinner time. 
+The chances of them being too into their food that they miss my presence are there…but they are slim. 
+Even the child monkeys run more than 3 times faster than me. As for the giant monkey, I feel like it could go as far as 10 times faster. I can’t imagine myself outrunning them. 
+“Let’s wait till night…” (Hikaru)
+I decide to keep it safe. 
+Challenging it here wouldn’t be that bad, but it could also increase the alertness of the monkeys pointlessly. 
+I don’t have many remaining points, but I gotta use them.
+I bought a Barrier Stone with 1 Point, and when the remaining time hit 1 minute, I broke it. You can overlap the times of the Barrier Stones. The remaining time is now 12 hours and 1 minute. 
+I continued training my Spirit Ability till late in the night. 
+◇◆◆◆◇
+“Alright… The moon is hidden because of the cloudy sky, so I would say this is a good time…” (Hikaru)
+2:00 at the dead of the night. 
+It is the time when even the plants are sleeping. 
+Even with Night Vision, the surroundings were covered in way too dense darkness, to a creepy extent. 
+But right now they are all factors that will be a plus for me. 
+I use Spirit Abilities over and over, and continue to the next step. 
+“[Darkness Fog].” (Hikaru)
+I chant the new Dark Mist that has reached 3rd Tier; new name, [Darkness Fog]. 
+The darkness that appeared instantly dyed the inside of the barrier in darkness until it was full.
+I was completely concealed and it will at least hide me from those who rely on their eyesight. 
+“My Spirit Ability has also grown decently.” (Hikaru)
+ 
+[Dark Spirit Ability]
+Tier 1 Ability
+・View of Darkness [Dark Vision] Proficiency 38
+・Transformation of Darkness [Shadow Runner] Proficiency 64
+Tier 3 Ability 
+・Revelation of Darkness [Darkness Fog] Proficiency 2
+ 
+I feel as if using my abilities inside the barrier is easier, or like…the burden is lower, which makes it easier to utilize successively, but I am not even showing any signs of fainting. 
+It must be because the Tier and Proficiency have increased, and I am slowly getting familiar with their use. 
+“I have prepared a new Barrier Stone too, so…let’s go…!” (Hikaru)
+I have 7 Points remaining. 
+It is finally beginning to feel scarce, but I actually got 1 Point while I was training on my Spirit Abilities. It is apparently because I am the first Chosen who has [Reached Tier 3 Spirit Ability]. 
+The other Chosen should be training in their Spirit Ability too though…
+It really must be the difference in urgency as someone who has been random transferred. Of course, there’s the chance that Affection of the Spirits is doing its work. I am aware that I have been using abilities successively to an unnatural extent after all.
+But well, I have no one to compare to, so this is just merely a possibility. 
+Whichever the case, the [First Achiever] rewards me Crystals and Points, so it helps me greatly. For example; if I were to defeat that monkey, I might be able to get an achievement like ‘First Monster Subjugation’ -not like I can defeat it though.
+The monkeys were hugging each other as they slept.
+This monkey most likely doesn’t have any natural enemy in this forest. It is a defenseless sleeping posture. 
+I can escape. 
+I felt that confidence. 
+There’s still 3 and a half hours left in the barrier. 
+But I have to escape while it is still night. 
+“[Darkness Fog].” (Hikaru)
+I stack more onto it. 
+I was inside dense darkness and it filled up the inside of the barrier completely. 
+“Alright…” (Hikaru)
+I moved slowly and carefully in order to not make any noise, and when I reached the corner of the 3 meter radius barrier, I undo it. 
+The film of the barrier vanishes as if it melted, and I spread the darkness to the surroundings. 
+From afar, it might have looked like darkness suddenly appeared to an unnatural extent. 
+The monkeys haven’t noticed. 
+But I am feeling a mysterious presence so strong it was prickling my skin.
+A presence I have been feeling the whole time since coming to this world.
+The presence was so intense that it felt as if someone was by my side on this moonless night. 
+But I can’t let my mind wander to this mysterious presence.
+I carefully advance one step at a time so as to not make any sound. 
+Fortunately, the monkeys are not showing any signs of waking up.
+There’s no moon in the sky, making the darkness of the night even denser.
+——-Fu…ufufu……fufu…
+I heard a voice. 
+The monkeys are sleeping. 
+But I heard the laughing of a girl from somewhere. 
+Is it a new monster? 
+I carefully advance as I check my surroundings. 
+Despite me already using Dark Vision, I can’t see that far. 
+It is to a degree where I can barely see the sleeping monkeys 50 meters away. 
+Kusukusu…
+Ufufu…
+(Again… What’s with this voice…?) (Hikaru)
+A mysterious voice that sounds as if it were really far yet right by my side. 
+As if it were a child playing around from faraway yet whispering in my ear. 
+Fufu…ufufu…
+The voice was slowly getting clearer.
+There was no distinct direction, and I can only feel as if it is meaningless noise, but the closer it gets, the more it begins to show some semblance of sentience. 
+The voice is directing her laughs at me…
+I am sure of that.
+I ignore the voice and hurry ahead. 
+Right now my highest priority is making distance.
+“[Darkness Fog].” (Hikaru)
+It is a really dark night. 
+It is not something as simple as it being dark because there’s no moonlight, it was as if darkness was present here plainly as darkness itself. It was a night as if deep inside this space that’s dyed in black, there’s a bottomless ocean that stretches all the way to the horizon.
+If I didn’t have Night Vision, I wouldn’t have been able to take a single step.
+I was hearing the voice endlessly. 
+Like a girl, like a boy, like an elderly woman, like an infant…
+As if radio noise was travelling far through the air and reaching my ears.
+—For some mysterious reason, I wasn’t scared of it. 
+If it had been the groan or the roar of a monster, I might have been scared, but the voice sounded like that of a person. 
+Also, I might have felt as if…someone was staying by my side in this lonely journey…
+My distance from the monkeys was 100 meters…200 meters, smoothly getting further and further away. 
+“[Darkness Fog].” (Hikaru)
+It was at the time when I chanted the Spirit Ability for who knows how many times now…
+The darkness around began to grow noisy…trembling as if it were alive. 
+The air pulsated, even deeper darkness appearing from within the darkness…sticking thickly to the ground, the trunk of the trees, branches, leaves, and even the sky…
+(W-What’s going on…?) (Hikaru)
+The ‘voice’ that I have been hearing until now had at some point stopped. 
+Not only that, the sound of the wind, the noise of the insects; I couldn’t hear a single thing. 
+I take out the Barrier Stone from my pocket, and ready myself.
+There’s a monster nearby…?
+No, there’s no way. There’s no sounds of footsteps…
+Is it not a living being…?
+The darkness took shape…that was the only way I could describe this phenomenon. 
+Right after I used the ability, something appeared from inside the darkness.
+I couldn’t tell my surroundings at all. Everything was dyed in darkness as if my Night Vision was serving no purpose at all.
+It is not something as vague as a ghost.
+Something of condensed darkness was somewhere around here…
+Far far away…or maybe right by my shoulder…
+—Hey, you look tasty.
+I heard this clearly by my ear. 
+A feeling as if my life itself was caressed by a mass of tangible darkness. 
+The hairs on my whole body stood on end, and I reflexively broke the Barrier Stone. 
+—Hmm, what a mysterious power…
+—The closer I try to get, the farther you get.
+At that moment, I finally saw the ‘owner of that voice’.
+Black, truly jet black contours. 
+It was inside darkness, and it was as if her figure itself was in even deeper darkness.
+The outline of a girl with long hair waving with the wind. 
+Fortunately, it seems like she can’t enter the barrier, but it is walking around me with imperceivable movements. 
+“W-Who are you?” (Hikaru)
+I somehow manage to ask her that. 
+I don’t know what she is. This being is dangerous for me…I think.
+But if words get to her, maybe there’s the chance that we can reach an understanding here?
+—Can’t tell who I am?
+—Even though you needed me that much? You love me, right? 
+—I also love you. Now, undo this.
+—Let’s become one.
+Looks like that won’t work.
+The ‘owner of the voice’ that could be called the Avatar of Darkness spoke words in a fluffy manner similar to her movements. The words itself are passionate, but her tone was emotionless without a single hint of warmth.
+The only thing I can tell is that she is not an ally. 
+I could also tell instinctively that fighting her would be pointless.
+Even so, it looks like she can’t enter the barrier and is simply moving around without any clear intent. 
+And, different from the monkeys…she can see inside the barrier.
+If she can see me, it would mean that she has no reason to leave. 
+I am done for.
+Here I was, thinking I finally managed to get away from the monkeys, and yet, to think there was even something this incomprehensible living here. I mistook how horrifying a danger level 4 forest was.
+—Now, now, undo this already, my beloved…
+—Let’s become one before the sun comes up.
+—You called for me over and over, right? Aah, that means you love me that much, right…? And yet, why are you being so cold…?
+The Avatar of Darkness was floating around as she said this. 
+It was as if she were talking to me, yet it also sounded as if she were monologuing. It was quite the mysterious tone of voice.
+(But she said something about the sun… She is the Avatar of Darkness, so maybe she disappears by the morning?) (Hikaru)
+There’s the chance. 
+Or more like, please let that be the case.
+I sat there plainly scared of the voice.
+I couldn’t do anything. 
+Because I feel like I ended up calling the owner of this voice with my excessive Spirit Ability training.
+In her(?) eyes, I apparently was calling for her. 
+I can only think of this being the Dark Spirit Ability.
+(Spirit Abilities are apparently performed by borrowing the power of the Spirits after all…) (Hikaru)
+Whichever the case, I have no choice but to wait for morning to come. 
+Fortunately, my Barrier Stone will last plenty enough, till around 2:30pm.
+I waited for the sun to come up without sleeping a wink.
+The Avatar of Darkness was floating around the whole time, but by the time it turned 3:30am, a change happened. 
+—What a shame. It truly is a shame, cutie. I wanted to become one with you.
+—But at the very least…at the very least I have met you, so I should give you a present.
+—Wait a bit, okay? I can tell anything it is you want.
+—I am looking forward to meeting you again…
+The voice disappeared somewhere.
+I pat my chest in relief, but after a while, the Avatar of Darkness appeared again.
+The sounds of something being placed on the ground.
+And then, this time around, the owner of the voice disappeared as if vanishing in thin air. 
+The forest ruled by silence one more day…
+
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnNext.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        i4v/ARncDAb79USYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnHome.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        Y4xpk4MO+n8iPceUEpUvZgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnPre.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+</root>
