@@ -117,7 +117,6 @@
             // 
             this.imgTruyen.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.imgTruyen.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.imgTruyen.Image = global::ReadingLightNovelApplication.Properties.Resources._274033549_1108566083289066_6781424345818665545_n;
             this.imgTruyen.ImageOffset = new System.Drawing.Point(0, 0);
             this.imgTruyen.ImageRotate = 0F;
             this.imgTruyen.Location = new System.Drawing.Point(11, 12);

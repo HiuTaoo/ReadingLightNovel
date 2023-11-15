@@ -81,7 +81,6 @@
             // 
             this.btnImg.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnImg.HoverState.ImageSize = new System.Drawing.Size(64, 96);
-            this.btnImg.Image = global::ReadingLightNovelApplication.Properties.Resources._271886390_341942914599355_2016043603005971576_n;
             this.btnImg.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnImg.ImageRotate = 0F;
             this.btnImg.ImageSize = new System.Drawing.Size(64, 96);
@@ -96,7 +95,6 @@
             // 
             this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(24, 24);
-            this.guna2ImageButton1.Image = global::ReadingLightNovelApplication.Properties.Resources.artist;
             this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton1.ImageRotate = 0F;
             this.guna2ImageButton1.ImageSize = new System.Drawing.Size(24, 24);

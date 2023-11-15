@@ -75,9 +75,7 @@
             this.pbAvt.BackColor = System.Drawing.Color.Transparent;
             this.pbAvt.BorderRadius = 30;
             this.pbAvt.FillColor = System.Drawing.Color.Transparent;
-            this.pbAvt.Image = global::ReadingLightNovelApplication.Properties.Resources._274033549_1108566083289066_6781424345818665545_n;
             this.pbAvt.ImageRotate = 0F;
-            this.pbAvt.InitialImage = global::ReadingLightNovelApplication.Properties.Resources._274033549_1108566083289066_6781424345818665545_n;
             this.pbAvt.Location = new System.Drawing.Point(17, 9);
             this.pbAvt.Name = "pbAvt";
             this.pbAvt.Size = new System.Drawing.Size(67, 53);

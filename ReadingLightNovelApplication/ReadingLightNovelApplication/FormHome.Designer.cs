@@ -174,7 +174,6 @@
 			// 
 			// guna2PictureBox1
 			// 
-			this.guna2PictureBox1.BackgroundImage = global::ReadingLightNovelApplication.Properties.Resources.home;
 			this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
 			this.guna2PictureBox1.ImageRotate = 0F;
@@ -791,7 +790,6 @@
 			// 
 			// guna2Panel9
 			// 
-			this.guna2Panel9.BackgroundImage = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
 			this.guna2Panel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.guna2Panel9.Dock = System.Windows.Forms.DockStyle.Left;
 			this.guna2Panel9.Location = new System.Drawing.Point(0, 0);
@@ -966,7 +964,6 @@
 			// 
 			// guna2Panel56
 			// 
-			this.guna2Panel56.BackgroundImage = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
 			this.guna2Panel56.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.guna2Panel56.Controls.Add(this.guna2Button24);
 			this.guna2Panel56.Controls.Add(this.guna2Button25);

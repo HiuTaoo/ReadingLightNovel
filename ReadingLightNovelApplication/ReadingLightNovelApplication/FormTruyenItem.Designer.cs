@@ -51,7 +51,6 @@
 			// panelAnh
 			// 
 			this.panelAnh.BackColor = System.Drawing.Color.Transparent;
-			this.panelAnh.BackgroundImage = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
 			this.panelAnh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.panelAnh.Controls.Add(this.guna2CustomGradientPanel1);
 			this.panelAnh.Dock = System.Windows.Forms.DockStyle.Fill;

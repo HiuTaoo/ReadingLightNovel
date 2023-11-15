@@ -122,7 +122,6 @@
             this.btnLogo.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnLogo.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnLogo.Image = global::ReadingLightNovelApplication.Properties.Resources.logo;
             this.btnLogo.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnLogo.ImageRotate = 0F;
             this.btnLogo.Location = new System.Drawing.Point(20, 0);

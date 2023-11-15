@@ -113,7 +113,6 @@ namespace ReadingLightNovelApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< HEAD
         internal static System.Drawing.Bitmap chat {
             get {
                 object obj = ResourceManager.GetObject("chat", resourceCulture);
@@ -127,11 +126,6 @@ namespace ReadingLightNovelApplication.Properties {
         internal static System.Drawing.Bitmap favorite {
             get {
                 object obj = ResourceManager.GetObject("favorite", resourceCulture);
-=======
-        internal static System.Drawing.Bitmap home {
-            get {
-                object obj = ResourceManager.GetObject("home", resourceCulture);
->>>>>>> 87e99b617a6370727cf0ac3bd732ce570c3090e1
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
