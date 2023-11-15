@@ -166,6 +166,12 @@
     <Compile Include="FormSuggest.Designer.cs">
       <DependentUpon>FormSuggest.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTruyenItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTruyenItem.Designer.cs">
+      <DependentUpon>FormTruyenItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="LayoutLogged.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     <EmbeddedResource Include="FormSuggest.resx">
       <DependentUpon>FormSuggest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTruyenItem.resx">
+      <DependentUpon>FormTruyenItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LayoutLogged.resx">
       <DependentUpon>LayoutLogged.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +281,7 @@
     <None Include="Resources\artist.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <None Include="Resources\favorite.png" />
   </ItemGroup>
   <ItemGroup>
@@ -285,6 +295,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\share.png" />
+=======
+    <None Include="bin\Debug\Asset\home.jpg" />
+>>>>>>> 87e99b617a6370727cf0ac3bd732ce570c3090e1
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
