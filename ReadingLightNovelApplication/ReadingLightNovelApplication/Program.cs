@@ -16,7 +16,7 @@ namespace ReadingLightNovelApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Nhap());
+            Application.Run(new FormProperties("TP001"));
         }
     }
 }

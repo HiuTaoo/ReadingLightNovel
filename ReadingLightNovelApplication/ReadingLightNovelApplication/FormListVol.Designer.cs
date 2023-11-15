@@ -29,23 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListVol));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Chương 1: Bắt đầu của sự kết thúc",
-            "15/5/2023"}, -1);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblTenVol = new System.Windows.Forms.Label();
-            this.panelImg = new System.Windows.Forms.Panel();
-            this.imgVol = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panelDetail = new System.Windows.Forms.Panel();
             this.lvChapter = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panelImg = new System.Windows.Forms.Panel();
+            this.imgVol = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblTenVol = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panelImg.SuspendLayout();
             this.panelDetail.SuspendLayout();
+            this.panelImg.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,24 +63,43 @@
             this.panel2.Size = new System.Drawing.Size(949, 300);
             this.panel2.TabIndex = 1;
             // 
-            // panel3
+            // panelDetail
             // 
-            this.panel3.Controls.Add(this.lblTenVol);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(949, 42);
-            this.panel3.TabIndex = 0;
+            this.panelDetail.Controls.Add(this.lvChapter);
+            this.panelDetail.Controls.Add(this.panelImg);
+            this.panelDetail.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDetail.Location = new System.Drawing.Point(0, 42);
+            this.panelDetail.Name = "panelDetail";
+            this.panelDetail.Size = new System.Drawing.Size(949, 236);
+            this.panelDetail.TabIndex = 1;
             // 
-            // lblTenVol
+            // lvChapter
             // 
-            this.lblTenVol.AutoSize = true;
-            this.lblTenVol.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenVol.Location = new System.Drawing.Point(20, 12);
-            this.lblTenVol.Name = "lblTenVol";
-            this.lblTenVol.Size = new System.Drawing.Size(190, 20);
-            this.lblTenVol.TabIndex = 0;
-            this.lblTenVol.Text = "Act1: Hắc hiệp sĩ bí ẩn ";
+            this.lvChapter.BackColor = System.Drawing.SystemColors.Control;
+            this.lvChapter.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.lvChapter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvChapter.FullRowSelect = true;
+            this.lvChapter.GridLines = true;
+            this.lvChapter.HideSelection = false;
+            this.lvChapter.Location = new System.Drawing.Point(170, 0);
+            this.lvChapter.Name = "lvChapter";
+            this.lvChapter.Size = new System.Drawing.Size(779, 236);
+            this.lvChapter.TabIndex = 1;
+            this.lvChapter.UseCompatibleStateImageBehavior = false;
+            this.lvChapter.View = System.Windows.Forms.View.Details;
+            this.lvChapter.DoubleClick += new System.EventHandler(this.lvChapter_DoubleClick);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Danh sách chương";
+            this.columnHeader1.Width = 249;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Ngày đăng";
+            this.columnHeader2.Width = 94;
             // 
             // panelImg
             // 
@@ -108,43 +124,24 @@
             this.imgVol.Size = new System.Drawing.Size(144, 196);
             this.imgVol.TabIndex = 0;
             // 
-            // panelDetail
+            // panel3
             // 
-            this.panelDetail.Controls.Add(this.lvChapter);
-            this.panelDetail.Controls.Add(this.panelImg);
-            this.panelDetail.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDetail.Location = new System.Drawing.Point(0, 42);
-            this.panelDetail.Name = "panelDetail";
-            this.panelDetail.Size = new System.Drawing.Size(949, 236);
-            this.panelDetail.TabIndex = 1;
+            this.panel3.Controls.Add(this.lblTenVol);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(949, 42);
+            this.panel3.TabIndex = 0;
             // 
-            // lvChapter
+            // lblTenVol
             // 
-            this.lvChapter.BackColor = System.Drawing.SystemColors.Control;
-            this.lvChapter.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.lvChapter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvChapter.GridLines = true;
-            this.lvChapter.HideSelection = false;
-            this.lvChapter.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.lvChapter.Location = new System.Drawing.Point(170, 0);
-            this.lvChapter.Name = "lvChapter";
-            this.lvChapter.Size = new System.Drawing.Size(779, 236);
-            this.lvChapter.TabIndex = 1;
-            this.lvChapter.UseCompatibleStateImageBehavior = false;
-            this.lvChapter.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Danh sách chương";
-            this.columnHeader1.Width = 697;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Ngày đăng";
-            this.columnHeader2.Width = 112;
+            this.lblTenVol.AutoSize = true;
+            this.lblTenVol.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenVol.Location = new System.Drawing.Point(20, 12);
+            this.lblTenVol.Name = "lblTenVol";
+            this.lblTenVol.Size = new System.Drawing.Size(190, 20);
+            this.lblTenVol.TabIndex = 0;
+            this.lblTenVol.Text = "Act1: Hắc hiệp sĩ bí ẩn ";
             // 
             // FormListVol
             // 
@@ -156,11 +153,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormListVol";
             this.Text = "FormListVol";
+            this.Load += new System.EventHandler(this.FormListVol_Load);
             this.panel2.ResumeLayout(false);
+            this.panelDetail.ResumeLayout(false);
+            this.panelImg.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panelImg.ResumeLayout(false);
-            this.panelDetail.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

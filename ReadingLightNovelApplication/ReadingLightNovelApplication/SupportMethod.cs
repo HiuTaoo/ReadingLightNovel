@@ -2,47 +2,61 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Xceed.Words.NET;
 
 namespace ReadingLightNovelApplication
 {
      class SupportMethod
     {
-		string strConnect = "Data Source=DESKTOP-EAAUDNC\\USERNAME;" +
+		string strConnect = "Data Source=DESKTOP-51MISFU\\HIUTAO;" +
 			"Initial Catalog=ReadingLightNovel;Integrated Security=True";
-		SqlConnection sqlConnect = null;
+        SqlConnection sqlConnect = null;
+        //Phương thức mở kết nối
+        void OpenConnect()
+        {
+            sqlConnect = new SqlConnection(strConnect);
+            if (sqlConnect.State != ConnectionState.Open)
+                sqlConnect.Open();
+        }
+        //Phương thức đóng kết nối
+        void CloseConnect()
+        {
+            if (sqlConnect.State != ConnectionState.Closed)
+            {
+                sqlConnect.Close();
+                sqlConnect.Dispose();
+            }
+        }
+        //Phương thức thực thi câu lệnh Select trả về một DataTable
+        public DataTable DataReader(string sqlSelct)
+        {
+            DataTable tblData = new DataTable();
+            OpenConnect();
+            SqlDataAdapter sqlData = new SqlDataAdapter(sqlSelct, sqlConnect);
+            sqlData.Fill(tblData);
+            CloseConnect();
+            return tblData;
+        }
 
-		//Connect to database
-		 void OpenConnect()
-		{
-			sqlConnect = new SqlConnection(strConnect);
-			if (sqlConnect.State != ConnectionState.Open)
-				sqlConnect.Open();
-		}
 
-		//Close database
-		 void CloseConnect()
-		{
-			if (sqlConnect.State != ConnectionState.Closed)
-				sqlConnect.Close();
-			sqlConnect.Dispose(); // giải phóng bộ nhớ cho database
-		}
+        //Phương thức thực hiện câu lệnh dạng insert,update,delete
+        public void DataChange(string sql)
+        {
+            OpenConnect();
+            SqlCommand sqlcomma = new SqlCommand();
+            sqlcomma.Connection = sqlConnect;
+            sqlcomma.CommandText = sql;
+            sqlcomma.ExecuteNonQuery();
+            CloseConnect();
+        }
 
-		// Get result 's Query 
-		public DataTable DataReader(string selectCommandText)
-		{
-			DataTable dtBang = new DataTable();
-			OpenConnect();
-			SqlDataAdapter sqlDataAdapte = new SqlDataAdapter(selectCommandText, sqlConnect);
-			sqlDataAdapte.Fill(dtBang);
-			CloseConnect();
-			return dtBang;
-		}
-
-		public List<object> GetValueOfOneField(string selectCommandText)
+        public List<object> GetValueOfOneField(string selectCommandText)
 		{
 			List<object> list = new List<object>();
 			DataTable dataTable = DataReader(selectCommandText);
@@ -57,17 +71,7 @@ namespace ReadingLightNovelApplication
 			return list;
 		}
 
-		//Charge data of database by SQL query command
-		public void DataChange(string commandText)
-		{
-			OpenConnect();
-			SqlCommand sqlcommand = new SqlCommand(commandText);
-			sqlcommand.Connection = sqlConnect;
-			sqlcommand.CommandText = commandText;
-			sqlcommand.ExecuteNonQuery(); // để thực thi câu lệnh SQL không trả về kết quả
-										  // dữ liệu (ví dụ: INSERT, UPDATE, DELETE).
-			CloseConnect();
-		}
+		
 
 		//func Load form into panel
 		public void openChildFormDockTop(Form activeForm, Form formName, Panel panelName)
@@ -84,7 +88,19 @@ namespace ReadingLightNovelApplication
             formName.Show();
         }
 
-		public void openChildFormDockFill(Form activeForm, Form formName, Panel panelName)
+        public void AddChildFormDockTop( Form formName, Panel panelName)
+        {
+            
+            formName.TopLevel = false;
+            formName.FormBorderStyle = FormBorderStyle.None;
+            formName.Dock = DockStyle.Top;
+            panelName.Controls.Add(formName);
+            panelName.Tag = formName;
+            formName.BringToFront();
+            formName.Show();
+        }
+
+        public void openChildFormDockFill(Form activeForm, Form formName, Panel panelName)
 		{
 			if (activeForm != null)
 				activeForm.Close();
@@ -120,12 +136,36 @@ namespace ReadingLightNovelApplication
 			return null;
 		}
 
-		/*public void loadNewChildForm(dynamic formContainer, dynamic formName, Panel panelName)
+        /*public void loadNewChildForm(dynamic formContainer, dynamic formName, Panel panelName)
 		{
 			Form form = formContainer.activeForm;
 			panelName.Controls.Clear();
 			SupportMethod.openChildFormDockTop(form, formName, panelName);
 		}*/
 
-	}
+
+        public  int CountWordsInDocx(string url)
+        {
+            try
+            {
+                using (WebClient webClient = new WebClient())
+                {
+                    // Tải nội dung của tệp tin DOCX từ URL
+                    byte[] docxBytes = webClient.DownloadData(url);
+
+                    // Đếm số từ trong tệp tin DOCX
+                    using (DocX document = DocX.Load(new MemoryStream(docxBytes)))
+                    {
+                        int wordCount = document.Paragraphs.Sum(paragraph => paragraph.Text.Split(' ').Length);
+                        return wordCount;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi: {ex.Message}");
+                return -1;
+            }
+        }
+    }
 }

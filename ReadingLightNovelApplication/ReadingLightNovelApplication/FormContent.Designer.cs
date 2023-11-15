@@ -37,14 +37,14 @@
             this.panelContent.AutoSize = true;
             this.panelContent.Location = new System.Drawing.Point(145, -89);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(952, 628);
+            this.panelContent.Size = new System.Drawing.Size(952, 716);
             this.panelContent.TabIndex = 1;
             // 
             // FormContent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1242, 628);
             this.Controls.Add(this.panelContent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
