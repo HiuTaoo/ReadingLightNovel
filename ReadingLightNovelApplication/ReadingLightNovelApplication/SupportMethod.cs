@@ -60,13 +60,10 @@ namespace ReadingLightNovelApplication
 		{
 			List<object> list = new List<object>();
 			DataTable dataTable = DataReader(selectCommandText);
-			if(dataTable.Columns.Count >= 2)
+			foreach(DataRow row in dataTable.Rows)
 			{
-				return list;
-			}
-			foreach(var row in dataTable.Rows)
-			{
-				list.Add(row);
+
+				list.Add(row[0]);
 			}
 			return list;
 		}
