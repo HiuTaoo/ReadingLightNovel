@@ -342,7 +342,11 @@ The forest ruled by silence one more day…
   <data name="btnNext.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAAA+s9J6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+<<<<<<< HEAD
         vgAADr4B6kKxwAAACGZJREFUeF7t3T9zEzsXgPF8hwwldZqUUGaGkpImdTraVHwBysykoqOi5FvyomDf
+=======
+        vAAADrwBlbxySQAACGZJREFUeF7t3T9zEzsXgPF8hwwldZqUUGaGkpImdTraVHwBysykoqOi5FvyomDf
+>>>>>>> 2ffd87406def4f9067a8f8bca78c71e8671ad6b2
         N8mxnV2vtKs/v2fmGc29xLb2oLPKCh3rAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAACvy8PDw5+7u7s/uP7Eu4o6Li9+/f6eBsBfr8hR3N8HBeZWEf25vbw2I9XgR+93f
         BUbjdRLu/fXrV2pRlhB3N8EBOZaEyS9fvqQW5QgxfyZG4cePH4cGwAvNisUIsX7u58+fU4vemZKEyU+f
@@ -634,7 +638,11 @@ The forest ruled by silence one more day…
   <data name="btnPre.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAAA+s9J6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+<<<<<<< HEAD
         vgAADr4B6kKxwAAABvJJREFUeF7t3b9O3EgAB+D0lHkBilRUNFRpkVKloaLlDZCQtqSjpk4TKU+QJu93
+=======
+        vAAADrwBlbxySQAABvJJREFUeF7t3b9O3EgAB+D0lHkBilRUNFRpkVKloaLlDZCQtqSjpk4TKU+QJu93
+>>>>>>> 2ffd87406def4f9067a8f8bca78c71e8671ad6b2
         hxPnDhjDer3zf75P+mlPuiR38fq3zHjG3g8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAMDxfvz48c/V1dU/T/+4mOnfffv2bfrnYVxfXwfH4W9OT0+HOx4kdHl5GZxk72Uq7NNrt94r31Ie
         Hh6mV9jm/Pw8OKnWpNcT773RwHu5ubmZXmG9+afZUbm9vZ1eu/Hx48fg73hI5hEF7Lfb7YITaGt+/vw5
