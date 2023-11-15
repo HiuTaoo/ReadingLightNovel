@@ -281,7 +281,6 @@
     <None Include="Resources\artist.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <None Include="Resources\favorite.png" />
   </ItemGroup>
   <ItemGroup>
@@ -295,9 +294,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\share.png" />
-=======
     <None Include="bin\Debug\Asset\home.jpg" />
->>>>>>> 87e99b617a6370727cf0ac3bd732ce570c3090e1
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
