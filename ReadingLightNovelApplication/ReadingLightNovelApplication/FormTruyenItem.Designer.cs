@@ -30,10 +30,10 @@
 		{
 			this.guna2Panel55 = new Guna.UI2.WinForms.Guna2Panel();
 			this.panelAnh = new Guna.UI2.WinForms.Guna2Panel();
-			this.guna2Panel57 = new Guna.UI2.WinForms.Guna2Panel();
 			this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-			this.btnTenChuong = new Guna.UI2.WinForms.Guna2Button();
 			this.btnTenTruyen = new Guna.UI2.WinForms.Guna2Button();
+			this.btnTenChuong = new Guna.UI2.WinForms.Guna2Button();
+			this.guna2Panel57 = new Guna.UI2.WinForms.Guna2Panel();
 			this.guna2Panel55.SuspendLayout();
 			this.panelAnh.SuspendLayout();
 			this.guna2CustomGradientPanel1.SuspendLayout();
@@ -59,14 +59,6 @@
 			this.panelAnh.Size = new System.Drawing.Size(172, 246);
 			this.panelAnh.TabIndex = 1;
 			// 
-			// guna2Panel57
-			// 
-			this.guna2Panel57.Dock = System.Windows.Forms.DockStyle.Left;
-			this.guna2Panel57.Location = new System.Drawing.Point(0, 0);
-			this.guna2Panel57.Name = "guna2Panel57";
-			this.guna2Panel57.Size = new System.Drawing.Size(23, 246);
-			this.guna2Panel57.TabIndex = 0;
-			// 
 			// guna2CustomGradientPanel1
 			// 
 			this.guna2CustomGradientPanel1.Controls.Add(this.btnTenTruyen);
@@ -80,6 +72,22 @@
 			this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
 			this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(172, 70);
 			this.guna2CustomGradientPanel1.TabIndex = 0;
+			// 
+			// btnTenTruyen
+			// 
+			this.btnTenTruyen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnTenTruyen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnTenTruyen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnTenTruyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnTenTruyen.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnTenTruyen.FillColor = System.Drawing.Color.Transparent;
+			this.btnTenTruyen.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnTenTruyen.ForeColor = System.Drawing.Color.White;
+			this.btnTenTruyen.Location = new System.Drawing.Point(0, 0);
+			this.btnTenTruyen.Name = "btnTenTruyen";
+			this.btnTenTruyen.Size = new System.Drawing.Size(172, 38);
+			this.btnTenTruyen.TabIndex = 1;
+			this.btnTenTruyen.Text = "guna2Button2";
 			// 
 			// btnTenChuong
 			// 
@@ -97,21 +105,13 @@
 			this.btnTenChuong.TabIndex = 0;
 			this.btnTenChuong.Text = "guna2Button1";
 			// 
-			// btnTenTruyen
+			// guna2Panel57
 			// 
-			this.btnTenTruyen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnTenTruyen.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnTenTruyen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnTenTruyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnTenTruyen.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btnTenTruyen.FillColor = System.Drawing.Color.Transparent;
-			this.btnTenTruyen.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.btnTenTruyen.ForeColor = System.Drawing.Color.White;
-			this.btnTenTruyen.Location = new System.Drawing.Point(0, 0);
-			this.btnTenTruyen.Name = "btnTenTruyen";
-			this.btnTenTruyen.Size = new System.Drawing.Size(172, 38);
-			this.btnTenTruyen.TabIndex = 1;
-			this.btnTenTruyen.Text = "guna2Button2";
+			this.guna2Panel57.Dock = System.Windows.Forms.DockStyle.Left;
+			this.guna2Panel57.Location = new System.Drawing.Point(0, 0);
+			this.guna2Panel57.Name = "guna2Panel57";
+			this.guna2Panel57.Size = new System.Drawing.Size(23, 246);
+			this.guna2Panel57.TabIndex = 0;
 			// 
 			// FormTruyenItem
 			// 

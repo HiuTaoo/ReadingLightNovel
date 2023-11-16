@@ -14,7 +14,7 @@ namespace ReadingLightNovelApplication
 {
      class SupportMethod
     {
-		string strConnect = "Data Source=DESKTOP-51MISFU\\HIUTAO;" +
+		string strConnect = "Data Source=DESKTOP-EAAUDNC\\USERNAME;" +
 			"Initial Catalog=ReadingLightNovel;Integrated Security=True";
         SqlConnection sqlConnect = null;
         //Phương thức mở kết nối
@@ -97,7 +97,19 @@ namespace ReadingLightNovelApplication
             formName.Show();
         }
 
-        public void openChildFormDockFill(Form activeForm, Form formName, Panel panelName)
+		public void AddChildFormDockNone(Form formName, FlowLayoutPanel panelName)
+		{
+
+			formName.TopLevel = false;
+			formName.FormBorderStyle = FormBorderStyle.None;
+			formName.Dock = DockStyle.None;            
+			panelName.Controls.Add(formName);
+			panelName.Tag = formName;
+			formName.BringToFront();
+			formName.Show();
+		}
+
+		public void openChildFormDockFill(Form activeForm, Form formName, Panel panelName)
 		{
 			if (activeForm != null)
 				activeForm.Close();

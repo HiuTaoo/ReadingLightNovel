@@ -23,8 +23,10 @@ namespace ReadingLightNovelApplication
 
 		private void FormHome_Load(object sender, EventArgs e)
 		{
-			
-			loadNoiBat();
+
+
+			loadNoiBat();	
+			loadChuongMoi();
 		}
 
 		private void loadNoiBat()
@@ -33,32 +35,7 @@ namespace ReadingLightNovelApplication
 			
 			foreach(DataRow row in data.Rows)
 			{
-				Guna2Panel panelItem = new Guna2Panel();
-				panelItem.Size = new Size(177, 215);
-				panelItem.Dock = DockStyle.None;
-				panelItem.AutoSize = false;
-				Guna2Panel panelMargin = new Guna2Panel();
-				panelMargin.Dock = DockStyle.Left;
-				panelMargin.Size = new Size(15, 215);
-				panelMargin.BackColor = Color.Transparent;
-				panelItem.Controls.Add(panelMargin);
-				Guna2Panel panelAnh = new Guna2Panel();
-				panelAnh.Dock = DockStyle.Fill;
-				panelAnh.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\" +
-					row[0].ToString() + "\\" + row[2].ToString());
-				panelAnh.BackColor = Color.Black;
-				panelItem.Controls.Add(panelAnh);
-				Guna2Button link = new Guna2Button();
-				link.Dock = DockStyle.Bottom;
-				link.Height = 29;
-				link.Text = row[1].ToString();
-				link.ForeColor = Color.Green;
-				link.BackColor = Color.Transparent;
-				link.FillColor = Color.Transparent;
-				panelAnh.Controls.Add(link);
-											
-				flpTopTruyen.Controls.Add(panelItem);
-				//MessageBox.Show(guna2Button17.Size.ToString());
+				SupportMethod.AddChildFormDockNone(new FormTruyenItemNoiBat(row["MaTacPham"].ToString()), flpTopTruyen);
 			}
 
 
@@ -77,34 +54,26 @@ namespace ReadingLightNovelApplication
 				"\r\nORDER BY BinhLuan.ThoiGian desc");
 			foreach (DataRow row in data.Rows)
 			{
-				Guna2Panel panelItem = new Guna2Panel();
-				panelItem.Size = new Size(181, 79);
-				panelItem.Dock = DockStyle.Top;
-				panelItem.AutoSize = false;
-
-
-				Guna2Panel panelMargin = new Guna2Panel();
-				panelMargin.Dock = DockStyle.Top;
-				panelMargin.Size = new Size(181,18);
-				panelMargin.BackColor = Color.Transparent;
-				panelItem.Controls.Add(panelMargin);
-
-				
-
-				Guna2Button tenTruyen = new Guna2Button();
-				tenTruyen.Dock = DockStyle.Top;
-				tenTruyen.Height = 29;
-				tenTruyen.Text = row["TenTacPham"].ToString();
-				tenTruyen.ForeColor = Color.Green;
-				tenTruyen.BackColor = Color.Transparent;
-				tenTruyen.FillColor = Color.Transparent;
+				//SupportMethod.openChildFormDockTop(activeForm, flpTruyenMoi, new FormTruyenItem()
 				
 			}
 		}
 
 		private void loadChuongMoi()
 		{
-
+			DataTable data = SupportMethod.DataReader("SELECT TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang" +
+				"\r\n" +
+				"FROM TacPham" +
+				"\r\nINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
+				"\r\nINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume" +
+				"\r\nWHERE Chapter.ThoiGianDang = (\r\n    SELECT MAX(c1.ThoiGianDang)" +
+				"\r\n    FROM Chapter c1\r\n    WHERE c1.MaVolume = Chapter.MaVolume\r\n)" +
+				"\r\nGROUP BY TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang" +
+				"\r\nORDER BY Chapter.ThoiGianDang\r\n");
+			foreach (DataRow row in data.Rows)
+			{
+				SupportMethod.AddChildFormDockNone(new FormTruyenItem(row["MaTacPham"].ToString()), this.flpTruyenMoi);
+			}
 		}
 	}
 }

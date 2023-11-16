@@ -22,16 +22,15 @@ namespace ReadingLightNovelApplication
 
 		private void FormTruyenItem_Load(object sender, EventArgs e)
 		{
-			DataTable data = supportMethod.DataReader("SELECT top 1 TacPham.Anh, TacPham.TenTacPham, Chapter.TenChapter" +
+			DataTable data = supportMethod.DataReader("SELECT top 1 TacPham.Anh, TacPham.MaTacPham, TacPham.TenTacPham, Chapter.TenChapter" +
 				"\r\nFROM   dbo.Chapter INNER JOIN" +
 				"\r\n             dbo.Volume ON dbo.Chapter.MaVolume = dbo.Volume.MaVolume INNER JOIN" +
 				"\r\n             dbo.TacPham ON dbo.Volume.MaTacPham = dbo.TacPham.MaTacPham" +
-				"\r\nWHERE TacPham.MaTacPham = N'"+ maTacPham +"'" +
-				"\r\nORDER BY Chapter.ThoiGianDang desc");
+				"\r\nWHERE TacPham.MaTacPham = N'"+ maTacPham +"'");
 			btnTenTruyen.Text = data.Rows[0]["TenTacPham"].ToString();
 			btnTenChuong.Text = data.Rows[0]["TenChapter"].ToString();
 			panelAnh.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
-				+ data.Rows[0]["TenTacPham"].ToString() + "\\" + data.Rows[0]["Anh"].ToString());
+				+ data.Rows[0]["MaTacPham"].ToString() + "\\" + data.Rows[0]["Anh"].ToString());
 		}
 	}
 }
