@@ -32,5 +32,7 @@ namespace ReadingLightNovelApplication
 			panelAnh.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
 				+ data.Rows[0]["MaTacPham"].ToString() + "\\" + data.Rows[0]["Anh"].ToString());
 		}
+
+		
 	}
 }

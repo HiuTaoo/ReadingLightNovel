@@ -24,9 +24,14 @@ namespace ReadingLightNovelApplication
 		private void FormHome_Load(object sender, EventArgs e)
 		{
 
-
-			loadNoiBat();	
-			loadChuongMoi();
+			//cần edit lại UI
+			loadNoiBat();	// done
+			loadChuongMoi(); //done
+			loadCommentRecent(); //done
+			loadLichSu(); // cần sửa lại truy vấn
+			loadTruyenMoi(); //done
+			loadToptheoDoi(); //
+			loadTruyenHoanThanh(); 
 		}
 
 		private void loadNoiBat()
@@ -37,24 +42,40 @@ namespace ReadingLightNovelApplication
 			{
 				SupportMethod.AddChildFormDockNone(new FormTruyenItemNoiBat(row["MaTacPham"].ToString()), flpTopTruyen);
 			}
+		}
 
+		private void loadLichSu() 
+		{
+			DataTable data = SupportMethod.DataReader("SELECT top 6 TacPham.TenTacPham, Volume.TenVolume, Chapter.MaChapter, LichSu.ThoiGian" +
+				"\r\nFROM   dbo.Chapter INNER JOIN" +
+				"\r\n             dbo.LichSu ON dbo.Chapter.MaChapter = dbo.LichSu.MaChapter INNER JOIN" +
+				"\r\n             dbo.Volume ON dbo.Chapter.MaVolume = dbo.Volume.MaVolume INNER JOIN" +
+				"\r\n             dbo.TacPham ON dbo.Volume.MaTacPham = dbo.TacPham.MaTacPham" +
+				"\r\nwhere LichSu.ThoiGian = (select MAX(l1.ThoiGian)" +
+				"\r\n\t\t\t\t\t\t\tfrom LichSu l1 inner join Chapter c1 on c1.MaChapter = l1.MaChapter" +
+				"\r\n\t\t\t\t\t\t\twhere c1.MaVolume = Volume.MaVolume)" +
+				"\r\n\t\tand LichSu.TenDangNhap = N'HiuTao'\t\t\t\t\t" +
+				"\r\ngroup by TacPham.TenTacPham, Volume.TenVolume, Chapter.MaChapter, LichSu.ThoiGian" +
+				"\r\norder by LichSu.ThoiGian desc");
 
-
-
-
+			foreach (DataRow row in data.Rows)
+			{
+				SupportMethod.AddChildFormDockTop(new FormTruyenVuaDocItem(row["MaChapter"].ToString()), panelTruyenVuaDoc);
+			}
 		}
 
 		private void loadCommentRecent()
 		{
-			DataTable data = SupportMethod.DataReader("SELECT TacPham.MaTacPham, TacPham.TenTacPham, BinhLuan.MaBinhLuan, BinhLuan.NoiDung, BinhLuan.Anh, BinhLuan.ThoiGian, [User].TenDangNhap, [User].AnhDaiDien" +
-				"\r\nFROM   dbo.BinhLuan INNER JOIN\r\n             dbo.Chapter ON dbo.BinhLuan.MaChapter = dbo.Chapter.MaChapter INNER JOIN" +
-				"\r\n             dbo.[User] ON dbo.BinhLuan.TenDangNhap = dbo.[User].TenDangNhap INNER JOIN" +
-				"\r\n             dbo.Volume ON dbo.Chapter.MaVolume = dbo.Volume.MaVolume INNER JOIN" +
-				"\r\n             dbo.TacPham ON dbo.Volume.MaTacPham = dbo.TacPham.MaTacPham" +
-				"\r\nORDER BY BinhLuan.ThoiGian desc");
+			DataTable data = SupportMethod.DataReader("select BinhLuanTacPham.MaBinhLuan, TacPham.MaTacPham, TacPham.TenTacPham, [User].TenDangNhap, BinhLuanTacPham.ThoiGian" +
+				"\r\nfrom TacPham inner join BinhLuanTacPham on BinhLuanTacPham.MaTacPham = TacPham.MaTacPham" +
+				"\r\n\tinner join [User] on [User].TenDangNhap = BinhLuanTacPham.TenDangNhap" +
+				"\r\nwhere BinhLuanTacPham.ThoiGian = (select MAX(c1.ThoiGian)" +
+				"\r\n\t\t\t\t\t\t\t\t\tfrom BinhLuanTacPham c1\r\n\t\t\t\t\t\t\t\t\twhere c1.MaTacPham = BinhLuanTacPham.MaTacPham)" +
+				"\r\ngroup by BinhLuanTacPham.MaBinhLuan ,TacPham.MaTacPham, TacPham.TenTacPham, [User].TenDangNhap, BinhLuanTacPham.ThoiGian" +
+				"\r\norder by BinhLuanTacPham.ThoiGian desc");
 			foreach (DataRow row in data.Rows)
 			{
-				//SupportMethod.openChildFormDockTop(activeForm, flpTruyenMoi, new FormTruyenItem()
+				SupportMethod.AddChildFormDockTop(new FormCommentRecent(row["MaBinhLuan"].ToString()), panelCommentRecent);
 				
 			}
 		}
@@ -73,6 +94,49 @@ namespace ReadingLightNovelApplication
 			foreach (DataRow row in data.Rows)
 			{
 				SupportMethod.AddChildFormDockNone(new FormTruyenItem(row["MaTacPham"].ToString()), this.flpTruyenMoi);
+			}
+		}
+
+		private void loadTruyenMoi()
+		{
+			DataTable data = SupportMethod.DataReader("select top 10 TacPham.MaTacPham" +
+				"\r\nfrom TacPham" +
+				"\r\norder by TacPham.ThoiGianTao desc");
+
+			foreach(DataRow row in data.Rows)
+			{
+				SupportMethod.AddChildFormDockNone(new FormTruyenMoiItem(row["MaTacPham"].ToString()), flpTruyenMoiDang);
+			}
+		}
+
+		private void loadToptheoDoi()
+		{
+			DataTable data = SupportMethod.DataReader("select top 10 TacPham.MaTacPham, COUNT(*) as luotThich" +
+				"\r\nfrom YeuThich inner join TacPham on TacPham.MaTacPham = YeuThich.MaTacPham" +
+				"\r\ngroup by TacPham.MaTacPham" +
+				"\r\norder by luotThich desc");
+			int index = 0;
+			foreach (DataRow row in data.Rows)
+			{
+				SupportMethod.AddChildFormDockTop(new FormTheoDoiNhieuItem(row["MaTacPham"].ToString(), index++), panelTopTheoDoi);
+			}
+		}
+
+		private void loadTruyenHoanThanh()
+		{
+			DataTable data = SupportMethod.DataReader("SELECT TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang" +
+				"\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham" +
+				"\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
+				"\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume" +
+				"\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
+				"\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)" +
+				"\r\n\t\t\t\t\t\tand TacPham.TinhTrang = N'Đã Hoàn thành'" +
+				"\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang" +
+				"\r\n\t\t\t\tORDER BY Chapter.ThoiGianDang desc");
+
+			foreach (DataRow row in data.Rows)
+			{
+				SupportMethod.AddChildFormDockNone(new FormTruyenItem(row["MaTacPham"].ToString()), flpTruyenHoanThanh);
 			}
 		}
 	}
