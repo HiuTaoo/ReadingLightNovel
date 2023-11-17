@@ -30,18 +30,20 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelTextArea = new System.Windows.Forms.Panel();
             this.panelTextEdit = new System.Windows.Forms.Panel();
-            this.btnBold = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReload = new System.Windows.Forms.Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.tbComment = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBold = new Guna.UI2.WinForms.Guna2Button();
+            this.panelTextArea = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnDangCmt = new Guna.UI2.WinForms.Guna2Button();
+            this.tbCmt = new System.Windows.Forms.RichTextBox();
+            this.panelCmt = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1.SuspendLayout();
-            this.panelTextArea.SuspendLayout();
             this.panelTextEdit.SuspendLayout();
+            this.panelTextArea.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,22 +67,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tổng bình luận";
             // 
-            // panelTextArea
-            // 
-            this.panelTextArea.AutoSize = true;
-            this.panelTextArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelTextArea.Controls.Add(this.panel4);
-            this.panelTextArea.Controls.Add(this.tbComment);
-            this.panelTextArea.Controls.Add(this.panelTextEdit);
-            this.panelTextArea.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTextArea.Location = new System.Drawing.Point(0, 42);
-            this.panelTextArea.Name = "panelTextArea";
-            this.panelTextArea.Size = new System.Drawing.Size(950, 230);
-            this.panelTextArea.TabIndex = 1;
-            // 
             // panelTextEdit
             // 
             this.panelTextEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTextEdit.Controls.Add(this.btnReload);
             this.panelTextEdit.Controls.Add(this.guna2Button3);
             this.panelTextEdit.Controls.Add(this.guna2Button2);
             this.panelTextEdit.Controls.Add(this.guna2Button1);
@@ -91,50 +81,14 @@
             this.panelTextEdit.Size = new System.Drawing.Size(948, 45);
             this.panelTextEdit.TabIndex = 4;
             // 
-            // btnBold
+            // btnReload
             // 
-            this.btnBold.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBold.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBold.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBold.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBold.FillColor = System.Drawing.SystemColors.Control;
-            this.btnBold.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBold.ForeColor = System.Drawing.Color.Black;
-            this.btnBold.Location = new System.Drawing.Point(29, 0);
-            this.btnBold.Name = "btnBold";
-            this.btnBold.Size = new System.Drawing.Size(96, 43);
-            this.btnBold.TabIndex = 0;
-            this.btnBold.Text = "B";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(140, 0);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(96, 43);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "I";
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(242, -1);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(96, 43);
-            this.guna2Button2.TabIndex = 0;
-            this.guna2Button2.Text = "U";
+            this.btnReload.Location = new System.Drawing.Point(884, 4);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(39, 36);
+            this.btnReload.TabIndex = 1;
+            this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.FormCommentArea_Load);
             // 
             // guna2Button3
             // 
@@ -151,37 +105,73 @@
             this.guna2Button3.TabIndex = 0;
             this.guna2Button3.Text = "S";
             // 
-            // tbComment
+            // guna2Button2
             // 
-            this.tbComment.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbComment.DefaultText = "";
-            this.tbComment.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbComment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbComment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbComment.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbComment.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbComment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbComment.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbComment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbComment.Location = new System.Drawing.Point(0, 45);
-            this.tbComment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbComment.Name = "tbComment";
-            this.tbComment.PasswordChar = '\0';
-            this.tbComment.PlaceholderText = "";
-            this.tbComment.SelectedText = "";
-            this.tbComment.Size = new System.Drawing.Size(948, 136);
-            this.tbComment.TabIndex = 5;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button2.Location = new System.Drawing.Point(242, -1);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(96, 43);
+            this.guna2Button2.TabIndex = 0;
+            this.guna2Button2.Text = "U";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Location = new System.Drawing.Point(140, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(96, 43);
+            this.guna2Button1.TabIndex = 0;
+            this.guna2Button1.Text = "I";
+            // 
+            // btnBold
+            // 
+            this.btnBold.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBold.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBold.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBold.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBold.FillColor = System.Drawing.SystemColors.Control;
+            this.btnBold.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBold.ForeColor = System.Drawing.Color.Black;
+            this.btnBold.Location = new System.Drawing.Point(29, 0);
+            this.btnBold.Name = "btnBold";
+            this.btnBold.Size = new System.Drawing.Size(96, 43);
+            this.btnBold.TabIndex = 0;
+            this.btnBold.Text = "B";
+            // 
+            // panelTextArea
+            // 
+            this.panelTextArea.AutoSize = true;
+            this.panelTextArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTextArea.Controls.Add(this.panel4);
+            this.panelTextArea.Controls.Add(this.tbCmt);
+            this.panelTextArea.Controls.Add(this.panelTextEdit);
+            this.panelTextArea.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTextArea.Location = new System.Drawing.Point(0, 42);
+            this.panelTextArea.Name = "panelTextArea";
+            this.panelTextArea.Size = new System.Drawing.Size(950, 212);
+            this.panelTextArea.TabIndex = 1;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.LightCyan;
             this.panel4.Controls.Add(this.btnDangCmt);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 181);
+            this.panel4.Location = new System.Drawing.Point(0, 163);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(948, 47);
-            this.panel4.TabIndex = 6;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            this.panel4.TabIndex = 7;
             // 
             // btnDangCmt
             // 
@@ -200,20 +190,44 @@
             this.btnDangCmt.TabIndex = 0;
             this.btnDangCmt.Text = "Đăng bình luận";
             // 
+            // tbCmt
+            // 
+            this.tbCmt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbCmt.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCmt.Location = new System.Drawing.Point(0, 45);
+            this.tbCmt.Name = "tbCmt";
+            this.tbCmt.Size = new System.Drawing.Size(948, 118);
+            this.tbCmt.TabIndex = 5;
+            this.tbCmt.Text = "";
+            // 
+            // panelCmt
+            // 
+            this.panelCmt.AutoSize = true;
+            this.panelCmt.BorderColor = System.Drawing.Color.Silver;
+            this.panelCmt.BorderThickness = 1;
+            this.panelCmt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCmt.Location = new System.Drawing.Point(0, 254);
+            this.panelCmt.Name = "panelCmt";
+            this.panelCmt.Size = new System.Drawing.Size(950, 0);
+            this.panelCmt.TabIndex = 2;
+            // 
             // FormCommentArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 1000);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(950, 420);
+            this.Controls.Add(this.panelCmt);
             this.Controls.Add(this.panelTextArea);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCommentArea";
             this.Text = "FormCommentArea";
+            this.Load += new System.EventHandler(this.FormCommentArea_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelTextArea.ResumeLayout(false);
             this.panelTextEdit.ResumeLayout(false);
+            this.panelTextArea.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,14 +238,16 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panelTextArea;
         private System.Windows.Forms.Panel panelTextEdit;
-        private Guna.UI2.WinForms.Guna2Button btnBold;
-        private Guna.UI2.WinForms.Guna2TextBox tbComment;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnBold;
+        private System.Windows.Forms.Panel panelTextArea;
+        private Guna.UI2.WinForms.Guna2Panel panelCmt;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button btnDangCmt;
+        private System.Windows.Forms.RichTextBox tbCmt;
+        private System.Windows.Forms.Button btnReload;
     }
 }

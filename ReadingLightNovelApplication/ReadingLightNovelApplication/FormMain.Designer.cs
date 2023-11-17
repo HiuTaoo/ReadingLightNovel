@@ -33,6 +33,7 @@
             // 
             // panelMain
             // 
+            this.panelMain.AutoScroll = true;
             this.panelMain.BackColor = System.Drawing.Color.Transparent;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.ForeColor = System.Drawing.Color.Black;
@@ -54,7 +55,6 @@
             this.Text = "Light novel";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
-
 
         }
 

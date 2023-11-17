@@ -13,6 +13,10 @@ namespace ReadingLightNovelApplication
     public partial class FormMain : Form
     {
         private Form activeForm = null;
+        public Form getactive()
+        {
+            return activeForm;
+        }
         SupportMethod SupportMethod = new SupportMethod();
 
         public FormMain()
@@ -29,6 +33,7 @@ namespace ReadingLightNovelApplication
         {
             return activeForm;
         }
+
 
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {

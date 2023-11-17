@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LayoutLogged));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelHeaderLayoutLogged = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -53,7 +54,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1260, 58);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // panelHeaderLayoutLogged
             // 
@@ -122,6 +123,7 @@
             this.btnLogo.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnLogo.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnLogo.Image = ((System.Drawing.Image)(resources.GetObject("btnLogo.Image")));
             this.btnLogo.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnLogo.ImageRotate = 0F;
             this.btnLogo.Location = new System.Drawing.Point(20, 0);
@@ -160,13 +162,11 @@
             // 
             // panelNoiDung
             // 
-            this.panelNoiDung.AutoScroll = true;
             this.panelNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNoiDung.Location = new System.Drawing.Point(0, 58);
-            this.panelNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelNoiDung.Name = "panelNoiDung";
             this.panelNoiDung.Size = new System.Drawing.Size(1260, 617);
-            this.panelNoiDung.TabIndex = 1;
+            this.panelNoiDung.TabIndex = 2;
             // 
             // LayoutLogged
             // 
@@ -190,14 +190,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelHeaderLayoutLogged;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private Guna.UI2.WinForms.Guna2Button btnHuongDan;
         private Guna.UI2.WinForms.Guna2Button btnDanhSach;
         private Guna.UI2.WinForms.Guna2ImageButton btnLogo;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelNoiDung;
     }
 }

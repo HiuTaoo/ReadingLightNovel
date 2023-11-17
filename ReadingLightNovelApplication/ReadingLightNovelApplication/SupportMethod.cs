@@ -6,9 +6,9 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Xceed.Words.NET;
 
 namespace ReadingLightNovelApplication
 {
@@ -97,6 +97,19 @@ namespace ReadingLightNovelApplication
             formName.Show();
         }
 
+
+        public void AddChildFormDockFill(Form formName, Panel panelName)
+        {
+
+            formName.TopLevel = false;
+            formName.FormBorderStyle = FormBorderStyle.None;
+            formName.Dock = DockStyle.Fill;
+            panelName.Controls.Add(formName);
+            panelName.Tag = formName;
+            formName.BringToFront();
+            formName.Show();
+        }
+
         public void openChildFormDockFill(Form activeForm, Form formName, Panel panelName)
 		{
 			if (activeForm != null)
@@ -123,7 +136,8 @@ namespace ReadingLightNovelApplication
 			return containerControl;
 		}
 
-		public Panel getPanel(Form formName ,string namepanel)
+
+        public Panel getPanel(Form formName ,string namepanel)
 		{
 			foreach (Panel c in formName.Controls.OfType<Panel>())
 			{
@@ -133,6 +147,8 @@ namespace ReadingLightNovelApplication
 			return null;
 		}
 
+        
+
         /*public void loadNewChildForm(dynamic formContainer, dynamic formName, Panel panelName)
 		{
 			Form form = formContainer.activeForm;
@@ -141,28 +157,58 @@ namespace ReadingLightNovelApplication
 		}*/
 
 
-        public  int CountWordsInDocx(string url)
+        public int CountWordsFromFile(string filePath)
         {
             try
             {
-                using (WebClient webClient = new WebClient())
-                {
-                    // Tải nội dung của tệp tin DOCX từ URL
-                    byte[] docxBytes = webClient.DownloadData(url);
+                int wordCount = 0;
 
-                    // Đếm số từ trong tệp tin DOCX
-                    using (DocX document = DocX.Load(new MemoryStream(docxBytes)))
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    while (!reader.EndOfStream)
                     {
-                        int wordCount = document.Paragraphs.Sum(paragraph => paragraph.Text.Split(' ').Length);
-                        return wordCount;
+                        string line = reader.ReadLine();
+
+                        // Sử dụng Regex.Split để tách từ theo các ký tự không phải là chữ cái
+                        string[] words = Regex.Split(line, @"\W+");
+
+                        // Đếm số từ trong mỗi dòng
+                        wordCount += words.Length;
                     }
                 }
+
+                return wordCount;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Lỗi: {ex.Message}");
+                Console.WriteLine($"An error occurred: {ex.Message}");
                 return -1;
             }
         }
+
+        public string loadContent(string filePath)
+        {
+            try
+            {
+                // Tạo một ứng dụng Word và một tài liệu Word
+                var wordApp = new Microsoft.Office.Interop.Word.Application();
+                var doc = wordApp.Documents.Open(filePath);
+
+                // Lấy nội dung của tài liệu và đóng ứng dụng Word
+                string content = doc.Content.Text;
+                wordApp.Quit();
+
+                return content;
+            }
+            catch (Exception ex)
+            {
+                return 0.ToString();
+            }
+        }
+
+
+
+
+
     }
 }

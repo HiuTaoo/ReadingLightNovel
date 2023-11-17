@@ -36,7 +36,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblContent = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnNext = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -45,6 +46,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelComment = new System.Windows.Forms.Panel();
             this.panelCmt = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.guna2ContextMenuStrip2 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.rtbContent = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelThongTin.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.panelContent.SuspendLayout();
@@ -62,7 +66,7 @@
             this.panelThongTin.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelThongTin.Location = new System.Drawing.Point(0, 0);
             this.panelThongTin.Name = "panelThongTin";
-            this.panelThongTin.Size = new System.Drawing.Size(1260, 95);
+            this.panelThongTin.Size = new System.Drawing.Size(1281, 95);
             this.panelThongTin.TabIndex = 0;
             // 
             // btnDetail
@@ -77,7 +81,7 @@
             this.btnDetail.ForeColor = System.Drawing.Color.Black;
             this.btnDetail.Location = new System.Drawing.Point(0, 68);
             this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(1260, 27);
+            this.btnDetail.Size = new System.Drawing.Size(1281, 27);
             this.btnDetail.TabIndex = 2;
             this.btnDetail.Text = "30 Bình luận - Độ dài: 3,874 từ - Cập nhật: 2 năm";
             // 
@@ -94,7 +98,7 @@
             this.btnChapterName.ForeColor = System.Drawing.Color.Black;
             this.btnChapterName.Location = new System.Drawing.Point(0, 34);
             this.btnChapterName.Name = "btnChapterName";
-            this.btnChapterName.Size = new System.Drawing.Size(1260, 34);
+            this.btnChapterName.Size = new System.Drawing.Size(1281, 34);
             this.btnChapterName.TabIndex = 1;
             this.btnChapterName.Text = "Chương 01: Người Ông đáng kính và lí do để kẻ yếu nhất hướng tới danh hiệu Mạnh n" +
     "hất";
@@ -112,7 +116,7 @@
             this.btnVolName.ForeColor = System.Drawing.Color.Black;
             this.btnVolName.Location = new System.Drawing.Point(0, 0);
             this.btnVolName.Name = "btnVolName";
-            this.btnVolName.Size = new System.Drawing.Size(1260, 34);
+            this.btnVolName.Size = new System.Drawing.Size(1281, 34);
             this.btnVolName.TabIndex = 0;
             this.btnVolName.Text = "Chương 1";
             // 
@@ -121,48 +125,53 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 95);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1260, 36);
+            this.panel1.Size = new System.Drawing.Size(1281, 36);
             this.panel1.TabIndex = 1;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.AutoSize = true;
             this.guna2Panel1.Controls.Add(this.panelContent);
+            this.guna2Panel1.Controls.Add(this.panel5);
+            this.guna2Panel1.Controls.Add(this.panel4);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 131);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1260, 6104);
+            this.guna2Panel1.Size = new System.Drawing.Size(1281, 276);
             this.guna2Panel1.TabIndex = 2;
             // 
             // panelContent
             // 
-            this.panelContent.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panelContent.AutoSize = true;
-            this.panelContent.Controls.Add(this.lblContent);
-            this.panelContent.Location = new System.Drawing.Point(100, 1);
+            this.panelContent.Controls.Add(this.rtbContent);
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelContent.Location = new System.Drawing.Point(150, 0);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1060, 6100);
-            this.panelContent.TabIndex = 0;
+            this.panelContent.Size = new System.Drawing.Size(981, 276);
+            this.panelContent.TabIndex = 2;
             // 
-            // lblContent
+            // panel5
             // 
-            this.lblContent.AutoSize = true;
-            this.lblContent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblContent.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContent.Location = new System.Drawing.Point(0, 0);
-            this.lblContent.MaximumSize = new System.Drawing.Size(1060, 0);
-            this.lblContent.Name = "lblContent";
-            this.lblContent.Size = new System.Drawing.Size(1056, 4660);
-            this.lblContent.TabIndex = 0;
-            this.lblContent.Text = resources.GetString("lblContent.Text");
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(1131, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(150, 276);
+            this.panel5.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(150, 276);
+            this.panel4.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.guna2Panel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 6235);
+            this.panel2.Location = new System.Drawing.Point(0, 407);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1260, 59);
+            this.panel2.Size = new System.Drawing.Size(1281, 59);
             this.panel2.TabIndex = 3;
             // 
             // guna2Panel2
@@ -226,33 +235,90 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 6294);
+            this.panel3.Location = new System.Drawing.Point(0, 466);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1260, 19);
+            this.panel3.Size = new System.Drawing.Size(1281, 19);
             this.panel3.TabIndex = 4;
             // 
             // panelComment
             // 
+            this.panelComment.AutoSize = true;
             this.panelComment.Controls.Add(this.panelCmt);
             this.panelComment.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelComment.Location = new System.Drawing.Point(0, 6313);
+            this.panelComment.Location = new System.Drawing.Point(0, 485);
             this.panelComment.Name = "panelComment";
-            this.panelComment.Size = new System.Drawing.Size(1260, 207);
+            this.panelComment.Size = new System.Drawing.Size(1281, 203);
             this.panelComment.TabIndex = 5;
             // 
             // panelCmt
             // 
             this.panelCmt.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panelCmt.AutoSize = true;
             this.panelCmt.Location = new System.Drawing.Point(100, 3);
             this.panelCmt.Name = "panelCmt";
             this.panelCmt.Size = new System.Drawing.Size(1060, 197);
             this.panelCmt.TabIndex = 1;
             // 
+            // guna2ContextMenuStrip1
+            // 
+            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // guna2ContextMenuStrip2
+            // 
+            this.guna2ContextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.guna2ContextMenuStrip2.Name = "guna2ContextMenuStrip2";
+            this.guna2ContextMenuStrip2.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip2.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip2.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip2.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip2.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip2.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip2.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip2.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip2.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
+            // rtbContent
+            // 
+            this.rtbContent.AutoSize = true;
+            this.rtbContent.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.rtbContent.DefaultText = "";
+            this.rtbContent.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.rtbContent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.rtbContent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.rtbContent.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.rtbContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbContent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(228)))), ((int)(((byte)(211)))));
+            this.rtbContent.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rtbContent.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.rtbContent.ForeColor = System.Drawing.Color.Black;
+            this.rtbContent.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rtbContent.Location = new System.Drawing.Point(0, 0);
+            this.rtbContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbContent.Multiline = true;
+            this.rtbContent.Name = "rtbContent";
+            this.rtbContent.PasswordChar = '\0';
+            this.rtbContent.PlaceholderText = "";
+            this.rtbContent.ReadOnly = true;
+            this.rtbContent.SelectedText = "";
+            this.rtbContent.Size = new System.Drawing.Size(981, 276);
+            this.rtbContent.TabIndex = 0;
+            // 
             // FormMainReading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(228)))), ((int)(((byte)(211)))));
             this.ClientSize = new System.Drawing.Size(1281, 675);
@@ -262,18 +328,19 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelThongTin);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMainReading";
             this.Text = "FormMainReading";
+            this.Load += new System.EventHandler(this.FormMainReading_Load);
             this.panelThongTin.ResumeLayout(false);
             this.panelThongTin.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             this.panelContent.ResumeLayout(false);
             this.panelContent.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.panelComment.ResumeLayout(false);
+            this.panelComment.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,8 +354,6 @@
         private Guna.UI2.WinForms.Guna2Button btnDetail;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel panelContent;
-        private System.Windows.Forms.Label lblContent;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2ImageButton btnNext;
@@ -297,5 +362,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panelComment;
         private Guna.UI2.WinForms.Guna2Panel panelCmt;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
+        private Guna.UI2.WinForms.Guna2Panel panelContent;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip2;
+        private Guna.UI2.WinForms.Guna2TextBox rtbContent;
     }
 }

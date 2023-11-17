@@ -70,7 +70,7 @@
             this.guna2Panel39 = new Guna.UI2.WinForms.Guna2Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Panel40 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnShare = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel41 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel42 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel43 = new Guna.UI2.WinForms.Guna2Panel();
@@ -78,7 +78,7 @@
             this.guna2Panel32 = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel33 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnBinhLuan = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel34 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel35 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel36 = new Guna.UI2.WinForms.Guna2Panel();
@@ -86,7 +86,7 @@
             this.guna2Panel25 = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel26 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnMucLuc = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel27 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel28 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel29 = new Guna.UI2.WinForms.Guna2Panel();
@@ -94,7 +94,7 @@
             this.guna2Panel18 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel19 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnVote = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel20 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel21 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel22 = new Guna.UI2.WinForms.Guna2Panel();
@@ -102,7 +102,7 @@
             this.panelButton = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnYeuThich = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
@@ -128,6 +128,8 @@
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panelListVol = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panelCmt = new Guna.UI2.WinForms.Guna2Panel();
             this.panel9.SuspendLayout();
             this.guna2Panel51.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -397,7 +399,6 @@
             // 
             // guna2Panel5
             // 
-            this.guna2Panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel5.Location = new System.Drawing.Point(203, 0);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(49, 385);
@@ -583,7 +584,7 @@
             // 
             // guna2Panel40
             // 
-            this.guna2Panel40.Controls.Add(this.guna2ImageButton6);
+            this.guna2Panel40.Controls.Add(this.btnShare);
             this.guna2Panel40.Controls.Add(this.guna2Panel41);
             this.guna2Panel40.Controls.Add(this.guna2Panel42);
             this.guna2Panel40.Controls.Add(this.guna2Panel43);
@@ -594,20 +595,20 @@
             this.guna2Panel40.Size = new System.Drawing.Size(70, 61);
             this.guna2Panel40.TabIndex = 0;
             // 
-            // guna2ImageButton6
+            // btnShare
             // 
-            this.guna2ImageButton6.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2ImageButton6.HoverState.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton6.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton6.Image")));
-            this.guna2ImageButton6.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton6.ImageRotate = 0F;
-            this.guna2ImageButton6.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton6.Location = new System.Drawing.Point(10, 10);
-            this.guna2ImageButton6.Name = "guna2ImageButton6";
-            this.guna2ImageButton6.PressedState.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton6.Size = new System.Drawing.Size(47, 41);
-            this.guna2ImageButton6.TabIndex = 4;
+            this.btnShare.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnShare.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnShare.HoverState.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnShare.Image = ((System.Drawing.Image)(resources.GetObject("btnShare.Image")));
+            this.btnShare.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnShare.ImageRotate = 0F;
+            this.btnShare.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnShare.Location = new System.Drawing.Point(10, 10);
+            this.btnShare.Name = "btnShare";
+            this.btnShare.PressedState.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnShare.Size = new System.Drawing.Size(47, 41);
+            this.btnShare.TabIndex = 4;
             // 
             // guna2Panel41
             // 
@@ -664,7 +665,7 @@
             // 
             // guna2Panel33
             // 
-            this.guna2Panel33.Controls.Add(this.guna2ImageButton5);
+            this.guna2Panel33.Controls.Add(this.btnBinhLuan);
             this.guna2Panel33.Controls.Add(this.guna2Panel34);
             this.guna2Panel33.Controls.Add(this.guna2Panel35);
             this.guna2Panel33.Controls.Add(this.guna2Panel36);
@@ -675,20 +676,20 @@
             this.guna2Panel33.Size = new System.Drawing.Size(70, 61);
             this.guna2Panel33.TabIndex = 0;
             // 
-            // guna2ImageButton5
+            // btnBinhLuan
             // 
-            this.guna2ImageButton5.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2ImageButton5.HoverState.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton5.Image")));
-            this.guna2ImageButton5.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton5.ImageRotate = 0F;
-            this.guna2ImageButton5.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton5.Location = new System.Drawing.Point(10, 10);
-            this.guna2ImageButton5.Name = "guna2ImageButton5";
-            this.guna2ImageButton5.PressedState.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton5.Size = new System.Drawing.Size(47, 41);
-            this.guna2ImageButton5.TabIndex = 4;
+            this.btnBinhLuan.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnBinhLuan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBinhLuan.HoverState.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnBinhLuan.Image = ((System.Drawing.Image)(resources.GetObject("btnBinhLuan.Image")));
+            this.btnBinhLuan.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnBinhLuan.ImageRotate = 0F;
+            this.btnBinhLuan.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnBinhLuan.Location = new System.Drawing.Point(10, 10);
+            this.btnBinhLuan.Name = "btnBinhLuan";
+            this.btnBinhLuan.PressedState.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnBinhLuan.Size = new System.Drawing.Size(47, 41);
+            this.btnBinhLuan.TabIndex = 4;
             // 
             // guna2Panel34
             // 
@@ -745,7 +746,7 @@
             // 
             // guna2Panel26
             // 
-            this.guna2Panel26.Controls.Add(this.guna2ImageButton4);
+            this.guna2Panel26.Controls.Add(this.btnMucLuc);
             this.guna2Panel26.Controls.Add(this.guna2Panel27);
             this.guna2Panel26.Controls.Add(this.guna2Panel28);
             this.guna2Panel26.Controls.Add(this.guna2Panel29);
@@ -756,20 +757,20 @@
             this.guna2Panel26.Size = new System.Drawing.Size(70, 61);
             this.guna2Panel26.TabIndex = 0;
             // 
-            // guna2ImageButton4
+            // btnMucLuc
             // 
-            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(48, 48);
-            this.guna2ImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton4.Image")));
-            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton4.ImageRotate = 0F;
-            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(48, 48);
-            this.guna2ImageButton4.Location = new System.Drawing.Point(10, 10);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(48, 48);
-            this.guna2ImageButton4.Size = new System.Drawing.Size(47, 41);
-            this.guna2ImageButton4.TabIndex = 4;
+            this.btnMucLuc.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnMucLuc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnMucLuc.HoverState.ImageSize = new System.Drawing.Size(48, 48);
+            this.btnMucLuc.Image = ((System.Drawing.Image)(resources.GetObject("btnMucLuc.Image")));
+            this.btnMucLuc.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnMucLuc.ImageRotate = 0F;
+            this.btnMucLuc.ImageSize = new System.Drawing.Size(48, 48);
+            this.btnMucLuc.Location = new System.Drawing.Point(10, 10);
+            this.btnMucLuc.Name = "btnMucLuc";
+            this.btnMucLuc.PressedState.ImageSize = new System.Drawing.Size(48, 48);
+            this.btnMucLuc.Size = new System.Drawing.Size(47, 41);
+            this.btnMucLuc.TabIndex = 4;
             // 
             // guna2Panel27
             // 
@@ -826,7 +827,7 @@
             // 
             // guna2Panel19
             // 
-            this.guna2Panel19.Controls.Add(this.guna2ImageButton3);
+            this.guna2Panel19.Controls.Add(this.btnVote);
             this.guna2Panel19.Controls.Add(this.guna2Panel20);
             this.guna2Panel19.Controls.Add(this.guna2Panel21);
             this.guna2Panel19.Controls.Add(this.guna2Panel22);
@@ -837,20 +838,20 @@
             this.guna2Panel19.Size = new System.Drawing.Size(70, 61);
             this.guna2Panel19.TabIndex = 0;
             // 
-            // guna2ImageButton3
+            // btnVote
             // 
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton3.Image")));
-            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton3.ImageRotate = 0F;
-            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton3.Location = new System.Drawing.Point(10, 10);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton3.Size = new System.Drawing.Size(47, 41);
-            this.guna2ImageButton3.TabIndex = 4;
+            this.btnVote.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnVote.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVote.HoverState.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnVote.Image = ((System.Drawing.Image)(resources.GetObject("btnVote.Image")));
+            this.btnVote.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnVote.ImageRotate = 0F;
+            this.btnVote.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnVote.Location = new System.Drawing.Point(10, 10);
+            this.btnVote.Name = "btnVote";
+            this.btnVote.PressedState.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnVote.Size = new System.Drawing.Size(47, 41);
+            this.btnVote.TabIndex = 4;
             // 
             // guna2Panel20
             // 
@@ -908,7 +909,7 @@
             // 
             // guna2Panel12
             // 
-            this.guna2Panel12.Controls.Add(this.guna2ImageButton2);
+            this.guna2Panel12.Controls.Add(this.btnYeuThich);
             this.guna2Panel12.Controls.Add(this.guna2Panel16);
             this.guna2Panel12.Controls.Add(this.guna2Panel15);
             this.guna2Panel12.Controls.Add(this.guna2Panel14);
@@ -919,20 +920,20 @@
             this.guna2Panel12.Size = new System.Drawing.Size(91, 61);
             this.guna2Panel12.TabIndex = 0;
             // 
-            // guna2ImageButton2
+            // btnYeuThich
             // 
-            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
-            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton2.ImageRotate = 0F;
-            this.guna2ImageButton2.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton2.Location = new System.Drawing.Point(14, 10);
-            this.guna2ImageButton2.Name = "guna2ImageButton2";
-            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton2.Size = new System.Drawing.Size(61, 41);
-            this.guna2ImageButton2.TabIndex = 4;
+            this.btnYeuThich.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnYeuThich.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnYeuThich.HoverState.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnYeuThich.Image = ((System.Drawing.Image)(resources.GetObject("btnYeuThich.Image")));
+            this.btnYeuThich.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnYeuThich.ImageRotate = 0F;
+            this.btnYeuThich.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnYeuThich.Location = new System.Drawing.Point(14, 10);
+            this.btnYeuThich.Name = "btnYeuThich";
+            this.btnYeuThich.PressedState.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnYeuThich.Size = new System.Drawing.Size(61, 41);
+            this.btnYeuThich.TabIndex = 4;
             // 
             // guna2Panel16
             // 
@@ -1116,7 +1117,6 @@
             // 
             // panelImg
             // 
-            this.panelImg.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelImg.Controls.Add(this.btnAnh);
             this.panelImg.Controls.Add(this.guna2Panel1);
             this.panelImg.Controls.Add(this.btnTheLoai);
@@ -1192,6 +1192,23 @@
             this.panelListVol.Size = new System.Drawing.Size(952, 0);
             this.panelListVol.TabIndex = 13;
             // 
+            // panel19
+            // 
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel19.Location = new System.Drawing.Point(0, 807);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(952, 21);
+            this.panel19.TabIndex = 14;
+            // 
+            // panelCmt
+            // 
+            this.panelCmt.AutoSize = true;
+            this.panelCmt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCmt.Location = new System.Drawing.Point(0, 828);
+            this.panelCmt.Name = "panelCmt";
+            this.panelCmt.Size = new System.Drawing.Size(952, 0);
+            this.panelCmt.TabIndex = 15;
+            // 
             // FormProperties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1199,6 +1216,8 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(952, 982);
+            this.Controls.Add(this.panelCmt);
+            this.Controls.Add(this.panel19);
             this.Controls.Add(this.panelListVol);
             this.Controls.Add(this.panel18);
             this.Controls.Add(this.panelView);
@@ -1336,7 +1355,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel39;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel40;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton6;
+        private Guna.UI2.WinForms.Guna2ImageButton btnShare;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel41;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel42;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel43;
@@ -1344,7 +1363,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel32;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel33;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
+        private Guna.UI2.WinForms.Guna2ImageButton btnBinhLuan;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel34;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel35;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel36;
@@ -1352,7 +1371,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel25;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel26;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
+        private Guna.UI2.WinForms.Guna2ImageButton btnMucLuc;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel27;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel28;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel29;
@@ -1360,7 +1379,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel18;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel19;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
+        private Guna.UI2.WinForms.Guna2ImageButton btnVote;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel20;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel21;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel22;
@@ -1368,7 +1387,7 @@
         private Guna.UI2.WinForms.Guna2Panel panelButton;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
+        private Guna.UI2.WinForms.Guna2ImageButton btnYeuThich;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel16;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel14;
@@ -1386,5 +1405,7 @@
         private Guna.UI2.WinForms.Guna2Panel panelTacGia;
         private System.Windows.Forms.Label lblTacGia;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel19;
+        private Guna.UI2.WinForms.Guna2Panel panelCmt;
     }
 }
