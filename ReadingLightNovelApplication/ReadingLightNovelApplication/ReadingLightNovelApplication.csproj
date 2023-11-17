@@ -86,6 +86,12 @@
     <Compile Include="FormCommentArea.Designer.cs">
       <DependentUpon>FormCommentArea.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCommentRecent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCommentRecent.Designer.cs">
+      <DependentUpon>FormCommentRecent.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormContent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,11 +176,35 @@
     <Compile Include="FormSuggest.Designer.cs">
       <DependentUpon>FormSuggest.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTheoDoiNhieuItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTheoDoiNhieuItem.Designer.cs">
+      <DependentUpon>FormTheoDoiNhieuItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTruyenItem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTruyenItem.Designer.cs">
       <DependentUpon>FormTruyenItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTruyenItemNoiBat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTruyenItemNoiBat.Designer.cs">
+      <DependentUpon>FormTruyenItemNoiBat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTruyenMoiItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTruyenMoiItem.Designer.cs">
+      <DependentUpon>FormTruyenMoiItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTruyenVuaDocItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTruyenVuaDocItem.Designer.cs">
+      <DependentUpon>FormTruyenVuaDocItem.cs</DependentUpon>
     </Compile>
     <Compile Include="LayoutLogged.cs">
       <SubType>Form</SubType>
@@ -201,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCommentArea.resx">
       <DependentUpon>FormCommentArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommentRecent.resx">
+      <DependentUpon>FormCommentRecent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormContent.resx">
       <DependentUpon>FormContent.cs</DependentUpon>
@@ -241,8 +274,20 @@
     <EmbeddedResource Include="FormSuggest.resx">
       <DependentUpon>FormSuggest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTheoDoiNhieuItem.resx">
+      <DependentUpon>FormTheoDoiNhieuItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTruyenItem.resx">
       <DependentUpon>FormTruyenItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTruyenItemNoiBat.resx">
+      <DependentUpon>FormTruyenItemNoiBat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTruyenMoiItem.resx">
+      <DependentUpon>FormTruyenMoiItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTruyenVuaDocItem.resx">
+      <DependentUpon>FormTruyenVuaDocItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LayoutLogged.resx">
       <DependentUpon>LayoutLogged.cs</DependentUpon>

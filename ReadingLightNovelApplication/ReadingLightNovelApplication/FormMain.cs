@@ -18,6 +18,9 @@ namespace ReadingLightNovelApplication
             return activeForm;
         }
         SupportMethod SupportMethod = new SupportMethod();
+        public static bool isDarkMode = false;
+        public static string TenDangNhap = string.Empty;
+        public static bool isRemember;
 
         public FormMain()
         {
