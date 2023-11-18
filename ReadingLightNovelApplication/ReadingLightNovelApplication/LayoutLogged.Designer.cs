@@ -39,6 +39,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelNoiDung = new System.Windows.Forms.Panel();
+            this.panelLogin = new Guna.UI2.WinForms.Guna2Panel();
             this.panel1.SuspendLayout();
             this.panelHeaderLayoutLogged.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             // panelHeaderLayoutLogged
             // 
             this.panelHeaderLayoutLogged.BackColor = System.Drawing.Color.Transparent;
+            this.panelHeaderLayoutLogged.Controls.Add(this.panelLogin);
             this.panelHeaderLayoutLogged.Controls.Add(this.panel5);
             this.panelHeaderLayoutLogged.Controls.Add(this.btnHuongDan);
             this.panelHeaderLayoutLogged.Controls.Add(this.btnDanhSach);
@@ -168,6 +170,14 @@
             this.panelNoiDung.Size = new System.Drawing.Size(1260, 617);
             this.panelNoiDung.TabIndex = 2;
             // 
+            // panelLogin
+            // 
+            this.panelLogin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelLogin.Location = new System.Drawing.Point(1012, 0);
+            this.panelLogin.Name = "panelLogin";
+            this.panelLogin.Size = new System.Drawing.Size(225, 38);
+            this.panelLogin.TabIndex = 20;
+            // 
             // LayoutLogged
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -199,5 +209,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelNoiDung;
+        private Guna.UI2.WinForms.Guna2Panel panelLogin;
     }
 }

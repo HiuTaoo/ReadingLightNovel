@@ -27,6 +27,14 @@ namespace ReadingLightNovelApplication
         private void LayoutLogged_Load(object sender, EventArgs e)
         {
             SupportMethod.openChildFormDockFill(this.activeForm, new FormHome(), this.panelNoiDung);
+            if(FormMain.isLogin == true)
+            {
+                SupportMethod.AddChildFormDockFill(new FormLogin(FormMain.TenDangNhap), this.panelLogin);
+            }
+            else
+            {
+                SupportMethod.AddChildFormDockFill(new FormLogout(), this.panelLogin);
+            }
         }
     }
 }

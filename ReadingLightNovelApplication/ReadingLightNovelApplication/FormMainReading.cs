@@ -22,7 +22,8 @@ namespace ReadingLightNovelApplication
             InitializeComponent();
             ma = matacpham;
             ngay = ngaydang;
-        }   
+        }
+
        
 
         private void FormMainReading_Load(object sender, EventArgs e)
@@ -57,7 +58,7 @@ namespace ReadingLightNovelApplication
             dt1.Dispose();
             string urlContent = Application.StartupPath + "\\Asset\\DataLightNovel\\"
                         + dt.Rows[0]["MaTacPham"].ToString() + "\\" + dt.Rows[0]["TenVolume"].ToString() + "\\" + dt.Rows[0]["Nguon"].ToString();
-            rtbContent.Text = dataload.loadContent(urlContent);
+            lbContent.Text = dataload.loadContent(urlContent);
 
             DataTable dt3 = dataload.DataReader("select TacPham.MaTacPham " +
                 "\r\nfrom Chapter inner join Volume on Volume.MaVolume = Chapter.MaVolume" +

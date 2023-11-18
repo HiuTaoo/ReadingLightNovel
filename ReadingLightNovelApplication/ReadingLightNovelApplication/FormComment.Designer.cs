@@ -30,11 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.lblComment = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pbAvt = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.guna2Panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvt)).BeginInit();
@@ -62,6 +62,15 @@
             this.guna2Panel1.Size = new System.Drawing.Size(950, 77);
             this.guna2Panel1.TabIndex = 1;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(884, 9);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(38, 34);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // lblComment
             // 
             this.lblComment.AutoSize = true;
@@ -74,7 +83,6 @@
             // 
             // lblUserName
             // 
-            this.lblUserName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.Location = new System.Drawing.Point(105, 14);
@@ -108,15 +116,6 @@
             this.pbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAvt.TabIndex = 4;
             this.pbAvt.TabStop = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(884, 9);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(38, 34);
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FormComment
             // 

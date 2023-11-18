@@ -21,6 +21,7 @@ namespace ReadingLightNovelApplication
         public static bool isDarkMode = false;
         public static string TenDangNhap = string.Empty;
         public static bool isRemember;
+        public static bool isLogin = false;
 
         public FormMain()
         {
