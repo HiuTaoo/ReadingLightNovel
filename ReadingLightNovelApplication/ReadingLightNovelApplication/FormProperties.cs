@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -19,11 +20,19 @@ namespace ReadingLightNovelApplication
         string MaTacPham;
         private Form activeForm = null;
 
+<<<<<<< HEAD
         public FormProperties(string MaTacPham)
         {
             InitializeComponent();
             this.MaTacPham = MaTacPham;
             loadData(MaTacPham);
+=======
+        public FormProperties(string matp)
+        {
+            InitializeComponent();
+            ma = matp;
+            loadData(ma);
+>>>>>>> 91e24ede06a4b45a03a20a3c9d681c4595ebb3f4
         }
         public void loadData(string ma)
         {
@@ -33,7 +42,7 @@ namespace ReadingLightNovelApplication
             if (dtTruyen.Rows.Count > 0)
             {
                 lblTenTruyen.Text = dtTruyen.Rows[0]["TenTacPham"].ToString();
-                Image image = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\" 
+                System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\" 
                     + dtTruyen.Rows[0]["MaTacPham"].ToString() + "\\" + dtTruyen.Rows[0]["Anh"].ToString());
                 btnAnh.Image = image;
                 lblAnotherName.Text = dtTruyen.Rows[0]["TenKhac"].ToString();
@@ -53,6 +62,7 @@ namespace ReadingLightNovelApplication
                 {
                     dataload.AddChildFormDockTop( new FormListVol(dt2.Rows[i]["MaVolume"].ToString()), this.panelListVol);
                 }
+                dt2.Dispose();
 
             }
             
@@ -61,12 +71,14 @@ namespace ReadingLightNovelApplication
                 "\r\ninner join BinhChon on TacPham.MaTacPham = BinhChon.MaTacPham" +
                 "\r\nwhere TacPham.MaTacPham = '" + ma +"'");
             lvlRating.Text = dt3.Rows[0][0].ToString() + "/5";
+            dt3.Dispose();
 
             DataTable dt4 = dataload.DataReader("select sum(Chapter.LuotXem)" +
                 "\r\nfrom Volume full outer join Chapter on Chapter.MaVolume = Volume.MaVolume" +
                 "\r\nfull outer join TacPham on TacPham.MaTacPham = Volume.MaTacPham" +
                 "\r\nwhere TacPham.MaTacPham = '"+ ma +"' ");
             lblView.Text = dt4.Rows[0][0].ToString();
+            dt4.Dispose();
 
             DataTable dt5 = dataload.DataReader("select * \r\nfrom TacPham inner join TacGia on TacGia.MaTacGia =TacPham.MaTacGia" +
                 "\r\ninner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = TacPham.MaTacPham" +
@@ -86,6 +98,29 @@ namespace ReadingLightNovelApplication
                 btn.BorderThickness = 1;
                 panelTheLoai.Controls.Add(btn);
             }
+            dt5.Dispose();
+
+            
+            DataTable dt6 = dataload.DataReader("select * \r\nfrom TacPham " +
+                "\r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
+                "\r\ninner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
+                "\r\nwhere TacPham.MaTacPham = '" + ma +"'");
+            if(dt6.Rows.Count > 0)
+            {
+                int sotu = 0;
+                foreach (DataRow dr in dt6.Rows)
+                {
+                    sotu += dataload.CountWordsFromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
+                        + dr["MaTacPham"].ToString() + "\\" + dr["TenVolume"].ToString() + "\\" + dr["Nguon"].ToString());
+                }
+                lblSoTu.Text = sotu.ToString();
+            }
+            dt6.Dispose();
+
+            dataload.AddChildFormDockTop(new FormCommentArea(ma), this.panelCmt);
+
+
+
         }
 
         
@@ -100,6 +135,6 @@ namespace ReadingLightNovelApplication
             
         }
 
-        
+      
     }
 }

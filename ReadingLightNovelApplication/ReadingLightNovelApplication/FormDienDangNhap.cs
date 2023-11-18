@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,64 @@ namespace ReadingLightNovelApplication
 {
 	public partial class FormDienDangNhap : Form
 	{
-		public FormDienDangNhap()
+        SupportMethod SupportMethod = new SupportMethod();
+        public FormDienDangNhap()
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void btnQuenMatKhau_Click(object sender, EventArgs e)
+        {
+
+            FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
+            Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
+            SupportMethod.openChildFormDockFill(formMain.getactive(), new FormDatLaiMatKhauB1(), panel1);
+        }
+
+        
+
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+            tbPassword.PasswordChar = '*';
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+                tbPassword.PasswordChar = '\0';
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            DataTable dt = SupportMethod.DataReader("select * \r\nfrom [User]");
+            if (tbUserName.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn chưa nhập tên đăng nhập!");
+            }
+            else
+            {
+                if (tbPassword.Text.Trim() == "")
+                    MessageBox.Show("Bạn chưa nhập mật khẩu!");
+                else
+                {
+                    foreach( DataRow c in dt.Rows)
+                    {
+                        if (tbUserName.Text == c["TenDangNhap"].ToString())
+                        {
+                            if (tbPassword.Text == c["MatKhau"].ToString())
+                            {
+                                FormMain.TenDangNhap = c["TenDangNhap"].ToString();
+                                FormMain.isLogin = true;
+                                FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
+                                Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
+                                SupportMethod.openChildFormDockFill(formMain.getactive(), new FormMain(), panel1);
+                            }
+                            else
+                                MessageBox.Show("Mật khẩu không chính xác!");
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
 }

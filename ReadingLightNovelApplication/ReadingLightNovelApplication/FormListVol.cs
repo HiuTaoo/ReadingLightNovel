@@ -23,8 +23,8 @@ namespace ReadingLightNovelApplication
         private void FormListVol_Load(object sender, EventArgs e)
         {
             DataTable dtbase = dataload.DataReader("select * \r\nfrom Volume inner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
-                "\r\nwhere Volume.MaVolume = '"+ ma +"'");
-            if(dtbase.Rows.Count != 0)
+                "\r\nwhere Volume.MaVolume = '" + ma + "'");
+            if (dtbase.Rows.Count != 0)
             {
                 lblTenVol.Text = dtbase.Rows[0]["TenVolume"].ToString();
                 Image image = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
@@ -42,17 +42,21 @@ namespace ReadingLightNovelApplication
             {
                 DataTable dt = dataload.DataReader("select Volume.Anh, Volume.TenVolume, Volume.MaTacPham, Volume.Stt " +
                     "\r\nfrom TacPham inner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
-                    "\r\nwhere Volume.MaVolume = '"+ ma +"' ");
+                    "\r\nwhere Volume.MaVolume = '" + ma + "' ");
                 lblTenVol.Text = dt.Rows[0]["TenVolume"].ToString();
                 Image image = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\" + dt.Rows[0]["MaTacPham"].ToString() + "\\" + dt.Rows[0]["TenVolume"].ToString() + "\\" + dt.Rows[0]["Anh"].ToString());
                 imgVol.Image = image;
             }
-            
+
 
         }
 
-        private void lvChapter_DoubleClick(object sender, EventArgs e)
+        
+        private void lvChapter_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            FormMain formMain  = dataload.getFormMain(this) as FormMain;
+            Panel panel1 = dataload.getPanel(formMain, "panelMain");
+            dataload.openChildFormDockFill(formMain.getactive(),new FormMainReading(lvChapter.SelectedItems[0].Text, lvChapter.SelectedItems[0].SubItems[1].Text), panel1);
             
         }
 

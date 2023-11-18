@@ -89,7 +89,7 @@
             this.lvChapter.TabIndex = 1;
             this.lvChapter.UseCompatibleStateImageBehavior = false;
             this.lvChapter.View = System.Windows.Forms.View.Details;
-            this.lvChapter.DoubleClick += new System.EventHandler(this.lvChapter_DoubleClick);
+            this.lvChapter.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvChapter_MouseDoubleClick);
             // 
             // columnHeader1
             // 

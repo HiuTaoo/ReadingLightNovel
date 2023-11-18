@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace ReadingLightNovelApplication
@@ -17,7 +16,12 @@ namespace ReadingLightNovelApplication
 		SupportMethod SupportMethod = new SupportMethod();
 		FormMain FormMain = null;
 
-		public FormLayoutDangNhap()
+        public Form getactive()
+        {
+            return activeForm;
+        }
+
+        public FormLayoutDangNhap()
 		{
 			InitializeComponent();
 
@@ -31,7 +35,31 @@ namespace ReadingLightNovelApplication
 
 		private void guna2Button3_Click(object sender, EventArgs e)
 		{
+            btnDangKi.BackColor = SystemColors.Control;
+            btnDangNhap.BackColor = Color.SeaGreen;
+            foreach (Control c in panelNoiDungDangNhap.Controls)
+            {
+                c.Dispose();
+            }
+            SupportMethod.openChildFormDockTop(this.activeForm, new FormDienDangNhap(), this.panelNoiDungDangNhap);
+        }
 
-		}
-	}
+        private void btnDangKi_Click(object sender, EventArgs e)
+        {
+			btnDangNhap.BackColor = SystemColors.Control;
+			btnDangKi.BackColor = Color.SeaGreen;
+			foreach(Control c in panelNoiDungDangNhap.Controls)
+			{
+				c.Dispose();
+			}
+            SupportMethod.openChildFormDockTop(this.activeForm, new FormDienDangKy(), this.panelNoiDungDangNhap);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
+            Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
+            SupportMethod.openChildFormDockFill(formMain.getactive(), new FormMain(), panel1);
+        }
+    }
 }
