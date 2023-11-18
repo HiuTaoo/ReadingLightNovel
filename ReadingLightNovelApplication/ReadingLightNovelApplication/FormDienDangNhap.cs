@@ -52,23 +52,19 @@ namespace ReadingLightNovelApplication
                     MessageBox.Show("Bạn chưa nhập mật khẩu!");
                 else
                 {
-                    foreach( DataRow c in dt.Rows)
+                    DataTable dt1 = SupportMethod.DataReader("select * " +
+                        "\r\nfrom [User]" +
+                        "\r\nwhere [TenDangNhap] = '" + tbUserName.Text + "' and [MatKhau] = '" + tbPassword.Text + "' ");
+                    if (dt1.Rows.Count == 0)
+                        MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác");
+                    else
                     {
-                        if (tbUserName.Text == c["TenDangNhap"].ToString())
-                        {
-                            if (tbPassword.Text == c["MatKhau"].ToString())
-                            {
-                                FormMain.TenDangNhap = c["TenDangNhap"].ToString();
-                                FormMain.isLogin = true;
-                                FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
-                                Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
-                                SupportMethod.openChildFormDockFill(formMain.getactive(), new FormMain(), panel1);
-                            }
-                            else
-                                MessageBox.Show("Mật khẩu không chính xác!");
-                        }
-                        
-                    }
+                        FormMain.TenDangNhap = tbUserName.Text;
+                        FormMain.isLogin = true;
+                        FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
+                        Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
+                        SupportMethod.openChildFormDockFill(formMain.getactive(), new FormMain(), panel1);
+                    }               
                 }
             }
         }

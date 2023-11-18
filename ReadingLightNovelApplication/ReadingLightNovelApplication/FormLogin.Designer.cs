@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAvt = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnYeuThich = new Guna.UI2.WinForms.Guna2Button();
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAvt = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -47,6 +48,20 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(225, 38);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btnAvt
+            // 
+            this.btnAvt.BackColor = System.Drawing.Color.Transparent;
+            this.btnAvt.BorderRadius = 30;
+            this.btnAvt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAvt.FillColor = System.Drawing.Color.Transparent;
+            this.btnAvt.ImageRotate = 0F;
+            this.btnAvt.Location = new System.Drawing.Point(187, 0);
+            this.btnAvt.Name = "btnAvt";
+            this.btnAvt.Size = new System.Drawing.Size(38, 38);
+            this.btnAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAvt.TabIndex = 5;
+            this.btnAvt.TabStop = false;
             // 
             // btnYeuThich
             // 
@@ -62,7 +77,7 @@
             this.btnYeuThich.Location = new System.Drawing.Point(21, 0);
             this.btnYeuThich.Name = "btnYeuThich";
             this.btnYeuThich.Size = new System.Drawing.Size(74, 38);
-            this.btnYeuThich.TabIndex = 3;
+            this.btnYeuThich.TabIndex = 8;
             // 
             // btnThongBao
             // 
@@ -78,7 +93,7 @@
             this.btnThongBao.Location = new System.Drawing.Point(95, 0);
             this.btnThongBao.Name = "btnThongBao";
             this.btnThongBao.Size = new System.Drawing.Size(74, 38);
-            this.btnThongBao.TabIndex = 2;
+            this.btnThongBao.TabIndex = 7;
             // 
             // panel1
             // 
@@ -86,23 +101,7 @@
             this.panel1.Location = new System.Drawing.Point(169, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(18, 38);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnAvt
-            // 
-            this.btnAvt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAvt.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAvt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAvt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAvt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAvt.FillColor = System.Drawing.Color.Transparent;
-            this.btnAvt.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAvt.ForeColor = System.Drawing.Color.White;
-            this.btnAvt.Location = new System.Drawing.Point(187, 0);
-            this.btnAvt.Name = "btnAvt";
-            this.btnAvt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnAvt.Size = new System.Drawing.Size(38, 38);
-            this.btnAvt.TabIndex = 0;
+            this.panel1.TabIndex = 6;
             // 
             // FormLogin
             // 
@@ -113,7 +112,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
             this.Text = "FormLogin";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnAvt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,9 +122,9 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2CircleButton btnAvt;
         private Guna.UI2.WinForms.Guna2Button btnYeuThich;
         private Guna.UI2.WinForms.Guna2Button btnThongBao;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2PictureBox btnAvt;
     }
 }

@@ -35,6 +35,8 @@ namespace ReadingLightNovelApplication
             {
                 SupportMethod.AddChildFormDockFill(new FormLogout(), this.panelLogin);
             }
+
+            
         }
     }
 }
