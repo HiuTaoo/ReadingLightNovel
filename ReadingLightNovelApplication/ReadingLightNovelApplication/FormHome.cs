@@ -139,5 +139,30 @@ namespace ReadingLightNovelApplication
 				SupportMethod.AddChildFormDockNone(new FormTruyenItem(row["MaTacPham"].ToString()), flpTruyenHoanThanh);
 			}
 		}
+
+		private void btnTopThang_Click(object sender, EventArgs e)
+		{
+			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormHome(), this);	// thay thành form sắp xếp theo tháng		
+		}
+
+		private void panelTopThoiGian_Click(object sender, EventArgs e)
+		{
+			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormHome(), this);//Thay thế thành form sắp xêp theo top full
+		}
+
+		private void btnChuongMoiNhat_Click(object sender, EventArgs e)
+		{
+			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormHome(), this);//Thay thế thành form sắp xếp theo chương mới nhất
+		}
+
+		private void btnTruyenMoiNhat_Click(object sender, EventArgs e)
+		{
+			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormHome(), this);//Thay thế thành form sắp xếp theo truyện mới
+		}
+
+		private void btnDaHoanThanh_Click(object sender, EventArgs e)
+		{
+			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormHome(), this);//Thay thế thành form sắp xếp theo đã hoàn thành
+		}
 	}
 }

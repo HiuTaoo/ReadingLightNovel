@@ -71,6 +71,7 @@
 			this.btnTenTruyen.Size = new System.Drawing.Size(237, 70);
 			this.btnTenTruyen.TabIndex = 2;
 			this.btnTenTruyen.Text = "guna2GradientButton1";
+			this.btnTenTruyen.Click += new System.EventHandler(this.btnTenTruyen_Click);
 			this.btnTenTruyen.MouseLeave += new System.EventHandler(this.btnTenTruyen_MouseLeave);
 			this.btnTenTruyen.MouseHover += new System.EventHandler(this.btnTenTruyen_MouseHover);
 			// 
