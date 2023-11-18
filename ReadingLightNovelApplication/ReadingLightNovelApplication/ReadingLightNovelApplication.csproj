@@ -166,17 +166,53 @@
     <Compile Include="FormProperties.Designer.cs">
       <DependentUpon>FormProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSapXep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSapXep.Designer.cs">
+      <DependentUpon>FormSapXep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSapXepChuCai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSapXepChuCai.Designer.cs">
+      <DependentUpon>FormSapXepChuCai.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSuggest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormSuggest.Designer.cs">
       <DependentUpon>FormSuggest.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTheLoaiCheckbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTheLoaiCheckbox.Designer.cs">
+      <DependentUpon>FormTheLoaiCheckbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTheoDoiNhieuItem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTheoDoiNhieuItem.Designer.cs">
       <DependentUpon>FormTheoDoiNhieuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTimKiem.Designer.cs">
+      <DependentUpon>FormTimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTimKiemKetQua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTimKiemKetQua.Designer.cs">
+      <DependentUpon>FormTimKiemKetQua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTimKiemNangCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTimKiemNangCao.Designer.cs">
+      <DependentUpon>FormTimKiemNangCao.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTruyenItem.cs">
       <SubType>Form</SubType>
@@ -267,11 +303,29 @@
     <EmbeddedResource Include="FormProperties.resx">
       <DependentUpon>FormProperties.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSapXep.resx">
+      <DependentUpon>FormSapXep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSapXepChuCai.resx">
+      <DependentUpon>FormSapXepChuCai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSuggest.resx">
       <DependentUpon>FormSuggest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTheLoaiCheckbox.resx">
+      <DependentUpon>FormTheLoaiCheckbox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTheoDoiNhieuItem.resx">
       <DependentUpon>FormTheoDoiNhieuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimKiem.resx">
+      <DependentUpon>FormTimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimKiemKetQua.resx">
+      <DependentUpon>FormTimKiemKetQua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimKiemNangCao.resx">
+      <DependentUpon>FormTimKiemNangCao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTruyenItem.resx">
       <DependentUpon>FormTruyenItem.cs</DependentUpon>

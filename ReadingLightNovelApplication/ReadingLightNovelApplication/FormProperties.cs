@@ -16,14 +16,14 @@ namespace ReadingLightNovelApplication
     public partial class FormProperties : Form
     {
         SupportMethod dataload = new SupportMethod();
-        string ma = "";
+        string MaTacPham;
         private Form activeForm = null;
 
-        public FormProperties(string mavol)
+        public FormProperties(string MaTacPham)
         {
             InitializeComponent();
-            ma = mavol;
-            loadData(ma);
+            this.MaTacPham = MaTacPham;
+            loadData(MaTacPham);
         }
         public void loadData(string ma)
         {

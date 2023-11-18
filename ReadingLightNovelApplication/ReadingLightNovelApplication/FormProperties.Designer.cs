@@ -1234,7 +1234,7 @@
 			this.btnTheLoai.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.btnTheLoai.ForeColor = System.Drawing.Color.White;
 			this.btnTheLoai.Location = new System.Drawing.Point(0, 22);
-			this.btnTheLoai.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.btnTheLoai.Margin = new System.Windows.Forms.Padding(6);
 			this.btnTheLoai.Name = "btnTheLoai";
 			this.btnTheLoai.Size = new System.Drawing.Size(228, 48);
 			this.btnTheLoai.TabIndex = 7;

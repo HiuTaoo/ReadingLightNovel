@@ -38,5 +38,10 @@ namespace ReadingLightNovelApplication
 		{
 			btnTenTruyen.ForeColor = Color.White;
 		}
+
+		private void btnTenTruyen_Click(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }

@@ -25,7 +25,12 @@ namespace ReadingLightNovelApplication
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-			SupportMethod.openChildFormDockFill(this.activeForm, new LayoutLogged(), this.panelMain);
+            if(TenDangNhap != string.Empty)
+            {
+				SupportMethod.openChildFormDockFill(this.activeForm, new LayoutLogged(), this.panelMain);
+			}
+			else
+				SupportMethod.openChildFormDockFill(this.activeForm, new LayoutLogged(), this.panelMain); // Thay thành layout no logged 
 		}
 
         public Form getActiveForm()
@@ -33,9 +38,6 @@ namespace ReadingLightNovelApplication
             return activeForm;
         }
 
-        private void panelMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

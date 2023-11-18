@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -135,6 +136,21 @@ namespace ReadingLightNovelApplication
 			return containerControl;
 		}
 
+        //Trả về form cha theo tên (trừ form main)
+        public Form getFormParent(Form container, string nameForm) 
+        {
+			Form containerControl = container;
+			while (/*containerControl.ParentForm != null || */containerControl.Name != nameForm)
+			{
+				return getFormParent(containerControl.ParentForm, nameForm);
+			}
+            if(containerControl.ParentForm == null)
+            {
+                return null;
+            }
+			else return containerControl;
+		}
+
 		public Panel getPanel(Form formName ,string namepanel)
 		{
 			foreach (Panel c in formName.Controls.OfType<Panel>())
@@ -144,6 +160,18 @@ namespace ReadingLightNovelApplication
 			}
 			return null;
 		}
+
+        public void openChildFormFromForm(string nameFormRoot, string namePanelContainer, Form formContent, Form formLeaf)
+        {
+            Form formRoot = getFormParent(formLeaf as Form, nameFormRoot); // ???Làm sao để có thể ép dúng kiểu.
+            MessageBox.Show(formRoot.Name);
+            Panel panelContainer = getPanel(formRoot, namePanelContainer);
+            foreach(Control control in panelContainer.Controls)
+            {
+                control.Dispose();
+            }
+            AddChildFormDockTop(formContent, panelContainer);
+        }
 
         /*public void loadNewChildForm(dynamic formContainer, dynamic formName, Panel panelName)
 		{

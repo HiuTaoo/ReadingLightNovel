@@ -26,7 +26,25 @@ namespace ReadingLightNovelApplication
 
         private void LayoutLogged_Load(object sender, EventArgs e)
         {
-            SupportMethod.openChildFormDockFill(this.activeForm, new FormHome(), this.panelNoiDung);
+            SupportMethod.AddChildFormDockTop(new FormHome(), this.panelNoiDung);
         }
-    }
+
+		private void btnLogo_Click(object sender, EventArgs e)
+		{
+            foreach(Control control in this.panelNoiDung.Controls) 
+            {
+                control.Dispose();
+            }
+			SupportMethod.AddChildFormDockTop(new FormHome(), this.panelNoiDung);
+		}
+
+		private void btnDanhSach_Click(object sender, EventArgs e)
+		{
+			foreach (Control control in this.panelNoiDung.Controls)
+			{
+				control.Dispose();
+			}
+			SupportMethod.AddChildFormDockTop(new FormSapXep(), this.panelNoiDung);
+		}
+	}
 }

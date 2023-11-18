@@ -14,15 +14,16 @@ namespace ReadingLightNovelApplication
     {
         private Form activeForm = null;
         SupportMethod SupportMethod = new SupportMethod();
-        string ma = "TP001";
-        public FormContent()
+        private string MaTacPham;
+        public FormContent(string MaTacPham)
         {
             InitializeComponent();
+            this.MaTacPham = MaTacPham;
         }
 
         private void FormContent_Load(object sender, EventArgs e)
         {
-            SupportMethod.openChildFormDockTop(this.activeForm, new FormProperties(ma), this.panelContent);
+            SupportMethod.openChildFormDockTop(this.activeForm, new FormProperties(MaTacPham), this.panelContent);
         }
     }
 }
