@@ -15,7 +15,7 @@ namespace ReadingLightNovelApplication
 {
      class SupportMethod
     {
-		string strConnect = "Data Source=DESKTOP-51MISFU\\HIUTAO;" +
+		string strConnect = "Data Source=DESKTOP-EAAUDNC\\USERNAME;" +
 			"Initial Catalog=ReadingLightNovel;Integrated Security=True";
         SqlConnection sqlConnect = null;
         //Phương thức mở kết nối
@@ -178,7 +178,6 @@ namespace ReadingLightNovelApplication
         public void openChildFormFromForm(string nameFormRoot, string namePanelContainer, Form formContent, Form formLeaf)
         {
             Form formRoot = getFormParent(formLeaf as Form, nameFormRoot); // ???Làm sao để có thể ép dúng kiểu.
-            MessageBox.Show(formRoot.Name);
             Panel panelContainer = getPanel(formRoot, namePanelContainer);
             foreach(Control control in panelContainer.Controls)
             {
