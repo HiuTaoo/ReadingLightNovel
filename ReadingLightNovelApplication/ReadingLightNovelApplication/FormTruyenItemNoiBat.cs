@@ -41,7 +41,7 @@ namespace ReadingLightNovelApplication
 
 		private void btnTenTruyen_Click(object sender, EventArgs e)
 		{
-			
+			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormContent(maTacPham), this);
 		}
 	}
 }
