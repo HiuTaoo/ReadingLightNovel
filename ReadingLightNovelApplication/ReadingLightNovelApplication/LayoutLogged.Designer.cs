@@ -256,8 +256,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelNoiDung;
-        private Guna.UI2.WinForms.Guna2Panel panelLogin;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2CircleButton btnTimKiem;
+        private Guna.UI2.WinForms.Guna2Panel panelLogin;
     }
 }
