@@ -43,6 +43,10 @@ namespace ReadingLightNovelApplication
 
                         SupportMethod.DataChange("INSERT [dbo].[User] ([TenDangNhap] ,[MatKhau],[TrangThai],[NgayTao], [Email]) " +
                             "VALUES (N'"+tbUserName.Text+"', N'"+tbPassword.Text+"',0,'"+ ngayHomNay.ToString() +"', N'"+tbEmail.Text+"')");
+                        FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
+                        Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
+
+                        SupportMethod.openChildFormDockFill(formMain.getactive(), new FormLayoutDangNhap(), panel1);
 
                     }
                     

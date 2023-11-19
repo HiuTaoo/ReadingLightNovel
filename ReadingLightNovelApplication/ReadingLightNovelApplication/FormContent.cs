@@ -23,7 +23,11 @@ namespace ReadingLightNovelApplication
 
         private void FormContent_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             SupportMethod.openChildFormDockFill(this.activeForm, new FormProperties(MaTacPham), this.panelContent);
+=======
+            SupportMethod.openChildFormDockTop(this.activeForm, new FormProperties(MaTacPham), this.panelContent);
+>>>>>>> 7cc47d813d933803cb54d10c4e0bdd8eecbcb74a
         }
     }
 }

@@ -116,6 +116,18 @@
     <Compile Include="FormDienDangNhap.Designer.cs">
       <DependentUpon>FormDienDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFollow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFollow.Designer.cs">
+      <DependentUpon>FormFollow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFollowItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFollowItem.Designer.cs">
+      <DependentUpon>FormFollowItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +306,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDienDangNhap.resx">
       <DependentUpon>FormDienDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFollow.resx">
+      <DependentUpon>FormFollow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFollowItem.resx">
+      <DependentUpon>FormFollowItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>

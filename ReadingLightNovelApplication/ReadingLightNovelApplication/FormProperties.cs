@@ -117,15 +117,7 @@ namespace ReadingLightNovelApplication
 
         
 
-        private void btnRead_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormProperties_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
 
       
     }
