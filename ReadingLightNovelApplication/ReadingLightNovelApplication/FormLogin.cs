@@ -24,9 +24,31 @@ namespace ReadingLightNovelApplication
         {
             DataTable dt = SupportMethod.DataReader("select * " +
                 "\r\nfrom [User]\r\nwhere [TenDangNhap] = '" + tendn +"'");
-            Image image = Image.FromFile(Application.StartupPath + "\\Asset\\User\\"
+            try
+            {
+                Image image = Image.FromFile(Application.StartupPath + "\\Asset\\User\\"
                     + dt.Rows[0]["AnhDaiDien"].ToString());
-            btnAvt.Image = image;
+                btnAvt.Image = image;
+            }
+            catch {
+                Image image = Image.FromFile(Application.StartupPath + "\\Asset\\User\\noLoadUser.png");
+                btnAvt.Image = image;
+            }
+                
+            
+            
+        }
+
+        private void btnYeuThich_Click(object sender, EventArgs e)
+        {
+
+            LayoutLogged  lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
+            Panel panel1 =  SupportMethod.getPanel(lg, "panelNoiDung");
+            foreach(Control c in panel1.Controls)
+            {
+                c.Dispose();    
+            }
+            SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormFollow(), panel1);
         }
     }
 }

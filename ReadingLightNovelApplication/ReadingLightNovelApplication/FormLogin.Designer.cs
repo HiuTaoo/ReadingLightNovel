@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAvt = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnYeuThich = new Guna.UI2.WinForms.Guna2Button();
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAvt = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAvt)).BeginInit();
             this.SuspendLayout();
@@ -49,20 +49,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(225, 38);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // btnAvt
-            // 
-            this.btnAvt.BackColor = System.Drawing.Color.Transparent;
-            this.btnAvt.BorderRadius = 30;
-            this.btnAvt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAvt.FillColor = System.Drawing.Color.Transparent;
-            this.btnAvt.ImageRotate = 0F;
-            this.btnAvt.Location = new System.Drawing.Point(187, 0);
-            this.btnAvt.Name = "btnAvt";
-            this.btnAvt.Size = new System.Drawing.Size(38, 38);
-            this.btnAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAvt.TabIndex = 5;
-            this.btnAvt.TabStop = false;
-            // 
             // btnYeuThich
             // 
             this.btnYeuThich.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -78,6 +64,7 @@
             this.btnYeuThich.Name = "btnYeuThich";
             this.btnYeuThich.Size = new System.Drawing.Size(74, 38);
             this.btnYeuThich.TabIndex = 8;
+            this.btnYeuThich.Click += new System.EventHandler(this.btnYeuThich_Click);
             // 
             // btnThongBao
             // 
@@ -102,6 +89,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(18, 38);
             this.panel1.TabIndex = 6;
+            // 
+            // btnAvt
+            // 
+            this.btnAvt.BackColor = System.Drawing.Color.Transparent;
+            this.btnAvt.BorderRadius = 30;
+            this.btnAvt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAvt.FillColor = System.Drawing.Color.Transparent;
+            this.btnAvt.ImageRotate = 0F;
+            this.btnAvt.Location = new System.Drawing.Point(187, 0);
+            this.btnAvt.Name = "btnAvt";
+            this.btnAvt.Size = new System.Drawing.Size(38, 38);
+            this.btnAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAvt.TabIndex = 5;
+            this.btnAvt.TabStop = false;
             // 
             // FormLogin
             // 

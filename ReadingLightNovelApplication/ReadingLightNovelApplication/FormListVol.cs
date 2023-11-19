@@ -56,7 +56,12 @@ namespace ReadingLightNovelApplication
         {
             FormMain formMain  = dataload.getFormMain(this) as FormMain;
             Panel panel1 = dataload.getPanel(formMain, "panelMain");
-            dataload.openChildFormDockFill(formMain.getactive(),new FormMainReading(lvChapter.SelectedItems[0].Text, lvChapter.SelectedItems[0].SubItems[1].Text), panel1);
+            DataTable dt = dataload.DataReader("select Chapter.MaChapter " +
+                "\r\nfrom Chapter inner join Volume on Volume.MaVolume = Chapter.MaVolume" +
+                "\r\ninner join TacPham on TacPham.MaTacPham = Volume.MaTacPham" +
+                "\r\nwhere Chapter.TenChapter = N'"+ lvChapter.SelectedItems[0].Text + "' " +
+                "and Chapter.ThoiGianDang = '"+ lvChapter.SelectedItems[0].SubItems[1].Text +"'");
+            dataload.openChildFormDockFill(formMain.getactive(),new FormMainReading(dt.Rows[0]["MaChapter"].ToString()), panel1);
             
         }
 
