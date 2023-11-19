@@ -48,7 +48,7 @@ namespace ReadingLightNovelApplication
             {
                 c.Dispose();
             }
-            SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormProperties(matp), panel1);
+            SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormContent(matp), panel1);
         }
 
         private void lblChapter_Click(object sender, EventArgs e)
