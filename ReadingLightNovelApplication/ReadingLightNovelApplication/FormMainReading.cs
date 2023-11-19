@@ -17,32 +17,28 @@ namespace ReadingLightNovelApplication
     {
         SupportMethod dataload = new SupportMethod();
         string ma, ngay;
-        public FormMainReading(string matacpham, string ngaydang)
+
+        public FormMainReading(string machapter)
         {
             InitializeComponent();
-            ma = matacpham;
-            ngay = ngaydang;
+            ma = machapter;
         }
-
-       
 
         private void FormMainReading_Load(object sender, EventArgs e)
         {
             DataTable dt = dataload.DataReader("select *" +
                 " \r\nfrom Chapter inner join Volume on Volume.MaVolume = Chapter.MaVolume" +
                 "\r\ninner join TacPham on TacPham.MaTacPham = Volume.MaTacPham" +
-                "\r\nwhere Chapter.TenChapter = N'" + ma +"' " +
-                "and Chapter.ThoiGianDang = '" + ngay +"'");
+                "\r\nwhere Chapter.MaChapter = '" + ma + "'");
             btnVolName.Text = dt.Rows[0]["TenVolume"].ToString();
             btnChapterName.Text = dt.Rows[0]["TenChapter"].ToString();
 
             DataTable dt1 = dataload.DataReader("select count(BinhLuan.MaBinhLuan) " +
                 "\r\nfrom Chapter inner join Volume on Volume.MaVolume = Chapter.MaVolume" +
                 "\r\ninner join BinhLuan on BinhLuan.MaChapter = Chapter.MaChapter" +
-                "\r\nwhere Chapter.TenChapter = N'" + ma +"' " +
-                "and Chapter.ThoiGianDang = '" + ngay + "'");
+                "\r\nwhere Chapter.MaChapter = '" + ma + "'");
 
-            DataTable dt2 = dataload.DataReader("DECLARE @StartDate DATE = '" + ngay + "'" +
+            DataTable dt2 = dataload.DataReader("DECLARE @StartDate DATE = '" + dt.Rows[0]["ThoiGianDang"].ToString() + "'" +
                 "\r\nDECLARE @EndDate DATE = GETDATE();  -- Ngày hiện tại" +
                 "\r\n\r\nDECLARE @DateDiff INT = DATEDIFF(DAY, @StartDate, @EndDate);" +
                 "\r\n\r\nSELECT\r\n    CASE\r\n        " +
@@ -60,15 +56,14 @@ namespace ReadingLightNovelApplication
                         + dt.Rows[0]["MaTacPham"].ToString() + "\\" + dt.Rows[0]["TenVolume"].ToString() + "\\" + dt.Rows[0]["Nguon"].ToString();
             lbContent.Text = dataload.loadContent(urlContent);
 
-            DataTable dt3 = dataload.DataReader("select TacPham.MaTacPham " +
-                "\r\nfrom Chapter inner join Volume on Volume.MaVolume = Chapter.MaVolume" +
-                "\r\ninner join TacPham on TacPham.MaTacPham = Volume.MaTacPham" +
-               "\r\nwhere Chapter.TenChapter = N'" + ma + "' " +
-                "and Chapter.ThoiGianDang = '" + ngay + "'");
-
-            dataload.AddChildFormDockTop(new FormCommentArea(dt3.Rows[0]["MaTacPham"].ToString()), this.panelCmt);
+            dataload.AddChildFormDockTop(new FormCommentArea(ma), this.panelCmt);
 
         }
+
+        
+
+
+        
 
         
 

@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTextEdit = new System.Windows.Forms.Panel();
-            this.btnReload = new System.Windows.Forms.Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -70,7 +69,6 @@
             // panelTextEdit
             // 
             this.panelTextEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelTextEdit.Controls.Add(this.btnReload);
             this.panelTextEdit.Controls.Add(this.guna2Button3);
             this.panelTextEdit.Controls.Add(this.guna2Button2);
             this.panelTextEdit.Controls.Add(this.guna2Button1);
@@ -80,15 +78,6 @@
             this.panelTextEdit.Name = "panelTextEdit";
             this.panelTextEdit.Size = new System.Drawing.Size(948, 45);
             this.panelTextEdit.TabIndex = 4;
-            // 
-            // btnReload
-            // 
-            this.btnReload.Location = new System.Drawing.Point(884, 4);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(39, 36);
-            this.btnReload.TabIndex = 1;
-            this.btnReload.UseVisualStyleBackColor = true;
-            this.btnReload.Click += new System.EventHandler(this.FormCommentArea_Load);
             // 
             // guna2Button3
             // 
@@ -175,6 +164,7 @@
             // 
             // btnDangCmt
             // 
+            this.btnDangCmt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDangCmt.BackColor = System.Drawing.SystemColors.Control;
             this.btnDangCmt.BorderRadius = 10;
             this.btnDangCmt.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -189,6 +179,7 @@
             this.btnDangCmt.Size = new System.Drawing.Size(173, 36);
             this.btnDangCmt.TabIndex = 0;
             this.btnDangCmt.Text = "Đăng bình luận";
+            this.btnDangCmt.Click += new System.EventHandler(this.btnDangCmt_Click);
             // 
             // tbCmt
             // 
@@ -248,6 +239,5 @@
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button btnDangCmt;
         private System.Windows.Forms.RichTextBox tbCmt;
-        private System.Windows.Forms.Button btnReload;
     }
 }

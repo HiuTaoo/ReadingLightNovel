@@ -14,10 +14,15 @@ namespace ReadingLightNovelApplication
     {
         SupportMethod dataload = new SupportMethod();
         string ma = "";
-        public FormCommentArea(string matp)
+        public FormCommentArea(string machapter)
         {
             InitializeComponent();
-            ma = matp;
+            ma = machapter;
+        }
+
+        public string getMa()
+        {
+            return ma;
         }
 
 
@@ -34,7 +39,8 @@ namespace ReadingLightNovelApplication
                "\r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
                "\r\ninner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
                "\r\ninner join BinhLuan on BinhLuan.MaChapter = Chapter.MaChapter" +
-               "\r\nwhere TacPham.MaTacPham = '" + ma + "'");
+                   "\r\nwhere Chapter.MaChapter = '" + ma + "'" +
+                   "order by BinhLuan.ThoiGian desc");
             foreach (DataRow dr in dt7.Rows)
             {
                 dataload.AddChildFormDockTop(new FormComment(dr["MaBinhLuan"].ToString()), this.panelCmt);
@@ -43,6 +49,35 @@ namespace ReadingLightNovelApplication
 
         }
 
-        
+        private void btnDangCmt_Click(object sender, EventArgs e)
+        {
+            DateTime date = DateTime.Now;
+            if(FormMain.isLogin == true)
+            {
+                dataload.DataChange("INSERT [dbo].[BinhLuan] ([MaBinhLuan], [TenDangNhap], [MaChapter], [NoiDung],  [ThoiGian]) " +
+                    " VALUES (N'BL"+ date.ToString()+ "', N'"+ FormMain.TenDangNhap +"', N'" + ma +"',  N'"+ tbCmt.Text + "', N'"+ date.ToString() +"')\r\n");
+
+                //Load lại cmt
+                foreach (FormComment c in panelCmt.Controls.OfType<FormComment>().ToList())
+                {
+                    c.Close();
+                    c.Dispose();
+                }
+                panelCmt.Controls.Clear();
+
+                DataTable dt7 = dataload.DataReader("select * \r\nfrom TacPham " +
+                   "\r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
+                   "\r\ninner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
+                   "\r\ninner join BinhLuan on BinhLuan.MaChapter = Chapter.MaChapter" +
+                   "\r\nwhere Chapter.MaChapter = '" + ma + "'" +
+                   "order by BinhLuan.ThoiGian desc");
+                foreach (DataRow dr in dt7.Rows)
+                {
+                    dataload.AddChildFormDockTop(new FormComment(dr["MaBinhLuan"].ToString()), this.panelCmt);
+                }
+                dt7.Dispose();
+                tbCmt.Text = "";
+            }
+        }
     }
 }

@@ -18,6 +18,7 @@ namespace ReadingLightNovelApplication
         {
             InitializeComponent();
         }
+        public Form getActiveForm() { return activeForm; }
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
@@ -26,7 +27,16 @@ namespace ReadingLightNovelApplication
 
         private void LayoutLogged_Load(object sender, EventArgs e)
         {
-            SupportMethod.AddChildFormDockTop(new FormHome(), this.panelNoiDung);
+
+            SupportMethod.openChildFormDockFill(this.activeForm, new FormHome(), this.panelNoiDung);
+            /*if(FormMain.isLogin == true)
+            {
+                SupportMethod.AddChildFormDockFill(new FormLogin(FormMain.TenDangNhap), this.panelLogin);
+            }
+            else
+            {
+                SupportMethod.AddChildFormDockFill(new FormLogout(), this.panelLogin);
+            }*/
         }
 
 		private void btnLogo_Click(object sender, EventArgs e)
