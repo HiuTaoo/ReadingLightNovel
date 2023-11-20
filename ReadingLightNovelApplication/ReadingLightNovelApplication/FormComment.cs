@@ -37,7 +37,30 @@ namespace ReadingLightNovelApplication
         {
             if(MessageBox.Show("Bạn có muốn xóa bình luận này?", "Yes/No", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                 DialogResult.Yes)
-            dataload.DataReader("delete from BinhLuan where MaBinhLuan = '" + ma + "'");
+            {
+                dataload.DataReader("delete from BinhLuan where MaBinhLuan = '" + ma + "'");
+
+                FormCommentArea lg = dataload.getFormParent(this, "FormCommentArea") as FormCommentArea;
+                Panel panel1 = dataload.getPanel(lg, "panelCmt");
+                foreach (FormComment c in panel1.Controls.OfType<FormComment>().ToList())
+                {
+                    c.Close();
+                    c.Dispose();
+                }
+                panel1.Controls.Clear();
+
+                DataTable dt7 = dataload.DataReader("select * \r\nfrom TacPham " +
+                   "\r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
+                   "\r\ninner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
+                   "\r\ninner join BinhLuan on BinhLuan.MaChapter = Chapter.MaChapter" +
+                   "\r\nwhere Chapter.MaChapter = '" + lg.getMa() + "'" +
+                   "order by BinhLuan.ThoiGian desc");
+                foreach (DataRow dr in dt7.Rows)
+                {
+                    dataload.AddChildFormDockTop(new FormComment(dr["MaBinhLuan"].ToString()), panel1);
+                }
+                dt7.Dispose();
+            }
 
         }
     }

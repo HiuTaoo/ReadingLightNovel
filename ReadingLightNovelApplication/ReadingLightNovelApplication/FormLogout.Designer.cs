@@ -55,13 +55,13 @@
             this.btnSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSetting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnSetting.FillColor = System.Drawing.Color.Transparent;
             this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Location = new System.Drawing.Point(12, 0);
+            this.btnSetting.Location = new System.Drawing.Point(0, 0);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(55, 38);
+            this.btnSetting.Size = new System.Drawing.Size(67, 38);
             this.btnSetting.TabIndex = 1;
             // 
             // FormLogout
