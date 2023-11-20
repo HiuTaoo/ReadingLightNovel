@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -193,6 +194,7 @@ namespace ReadingLightNovelApplication
 			SupportMethod.openChildFormDockTop(form, formName, panelName);
 		}*/
 
+        
 
         public int CountWordsFromFile(string filePath)
         {

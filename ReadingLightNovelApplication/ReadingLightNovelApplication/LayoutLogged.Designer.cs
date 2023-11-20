@@ -31,6 +31,11 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LayoutLogged));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panelHeaderLayoutLogged = new System.Windows.Forms.Panel();
+			this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+			this.btnTimKiem = new Guna.UI2.WinForms.Guna2CircleButton();
+			this.btnThongBao = new Guna.UI2.WinForms.Guna2CircleButton();
+			this.btnYeuThich = new Guna.UI2.WinForms.Guna2CircleButton();
+			this.btnAvatar = new Guna.UI2.WinForms.Guna2CircleButton();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.btnHuongDan = new Guna.UI2.WinForms.Guna2Button();
 			this.btnDanhSach = new Guna.UI2.WinForms.Guna2Button();
@@ -39,11 +44,6 @@
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.panelNoiDung = new System.Windows.Forms.Panel();
-			this.btnAvatar = new Guna.UI2.WinForms.Guna2CircleButton();
-			this.btnYeuThich = new Guna.UI2.WinForms.Guna2CircleButton();
-			this.btnThongBao = new Guna.UI2.WinForms.Guna2CircleButton();
-			this.btnTimKiem = new Guna.UI2.WinForms.Guna2CircleButton();
-			this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
 			this.panel1.SuspendLayout();
 			this.panelHeaderLayoutLogged.SuspendLayout();
 			this.SuspendLayout();
@@ -80,6 +80,93 @@
 			this.panelHeaderLayoutLogged.Name = "panelHeaderLayoutLogged";
 			this.panelHeaderLayoutLogged.Size = new System.Drawing.Size(1418, 48);
 			this.panelHeaderLayoutLogged.TabIndex = 4;
+			// 
+			// guna2TextBox1
+			// 
+			this.guna2TextBox1.BorderRadius = 10;
+			this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.guna2TextBox1.DefaultText = "";
+			this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+			this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Right;
+			this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+			this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+			this.guna2TextBox1.Location = new System.Drawing.Point(914, 0);
+			this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.guna2TextBox1.Name = "guna2TextBox1";
+			this.guna2TextBox1.PasswordChar = '\0';
+			this.guna2TextBox1.PlaceholderText = "";
+			this.guna2TextBox1.SelectedText = "";
+			this.guna2TextBox1.Size = new System.Drawing.Size(286, 48);
+			this.guna2TextBox1.TabIndex = 24;
+			// 
+			// btnTimKiem
+			// 
+			this.btnTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Right;
+			this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+			this.btnTimKiem.Location = new System.Drawing.Point(1200, 0);
+			this.btnTimKiem.Name = "btnTimKiem";
+			this.btnTimKiem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+			this.btnTimKiem.Size = new System.Drawing.Size(48, 48);
+			this.btnTimKiem.TabIndex = 23;
+			this.btnTimKiem.Text = "guna2CircleButton4";
+			this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+			// 
+			// btnThongBao
+			// 
+			this.btnThongBao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnThongBao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnThongBao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnThongBao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnThongBao.Dock = System.Windows.Forms.DockStyle.Right;
+			this.btnThongBao.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnThongBao.ForeColor = System.Drawing.Color.White;
+			this.btnThongBao.Location = new System.Drawing.Point(1248, 0);
+			this.btnThongBao.Name = "btnThongBao";
+			this.btnThongBao.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+			this.btnThongBao.Size = new System.Drawing.Size(48, 48);
+			this.btnThongBao.TabIndex = 22;
+			this.btnThongBao.Text = "guna2CircleButton3";
+			// 
+			// btnYeuThich
+			// 
+			this.btnYeuThich.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnYeuThich.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnYeuThich.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnYeuThich.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnYeuThich.Dock = System.Windows.Forms.DockStyle.Right;
+			this.btnYeuThich.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnYeuThich.ForeColor = System.Drawing.Color.White;
+			this.btnYeuThich.Location = new System.Drawing.Point(1296, 0);
+			this.btnYeuThich.Name = "btnYeuThich";
+			this.btnYeuThich.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+			this.btnYeuThich.Size = new System.Drawing.Size(48, 48);
+			this.btnYeuThich.TabIndex = 21;
+			this.btnYeuThich.Text = "guna2CircleButton2";
+			// 
+			// btnAvatar
+			// 
+			this.btnAvatar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+			this.btnAvatar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+			this.btnAvatar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+			this.btnAvatar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+			this.btnAvatar.Dock = System.Windows.Forms.DockStyle.Right;
+			this.btnAvatar.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnAvatar.ForeColor = System.Drawing.Color.White;
+			this.btnAvatar.Location = new System.Drawing.Point(1344, 0);
+			this.btnAvatar.Name = "btnAvatar";
+			this.btnAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+			this.btnAvatar.Size = new System.Drawing.Size(48, 48);
+			this.btnAvatar.TabIndex = 20;
+			this.btnAvatar.Text = "guna2CircleButton1";
 			// 
 			// panel5
 			// 
@@ -181,92 +268,6 @@
 			this.panelNoiDung.Name = "panelNoiDung";
 			this.panelNoiDung.Size = new System.Drawing.Size(1418, 772);
 			this.panelNoiDung.TabIndex = 1;
-			// 
-			// btnAvatar
-			// 
-			this.btnAvatar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnAvatar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnAvatar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnAvatar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnAvatar.Dock = System.Windows.Forms.DockStyle.Right;
-			this.btnAvatar.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.btnAvatar.ForeColor = System.Drawing.Color.White;
-			this.btnAvatar.Location = new System.Drawing.Point(1344, 0);
-			this.btnAvatar.Name = "btnAvatar";
-			this.btnAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-			this.btnAvatar.Size = new System.Drawing.Size(48, 48);
-			this.btnAvatar.TabIndex = 20;
-			this.btnAvatar.Text = "guna2CircleButton1";
-			// 
-			// btnYeuThich
-			// 
-			this.btnYeuThich.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnYeuThich.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnYeuThich.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnYeuThich.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnYeuThich.Dock = System.Windows.Forms.DockStyle.Right;
-			this.btnYeuThich.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.btnYeuThich.ForeColor = System.Drawing.Color.White;
-			this.btnYeuThich.Location = new System.Drawing.Point(1296, 0);
-			this.btnYeuThich.Name = "btnYeuThich";
-			this.btnYeuThich.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-			this.btnYeuThich.Size = new System.Drawing.Size(48, 48);
-			this.btnYeuThich.TabIndex = 21;
-			this.btnYeuThich.Text = "guna2CircleButton2";
-			// 
-			// btnThongBao
-			// 
-			this.btnThongBao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnThongBao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnThongBao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnThongBao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnThongBao.Dock = System.Windows.Forms.DockStyle.Right;
-			this.btnThongBao.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.btnThongBao.ForeColor = System.Drawing.Color.White;
-			this.btnThongBao.Location = new System.Drawing.Point(1248, 0);
-			this.btnThongBao.Name = "btnThongBao";
-			this.btnThongBao.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-			this.btnThongBao.Size = new System.Drawing.Size(48, 48);
-			this.btnThongBao.TabIndex = 22;
-			this.btnThongBao.Text = "guna2CircleButton3";
-			// 
-			// btnTimKiem
-			// 
-			this.btnTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Right;
-			this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-			this.btnTimKiem.Location = new System.Drawing.Point(1200, 0);
-			this.btnTimKiem.Name = "btnTimKiem";
-			this.btnTimKiem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-			this.btnTimKiem.Size = new System.Drawing.Size(48, 48);
-			this.btnTimKiem.TabIndex = 23;
-			this.btnTimKiem.Text = "guna2CircleButton4";
-			// 
-			// guna2TextBox1
-			// 
-			this.guna2TextBox1.BorderRadius = 10;
-			this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.guna2TextBox1.DefaultText = "";
-			this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-			this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Right;
-			this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.guna2TextBox1.Location = new System.Drawing.Point(914, 0);
-			this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.guna2TextBox1.Name = "guna2TextBox1";
-			this.guna2TextBox1.PasswordChar = '\0';
-			this.guna2TextBox1.PlaceholderText = "";
-			this.guna2TextBox1.SelectedText = "";
-			this.guna2TextBox1.Size = new System.Drawing.Size(286, 48);
-			this.guna2TextBox1.TabIndex = 24;
 			// 
 			// LayoutLogged
 			// 
