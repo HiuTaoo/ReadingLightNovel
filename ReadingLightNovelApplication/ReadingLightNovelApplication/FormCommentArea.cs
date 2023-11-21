@@ -78,6 +78,14 @@ namespace ReadingLightNovelApplication
                 dt7.Dispose();
                 tbCmt.Text = "";
             }
+            else
+            {
+                MessageBox.Show("Bạn chưa đăng nhập");
+                FormMain formMain = dataload.getFormMain(this) as FormMain;
+                Panel panel1 = dataload.getPanel(formMain, "panelMain");
+
+                dataload.openChildFormDockFill(formMain.getactive(), new FormLayoutDangNhap(), panel1);
+            }
         }
     }
 }

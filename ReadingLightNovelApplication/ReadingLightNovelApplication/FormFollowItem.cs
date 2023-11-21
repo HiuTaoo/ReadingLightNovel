@@ -38,6 +38,7 @@ namespace ReadingLightNovelApplication
                 "\r\norder by Chapter.ThoiGianDang desc");
             lblChapter.Text = dt1.Rows[0]["TenChapter"].ToString();
             lblVol.Text = dt1.Rows[0]["TenVolume"].ToString();
+            lblLoai.Text = dt.Rows[0]["LoaiTruyen"].ToString();
         }
 
         private void lblTenTruyen_Click(object sender, EventArgs e)

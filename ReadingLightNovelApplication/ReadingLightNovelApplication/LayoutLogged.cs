@@ -18,11 +18,12 @@ namespace ReadingLightNovelApplication
         {
             InitializeComponent();
         }
+
         public Form getActiveForm() { return activeForm; }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
+        public Panel getPanelMorong()
         {
-
+            return panel3;
         }
 
         private void LayoutLogged_Load(object sender, EventArgs e)

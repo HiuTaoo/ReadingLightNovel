@@ -103,6 +103,7 @@
             this.btnAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnAvt.TabIndex = 5;
             this.btnAvt.TabStop = false;
+            this.btnAvt.Click += new System.EventHandler(this.btnAvt_Click);
             // 
             // FormLogin
             // 

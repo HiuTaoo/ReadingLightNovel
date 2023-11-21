@@ -24,6 +24,24 @@ namespace ReadingLightNovelApplication
             ma = machapter;
         }
 
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            FormMain formMain = dataload.getFormMain(this) as FormMain;
+            Panel panel1 = dataload.getPanel(formMain, "panelMain");
+            LayoutLogged lg = new LayoutLogged();
+            dataload.openChildFormDockFill(formMain.getactive(), lg, panel1);
+            Panel panel2 = dataload.getPanel(lg, "panelNoiDung");
+            foreach (Control c in panel2.Controls)
+            {
+                c.Dispose();
+            }
+            DataTable dt = dataload.DataReader("select TacPham.MaTacPham" +
+                "\r\nfrom TacPham \r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
+                "\r\ninner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
+                "\r\nwhere Chapter.MaChapter = '" + ma + "'");
+            dataload.openChildFormDockFill(lg.getActiveForm(), new FormContent(dt.Rows[0][0].ToString()), panel2);
+        }
+
         private void FormMainReading_Load(object sender, EventArgs e)
         {
             DataTable dt = dataload.DataReader("select *" +

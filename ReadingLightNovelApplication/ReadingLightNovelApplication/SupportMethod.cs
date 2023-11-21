@@ -184,7 +184,7 @@ namespace ReadingLightNovelApplication
             {
                 control.Dispose();
             }
-            AddChildFormDockTop(formContent, panelContainer);
+            AddChildFormDockFill(formContent, panelContainer);
         }
 
         /*public void loadNewChildForm(dynamic formContainer, dynamic formName, Panel panelName)
