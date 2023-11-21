@@ -165,6 +165,7 @@
             this.pbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImg.TabIndex = 0;
             this.pbImg.TabStop = false;
+            this.pbImg.Click += new System.EventHandler(this.pbImg_Click);
             // 
             // FormListNovel
             // 

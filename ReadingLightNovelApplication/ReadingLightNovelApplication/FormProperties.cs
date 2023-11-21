@@ -76,7 +76,13 @@ namespace ReadingLightNovelApplication
                 " dbo.Volume ON dbo.Chapter.MaVolume = dbo.Volume.MaVolume INNER JOIN\r\n " +
                 " dbo.TacPham ON dbo.Volume.MaTacPham = dbo.TacPham.MaTacPham" +
                 "\r\nwhere TacPham.MaTacPham = N'" + MaTp + "' \r\ngroup by TacPham.MaTacPham ");
-            lblView.Text = dt4.Rows[0][0].ToString();
+            try
+            {
+                lblView.Text = dt4.Rows[0][0].ToString();
+            }
+            catch {
+                lblView.Text = "0";
+            }
             dt4.Dispose();
 
             DataTable dt5 = dataload.DataReader("select * \r\nfrom TacPham inner join TacGia on TacGia.MaTacGia =TacPham.MaTacGia" +
@@ -114,8 +120,7 @@ namespace ReadingLightNovelApplication
                 }
                 lblSoTu.Text = sotu.ToString();
             }
-            dt6.Dispose();
-            dataload.AddChildFormDockTop(new FormCommentArea(MaTp), this.panelCmt);
+            dt6.Dispose();         
             dataload.AddChildFormDockTop(new FormNhomDich(MaTp), panelNhomDich);
         }
 
@@ -140,9 +145,14 @@ namespace ReadingLightNovelApplication
             }
             else
             {
-                FormMain formMain = dataload.getFormMain(this) as FormMain;
-                Panel panel1 = dataload.getPanel(formMain, "panelMain");
-                dataload.openChildFormDockFill(formMain.getactive(), new FormLayoutDangNhap(), panel1);
+                MessageBox.Show("Bạn cần đăng nhập để theo dõi truyện này!");
+                LayoutLogged lg = dataload.getFormParent(this, "LayoutLogged") as LayoutLogged;
+                Panel panel1 = dataload.getPanel(lg, "panelNoiDung");
+                if (lg.isclick == false)
+                {
+                    dataload.AddChildFormDockFill(new FormLayoutDangNhap(), panel1);
+                    lg.setClick(true);
+                }
             }
         }
 
@@ -163,9 +173,13 @@ namespace ReadingLightNovelApplication
             else
             {
                 MessageBox.Show("Bạn cần đăng nhập để đánh giá truyện này");
-                FormMain formMain = dataload.getFormMain(this) as FormMain;
-                Panel panel1 = dataload.getPanel(formMain, "panelMain");
-                dataload.openChildFormDockFill(formMain.getactive(), new FormLayoutDangNhap(), panel1);
+                LayoutLogged lg = dataload.getFormParent(this, "LayoutLogged") as LayoutLogged;
+                Panel panel1 = dataload.getPanel(lg, "panelNoiDung");
+                if (lg.isclick == false)
+                {
+                    dataload.AddChildFormDockFill(new FormLayoutDangNhap(), panel1);
+                    lg.setClick(true);
+                }
             }
 
         }
@@ -198,10 +212,14 @@ namespace ReadingLightNovelApplication
             }
             else
             {
-                MessageBox.Show("Bạn cần đăng nhập để đánh giá truyện này");
-                FormMain formMain = dataload.getFormMain(this) as FormMain;
-                Panel panel1 = dataload.getPanel(formMain, "panelMain");
-                dataload.openChildFormDockFill(formMain.getactive(), new FormLayoutDangNhap(), panel1);
+                MessageBox.Show("Bạn cần đăng nhập để đọc tiếp truyện này");
+                LayoutLogged lg = dataload.getFormParent(this, "LayoutLogged") as LayoutLogged;
+                Panel panel1 = dataload.getPanel(lg, "panelNoiDung");
+                if (lg.isclick == false)
+                {
+                    dataload.AddChildFormDockFill(new FormLayoutDangNhap(), panel1);
+                    lg.setClick(true);
+                }
             }
         }
     }

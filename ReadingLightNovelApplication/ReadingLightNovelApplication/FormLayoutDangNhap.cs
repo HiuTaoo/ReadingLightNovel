@@ -36,7 +36,9 @@ namespace ReadingLightNovelApplication
 		private void guna2Button3_Click(object sender, EventArgs e)
 		{
             btnDangKi.BackColor = SystemColors.Control;
+            btnDangKi.ForeColor = Color.Black;
             btnDangNhap.BackColor = Color.SeaGreen;
+            btnDangNhap.ForeColor = Color.White;
             foreach (Control c in panelNoiDungDangNhap.Controls)
             {
                 c.Dispose();
@@ -47,7 +49,9 @@ namespace ReadingLightNovelApplication
         private void btnDangKi_Click(object sender, EventArgs e)
         {
 			btnDangNhap.BackColor = SystemColors.Control;
+            btnDangNhap.ForeColor = Color.Black;
 			btnDangKi.BackColor = Color.SeaGreen;
+            btnDangKi.ForeColor = Color.White;
 			foreach(Control c in panelNoiDungDangNhap.Controls)
 			{
 				c.Dispose();
@@ -57,9 +61,9 @@ namespace ReadingLightNovelApplication
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
-            Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
-            SupportMethod.openChildFormDockFill(formMain.getactive(), new FormMain(), panel1);
+            LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
+            lg.setClick(false);
+            this.Close();
         }
     }
 }

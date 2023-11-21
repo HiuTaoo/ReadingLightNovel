@@ -53,16 +53,23 @@ namespace ReadingLightNovelApplication
 
         
         private void lvChapter_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            FormMain formMain  = dataload.getFormMain(this) as FormMain;
+        {          
+            FormMain formMain = dataload.getFormMain(this) as FormMain;
             Panel panel1 = dataload.getPanel(formMain, "panelMain");
             DataTable dt = dataload.DataReader("select Chapter.MaChapter " +
                 "\r\nfrom Chapter inner join Volume on Volume.MaVolume = Chapter.MaVolume" +
                 "\r\ninner join TacPham on TacPham.MaTacPham = Volume.MaTacPham" +
-                "\r\nwhere Chapter.TenChapter = N'"+ lvChapter.SelectedItems[0].Text + "' " +
-                "and Chapter.ThoiGianDang = '"+ lvChapter.SelectedItems[0].SubItems[1].Text +"'");
-            dataload.openChildFormDockFill(formMain.getactive(),new FormMainReading(dt.Rows[0]["MaChapter"].ToString()), panel1);
-            
+                "\r\nwhere Chapter.TenChapter = N'" + lvChapter.SelectedItems[0].Text + "' " +
+                "and Chapter.ThoiGianDang = '" + lvChapter.SelectedItems[0].SubItems[1].Text + "'");
+            foreach(Control c in panel1.Controls)
+            {
+                c.Dispose();    
+            }
+            foreach (Form f in panel1.Controls)
+            {
+                f.Dispose();
+            }
+            dataload.openChildFormDockFill(formMain.getactive(), new FormMainReading(dt.Rows[0]["MaChapter"].ToString()), panel1);   
         }
 
         

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,17 +15,18 @@ namespace ReadingLightNovelApplication
     {
         private Form activeForm = null;
         SupportMethod SupportMethod = new SupportMethod();
+        public Boolean isclick = false;
         public LayoutLogged()
         {
             InitializeComponent();
         }
+        public void setClick(Boolean a)
+        {
+            isclick = a;
+        }
 
         public Form getActiveForm() { return activeForm; }
 
-        public Panel getPanelMorong()
-        {
-            return panel3;
-        }
 
         private void LayoutLogged_Load(object sender, EventArgs e)
         {
@@ -40,13 +42,39 @@ namespace ReadingLightNovelApplication
             }
         }
 
+        public void LoadPanel()
+        {
+            if (FormMain.isLogin == true)
+            {
+                foreach(Control c in panelLogin.Controls)
+                {
+                    c.Dispose();
+                }
+                SupportMethod.AddChildFormDockFill(new FormLogin(FormMain.TenDangNhap), this.panelLogin);
+            }
+            else
+            {
+                foreach (Control c in panelLogin.Controls)
+                {
+                    c.Dispose();
+                }
+                SupportMethod.AddChildFormDockFill(new FormLogout(), this.panelLogin);
+            }
+        }
+
 		private void btnLogo_Click(object sender, EventArgs e)
 		{
             foreach(Control control in this.panelNoiDung.Controls) 
             {
                 control.Dispose();
             }
-			SupportMethod.AddChildFormDockTop(new FormHome(), this.panelNoiDung);
+            
+            foreach (Form f in this.panelNoiDung.Controls)
+            {
+                f.Close();
+                f.Dispose();
+            }
+            SupportMethod.AddChildFormDockFill(new FormHome(), this.panelNoiDung);
 		}
 
 		private void btnDanhSach_Click(object sender, EventArgs e)

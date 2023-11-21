@@ -90,7 +90,7 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(715, 0);
+            this.guna2TextBox1.Location = new System.Drawing.Point(730, 0);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
@@ -108,7 +108,7 @@
             this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(969, 0);
+            this.btnTimKiem.Location = new System.Drawing.Point(984, 0);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -119,9 +119,9 @@
             // panelLogin
             // 
             this.panelLogin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelLogin.Location = new System.Drawing.Point(1012, 0);
+            this.panelLogin.Location = new System.Drawing.Point(1027, 0);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(225, 38);
+            this.panelLogin.Size = new System.Drawing.Size(210, 38);
             this.panelLogin.TabIndex = 20;
             // 
             // panel5
@@ -217,7 +217,6 @@
             // 
             // panelNoiDung
             // 
-            this.panelNoiDung.AutoScroll = true;
             this.panelNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNoiDung.Location = new System.Drawing.Point(0, 58);
             this.panelNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

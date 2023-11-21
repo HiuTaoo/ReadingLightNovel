@@ -31,8 +31,8 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnYeuThich = new Guna.UI2.WinForms.Guna2Button();
             this.btnThongBao = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAvt = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panelLogout = new System.Windows.Forms.Panel();
+            this.btnAvt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAvt)).BeginInit();
             this.SuspendLayout();
@@ -41,12 +41,12 @@
             // 
             this.guna2Panel1.Controls.Add(this.btnYeuThich);
             this.guna2Panel1.Controls.Add(this.btnThongBao);
-            this.guna2Panel1.Controls.Add(this.panel1);
+            this.guna2Panel1.Controls.Add(this.panelLogout);
             this.guna2Panel1.Controls.Add(this.btnAvt);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(225, 38);
+            this.guna2Panel1.Size = new System.Drawing.Size(210, 38);
             this.guna2Panel1.TabIndex = 0;
             // 
             // btnYeuThich
@@ -60,10 +60,10 @@
             this.btnYeuThich.FillColor = System.Drawing.Color.Transparent;
             this.btnYeuThich.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnYeuThich.ForeColor = System.Drawing.Color.White;
-            this.btnYeuThich.Location = new System.Drawing.Point(21, 0);
+            this.btnYeuThich.Location = new System.Drawing.Point(1, 0);
             this.btnYeuThich.Name = "btnYeuThich";
             this.btnYeuThich.Size = new System.Drawing.Size(74, 38);
-            this.btnYeuThich.TabIndex = 8;
+            this.btnYeuThich.TabIndex = 11;
             this.btnYeuThich.Click += new System.EventHandler(this.btnYeuThich_Click);
             // 
             // btnThongBao
@@ -77,31 +77,31 @@
             this.btnThongBao.FillColor = System.Drawing.Color.Transparent;
             this.btnThongBao.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThongBao.ForeColor = System.Drawing.Color.White;
-            this.btnThongBao.Location = new System.Drawing.Point(95, 0);
+            this.btnThongBao.Location = new System.Drawing.Point(75, 0);
             this.btnThongBao.Name = "btnThongBao";
             this.btnThongBao.Size = new System.Drawing.Size(74, 38);
-            this.btnThongBao.TabIndex = 7;
+            this.btnThongBao.TabIndex = 10;
             // 
-            // panel1
+            // panelLogout
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(169, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(18, 38);
-            this.panel1.TabIndex = 6;
+            this.panelLogout.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelLogout.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelLogout.Location = new System.Drawing.Point(149, 0);
+            this.panelLogout.Name = "panelLogout";
+            this.panelLogout.Size = new System.Drawing.Size(16, 38);
+            this.panelLogout.TabIndex = 9;
             // 
             // btnAvt
             // 
-            this.btnAvt.BackColor = System.Drawing.Color.Transparent;
-            this.btnAvt.BorderRadius = 30;
+            this.btnAvt.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAvt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAvt.FillColor = System.Drawing.Color.Transparent;
             this.btnAvt.ImageRotate = 0F;
-            this.btnAvt.Location = new System.Drawing.Point(187, 0);
+            this.btnAvt.Location = new System.Drawing.Point(165, 0);
             this.btnAvt.Name = "btnAvt";
-            this.btnAvt.Size = new System.Drawing.Size(38, 38);
-            this.btnAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAvt.TabIndex = 5;
+            this.btnAvt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnAvt.Size = new System.Drawing.Size(45, 38);
+            this.btnAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnAvt.TabIndex = 0;
             this.btnAvt.TabStop = false;
             this.btnAvt.Click += new System.EventHandler(this.btnAvt_Click);
             // 
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(225, 38);
+            this.ClientSize = new System.Drawing.Size(210, 38);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
@@ -126,7 +126,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button btnYeuThich;
         private Guna.UI2.WinForms.Guna2Button btnThongBao;
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2PictureBox btnAvt;
+        private System.Windows.Forms.Panel panelLogout;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox btnAvt;
     }
 }

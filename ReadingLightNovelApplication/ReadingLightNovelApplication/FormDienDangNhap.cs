@@ -60,13 +60,19 @@ namespace ReadingLightNovelApplication
                     else
                     {
                         FormMain.TenDangNhap = tbUserName.Text;
-                        FormMain.isLogin = true;
-                        FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
-                        Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
-                        SupportMethod.openChildFormDockFill(formMain.getactive(), new FormMain(), panel1);
-                    }               
+                        FormMain.isLogin = true;                      
+                        FormLayoutDangNhap fl = SupportMethod.getFormParent(this, "FormLayoutDangNhap") as FormLayoutDangNhap;
+
+                        LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
+                        lg.LoadPanel();
+                        lg.setClick(false);
+                        fl.Close();
+                    }
                 }
             }
+            
+            
+
         }
     }
 }

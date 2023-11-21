@@ -140,10 +140,21 @@ D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\Re
 >>>>>>> 7cc47d813d933803cb54d10c4e0bdd8eecbcb74a
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormFollow.resources
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormFollowItem.resources
-<<<<<<< HEAD
 D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormNhomDich.resources
 D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormRating.resources
 D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormListNovel.resources
-=======
 >>>>>>> 4e6a66fbfc6f887dfb3cdbf8017ae40a5d6fc532
 >>>>>>> 6f79d8b66cdee53580fdc7cc877d30abf94ff60a
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.LayoutNoLogged.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormHomeSystem.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.FormSuaTruyen.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.FormThemChapter.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormThemTruyen.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.FormThemVolume.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormTienIch.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.FormTruyenDaDang.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.LayoutQuanLyTruyen.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.LayOutSystem.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormLichSu.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormHistoryItem.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormListItem.resources

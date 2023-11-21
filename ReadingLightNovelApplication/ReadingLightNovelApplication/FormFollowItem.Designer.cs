@@ -77,10 +77,10 @@
             // 
             this.guna2Panel4.Controls.Add(this.lblVol);
             this.guna2Panel4.Controls.Add(this.lblChapter);
-            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel4.Location = new System.Drawing.Point(438, 0);
+            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel4.Location = new System.Drawing.Point(523, 0);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(288, 70);
+            this.guna2Panel4.Size = new System.Drawing.Size(451, 70);
             this.guna2Panel4.TabIndex = 4;
             // 
             // lblVol
@@ -112,7 +112,7 @@
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(438, 70);
+            this.guna2Panel2.Size = new System.Drawing.Size(523, 70);
             this.guna2Panel2.TabIndex = 2;
             // 
             // pbImg
