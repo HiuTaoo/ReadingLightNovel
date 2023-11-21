@@ -15,16 +15,18 @@ namespace ReadingLightNovelApplication
 {
 	public partial class FormSapXep : Form
 	{
-
+		private int cbLuaChonIndex = 0;
 		private SupportMethod supportMethod = new SupportMethod();
-		public FormSapXep()
+		public FormSapXep(int cbLuaChonIndex)
 		{
 			InitializeComponent();
+			this.Load += btnApDung;
+			this.cbLuaChonIndex = cbLuaChonIndex;
 		}
 
 		public void setUpMacDinh()
 		{
-			cbLuaChon.SelectedIndex = 0;
+			cbLuaChon.SelectedIndex = cbLuaChonIndex;
 			checkboxDaHoanThanh.Checked = true;
 			checkboxDangTienHanh.Checked = true;
 			checkboxTamNgung.Checked = true;
@@ -91,7 +93,7 @@ namespace ReadingLightNovelApplication
 			btnPhanLoaiApDung.Click += btnApDung;
 			btnTinhTrangApDung.Click += btnApDung;
 			loadTheLoai();
-			this.Load += btnApDung;
+			
 		
 		}
 
@@ -200,6 +202,10 @@ namespace ReadingLightNovelApplication
 		void btnApDung(object sender, EventArgs e)
 		{
 			DataTable data = supportMethod.DataReader(getCommandText());
+			foreach (Control control in flpKetQuaSapXep.Controls)
+			{
+				control.Dispose();
+			}
 			Stack<string> stack = new Stack<string>();
 			foreach (DataRow row in data.Rows)
 			{
@@ -233,6 +239,24 @@ namespace ReadingLightNovelApplication
 				panelTheLoai.Controls.Add(button);
 			}
 
+		}
+
+		private void cbLuaChon_SelectedValueChanged(object sender, EventArgs e)
+		{
+			DataTable data = supportMethod.DataReader(getCommandText());
+			foreach(Control control in flpKetQuaSapXep.Controls)
+			{
+				control.Dispose();
+			}
+			Stack<string> stack = new Stack<string>();
+			foreach (DataRow row in data.Rows)
+			{
+				stack.Push(row["MaTacPham"].ToString());
+			}
+			foreach (string item in stack)
+			{
+				supportMethod.AddChildFormDockNone(new FormTruyenItem(item), flpKetQuaSapXep);
+			}
 		}
 	}
 }

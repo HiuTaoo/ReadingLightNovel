@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace ReadingLightNovelApplication
 	{
 		private SupportMethod  supportMethod = new SupportMethod();
 		private string maChapter;
+		private string maTacPham;
 		public FormTruyenVuaDocItem(string maChapter)
 		{
 			InitializeComponent();
@@ -43,8 +45,53 @@ namespace ReadingLightNovelApplication
 			btnTenChuong.Text = data.Rows[0]["TenChapter"].ToString();
 			btnTenTruyen.Text = data.Rows[0]["TenTacPham"].ToString();
 			btnTenVolume.Text = data.Rows[0]["TenVolume"].ToString();
+
+			this.maTacPham = data.Rows[0]["MaTacPham"].ToString();
+
+			// load event
+			btnTenChuong.MouseEnter += mouseEnter;
+			btnTenTruyen.MouseEnter += mouseEnter;
+			btnTenVolume.MouseEnter += mouseEnter;
+
+			btnTenVolume.MouseLeave += mouseLeave;
+			btnTenTruyen.MouseLeave += mouseLeave;
+			btnTenChuong.MouseLeave += mouseLeave;
 		}
 
+		public void mouseEnter(object sender, EventArgs e)
+		{
+			Guna2Button btn = sender as Guna2Button;
+			btn.ForeColor = Color.Green;
+		}
 
+		public void mouseLeave(object sender, EventArgs e)
+		{
+			Guna2Button btn = sender as Guna2Button;
+			btn.ForeColor = Color.Black;
+		}
+
+		private void panelAnh_MouseClick(object sender, MouseEventArgs e)
+		{
+			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormProperties(maTacPham), this);
+		}
+
+		private void btnTenTruyen_Click(object sender, EventArgs e)
+		{
+			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormProperties(maTacPham), this);
+
+		}
+
+		private void btnTenVolume_Click(object sender, EventArgs e)
+		{
+			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormProperties(maTacPham), this);
+
+		}
+
+		private void btnTenChuong_Click(object sender, EventArgs e)
+		{
+			supportMethod.openChildFormFromForm("FormMain", "panelMain", new FormMainReading(maChapter), this);
+
+		}
 	}
+
 }
