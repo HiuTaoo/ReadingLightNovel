@@ -57,5 +57,16 @@ namespace ReadingLightNovelApplication
 			}
 			SupportMethod.AddChildFormDockTop(new FormSapXep(), this.panelNoiDung);
 		}
+
+		private void btnTimKiem_Click(object sender, EventArgs e)
+		{
+			foreach (Control control in this.panelNoiDung.Controls)
+			{
+				control.Dispose();
+			}
+			SupportMethod.AddChildFormDockTop(new FormTimKiem("s"), this.panelNoiDung);
+		}
+
+		
 	}
 }

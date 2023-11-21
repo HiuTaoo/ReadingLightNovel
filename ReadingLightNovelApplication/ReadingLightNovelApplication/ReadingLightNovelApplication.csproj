@@ -290,6 +290,12 @@
     <Compile Include="LayoutLogged.Designer.cs">
       <DependentUpon>LayoutLogged.cs</DependentUpon>
     </Compile>
+    <Compile Include="LayoutNoLogged.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayoutNoLogged.Designer.cs">
+      <DependentUpon>LayoutNoLogged.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -408,6 +414,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LayoutLogged.resx">
       <DependentUpon>LayoutLogged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutNoLogged.resx">
+      <DependentUpon>LayoutNoLogged.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

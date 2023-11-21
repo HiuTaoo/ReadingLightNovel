@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -15,7 +16,7 @@ namespace ReadingLightNovelApplication
 {
      class SupportMethod
     {
-		string strConnect = "Data Source=DESKTOP-51MISFU\\HIUTAO;" +
+		string strConnect = "Data Source=DESKTOP-EAAUDNC\\USERNAME;" +
 			"Initial Catalog=ReadingLightNovel;Integrated Security=True";
         SqlConnection sqlConnect = null;
         //Phương thức mở kết nối
@@ -193,6 +194,7 @@ namespace ReadingLightNovelApplication
 			SupportMethod.openChildFormDockTop(form, formName, panelName);
 		}*/
 
+        
 
         public int CountWordsFromFile(string filePath)
         {

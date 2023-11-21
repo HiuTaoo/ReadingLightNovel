@@ -28,36 +28,47 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.flpDanhSach = new System.Windows.Forms.FlowLayoutPanel();
-			this.flpDanhSachKetQua = new System.Windows.Forms.FlowLayoutPanel();
+			this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+			this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+			this.flpKetQua = new System.Windows.Forms.FlowLayoutPanel();
 			this.SuspendLayout();
 			// 
-			// flpDanhSach
+			// guna2Panel1
 			// 
-			this.flpDanhSach.AutoSize = true;
-			this.flpDanhSach.Dock = System.Windows.Forms.DockStyle.Top;
-			this.flpDanhSach.Location = new System.Drawing.Point(0, 0);
-			this.flpDanhSach.Name = "flpDanhSach";
-			this.flpDanhSach.Size = new System.Drawing.Size(1548, 0);
-			this.flpDanhSach.TabIndex = 0;
+			this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
+			this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+			this.guna2Panel1.Name = "guna2Panel1";
+			this.guna2Panel1.Size = new System.Drawing.Size(33, 254);
+			this.guna2Panel1.TabIndex = 0;
 			// 
-			// flpDanhSachKetQua
+			// guna2Panel2
 			// 
-			this.flpDanhSachKetQua.AutoSize = true;
-			this.flpDanhSachKetQua.Dock = System.Windows.Forms.DockStyle.Top;
-			this.flpDanhSachKetQua.Location = new System.Drawing.Point(0, 0);
-			this.flpDanhSachKetQua.Name = "flpDanhSachKetQua";
-			this.flpDanhSachKetQua.Size = new System.Drawing.Size(1548, 0);
-			this.flpDanhSachKetQua.TabIndex = 1;
+			this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Right;
+			this.guna2Panel2.Location = new System.Drawing.Point(1515, 0);
+			this.guna2Panel2.Name = "guna2Panel2";
+			this.guna2Panel2.Size = new System.Drawing.Size(33, 254);
+			this.guna2Panel2.TabIndex = 1;
+			// 
+			// flpKetQua
+			// 
+			this.flpKetQua.AutoSize = true;
+			this.flpKetQua.Dock = System.Windows.Forms.DockStyle.Top;
+			this.flpKetQua.Location = new System.Drawing.Point(33, 0);
+			this.flpKetQua.Name = "flpKetQua";
+			this.flpKetQua.Size = new System.Drawing.Size(1482, 0);
+			this.flpKetQua.TabIndex = 2;
+			this.flpKetQua.AutoSizeChanged += new System.EventHandler(this.flpKetQua_AutoSizeChanged);
 			// 
 			// FormTimKiemKetQua
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
-			this.ClientSize = new System.Drawing.Size(1548, 471);
-			this.Controls.Add(this.flpDanhSachKetQua);
-			this.Controls.Add(this.flpDanhSach);
+			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.ClientSize = new System.Drawing.Size(1548, 254);
+			this.Controls.Add(this.flpKetQua);
+			this.Controls.Add(this.guna2Panel2);
+			this.Controls.Add(this.guna2Panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "FormTimKiemKetQua";
 			this.Text = "FormTimKiemKetQua";
@@ -69,7 +80,8 @@
 
 		#endregion
 
-		private System.Windows.Forms.FlowLayoutPanel flpDanhSach;
-		private System.Windows.Forms.FlowLayoutPanel flpDanhSachKetQua;
+		private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+		private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+		private System.Windows.Forms.FlowLayoutPanel flpKetQua;
 	}
 }

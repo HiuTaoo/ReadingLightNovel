@@ -27,7 +27,7 @@ namespace ReadingLightNovelApplication
 			//cần edit lại UI
 			loadNoiBat();	// done
 			loadChuongMoi(); //done
-			loadCommentRecent(); //done
+			//loadCommentRecent(); //done
 			loadLichSu(); // cần sửa lại truy vấn
 			loadTruyenMoi(); //done
 			loadToptheoDoi(); //
@@ -36,11 +36,21 @@ namespace ReadingLightNovelApplication
 
 		private void loadNoiBat()
 		{
+			Stack<string> list = new Stack<string>();
+
 			DataTable data = SupportMethod.DataReader("SELECT top 6 TacPham.MaTacPham, TacPham.TenTacPham, TacPham.Anh ,COUNT(LichSu.ThoiGian)\r\nFROM   dbo.Chapter INNER JOIN\r\n             dbo.LichSu ON dbo.Chapter.MaChapter = dbo.LichSu.MaChapter INNER JOIN\r\n             dbo.Volume ON dbo.Chapter.MaVolume = dbo.Volume.MaVolume INNER JOIN\r\n             dbo.TacPham ON dbo.Volume.MaTacPham = dbo.TacPham.MaTacPham\r\ngroup by TacPham.MaTacPham, TacPham.TenTacPham, TacPham.Anh");
 			
+
 			foreach(DataRow row in data.Rows)
 			{
-				SupportMethod.AddChildFormDockNone(new FormTruyenItemNoiBat(row["MaTacPham"].ToString()), flpTopTruyen);
+				list.Push(row["MaTacPham"].ToString());
+
+				//SupportMethod.AddChildFormDockNone(new FormTruyenItemNoiBat(row["MaTacPham"].ToString()), flpTopTruyen);
+			}
+
+			foreach (string item in list)
+			{
+				SupportMethod.AddChildFormDockTop(new FormTruyenItemNoiBat(item), flpTopTruyen);
 			}
 		}
 
@@ -57,15 +67,23 @@ namespace ReadingLightNovelApplication
 				"\r\n\t\tand LichSu.TenDangNhap = N'HiuTao'\t\t\t\t\t" +
 				"\r\ngroup by TacPham.TenTacPham, Volume.TenVolume, Chapter.MaChapter, LichSu.ThoiGian" +
 				"\r\norder by LichSu.ThoiGian desc");
-
+			Stack<string> list = new Stack<string>();
 			foreach (DataRow row in data.Rows)
 			{
-				SupportMethod.AddChildFormDockTop(new FormTruyenVuaDocItem(row["MaChapter"].ToString()), panelTruyenVuaDoc);
+				list.Push(row["MaChapter"].ToString());
+
+				
+			}
+
+			foreach (string item in list)
+			{
+				SupportMethod.AddChildFormDockTop(new FormTruyenVuaDocItem(item), panelTruyenVuaDoc);
 			}
 		}
 
 		private void loadCommentRecent()
 		{
+			Stack<string> list = new Stack<string>();
 			DataTable data = SupportMethod.DataReader("select BinhLuanTacPham.MaBinhLuan, TacPham.MaTacPham, TacPham.TenTacPham, [User].TenDangNhap, BinhLuanTacPham.ThoiGian" +
 				"\r\nfrom TacPham inner join BinhLuanTacPham on BinhLuanTacPham.MaTacPham = TacPham.MaTacPham" +
 				"\r\n\tinner join [User] on [User].TenDangNhap = BinhLuanTacPham.TenDangNhap" +
@@ -75,8 +93,14 @@ namespace ReadingLightNovelApplication
 				"\r\norder by BinhLuanTacPham.ThoiGian desc");
 			foreach (DataRow row in data.Rows)
 			{
-				SupportMethod.AddChildFormDockTop(new FormCommentRecent(row["MaBinhLuan"].ToString()), panelCommentRecent);
+				list.Push(row["MaBinhLuan"].ToString());
 				
+				
+			}
+
+			foreach(string item in list)
+			{
+				SupportMethod.AddChildFormDockTop(new FormCommentRecent(item), panelCommentRecent);
 			}
 		}
 
