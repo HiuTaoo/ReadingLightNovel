@@ -1,41 +1,39 @@
 ﻿namespace ReadingLightNovelApplication
 {
-    partial class LayoutLogged
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class LayoutLogged
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Windows Form Designer generated code
+		#region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LayoutLogged));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panelHeaderLayoutLogged = new System.Windows.Forms.Panel();
-			this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+			this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
 			this.btnTimKiem = new Guna.UI2.WinForms.Guna2CircleButton();
-			this.btnThongBao = new Guna.UI2.WinForms.Guna2CircleButton();
-			this.btnYeuThich = new Guna.UI2.WinForms.Guna2CircleButton();
-			this.btnAvatar = new Guna.UI2.WinForms.Guna2CircleButton();
+			this.panelLogin = new Guna.UI2.WinForms.Guna2Panel();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.btnHuongDan = new Guna.UI2.WinForms.Guna2Button();
 			this.btnDanhSach = new Guna.UI2.WinForms.Guna2Button();
@@ -64,11 +62,9 @@
 			// panelHeaderLayoutLogged
 			// 
 			this.panelHeaderLayoutLogged.BackColor = System.Drawing.Color.Transparent;
-			this.panelHeaderLayoutLogged.Controls.Add(this.guna2TextBox1);
+			this.panelHeaderLayoutLogged.Controls.Add(this.txtTimKiem);
 			this.panelHeaderLayoutLogged.Controls.Add(this.btnTimKiem);
-			this.panelHeaderLayoutLogged.Controls.Add(this.btnThongBao);
-			this.panelHeaderLayoutLogged.Controls.Add(this.btnYeuThich);
-			this.panelHeaderLayoutLogged.Controls.Add(this.btnAvatar);
+			this.panelHeaderLayoutLogged.Controls.Add(this.panelLogin);
 			this.panelHeaderLayoutLogged.Controls.Add(this.panel5);
 			this.panelHeaderLayoutLogged.Controls.Add(this.btnHuongDan);
 			this.panelHeaderLayoutLogged.Controls.Add(this.btnDanhSach);
@@ -81,27 +77,27 @@
 			this.panelHeaderLayoutLogged.Size = new System.Drawing.Size(1418, 48);
 			this.panelHeaderLayoutLogged.TabIndex = 4;
 			// 
-			// guna2TextBox1
+			// txtTimKiem
 			// 
-			this.guna2TextBox1.BorderRadius = 10;
-			this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.guna2TextBox1.DefaultText = "";
-			this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-			this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-			this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Right;
-			this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-			this.guna2TextBox1.Location = new System.Drawing.Point(914, 0);
-			this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.guna2TextBox1.Name = "guna2TextBox1";
-			this.guna2TextBox1.PasswordChar = '\0';
-			this.guna2TextBox1.PlaceholderText = "";
-			this.guna2TextBox1.SelectedText = "";
-			this.guna2TextBox1.Size = new System.Drawing.Size(286, 48);
-			this.guna2TextBox1.TabIndex = 24;
+			this.txtTimKiem.BorderRadius = 10;
+			this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtTimKiem.DefaultText = "";
+			this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+			this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+			this.txtTimKiem.Dock = System.Windows.Forms.DockStyle.Right;
+			this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+			this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+			this.txtTimKiem.Location = new System.Drawing.Point(805, 0);
+			this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.txtTimKiem.Name = "txtTimKiem";
+			this.txtTimKiem.PasswordChar = '\0';
+			this.txtTimKiem.PlaceholderText = "";
+			this.txtTimKiem.SelectedText = "";
+			this.txtTimKiem.Size = new System.Drawing.Size(286, 48);
+			this.txtTimKiem.TabIndex = 26;
 			// 
 			// btnTimKiem
 			// 
@@ -112,61 +108,22 @@
 			this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Right;
 			this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
 			this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-			this.btnTimKiem.Location = new System.Drawing.Point(1200, 0);
+			this.btnTimKiem.Location = new System.Drawing.Point(1091, 0);
+			this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnTimKiem.Name = "btnTimKiem";
 			this.btnTimKiem.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
 			this.btnTimKiem.Size = new System.Drawing.Size(48, 48);
-			this.btnTimKiem.TabIndex = 23;
+			this.btnTimKiem.TabIndex = 25;
 			this.btnTimKiem.Text = "guna2CircleButton4";
-			this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
 			// 
-			// btnThongBao
+			// panelLogin
 			// 
-			this.btnThongBao.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnThongBao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnThongBao.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnThongBao.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnThongBao.Dock = System.Windows.Forms.DockStyle.Right;
-			this.btnThongBao.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.btnThongBao.ForeColor = System.Drawing.Color.White;
-			this.btnThongBao.Location = new System.Drawing.Point(1248, 0);
-			this.btnThongBao.Name = "btnThongBao";
-			this.btnThongBao.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-			this.btnThongBao.Size = new System.Drawing.Size(48, 48);
-			this.btnThongBao.TabIndex = 22;
-			this.btnThongBao.Text = "guna2CircleButton3";
-			// 
-			// btnYeuThich
-			// 
-			this.btnYeuThich.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnYeuThich.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnYeuThich.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnYeuThich.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnYeuThich.Dock = System.Windows.Forms.DockStyle.Right;
-			this.btnYeuThich.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.btnYeuThich.ForeColor = System.Drawing.Color.White;
-			this.btnYeuThich.Location = new System.Drawing.Point(1296, 0);
-			this.btnYeuThich.Name = "btnYeuThich";
-			this.btnYeuThich.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-			this.btnYeuThich.Size = new System.Drawing.Size(48, 48);
-			this.btnYeuThich.TabIndex = 21;
-			this.btnYeuThich.Text = "guna2CircleButton2";
-			// 
-			// btnAvatar
-			// 
-			this.btnAvatar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnAvatar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnAvatar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnAvatar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnAvatar.Dock = System.Windows.Forms.DockStyle.Right;
-			this.btnAvatar.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.btnAvatar.ForeColor = System.Drawing.Color.White;
-			this.btnAvatar.Location = new System.Drawing.Point(1344, 0);
-			this.btnAvatar.Name = "btnAvatar";
-			this.btnAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-			this.btnAvatar.Size = new System.Drawing.Size(48, 48);
-			this.btnAvatar.TabIndex = 20;
-			this.btnAvatar.Text = "guna2CircleButton1";
+			this.panelLogin.Dock = System.Windows.Forms.DockStyle.Right;
+			this.panelLogin.Location = new System.Drawing.Point(1139, 0);
+			this.panelLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+			this.panelLogin.Name = "panelLogin";
+			this.panelLogin.Size = new System.Drawing.Size(253, 48);
+			this.panelLogin.TabIndex = 20;
 			// 
 			// panel5
 			// 
@@ -286,22 +243,22 @@
 			this.panelHeaderLayoutLogged.PerformLayout();
 			this.ResumeLayout(false);
 
-        }
+		}
 
-        #endregion
+		#endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelHeaderLayoutLogged;
-        private System.Windows.Forms.Panel panel5;
-        private Guna.UI2.WinForms.Guna2Button btnHuongDan;
-        private Guna.UI2.WinForms.Guna2Button btnDanhSach;
-        private Guna.UI2.WinForms.Guna2ImageButton btnLogo;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panelNoiDung;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2CircleButton btnTimKiem;
-        private Guna.UI2.WinForms.Guna2Panel panelLogin;
-    }
+		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Panel panelHeaderLayoutLogged;
+		private System.Windows.Forms.Panel panel5;
+		private Guna.UI2.WinForms.Guna2Button btnHuongDan;
+		private Guna.UI2.WinForms.Guna2Button btnDanhSach;
+		private Guna.UI2.WinForms.Guna2ImageButton btnLogo;
+		private System.Windows.Forms.Panel panel4;
+		private System.Windows.Forms.Panel panel3;
+		private System.Windows.Forms.Panel panel2;
+		private System.Windows.Forms.Panel panelNoiDung;
+		private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
+		private Guna.UI2.WinForms.Guna2CircleButton btnTimKiem;
+		private Guna.UI2.WinForms.Guna2Panel panelLogin;
+	}
 }

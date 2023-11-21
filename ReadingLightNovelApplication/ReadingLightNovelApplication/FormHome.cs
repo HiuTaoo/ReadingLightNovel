@@ -27,7 +27,7 @@ namespace ReadingLightNovelApplication
 			//cần edit lại UI
 			loadNoiBat();	// done
 			loadChuongMoi(); //done
-			//loadCommentRecent(); //done
+			loadCommentRecent(); //done
 			loadLichSu(); // cần sửa lại truy vấn
 			loadTruyenMoi(); //done
 			loadToptheoDoi(); //
@@ -115,9 +115,16 @@ namespace ReadingLightNovelApplication
 				"\r\n    FROM Chapter c1\r\n    WHERE c1.MaVolume = Chapter.MaVolume\r\n)" +
 				"\r\nGROUP BY TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang" +
 				"\r\nORDER BY Chapter.ThoiGianDang\r\n");
+			Stack<string> list = new Stack<string>();
+
 			foreach (DataRow row in data.Rows)
 			{
-				SupportMethod.AddChildFormDockNone(new FormTruyenItem(row["MaTacPham"].ToString()), this.flpTruyenMoi);
+				list.Push(row["MaTacPham"].ToString());
+			}
+
+			foreach (string item in list)
+			{
+				SupportMethod.AddChildFormDockNone(new FormTruyenItem(item), this.flpTruyenMoi);
 			}
 		}
 
@@ -127,9 +134,17 @@ namespace ReadingLightNovelApplication
 				"\r\nfrom TacPham" +
 				"\r\norder by TacPham.ThoiGianTao desc");
 
+			Stack<string> list = new Stack<string>();
+
 			foreach(DataRow row in data.Rows)
 			{
-				SupportMethod.AddChildFormDockNone(new FormTruyenMoiItem(row["MaTacPham"].ToString()), flpTruyenMoiDang);
+				list.Push(row["MaTacPham"].ToString());
+			}
+
+			foreach(string item in list)
+			{
+				SupportMethod.AddChildFormDockNone(new FormTruyenMoiItem(item), flpTruyenMoiDang);
+
 			}
 		}
 
@@ -140,9 +155,15 @@ namespace ReadingLightNovelApplication
 				"\r\ngroup by TacPham.MaTacPham" +
 				"\r\norder by luotThich desc");
 			int index = 0;
+			Stack<string> list = new Stack<string>();
 			foreach (DataRow row in data.Rows)
 			{
-				SupportMethod.AddChildFormDockTop(new FormTheoDoiNhieuItem(row["MaTacPham"].ToString(), index++), panelTopTheoDoi);
+				list.Push(row["MaTacPham"].ToString());
+			}
+
+			foreach(string item in list)
+			{
+				SupportMethod.AddChildFormDockTop(new FormTheoDoiNhieuItem(item, index++), panelTopTheoDoi);
 			}
 		}
 
@@ -158,9 +179,14 @@ namespace ReadingLightNovelApplication
 				"\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang" +
 				"\r\n\t\t\t\tORDER BY Chapter.ThoiGianDang desc");
 
+			Stack<string> list = new Stack<string>();
 			foreach (DataRow row in data.Rows)
 			{
-				SupportMethod.AddChildFormDockNone(new FormTruyenItem(row["MaTacPham"].ToString()), flpTruyenHoanThanh);
+				list.Push(row["MaTacPham"].ToString());
+			}
+			foreach (string item in list)
+			{
+				SupportMethod.AddChildFormDockNone(new FormTruyenItem(item), flpTruyenHoanThanh);
 			}
 		}
 

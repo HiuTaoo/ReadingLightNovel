@@ -315,16 +315,17 @@
             "Số từ"});
 			this.cbLuaChon.Location = new System.Drawing.Point(34, 0);
 			this.cbLuaChon.Name = "cbLuaChon";
-			this.cbLuaChon.Size = new System.Drawing.Size(217, 36);
+			this.cbLuaChon.Size = new System.Drawing.Size(413, 36);
 			this.cbLuaChon.TabIndex = 2;
+			this.cbLuaChon.SelectedValueChanged += new System.EventHandler(this.cbLuaChon_SelectedValueChanged);
 			// 
 			// guna2GradientPanel8
 			// 
 			this.guna2GradientPanel8.BackColor = System.Drawing.Color.Transparent;
 			this.guna2GradientPanel8.Dock = System.Windows.Forms.DockStyle.Right;
-			this.guna2GradientPanel8.Location = new System.Drawing.Point(251, 0);
+			this.guna2GradientPanel8.Location = new System.Drawing.Point(447, 0);
 			this.guna2GradientPanel8.Name = "guna2GradientPanel8";
-			this.guna2GradientPanel8.Size = new System.Drawing.Size(921, 41);
+			this.guna2GradientPanel8.Size = new System.Drawing.Size(725, 41);
 			this.guna2GradientPanel8.TabIndex = 1;
 			// 
 			// guna2GradientPanel9
