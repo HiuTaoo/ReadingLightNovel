@@ -44,9 +44,7 @@
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lbContent = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDetail = new Guna.UI2.WinForms.Guna2Button();
             this.btnChapterName = new Guna.UI2.WinForms.Guna2Button();
@@ -86,7 +84,7 @@
             // 
             this.panelCmt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelCmt.AutoSize = true;
-            this.panelCmt.Location = new System.Drawing.Point(100, 3);
+            this.panelCmt.Location = new System.Drawing.Point(111, 3);
             this.panelCmt.Name = "panelCmt";
             this.panelCmt.Size = new System.Drawing.Size(1060, 197);
             this.panelCmt.TabIndex = 1;
@@ -96,17 +94,17 @@
             this.panelComment.AutoSize = true;
             this.panelComment.Controls.Add(this.panelCmt);
             this.panelComment.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelComment.Location = new System.Drawing.Point(0, 485);
+            this.panelComment.Location = new System.Drawing.Point(0, 246);
             this.panelComment.Name = "panelComment";
-            this.panelComment.Size = new System.Drawing.Size(1281, 203);
+            this.panelComment.Size = new System.Drawing.Size(1302, 203);
             this.panelComment.TabIndex = 11;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 466);
+            this.panel3.Location = new System.Drawing.Point(0, 227);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1281, 19);
+            this.panel3.Size = new System.Drawing.Size(1302, 19);
             this.panel3.TabIndex = 10;
             // 
             // btnNext
@@ -138,6 +136,7 @@
             this.btnHome.PressedState.ImageSize = new System.Drawing.Size(36, 36);
             this.btnHome.Size = new System.Drawing.Size(196, 53);
             this.btnHome.TabIndex = 0;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnPre
             // 
@@ -162,7 +161,7 @@
             this.guna2Panel2.Controls.Add(this.btnNext);
             this.guna2Panel2.Controls.Add(this.btnHome);
             this.guna2Panel2.Controls.Add(this.btnPre);
-            this.guna2Panel2.Location = new System.Drawing.Point(335, 1);
+            this.guna2Panel2.Location = new System.Drawing.Point(346, 1);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(589, 57);
             this.guna2Panel2.TabIndex = 2;
@@ -186,72 +185,57 @@
             // 
             this.panel2.Controls.Add(this.guna2Panel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 407);
+            this.panel2.Location = new System.Drawing.Point(0, 168);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1281, 59);
+            this.panel2.Size = new System.Drawing.Size(1302, 59);
             this.panel2.TabIndex = 9;
             // 
             // panelContent
             // 
+            this.panelContent.AutoSize = true;
             this.panelContent.Controls.Add(this.panel6);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelContent.Location = new System.Drawing.Point(150, 0);
+            this.panelContent.Location = new System.Drawing.Point(0, 0);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(981, 276);
+            this.panelContent.Size = new System.Drawing.Size(1302, 37);
             this.panelContent.TabIndex = 2;
             // 
             // panel6
             // 
+            this.panel6.AutoSize = true;
             this.panel6.Controls.Add(this.lbContent);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(981, 276);
+            this.panel6.Size = new System.Drawing.Size(1302, 37);
             this.panel6.TabIndex = 0;
             // 
             // lbContent
             // 
             this.lbContent.AutoSize = true;
-            this.lbContent.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbContent.Location = new System.Drawing.Point(23, 13);
+            this.lbContent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbContent.Location = new System.Drawing.Point(186, 15);
+            this.lbContent.MaximumSize = new System.Drawing.Size(1000, 0);
             this.lbContent.Name = "lbContent";
-            this.lbContent.Size = new System.Drawing.Size(0, 20);
+            this.lbContent.Size = new System.Drawing.Size(0, 22);
             this.lbContent.TabIndex = 0;
-            // 
-            // panel5
-            // 
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(1131, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(150, 276);
-            this.panel5.TabIndex = 1;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.AutoSize = true;
             this.guna2Panel1.Controls.Add(this.panelContent);
-            this.guna2Panel1.Controls.Add(this.panel5);
-            this.guna2Panel1.Controls.Add(this.panel4);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 131);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1281, 276);
+            this.guna2Panel1.Size = new System.Drawing.Size(1302, 37);
             this.guna2Panel1.TabIndex = 8;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(150, 276);
-            this.panel4.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 95);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1281, 36);
+            this.panel1.Size = new System.Drawing.Size(1302, 36);
             this.panel1.TabIndex = 7;
             // 
             // btnDetail
@@ -266,7 +250,7 @@
             this.btnDetail.ForeColor = System.Drawing.Color.Black;
             this.btnDetail.Location = new System.Drawing.Point(0, 68);
             this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(1281, 27);
+            this.btnDetail.Size = new System.Drawing.Size(1302, 27);
             this.btnDetail.TabIndex = 2;
             this.btnDetail.Text = "30 Bình luận - Độ dài: 3,874 từ - Cập nhật: 2 năm";
             // 
@@ -283,7 +267,7 @@
             this.btnChapterName.ForeColor = System.Drawing.Color.Black;
             this.btnChapterName.Location = new System.Drawing.Point(0, 34);
             this.btnChapterName.Name = "btnChapterName";
-            this.btnChapterName.Size = new System.Drawing.Size(1281, 34);
+            this.btnChapterName.Size = new System.Drawing.Size(1302, 34);
             this.btnChapterName.TabIndex = 1;
             this.btnChapterName.Text = "Chương 01: Người Ông đáng kính và lí do để kẻ yếu nhất hướng tới danh hiệu Mạnh n" +
     "hất";
@@ -301,7 +285,7 @@
             this.btnVolName.ForeColor = System.Drawing.Color.Black;
             this.btnVolName.Location = new System.Drawing.Point(0, 0);
             this.btnVolName.Name = "btnVolName";
-            this.btnVolName.Size = new System.Drawing.Size(1281, 34);
+            this.btnVolName.Size = new System.Drawing.Size(1302, 34);
             this.btnVolName.TabIndex = 0;
             this.btnVolName.Text = "Chương 1";
             // 
@@ -314,7 +298,7 @@
             this.panelThongTin.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelThongTin.Location = new System.Drawing.Point(0, 0);
             this.panelThongTin.Name = "panelThongTin";
-            this.panelThongTin.Size = new System.Drawing.Size(1281, 95);
+            this.panelThongTin.Size = new System.Drawing.Size(1302, 95);
             this.panelThongTin.TabIndex = 6;
             // 
             // FormMainReading
@@ -340,9 +324,11 @@
             this.guna2Panel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);
+            this.panelContent.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.panelThongTin.ResumeLayout(false);
             this.panelThongTin.PerformLayout();
             this.ResumeLayout(false);
@@ -364,9 +350,7 @@
         private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip2;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Panel panelContent;
-        private System.Windows.Forms.Panel panel5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnDetail;
         private Guna.UI2.WinForms.Guna2Button btnChapterName;

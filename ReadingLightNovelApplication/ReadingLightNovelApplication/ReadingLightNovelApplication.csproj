@@ -152,6 +152,12 @@
     <Compile Include="FormList.Designer.cs">
       <DependentUpon>FormList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListNovel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListNovel.Designer.cs">
+      <DependentUpon>FormListNovel.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListVol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,12 @@
     <Compile Include="FormMainReading.Designer.cs">
       <DependentUpon>FormMainReading.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNhomDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhomDich.Designer.cs">
+      <DependentUpon>FormNhomDich.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +205,12 @@
     </Compile>
     <Compile Include="FormProperties.Designer.cs">
       <DependentUpon>FormProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRating.Designer.cs">
+      <DependentUpon>FormRating.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSapXep.cs">
       <SubType>Form</SubType>
@@ -322,6 +340,9 @@
     <EmbeddedResource Include="FormList.resx">
       <DependentUpon>FormList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListNovel.resx">
+      <DependentUpon>FormListNovel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormListVol.resx">
       <DependentUpon>FormListVol.cs</DependentUpon>
     </EmbeddedResource>
@@ -337,11 +358,17 @@
     <EmbeddedResource Include="FormMainReading.resx">
       <DependentUpon>FormMainReading.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormNhomDich.resx">
+      <DependentUpon>FormNhomDich.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormProfile.resx">
       <DependentUpon>FormProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProperties.resx">
       <DependentUpon>FormProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRating.resx">
+      <DependentUpon>FormRating.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSapXep.resx">
       <DependentUpon>FormSapXep.cs</DependentUpon>

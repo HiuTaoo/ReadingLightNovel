@@ -48,6 +48,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -68,6 +69,7 @@
             // 
             // panelTextEdit
             // 
+            this.panelTextEdit.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelTextEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelTextEdit.Controls.Add(this.guna2Button3);
             this.panelTextEdit.Controls.Add(this.guna2Button2);
@@ -85,7 +87,7 @@
             this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2Button3.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Button3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
             this.guna2Button3.Location = new System.Drawing.Point(344, 1);
@@ -100,7 +102,7 @@
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2Button2.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Button2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
             this.guna2Button2.Location = new System.Drawing.Point(242, -1);
@@ -115,7 +117,7 @@
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2Button1.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
             this.guna2Button1.Location = new System.Drawing.Point(140, 0);
@@ -130,7 +132,7 @@
             this.btnBold.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBold.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBold.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBold.FillColor = System.Drawing.SystemColors.Control;
+            this.btnBold.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBold.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBold.ForeColor = System.Drawing.Color.Black;
             this.btnBold.Location = new System.Drawing.Point(29, 0);
@@ -194,9 +196,11 @@
             // panelCmt
             // 
             this.panelCmt.AutoSize = true;
+            this.panelCmt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(228)))), ((int)(((byte)(211)))));
             this.panelCmt.BorderColor = System.Drawing.Color.Silver;
             this.panelCmt.BorderThickness = 1;
             this.panelCmt.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCmt.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(228)))), ((int)(((byte)(211)))));
             this.panelCmt.Location = new System.Drawing.Point(0, 254);
             this.panelCmt.Name = "panelCmt";
             this.panelCmt.Size = new System.Drawing.Size(950, 0);
@@ -207,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(950, 420);
+            this.ClientSize = new System.Drawing.Size(950, 259);
             this.Controls.Add(this.panelCmt);
             this.Controls.Add(this.panelTextArea);
             this.Controls.Add(this.panel1);

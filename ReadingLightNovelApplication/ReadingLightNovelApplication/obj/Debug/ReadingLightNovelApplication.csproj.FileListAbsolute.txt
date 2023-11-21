@@ -139,3 +139,6 @@ D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\Re
 >>>>>>> 7cc47d813d933803cb54d10c4e0bdd8eecbcb74a
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormFollow.resources
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormFollowItem.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormNhomDich.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormRating.resources
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormListNovel.resources
