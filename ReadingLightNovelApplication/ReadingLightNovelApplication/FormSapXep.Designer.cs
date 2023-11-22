@@ -376,8 +376,8 @@
 			this.guna2Panel24.TabIndex = 10;
 			// 
 			// guna2Panel25
-			// 
-			this.guna2Panel25.Controls.Add(this.guna2Button6);
+/*			// 
+			this.guna2Panel25.Controls.Add(this.guna2Button6);*/
 			this.guna2Panel25.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.guna2Panel25.Location = new System.Drawing.Point(24, 177);
 			this.guna2Panel25.Name = "guna2Panel25";
@@ -386,7 +386,7 @@
 			// 
 			// guna2Button6
 			// 
-			this.guna2Button6.BackColor = System.Drawing.Color.Transparent;
+		/*	this.guna2Button6.BackColor = System.Drawing.Color.Transparent;
 			this.guna2Button6.BorderRadius = 10;
 			this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
 			this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -400,12 +400,12 @@
 			this.guna2Button6.Name = "guna2Button6";
 			this.guna2Button6.Size = new System.Drawing.Size(129, 39);
 			this.guna2Button6.TabIndex = 0;
-			this.guna2Button6.Text = "Áp dụng";
+			this.guna2Button6.Text = "Áp dụng";*/
 			// 
 			// guna2Panel26
 			// 
 			this.guna2Panel26.Controls.Add(this.guna2HtmlLabel4);
-			this.guna2Panel26.Controls.Add(this.guna2CustomCheckBox1);
+			/*this.guna2Panel26.Controls.Add(this.guna2CustomCheckBox1);*/
 			this.guna2Panel26.Dock = System.Windows.Forms.DockStyle.Top;
 			this.guna2Panel26.Location = new System.Drawing.Point(24, 117);
 			this.guna2Panel26.Name = "guna2Panel26";
@@ -422,7 +422,7 @@
 			this.guna2HtmlLabel4.Text = "Convert";
 			// 
 			// guna2CustomCheckBox1
-			// 
+			/*// 
 			this.guna2CustomCheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
 			this.guna2CustomCheckBox1.CheckedState.BorderRadius = 2;
 			this.guna2CustomCheckBox1.CheckedState.BorderThickness = 0;
@@ -436,11 +436,11 @@
 			this.guna2CustomCheckBox1.UncheckedState.BorderRadius = 2;
 			this.guna2CustomCheckBox1.UncheckedState.BorderThickness = 0;
 			this.guna2CustomCheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-			// 
+			// */
 			// guna2Panel27
 			// 
 			this.guna2Panel27.Controls.Add(this.guna2HtmlLabel5);
-			this.guna2Panel27.Controls.Add(this.guna2CustomCheckBox2);
+		/*	this.guna2Panel27.Controls.Add(this.guna2CustomCheckBox2);*/
 			this.guna2Panel27.Dock = System.Windows.Forms.DockStyle.Top;
 			this.guna2Panel27.Location = new System.Drawing.Point(24, 83);
 			this.guna2Panel27.Name = "guna2Panel27";
@@ -458,7 +458,7 @@
 			// 
 			// guna2CustomCheckBox2
 			// 
-			this.guna2CustomCheckBox2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+		/*	this.guna2CustomCheckBox2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
 			this.guna2CustomCheckBox2.CheckedState.BorderRadius = 2;
 			this.guna2CustomCheckBox2.CheckedState.BorderThickness = 0;
 			this.guna2CustomCheckBox2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -471,11 +471,11 @@
 			this.guna2CustomCheckBox2.UncheckedState.BorderRadius = 2;
 			this.guna2CustomCheckBox2.UncheckedState.BorderThickness = 0;
 			this.guna2CustomCheckBox2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-			// 
+			// */
 			// guna2Panel28
 			// 
 			this.guna2Panel28.Controls.Add(this.guna2HtmlLabel6);
-			this.guna2Panel28.Controls.Add(this.guna2CustomCheckBox3);
+	/*		this.guna2Panel28.Controls.Add(this.guna2CustomCheckBox3);*/
 			this.guna2Panel28.Dock = System.Windows.Forms.DockStyle.Top;
 			this.guna2Panel28.Location = new System.Drawing.Point(24, 49);
 			this.guna2Panel28.Name = "guna2Panel28";
@@ -492,7 +492,7 @@
 			this.guna2HtmlLabel6.Text = "Truyện dịch";
 			// 
 			// guna2CustomCheckBox3
-			// 
+			/*// 
 			this.guna2CustomCheckBox3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
 			this.guna2CustomCheckBox3.CheckedState.BorderRadius = 2;
 			this.guna2CustomCheckBox3.CheckedState.BorderThickness = 0;
@@ -507,7 +507,7 @@
 			this.guna2CustomCheckBox3.UncheckedState.BorderThickness = 0;
 			this.guna2CustomCheckBox3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
 			// 
-			// guna2Panel29
+			// guna2Panel29*/
 			// 
 			this.guna2Panel29.Dock = System.Windows.Forms.DockStyle.Top;
 			this.guna2Panel29.Location = new System.Drawing.Point(24, 34);
@@ -575,7 +575,7 @@
 			// 
 			// guna2Panel22
 			// 
-			this.guna2Panel22.Controls.Add(this.guna2Button5);
+			/*this.guna2Panel22.Controls.Add(this.guna2Button5);*/
 			this.guna2Panel22.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.guna2Panel22.Location = new System.Drawing.Point(24, 177);
 			this.guna2Panel22.Name = "guna2Panel22";
@@ -583,7 +583,7 @@
 			this.guna2Panel22.TabIndex = 12;
 			// 
 			// guna2Button5
-			// 
+		/*	// 
 			this.guna2Button5.BackColor = System.Drawing.Color.Transparent;
 			this.guna2Button5.BorderRadius = 10;
 			this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -599,7 +599,7 @@
 			this.guna2Button5.Size = new System.Drawing.Size(129, 39);
 			this.guna2Button5.TabIndex = 0;
 			this.guna2Button5.Text = "Áp dụng";
-			// 
+			// */
 			// guna2Panel21
 			// 
 			this.guna2Panel21.Controls.Add(this.guna2HtmlLabel3);
@@ -759,7 +759,7 @@
 			// guna2Panel6
 			// 
 			this.guna2Panel6.Controls.Add(this.guna2Panel8);
-			this.guna2Panel6.Controls.Add(this.flowLayoutPanel1);
+			/*this.guna2Panel6.Controls.Add(this.flowLayoutPanel1);*/
 			this.guna2Panel6.Controls.Add(this.guna2Panel12);
 			this.guna2Panel6.Controls.Add(this.guna2Panel13);
 			this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -777,7 +777,7 @@
 			this.guna2Panel8.TabIndex = 6;
 			// 
 			// flowLayoutPanel1
-			// 
+		/*	// 
 			this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
 			this.flowLayoutPanel1.Controls.Add(this.guna2Button2);
 			this.flowLayoutPanel1.Controls.Add(this.guna2CircleButton1);
@@ -812,7 +812,7 @@
 			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
 			this.flowLayoutPanel1.Size = new System.Drawing.Size(326, 272);
 			this.flowLayoutPanel1.TabIndex = 7;
-			// 
+			// */
 			// guna2Button2
 			// 
 			this.guna2Button2.BorderRadius = 10;
@@ -1361,7 +1361,7 @@
 			this.guna2Panel19.PerformLayout();
 			this.guna2Panel18.ResumeLayout(false);
 			this.guna2Panel6.ResumeLayout(false);
-			this.flowLayoutPanel1.ResumeLayout(false);
+/*			this.flowLayoutPanel1.ResumeLayout(false);*/
 			this.guna2Panel12.ResumeLayout(false);
 			this.ResumeLayout(false);
 

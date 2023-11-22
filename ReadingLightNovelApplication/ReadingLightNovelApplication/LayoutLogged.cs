@@ -83,7 +83,7 @@ namespace ReadingLightNovelApplication
 			{
 				control.Dispose();
 			}
-			SupportMethod.AddChildFormDockTop(new FormSapXep(0), this.panelNoiDung);
+			/*SupportMethod.AddChildFormDockTop(new FormSapXep(0), this.panelNoiDung);*/
 		}
 
 		private void btnTimKiem_Click(object sender, EventArgs e)

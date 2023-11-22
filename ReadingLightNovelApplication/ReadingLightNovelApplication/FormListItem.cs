@@ -37,15 +37,38 @@ namespace ReadingLightNovelApplication
                 foreach (DataRow dr in dt.Rows)
                 {
                     Guna2Button btn = new Guna2Button();
+                    btn.Click += btn_Click;
                     btn.Text = dr["TenChapter"].ToString();
-                    btn.Name = dr["MaChapter"].ToString();
+                    btn.Tag = dr["MaChapter"].ToString();
                     btn.TextAlign = HorizontalAlignment.Right;
                     btn.Dock = DockStyle.Top;
                     btn.FillColor = Color.White;
                     btn.ForeColor = Color.Black;
-                    panelChapter.Controls.Add(btn);
+                    btn.AutoSize = true;                
+                    this.panelChapter.Controls.Add(btn);
+                    
                 }
             }
+        }
+
+        
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            Guna2Button btn = sender as Guna2Button;
+            FormMain formMain = dataload.getFormMain(this) as FormMain;
+            Panel panel1 = dataload.getPanel(formMain, "panelMain");
+
+            foreach (Control c in panel1.Controls)
+            {
+                c.Dispose();
+            }
+            foreach (Form f in panel1.Controls)
+            {
+                f.Dispose();
+            }
+            dataload.openChildFormDockFill(formMain.getactive(), new FormMainReading(btn.Tag.ToString()), panel1);
+            
         }
     }
 }

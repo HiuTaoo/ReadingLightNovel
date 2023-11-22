@@ -72,18 +72,18 @@ namespace ReadingLightNovelApplication
 
 		private void panelAnh_MouseClick(object sender, MouseEventArgs e)
 		{
-			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormProperties(maTacPham), this);
+			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormContent(maTacPham), this);
 		}
 
 		private void btnTenTruyen_Click(object sender, EventArgs e)
 		{
-			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormProperties(maTacPham), this);
+			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormContent(maTacPham), this);
 
 		}
 
 		private void btnTenVolume_Click(object sender, EventArgs e)
 		{
-			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormProperties(maTacPham), this);
+			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormContent(maTacPham), this);
 
 		}
 

@@ -26,6 +26,11 @@ namespace ReadingLightNovelApplication
             ma = machapter;
         }
 
+        public string getma()
+        {
+            return ma;
+        }
+
         public void setClick(Boolean a)
         {
             isClick = a;
@@ -154,7 +159,7 @@ namespace ReadingLightNovelApplication
         }
 
         private void btnList_Click(object sender, EventArgs e)
-        {
+        {   
             FormMain formMain = dataload.getFormMain(this) as FormMain;
             Panel panel1 = dataload.getPanel(formMain, "panelMain");
             if (isClick == false)
@@ -162,7 +167,7 @@ namespace ReadingLightNovelApplication
                 dataload.AddChildFormDockLeft(new FormList(ma), panel1);
                 setClick(true);
             }
-                
+
         }
 
         private void FormMainReading_Load(object sender, EventArgs e)

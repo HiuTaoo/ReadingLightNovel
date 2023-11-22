@@ -33,10 +33,10 @@
             this.panelName = new Guna.UI2.WinForms.Guna2Panel();
             this.lblName = new System.Windows.Forms.Label();
             this.lblTacGia = new System.Windows.Forms.Label();
-            this.panelImg = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelList = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.panelImg = new Guna.UI2.WinForms.Guna2Panel();
             this.pbImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panelList = new Guna.UI2.WinForms.Guna2Panel();
             this.panelItem = new Guna.UI2.WinForms.Guna2Panel();
             this.panelInfo.SuspendLayout();
             this.panelName.SuspendLayout();
@@ -90,24 +90,6 @@
             this.lblTacGia.TabIndex = 1;
             this.lblTacGia.Text = "じゃき ( Jaki )";
             // 
-            // panelImg
-            // 
-            this.panelImg.Controls.Add(this.pbImg);
-            this.panelImg.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelImg.Location = new System.Drawing.Point(0, 0);
-            this.panelImg.Name = "panelImg";
-            this.panelImg.Size = new System.Drawing.Size(85, 120);
-            this.panelImg.TabIndex = 0;
-            // 
-            // panelList
-            // 
-            this.panelList.AutoSize = true;
-            this.panelList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelList.Location = new System.Drawing.Point(0, 120);
-            this.panelList.Name = "panelList";
-            this.panelList.Size = new System.Drawing.Size(308, 0);
-            this.panelList.TabIndex = 1;
-            // 
             // guna2ImageButton2
             // 
             this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -122,6 +104,15 @@
             this.guna2ImageButton2.Size = new System.Drawing.Size(24, 24);
             this.guna2ImageButton2.TabIndex = 0;
             // 
+            // panelImg
+            // 
+            this.panelImg.Controls.Add(this.pbImg);
+            this.panelImg.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelImg.Location = new System.Drawing.Point(0, 0);
+            this.panelImg.Name = "panelImg";
+            this.panelImg.Size = new System.Drawing.Size(85, 120);
+            this.panelImg.TabIndex = 0;
+            // 
             // pbImg
             // 
             this.pbImg.ImageRotate = 0F;
@@ -131,6 +122,15 @@
             this.pbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImg.TabIndex = 0;
             this.pbImg.TabStop = false;
+            // 
+            // panelList
+            // 
+            this.panelList.AutoSize = true;
+            this.panelList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelList.Location = new System.Drawing.Point(0, 120);
+            this.panelList.Name = "panelList";
+            this.panelList.Size = new System.Drawing.Size(308, 0);
+            this.panelList.TabIndex = 1;
             // 
             // panelItem
             // 

@@ -431,7 +431,7 @@
             this.lbContent.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbContent.AutoSize = true;
             this.lbContent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbContent.Location = new System.Drawing.Point(422, 3);
+            this.lbContent.Location = new System.Drawing.Point(318, 3);
             this.lbContent.MaximumSize = new System.Drawing.Size(1000, 0);
             this.lbContent.Name = "lbContent";
             this.lbContent.Size = new System.Drawing.Size(0, 22);
