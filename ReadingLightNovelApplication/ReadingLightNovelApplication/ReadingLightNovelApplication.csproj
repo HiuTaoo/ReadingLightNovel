@@ -356,6 +356,12 @@
     <Compile Include="FormTruyenVuaDocItem.Designer.cs">
       <DependentUpon>FormTruyenVuaDocItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUserButton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserButton.Designer.cs">
+      <DependentUpon>FormUserButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="LayoutLogged.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -520,6 +526,9 @@
     <EmbeddedResource Include="FormTruyenVuaDocItem.resx">
       <DependentUpon>FormTruyenVuaDocItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUserButton.resx">
+      <DependentUpon>FormUserButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LayoutLogged.resx">
       <DependentUpon>LayoutLogged.cs</DependentUpon>
     </EmbeddedResource>
@@ -578,6 +587,15 @@
   <ItemGroup>
     <None Include="Resources\share.png" />
     <None Include="bin\Debug\Asset\home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Asset\transparent-basic-icons-icon-bell-icon-notification-icon-5d8d57bac00ec7.2987967515695441227867.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Asset\tải xuống.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Asset\png-transparent-heart-computer-icons-shape-blackheart-love-black-share-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

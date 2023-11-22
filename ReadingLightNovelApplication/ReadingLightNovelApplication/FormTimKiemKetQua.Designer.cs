@@ -64,7 +64,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
-			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.BackColor = System.Drawing.SystemColors.Control;
 			this.ClientSize = new System.Drawing.Size(1548, 254);
 			this.Controls.Add(this.flpKetQua);
 			this.Controls.Add(this.guna2Panel2);

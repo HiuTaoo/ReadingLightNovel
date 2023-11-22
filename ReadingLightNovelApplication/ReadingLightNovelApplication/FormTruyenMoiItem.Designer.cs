@@ -76,7 +76,7 @@
 			this.btnTenTruyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
 			this.btnTenTruyen.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnTenTruyen.FillColor = System.Drawing.Color.Transparent;
-			this.btnTenTruyen.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.btnTenTruyen.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnTenTruyen.ForeColor = System.Drawing.Color.Black;
 			this.btnTenTruyen.Location = new System.Drawing.Point(215, 16);
 			this.btnTenTruyen.Name = "btnTenTruyen";
@@ -84,6 +84,7 @@
 			this.btnTenTruyen.TabIndex = 4;
 			this.btnTenTruyen.Text = "guna2Button25";
 			this.btnTenTruyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btnTenTruyen.Click += new System.EventHandler(this.btnTenTruyen_Click);
 			// 
 			// panelAnh
 			// 

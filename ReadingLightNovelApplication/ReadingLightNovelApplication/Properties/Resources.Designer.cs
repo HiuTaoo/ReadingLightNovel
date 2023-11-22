@@ -153,9 +153,40 @@ namespace ReadingLightNovelApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_heart_computer_icons_shape_blackheart_love_black_share_icon {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-heart-computer-icons-shape-blackheart-love-black-share-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap share {
             get {
                 object obj = ResourceManager.GetObject("share", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tải_xuống {
+            get {
+                object obj = ResourceManager.GetObject("tải xuống", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transparent_basic_icons_icon_bell_icon_notification_icon_5d8d57bac00ec7_2987967515695441227867 {
+            get {
+                object obj = ResourceManager.GetObject("transparent-basic-icons-icon-bell-icon-notification-icon-5d8d57bac00ec7.298796751" +
+                        "5695441227867", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -258,8 +258,22 @@ namespace ReadingLightNovelApplication
         }
 
 
+		public Point ConvertPointToFormMain(Control currentControl, Point point)
+		{
+			if (currentControl.Parent != null)
+			{
+				// Chuyển đổi tọa độ từ control hiện tại sang control cha
+				point = currentControl.Parent.PointToClient(point);
+
+				// Gọi đệ quy cho control cha
+				return ConvertPointToFormMain(currentControl.Parent, point);
+			}
+
+			// Nếu không còn control cha, trả về tọa độ cuối cùng trong hệ thống tọa độ client của FormA
+			return point;
+		}
 
 
 
-    }
+	}
 }

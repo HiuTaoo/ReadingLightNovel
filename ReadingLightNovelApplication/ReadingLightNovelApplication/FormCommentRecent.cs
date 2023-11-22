@@ -36,6 +36,8 @@ namespace ReadingLightNovelApplication
 			if(File.Exists(Application.StartupPath + "\\Asset\\User\\" + data.Rows[0]["TenDangNhap"].ToString() + "\\" + data.Rows[0]["AnhDaiDien"].ToString()))
 				btnAvatar.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Asset\\User\\"
 					+ data.Rows[0]["TenDangNhap"].ToString() + "\\" + data.Rows[0]["AnhDaiDien"].ToString());
+			else btnAvatar.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Asset\\noLoadUser.png"
+			);
 
 		}
 
