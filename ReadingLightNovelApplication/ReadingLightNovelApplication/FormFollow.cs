@@ -31,8 +31,20 @@ namespace ReadingLightNovelApplication
                 {
                     SupportMethod.AddChildFormDockTop(new FormFollowItem(t["MaTacPham"].ToString()),this.panelListFollow);
                 }
-
+                lblUserName.Text = FormMain.TenDangNhap;
             }
+            
+        }
+
+        private void btnLichSu_Click(object sender, EventArgs e)
+        {
+            LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
+            Panel panel1 = SupportMethod.getPanel(lg, "panelNoiDung");
+            foreach (Control c in panel1.Controls)
+            {
+                c.Dispose();
+            }
+            SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormLichSu(), panel1);
         }
     }
 }

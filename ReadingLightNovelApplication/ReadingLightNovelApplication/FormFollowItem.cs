@@ -49,6 +49,10 @@ namespace ReadingLightNovelApplication
             {
                 c.Dispose();
             }
+            foreach (Form c in panel1.Controls)
+            {
+                c.Dispose();
+            }
             SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormContent(matp), panel1);
         }
 
@@ -62,6 +66,10 @@ namespace ReadingLightNovelApplication
             FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
             Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
             foreach (Control c in panel1.Controls)
+            {
+                c.Dispose();
+            }
+            foreach (Form c in panel1.Controls)
             {
                 c.Dispose();
             }

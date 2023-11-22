@@ -33,15 +33,14 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.lblComment = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pbAvt = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbAvt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -52,10 +51,12 @@
             // 
             this.guna2Panel1.AutoSize = true;
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Gray;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.pbAvt);
             this.guna2Panel1.Controls.Add(this.btnDelete);
             this.guna2Panel1.Controls.Add(this.lblComment);
             this.guna2Panel1.Controls.Add(this.lblUserName);
-            this.guna2Panel1.Controls.Add(this.panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 24);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -64,6 +65,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Location = new System.Drawing.Point(884, 9);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(38, 34);
@@ -91,30 +93,15 @@
             this.lblUserName.TabIndex = 4;
             this.lblUserName.Text = "Wibu giấu tên";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.pbAvt);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(91, 77);
-            this.panel2.TabIndex = 3;
-            // 
             // pbAvt
             // 
-            this.pbAvt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbAvt.BackColor = System.Drawing.Color.Transparent;
-            this.pbAvt.BorderRadius = 30;
-            this.pbAvt.FillColor = System.Drawing.Color.Transparent;
             this.pbAvt.ImageRotate = 0F;
-            this.pbAvt.Location = new System.Drawing.Point(17, 9);
+            this.pbAvt.Location = new System.Drawing.Point(12, 5);
             this.pbAvt.Name = "pbAvt";
-            this.pbAvt.Size = new System.Drawing.Size(67, 61);
-            this.pbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAvt.TabIndex = 4;
+            this.pbAvt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbAvt.Size = new System.Drawing.Size(75, 69);
+            this.pbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvt.TabIndex = 7;
             this.pbAvt.TabStop = false;
             // 
             // FormComment
@@ -132,7 +119,6 @@
             this.Load += new System.EventHandler(this.FormComment_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -145,8 +131,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label lblComment;
         private System.Windows.Forms.Label lblUserName;
-        private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2PictureBox pbAvt;
         private System.Windows.Forms.Button btnDelete;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pbAvt;
     }
 }

@@ -722,7 +722,7 @@
 			this.checkboxTruyenDich.UncheckedState.BorderThickness = 0;
 			this.checkboxTruyenDich.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
 			// 
-			// guna2Panel29
+			// guna2Panel29*/
 			// 
 			this.guna2Panel29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
 			this.guna2Panel29.Dock = System.Windows.Forms.DockStyle.Top;

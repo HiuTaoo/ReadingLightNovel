@@ -47,6 +47,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -65,6 +66,7 @@
             // 
             // panelInfo
             // 
+            this.panelInfo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelInfo.Controls.Add(this.label2);
             this.panelInfo.Controls.Add(this.lblLastUpdate);
             this.panelInfo.Controls.Add(this.lblStatus);
@@ -149,6 +151,7 @@
             // 
             // panelImg
             // 
+            this.panelImg.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelImg.Controls.Add(this.pbImg);
             this.panelImg.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelImg.Location = new System.Drawing.Point(0, 0);
@@ -165,6 +168,7 @@
             this.pbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImg.TabIndex = 0;
             this.pbImg.TabStop = false;
+            this.pbImg.Click += new System.EventHandler(this.pbImg_Click);
             // 
             // FormListNovel
             // 

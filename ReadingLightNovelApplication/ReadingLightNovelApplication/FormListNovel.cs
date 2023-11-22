@@ -68,5 +68,25 @@ namespace ReadingLightNovelApplication
             }
             SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormContent(matp), panel2);
         }
+
+        private void pbImg_Click(object sender, EventArgs e)
+        {
+            FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
+            Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
+            foreach (Form f in panel1.Controls)
+            {
+                f.Close();
+                f.Dispose();
+            }
+            LayoutLogged lg = new LayoutLogged();
+            SupportMethod.openChildFormDockFill(formMain.getactive(), lg, panel1);
+            Panel panel2 = SupportMethod.getPanel(lg, "panelNoiDung");
+            foreach (Control c in panel2.Controls)
+            {
+                c.Dispose();
+            }
+            
+            SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormContent(matp), panel2);
+        }
     }
 }

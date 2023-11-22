@@ -47,6 +47,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -75,7 +76,7 @@
             // 
             // lvChapter
             // 
-            this.lvChapter.BackColor = System.Drawing.SystemColors.Control;
+            this.lvChapter.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lvChapter.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
@@ -103,6 +104,7 @@
             // 
             // panelImg
             // 
+            this.panelImg.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelImg.Controls.Add(this.imgVol);
             this.panelImg.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelImg.Location = new System.Drawing.Point(0, 0);
@@ -126,6 +128,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Controls.Add(this.lblTenVol);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -147,6 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(952, 300);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

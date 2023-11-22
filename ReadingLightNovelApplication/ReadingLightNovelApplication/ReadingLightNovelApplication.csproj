@@ -62,6 +62,60 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountSystem\FormHomeSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\FormHomeSystem.Designer.cs">
+      <DependentUpon>FormHomeSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\FormSuaTruyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\FormSuaTruyen.Designer.cs">
+      <DependentUpon>FormSuaTruyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\FormThemChapter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\FormThemChapter.Designer.cs">
+      <DependentUpon>FormThemChapter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\FormThemTruyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\FormThemTruyen.Designer.cs">
+      <DependentUpon>FormThemTruyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\FormThemVolume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\FormThemVolume.Designer.cs">
+      <DependentUpon>FormThemVolume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\FormTienIch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\FormTienIch.Designer.cs">
+      <DependentUpon>FormTienIch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\FormTruyenDaDang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\FormTruyenDaDang.Designer.cs">
+      <DependentUpon>FormTruyenDaDang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\LayoutQuanLyTruyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\LayoutQuanLyTruyen.Designer.cs">
+      <DependentUpon>LayoutQuanLyTruyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\LayOutSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\LayOutSystem.Designer.cs">
+      <DependentUpon>LayOutSystem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChangeFont.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +182,12 @@
     <Compile Include="FormFollowItem.Designer.cs">
       <DependentUpon>FormFollowItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHistoryItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHistoryItem.Designer.cs">
+      <DependentUpon>FormHistoryItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,11 +206,23 @@
     <Compile Include="FormLayoutDangNhap.Designer.cs">
       <DependentUpon>FormLayoutDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLichSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLichSu.Designer.cs">
+      <DependentUpon>FormLichSu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormList.Designer.cs">
       <DependentUpon>FormList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListItem.Designer.cs">
+      <DependentUpon>FormListItem.cs</DependentUpon>
     </Compile>
     <Compile Include="FormListNovel.cs">
       <SubType>Form</SubType>
@@ -310,6 +382,33 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SupportMethod.cs" />
+    <EmbeddedResource Include="AccountSystem\FormHomeSystem.resx">
+      <DependentUpon>FormHomeSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\FormSuaTruyen.resx">
+      <DependentUpon>FormSuaTruyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\FormThemChapter.resx">
+      <DependentUpon>FormThemChapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\FormThemTruyen.resx">
+      <DependentUpon>FormThemTruyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\FormThemVolume.resx">
+      <DependentUpon>FormThemVolume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\FormTienIch.resx">
+      <DependentUpon>FormTienIch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\FormTruyenDaDang.resx">
+      <DependentUpon>FormTruyenDaDang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\LayoutQuanLyTruyen.resx">
+      <DependentUpon>LayoutQuanLyTruyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\LayOutSystem.resx">
+      <DependentUpon>LayOutSystem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormChangeFont.resx">
       <DependentUpon>FormChangeFont.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,14 +442,23 @@
     <EmbeddedResource Include="FormFollowItem.resx">
       <DependentUpon>FormFollowItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHistoryItem.resx">
+      <DependentUpon>FormHistoryItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLayoutDangNhap.resx">
       <DependentUpon>FormLayoutDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLichSu.resx">
+      <DependentUpon>FormLichSu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormList.resx">
       <DependentUpon>FormList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListItem.resx">
+      <DependentUpon>FormListItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListNovel.resx">
       <DependentUpon>FormListNovel.cs</DependentUpon>

@@ -12,18 +12,25 @@ namespace ReadingLightNovelApplication
 {
     public partial class FormLogout : Form
     {
+        
         SupportMethod SupportMethod = new SupportMethod();
         public FormLogout()
         {
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
-            Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
-            SupportMethod.openChildFormDockFill(formMain.getactive(), new FormLayoutDangNhap(), panel1);
+        
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {   
+                LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
+                Panel panel1 = SupportMethod.getPanel(lg, "panelNoiDung");
+                if(lg.isclick == false)
+                {
+                    SupportMethod.AddChildFormDockFill(new FormLayoutDangNhap(), panel1);
+                lg.setClick(true);
+                }
+                
         }
     }
 }

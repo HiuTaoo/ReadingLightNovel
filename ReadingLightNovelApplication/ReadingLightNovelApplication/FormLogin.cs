@@ -34,6 +34,7 @@ namespace ReadingLightNovelApplication
                 Image image = Image.FromFile(Application.StartupPath + "\\Asset\\User\\noLoadUser.png");
                 btnAvt.Image = image;
             }
+            
                 
             
             
