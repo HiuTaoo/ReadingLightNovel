@@ -125,7 +125,7 @@ namespace ReadingLightNovelApplication
 			loadEventClickChuCai();
 			
 			string commandText = string.Empty;
-			MessageBox.Show(getCommandText());
+			/*MessageBox.Show(getCommandText());*/
 
 			btnChuCaiApDung.Click += btnApDung;
 			btnPhanLoaiApDung.Click += btnApDung;

@@ -70,13 +70,8 @@ namespace ReadingLightNovelApplication
             foreach(Control control in this.panelNoiDung.Controls) 
             {
                 control.Dispose();
-            }
+            }          
             
-            foreach (Form f in this.panelNoiDung.Controls)
-            {
-                f.Close();
-                f.Dispose();
-            }
             SupportMethod.AddChildFormDockFill(new FormHome(), this.panelNoiDung);
 		}
 
@@ -85,10 +80,10 @@ namespace ReadingLightNovelApplication
             
 			foreach (Control control in this.panelNoiDung.Controls)
 			{
-				control.Visible = false;
+				control.Dispose();
 			}
-			/*SupportMethod.AddChildFormDockTop(new FormSapXep(0), this.panelNoiDung);*/
-		}
+            SupportMethod.AddChildFormDockFill(new FormSapXep(0), this.panelNoiDung);
+        }
 
 		private void btnTimKiem_Click(object sender, EventArgs e)
 		{
@@ -96,7 +91,7 @@ namespace ReadingLightNovelApplication
 			{
 				control.Visible = false;
 			}
-			SupportMethod.AddChildFormDockTop(new FormTimKiem(txtTimKiem.Text), this.panelNoiDung);
+			SupportMethod.AddChildFormDockFill(new FormTimKiem(txtTimKiem.Text), this.panelNoiDung);
 		}
 
 		private void btnTimKiem_Click_1(object sender, EventArgs e)
@@ -105,7 +100,7 @@ namespace ReadingLightNovelApplication
 			{
 				control.Visible = false;
 			}
-			SupportMethod.AddChildFormDockTop(new FormTimKiem(txtTimKiem.Text), this.panelNoiDung);
+			SupportMethod.AddChildFormDockFill(new FormTimKiem(txtTimKiem.Text), this.panelNoiDung);
 		}
 
         public void showUserButton()
