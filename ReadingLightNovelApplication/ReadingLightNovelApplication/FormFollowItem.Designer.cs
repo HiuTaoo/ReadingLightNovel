@@ -75,6 +75,7 @@
             // 
             // guna2Panel4
             // 
+            this.guna2Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel4.Controls.Add(this.lblVol);
             this.guna2Panel4.Controls.Add(this.lblChapter);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -106,6 +107,7 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel2.Controls.Add(this.pbImg);
             this.guna2Panel2.Controls.Add(this.lblLoai);
             this.guna2Panel2.Controls.Add(this.lblTenTruyen);

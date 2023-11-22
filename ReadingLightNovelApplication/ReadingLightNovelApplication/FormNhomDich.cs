@@ -44,6 +44,24 @@ namespace ReadingLightNovelApplication
             }
         }
 
-        
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            DataTable dt = dataload.DataReader(" select *\r\n from TacPham inner join [User] on [User].TenDangNhap = TacPham.TenDangNhap " +
+                "where TacPham.MaTacPham = '" + MaTp + "'");
+            LayoutLogged lg = dataload.getFormParent(this, "LayoutLogged") as LayoutLogged;
+           
+            Panel panel1 = dataload.getPanel(lg, "panelNoiDung");
+            foreach (Control c in panel1.Controls)
+            {
+                c.Dispose();
+            }
+            foreach (Form f in panel1.Controls)
+            {
+                f.Close();
+                f.Dispose();
+            }
+            dataload.AddChildFormDockFill(new FormProfile(dt.Rows[0]["TenDangNhap"].ToString()), panel1);
+
+        }
     }
 }

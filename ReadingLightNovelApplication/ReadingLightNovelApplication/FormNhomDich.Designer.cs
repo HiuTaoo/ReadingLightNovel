@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pbImg = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pbImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTenNhom = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImg)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -48,28 +48,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(931, 62);
             this.guna2Panel1.TabIndex = 0;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2Panel2.Controls.Add(this.lblTenNhom);
-            this.guna2Panel2.Controls.Add(this.label1);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 62);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(931, 75);
-            this.guna2Panel2.TabIndex = 1;
-            // 
-            // pbImg
-            // 
-            this.pbImg.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbImg.ImageRotate = 0F;
-            this.pbImg.Location = new System.Drawing.Point(0, 0);
-            this.pbImg.Name = "pbImg";
-            this.pbImg.Size = new System.Drawing.Size(62, 62);
-            this.pbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbImg.TabIndex = 0;
-            this.pbImg.TabStop = false;
             // 
             // btnUser
             // 
@@ -87,16 +65,29 @@
             this.btnUser.TabIndex = 1;
             this.btnUser.Text = "Tên User";
             this.btnUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
-            // label1
+            // pbImg
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nhóm dịch";
+            this.pbImg.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbImg.ImageRotate = 0F;
+            this.pbImg.Location = new System.Drawing.Point(0, 0);
+            this.pbImg.Name = "pbImg";
+            this.pbImg.Size = new System.Drawing.Size(62, 62);
+            this.pbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImg.TabIndex = 0;
+            this.pbImg.TabStop = false;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2Panel2.Controls.Add(this.lblTenNhom);
+            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 62);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(931, 75);
+            this.guna2Panel2.TabIndex = 1;
             // 
             // lblTenNhom
             // 
@@ -107,6 +98,16 @@
             this.lblTenNhom.Size = new System.Drawing.Size(205, 32);
             this.lblTenNhom.TabIndex = 1;
             this.lblTenNhom.Text = "Wibu never die!";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nhóm dịch";
             // 
             // FormNhomDich
             // 
@@ -120,9 +121,9 @@
             this.Text = "FormNhomDich";
             this.Load += new System.EventHandler(this.FormNhomDich_Load);
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbImg)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImg)).EndInit();
             this.ResumeLayout(false);
 
         }

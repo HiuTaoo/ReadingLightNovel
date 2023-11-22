@@ -49,7 +49,11 @@ namespace ReadingLightNovelApplication
             {
                 c.Dispose();
             }
-            SupportMethod.openChildFormDockTop(lg.getActiveForm(), new FormContent(matp), panel1);
+            foreach (Form c in panel1.Controls)
+            {
+                c.Dispose();
+            }
+            SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormContent(matp), panel1);
         }
 
         private void lblChapter_Click(object sender, EventArgs e)
@@ -65,7 +69,11 @@ namespace ReadingLightNovelApplication
             {
                 c.Dispose();
             }
-            SupportMethod.openChildFormDockTop(formMain.getActiveForm(), new FormMainReading(dt2.Rows[0]["MaChapter"].ToString()), panel1);
+            foreach (Form c in panel1.Controls)
+            {
+                c.Dispose();
+            }
+            SupportMethod.openChildFormDockFill(formMain.getActiveForm(), new FormMainReading(dt2.Rows[0]["MaChapter"].ToString()), panel1);
         }
     }
 }

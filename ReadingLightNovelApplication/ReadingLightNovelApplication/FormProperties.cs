@@ -47,7 +47,14 @@ namespace ReadingLightNovelApplication
                 lblTacGia.Text = dtTruyen.Rows[0]["TenTacGia"].ToString();
                 lblStatus.Text = dtTruyen.Rows[0]["TinhTrang"].ToString();
 
-                DataTable dt1 = dataload.DataReader("DECLARE @StartDate DATE = (select ThoiGianTao \r\nfrom TacPham inner join TacGia on TacGia.MaTacGia =TacPham.MaTacGia\r\nwhere TacPham.MaTacPham = '" + MaTp + "');\r\nDECLARE @EndDate DATE = GETDATE();  -- Ngày hiện tại\r\n\r\nDECLARE @DateDiff INT = DATEDIFF(DAY, @StartDate, @EndDate);\r\n\r\nSELECT\r\n    CASE\r\n        WHEN @DateDiff < 30 THEN  CAST(@DateDiff AS NVARCHAR(10)) +  N' Ngày' \r\n        WHEN @DateDiff < 365 THEN + CAST(@DateDiff / 30 AS NVARCHAR(10)) +  N' Tháng' \r\n        ELSE CAST(@DateDiff / 365 AS NVARCHAR(10)) +  N' Năm' \r\n    END AS Result;");
+                DataTable dt1 = dataload.DataReader("DECLARE @StartDate DATE = (select top 1 ThoiGianDang" +
+                    "\r\nfrom TacPham \r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
+                    "\r\ninner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
+                    "\r\nwhere TacPham.MaTacPham = '"+MaTp+"'" +
+                    "\r\norder by Chapter.MaChapter desc);" +
+                    "\r\nDECLARE @EndDate DATE = GETDATE();  -- Ngày hiện tại\r\n\r\nDECLARE @DateDiff INT = DATEDIFF(DAY, @StartDate, @EndDate);" +
+                    "\r\n\r\nSELECT\r\n    CASE\r\n        WHEN @DateDiff < 30 THEN  CAST(@DateDiff AS NVARCHAR(10)) +  N' Ngày' \r\n        " +
+                    "WHEN @DateDiff < 365 THEN + CAST(@DateDiff / 30 AS NVARCHAR(10)) +  N' Tháng' \r\n        ELSE CAST(@DateDiff / 365 AS NVARCHAR(10)) +  N' Năm' \r\n    END AS Result;");
                 lblLastUpdate.Text = dt1.Rows[0][0].ToString();
 
                 lblSoTu.Text = dataload.CountWordsFromFile("Application.StartupPath + \"\\\\Asset\\\\DataLightNovel\\\\\" \r\n" +
@@ -123,6 +130,20 @@ namespace ReadingLightNovelApplication
             }
             dt6.Dispose();         
             dataload.AddChildFormDockTop(new FormNhomDich(MaTp), panelNhomDich);
+
+            DataTable dt7 = dataload.DataReader("select distinct top 3 TacPham.MaTacPham" +
+                "\r\nfrom TacPham inner join TacGia on TacGia.MaTacGia =TacPham.MaTacGia" +
+                "\r\ninner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = TacPham.MaTacPham" +
+                "\r\nwhere ChiTietTheLoai.MaTheLoai in (select ChiTietTheLoai.MaTheLoai" +
+                "\r\n\t\t\t\t\t\t\t\t\tfrom TacPham \r\n\t\t\t\t\t\t\t\t\t" +
+                "inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = TacPham.MaTacPham" +
+                "\r\n\t\t\t\t\t\t\t\t\tinner join TheLoai on ChiTietTheLoai.MaTheLoai = TheLoai.MaTheLoai" +
+                "\r\n\t\t\t\t\t\t\t\t\twhere TacPham.MaTacPham = '"+MaTp+"') " +
+                "and TacPham.MaTacPham NOT IN ('"+MaTp+"')");
+            foreach(DataRow c in dt7.Rows)
+            {
+                dataload.AddChildFormDockTop(new FormSuggest(c["MaTacPham"].ToString()), panelSuggest);
+            }
         }
 
         private void btnYeuThich_Click(object sender, EventArgs e)

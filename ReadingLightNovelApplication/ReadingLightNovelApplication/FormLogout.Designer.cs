@@ -34,6 +34,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -51,6 +52,7 @@
             // 
             // btnSetting
             // 
+            this.btnSetting.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSetting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSetting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSetting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

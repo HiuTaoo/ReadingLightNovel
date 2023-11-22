@@ -163,7 +163,7 @@
             this.btnLichSu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLichSu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLichSu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLichSu.FillColor = System.Drawing.SystemColors.Control;
+            this.btnLichSu.FillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLichSu.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold);
             this.btnLichSu.ForeColor = System.Drawing.Color.Black;
             this.btnLichSu.Location = new System.Drawing.Point(0, 116);

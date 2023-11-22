@@ -91,7 +91,7 @@
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiem.Location = new System.Drawing.Point(715, 0);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderText = "";
@@ -218,6 +218,7 @@
             // panelNoiDung
             // 
             this.panelNoiDung.AutoScroll = true;
+            this.panelNoiDung.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNoiDung.Location = new System.Drawing.Point(0, 58);
             this.panelNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

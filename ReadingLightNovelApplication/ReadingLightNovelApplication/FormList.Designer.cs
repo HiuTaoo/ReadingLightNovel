@@ -134,6 +134,7 @@
             // 
             // panelItem
             // 
+            this.panelItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelItem.Location = new System.Drawing.Point(0, 120);
             this.panelItem.Name = "panelItem";

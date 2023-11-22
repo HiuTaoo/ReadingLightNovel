@@ -35,6 +35,7 @@ namespace ReadingLightNovelApplication
             "INNER JOIN BinhChon ON TacPham.MaTacPham = BinhChon.MaTacPham " +
             "WHERE TacPham.MaTacPham = '" + matp + "'");
             pf.GetlvlRating().Text = dt3.Rows[0][0].ToString() + "/5";
+            MessageBox.Show("Bạn đã đánh giá thành công truyện này!");
             this.Close();
             this.Dispose();
 

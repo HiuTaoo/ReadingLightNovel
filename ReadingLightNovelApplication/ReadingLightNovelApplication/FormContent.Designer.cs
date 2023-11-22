@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,29 +47,32 @@
             this.panel3.Size = new System.Drawing.Size(1242, 638);
             this.panel3.TabIndex = 4;
             // 
-            // panel1
+            // panelContent
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(180, 638);
-            this.panel1.TabIndex = 0;
+            this.panelContent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContent.Location = new System.Drawing.Point(145, 0);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(952, 638);
+            this.panelContent.TabIndex = 2;
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1062, 0);
+            this.panel2.Location = new System.Drawing.Point(1097, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(180, 638);
+            this.panel2.Size = new System.Drawing.Size(145, 638);
             this.panel2.TabIndex = 1;
             // 
-            // panelContent
+            // panel1
             // 
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(180, 0);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(882, 638);
-            this.panelContent.TabIndex = 2;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(145, 638);
+            this.panel1.TabIndex = 0;
             // 
             // FormContent
             // 
