@@ -24,8 +24,12 @@ namespace ReadingLightNovelApplication
 		{
 			DataTable data = supportMethod.DataReader("select TacPham.MaTacPham, TacPham.TenTacPham, TacPham.Anh" +
 				"\r\nfrom TacPham\r\nwhere TacPham.MaTacPham = '" + maTacPham + "'");
-			panelAnh.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
-				+ data.Rows[0]["MaTacPham"].ToString() + "\\" + data.Rows[0]["Anh"].ToString());
+			try
+			{
+                panelAnh.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
+                + data.Rows[0]["MaTacPham"].ToString() + "\\" + data.Rows[0]["Anh"].ToString());
+            }
+			catch { }
 			btnTenTruyen.Text = data.Rows[0]["TenTacPham"].ToString();
 		}
 

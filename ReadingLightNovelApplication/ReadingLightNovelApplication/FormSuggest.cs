@@ -29,9 +29,17 @@ namespace ReadingLightNovelApplication
                 "\r\norder by Chapter.ThoiGianDang desc");
             lblName.Text = dt.Rows[0]["TenTacPham"].ToString();
             lblChapter.Text = dt.Rows[0]["TenChapter"].ToString();
-            System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
+            try
+            {
+                System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
                     + dt.Rows[0]["MaTacPham"].ToString() + "\\" + dt.Rows[0]["Anh"].ToString());
-            pbImg.Image = image;
+                pbImg.Image = image;
+            }
+            catch {
+                System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\noLoadUser.png");
+                pbImg.Image = image;
+            }
+            
         }
 
         private void lblName_Click(object sender, EventArgs e)

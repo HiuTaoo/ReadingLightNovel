@@ -44,8 +44,8 @@
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnList = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnChange = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnNext1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnPre1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelComment = new System.Windows.Forms.Panel();
             this.panelCmt = new Guna.UI2.WinForms.Guna2Panel();
@@ -205,8 +205,8 @@
             this.guna2Panel4.Controls.Add(this.guna2ImageButton1);
             this.guna2Panel4.Controls.Add(this.btnList);
             this.guna2Panel4.Controls.Add(this.btnChange);
-            this.guna2Panel4.Controls.Add(this.guna2ImageButton4);
-            this.guna2Panel4.Controls.Add(this.guna2ImageButton5);
+            this.guna2Panel4.Controls.Add(this.btnNext1);
+            this.guna2Panel4.Controls.Add(this.btnPre1);
             this.guna2Panel4.Location = new System.Drawing.Point(346, 1);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(589, 57);
@@ -259,37 +259,37 @@
             this.btnChange.TabIndex = 1;
             this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
-            // guna2ImageButton4
+            // btnNext1
             // 
-            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton4.Image")));
-            this.guna2ImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton4.ImageRotate = 0F;
-            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton4.Location = new System.Drawing.Point(461, 0);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton4.Size = new System.Drawing.Size(128, 57);
-            this.guna2ImageButton4.TabIndex = 0;
-            this.guna2ImageButton4.Click += new System.EventHandler(this.btnNext_Click);
+            this.btnNext1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnNext1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnNext1.HoverState.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnNext1.Image = ((System.Drawing.Image)(resources.GetObject("btnNext1.Image")));
+            this.btnNext1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnNext1.ImageRotate = 0F;
+            this.btnNext1.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnNext1.Location = new System.Drawing.Point(461, 0);
+            this.btnNext1.Name = "btnNext1";
+            this.btnNext1.PressedState.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnNext1.Size = new System.Drawing.Size(128, 57);
+            this.btnNext1.TabIndex = 0;
+            this.btnNext1.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // guna2ImageButton5
+            // btnPre1
             // 
-            this.guna2ImageButton5.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2ImageButton5.HoverState.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton5.Image")));
-            this.guna2ImageButton5.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton5.ImageRotate = 0F;
-            this.guna2ImageButton5.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton5.Location = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton5.Name = "guna2ImageButton5";
-            this.guna2ImageButton5.PressedState.ImageSize = new System.Drawing.Size(36, 36);
-            this.guna2ImageButton5.Size = new System.Drawing.Size(136, 57);
-            this.guna2ImageButton5.TabIndex = 0;
-            this.guna2ImageButton5.Click += new System.EventHandler(this.btnPre_Click);
+            this.btnPre1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnPre1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnPre1.HoverState.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnPre1.Image = ((System.Drawing.Image)(resources.GetObject("btnPre1.Image")));
+            this.btnPre1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnPre1.ImageRotate = 0F;
+            this.btnPre1.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnPre1.Location = new System.Drawing.Point(0, 0);
+            this.btnPre1.Name = "btnPre1";
+            this.btnPre1.PressedState.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnPre1.Size = new System.Drawing.Size(136, 57);
+            this.btnPre1.TabIndex = 0;
+            this.btnPre1.Click += new System.EventHandler(this.btnPre_Click);
             // 
             // panel4
             // 
@@ -492,8 +492,8 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2ImageButton btnList;
         private Guna.UI2.WinForms.Guna2ImageButton btnChange;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
+        private Guna.UI2.WinForms.Guna2ImageButton btnNext1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnPre1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panelComment;
         private Guna.UI2.WinForms.Guna2Panel panelCmt;

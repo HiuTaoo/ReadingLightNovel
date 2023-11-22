@@ -37,9 +37,17 @@ namespace ReadingLightNovelApplication
                 "\r\nwhere TacPham.MaTacPham = N'" + matp + "'");
             lblName.Text = dt.Rows[0]["TenTacPham"].ToString();
             lblTacGia.Text = dt.Rows[0]["TenTacGia"].ToString();
-            Image image = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
-                        + dt.Rows[0]["MaTacPham"].ToString()  + "\\" + dt.Rows[0]["Anh"].ToString());
-            pbImg.Image = image;
+            
+            try
+            {
+                Image image = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
+                        + dt.Rows[0]["MaTacPham"].ToString() + "\\" + dt.Rows[0]["Anh"].ToString());
+                pbImg.Image = image;
+            }
+            catch {
+                System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\noLoadUser.png");
+                pbImg.Image = image;
+            }
             dt.Dispose ();
 
             DataTable dt1 = dataload.DataReader("select  Volume.MaVolume, Volume.TenVolume" +

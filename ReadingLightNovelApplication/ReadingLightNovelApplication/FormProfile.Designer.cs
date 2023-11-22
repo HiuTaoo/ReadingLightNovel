@@ -120,6 +120,7 @@
             this.pbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAvt.TabIndex = 0;
             this.pbAvt.TabStop = false;
+            this.pbAvt.Click += new System.EventHandler(this.pbAvt_Click);
             // 
             // pbImg
             // 

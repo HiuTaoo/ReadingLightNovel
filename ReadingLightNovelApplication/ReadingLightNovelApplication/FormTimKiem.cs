@@ -129,7 +129,7 @@ namespace ReadingLightNovelApplication
 			str += " group by sub.MaTacPham";
 			queryTxt += str;
 			//txtTimKiem.Text = queryTxt;
-			MessageBox.Show(queryTxt);
+			//MessageBox.Show(queryTxt);
 			DataTable data = supportMethod.DataReader(queryTxt);
 
 			List<string> list = new List<string>();
@@ -147,6 +147,7 @@ namespace ReadingLightNovelApplication
 				list.Add(row["MaTacPham"].ToString());
 			}
 			supportMethod.AddChildFormDockTop(new FormTimKiemKetQua(list), panelKetQua);
+			
 		}
 
 		private void guna2Button1_Click(object sender, EventArgs e)

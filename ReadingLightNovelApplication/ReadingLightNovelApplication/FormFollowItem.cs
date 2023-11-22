@@ -25,10 +25,18 @@ namespace ReadingLightNovelApplication
             DataTable dt = SupportMethod.DataReader("select * " +
                 "\r\nfrom TacPham \r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
                 "\r\ninner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
-                "\r\nwhere TacPham.MaTacPham = '"+ matp +"'");
-            System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
-                    + dt.Rows[0]["MaTacPham"].ToString() +"\\" + dt.Rows[0]["Anh"].ToString());
-            pbImg.Image = image;
+                "\r\nwhere TacPham.MaTacPham = '"+ matp +"'");          
+            try
+            {
+                System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
+                    + dt.Rows[0]["MaTacPham"].ToString() + "\\" + dt.Rows[0]["Anh"].ToString());
+                pbImg.Image = image;
+            }
+            catch {
+                Image image = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\noLoadUser.png"
+                       );
+                pbImg.Image = image;
+            }
             lblTenTruyen.Text = dt.Rows[0]["TenTacPham"].ToString();
 
             DataTable dt1 = SupportMethod.DataReader("select top 1 Volume.TenVolume, Chapter.TenChapter, Chapter.MaChapter, Chapter.ThoiGianDang" +
@@ -49,10 +57,7 @@ namespace ReadingLightNovelApplication
             {
                 c.Dispose();
             }
-            foreach (Form c in panel1.Controls)
-            {
-                c.Dispose();
-            }
+            
             SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormContent(matp), panel1);
         }
 

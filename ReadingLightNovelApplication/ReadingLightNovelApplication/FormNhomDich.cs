@@ -55,11 +55,7 @@ namespace ReadingLightNovelApplication
             {
                 c.Dispose();
             }
-            foreach (Form f in panel1.Controls)
-            {
-                f.Close();
-                f.Dispose();
-            }
+            
             dataload.AddChildFormDockFill(new FormProfile(dt.Rows[0]["TenDangNhap"].ToString()), panel1);
 
         }

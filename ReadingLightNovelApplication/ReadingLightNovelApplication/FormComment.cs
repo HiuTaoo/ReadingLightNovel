@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,9 +29,17 @@ namespace ReadingLightNovelApplication
                 "\r\nwhere BinhLuan.MaBinhLuan = '" + ma +"'");
             lblUserName.Text = dt.Rows[0]["TenDangNhap"].ToString();
             lblComment.Text = dt.Rows[0]["NoiDung"].ToString();
-            System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\User\\"
+            
+            try {
+                System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\User\\"
                     + dt.Rows[0]["AnhDaiDien"].ToString());
-            pbAvt.Image = image;
+                pbAvt.Image = image;
+            }
+            catch {
+                Image image = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\noLoadUser.png"
+                           );
+                pbAvt.Image = image;
+            }
 
         }
         private void btnDelete_Click(object sender, EventArgs e)

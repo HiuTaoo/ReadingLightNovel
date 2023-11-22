@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,9 +40,16 @@ namespace ReadingLightNovelApplication
             if (dtTruyen.Rows.Count > 0)
             {
                 lblTenTruyen.Text = dtTruyen.Rows[0]["TenTacPham"].ToString();
-                System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
+                try
+                {
+                    System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
                     + dtTruyen.Rows[0]["MaTacPham"].ToString() + "\\" + dtTruyen.Rows[0]["Anh"].ToString());
-                btnAnh.Image = image;
+                    btnAnh.Image = image;
+                }
+                catch {
+                    System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\noLoadUser.png");
+                    btnAnh.Image = image;
+                }
                 lblAnotherName.Text = dtTruyen.Rows[0]["TenKhac"].ToString();
                 lblTomTat.Text = dtTruyen.Rows[0]["TomTat"].ToString();
                 lblTacGia.Text = dtTruyen.Rows[0]["TenTacGia"].ToString();
@@ -167,14 +175,18 @@ namespace ReadingLightNovelApplication
             }
             else
             {
-                MessageBox.Show("Bạn cần đăng nhập để theo dõi truyện này!");
-                LayoutLogged lg = dataload.getFormParent(this, "LayoutLogged") as LayoutLogged;
-                Panel panel1 = dataload.getPanel(lg, "panelNoiDung");
-                if (lg.isclick == false)
+                if (MessageBox.Show("Bạn cần đăng nhập để theo dõi truyện này ? Bạn có muốn đăng nhập", "Yêu cầu đăng nhập", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    dataload.AddChildFormDockFill(new FormLayoutDangNhap(), panel1);
-                    lg.setClick(true);
+                    MessageBox.Show("Bạn cần đăng nhập để theo dõi truyện này!");
+                    LayoutLogged lg = dataload.getFormParent(this, "LayoutLogged") as LayoutLogged;
+                    Panel panel1 = dataload.getPanel(lg, "panelNoiDung");
+                    if (lg.isclick == false)
+                    {
+                        dataload.AddChildFormDockFill(new FormLayoutDangNhap(), panel1);
+                        lg.setClick(true);
+                    }
                 }
+                    
             }
         }
 
@@ -193,14 +205,17 @@ namespace ReadingLightNovelApplication
 
             }
             else
-            {
-                MessageBox.Show("Bạn cần đăng nhập để đánh giá truyện này");
-                LayoutLogged lg = dataload.getFormParent(this, "LayoutLogged") as LayoutLogged;
-                Panel panel1 = dataload.getPanel(lg, "panelNoiDung");
-                if (lg.isclick == false)
+            {              
+                if (MessageBox.Show("Bạn cần đăng nhập để đánh giá truyện này ? Bạn có muốn đăng nhập", "Yêu cầu đăng nhập", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    dataload.AddChildFormDockFill(new FormLayoutDangNhap(), panel1);
-                    lg.setClick(true);
+                    MessageBox.Show("Bạn cần đăng nhập để theo dõi truyện này!");
+                    LayoutLogged lg = dataload.getFormParent(this, "LayoutLogged") as LayoutLogged;
+                    Panel panel1 = dataload.getPanel(lg, "panelNoiDung");
+                    if (lg.isclick == false)
+                    {
+                        dataload.AddChildFormDockFill(new FormLayoutDangNhap(), panel1);
+                        lg.setClick(true);
+                    }
                 }
             }
         }
@@ -233,13 +248,15 @@ namespace ReadingLightNovelApplication
             }
             else
             {
-                MessageBox.Show("Bạn cần đăng nhập để đọc tiếp truyện này");
-                LayoutLogged lg = dataload.getFormParent(this, "LayoutLogged") as LayoutLogged;
-                Panel panel1 = dataload.getPanel(lg, "panelNoiDung");
-                if (lg.isclick == false)
+                if (MessageBox.Show("Bạn cần đăng nhập để đọc tiếp truyện này ? Bạn có muốn đăng nhập", "Yêu cầu đăng nhập", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    dataload.AddChildFormDockFill(new FormLayoutDangNhap(), panel1);
-                    lg.setClick(true);
+                    LayoutLogged lg = dataload.getFormParent(this, "LayoutLogged") as LayoutLogged;
+                    Panel panel1 = dataload.getPanel(lg, "panelNoiDung");
+                    if (lg.isclick == false)
+                    {
+                        dataload.AddChildFormDockFill(new FormLayoutDangNhap(), panel1);
+                        lg.setClick(true);
+                    }
                 }
             }
         }

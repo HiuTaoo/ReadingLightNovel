@@ -74,5 +74,10 @@ namespace ReadingLightNovelApplication
             btnCountChapter.Text = dt5.Rows[0][0].ToString();
             dt5.Dispose();
         }
+
+        private void pbAvt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

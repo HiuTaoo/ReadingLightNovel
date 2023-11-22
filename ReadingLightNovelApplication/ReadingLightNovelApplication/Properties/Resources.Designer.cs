@@ -143,6 +143,16 @@ namespace ReadingLightNovelApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logout {
+            get {
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mucluc {
             get {
                 object obj = ResourceManager.GetObject("mucluc", resourceCulture);
@@ -156,6 +166,16 @@ namespace ReadingLightNovelApplication.Properties {
         internal static System.Drawing.Bitmap png_transparent_heart_computer_icons_shape_blackheart_love_black_share_icon {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-heart-computer-icons-shape-blackheart-love-black-share-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search {
+            get {
+                object obj = ResourceManager.GetObject("search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

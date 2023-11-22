@@ -112,5 +112,34 @@ namespace ReadingLightNovelApplication
 			}
             else { panelUserButton.Visible = false; }
         }
-	}
+
+        public void setVisible()
+        {
+            panelUserButton.Visible = false;
+            panelUserButton.SendToBack();
+        }
+
+        private void btnHuongDan_Click(object sender, EventArgs e)
+        {
+            /*FormMain fm = SupportMethod.getFormMain(this) as FormMain;
+            Panel panel1 = SupportMethod.getPanel(fm, "panelMain");*/
+            /*foreach (Control c in panel1.Controls)
+            {
+                c.Dispose();
+            }*/
+            LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
+            Panel panel2 = SupportMethod.getPanel(lg, "panelNoiDung");
+            if (FormMain.isLogin == true)
+                SupportMethod.AddChildFormDockFill(new LayOutSystem(), panel2);
+            else
+            {
+                MessageBox.Show("Bạn cần đăng nhập để dùng tính năng này!");                   
+                if (lg.isclick == false)
+                {
+                    SupportMethod.AddChildFormDockFill(new FormLayoutDangNhap(), panel2);
+                    lg.setClick(true);
+                }
+            }
+        }
+    }
 }

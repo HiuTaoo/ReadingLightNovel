@@ -49,11 +49,7 @@ namespace ReadingLightNovelApplication
             {
                 c.Dispose();
             }
-            foreach (Form f in panel1.Controls)
-            {
-                f.Close();
-                f.Dispose();
-            }
+            
 
             LayoutLogged lg = new LayoutLogged();
             dataload.openChildFormDockFill(formMain.getactive(), lg, panel1);
@@ -63,11 +59,7 @@ namespace ReadingLightNovelApplication
             {
                 c.Dispose();
             }
-            foreach (Form f in panel2.Controls)
-            {
-                f.Close();
-                f.Dispose();
-            }
+            
 
             DataTable dt = dataload.DataReader("select TacPham.MaTacPham" +
                 "\r\nfrom TacPham \r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
@@ -93,11 +85,7 @@ namespace ReadingLightNovelApplication
             {
                 c.Dispose();
             }
-            foreach(Form f in panel1.Controls)
-            {
-                f.Close();
-                f.Dispose();
-            }
+            
             dataload.openChildFormDockFill(formMain.getactive(), new FormMainReading(dt4.Rows[a - 1]["MaChapter"].ToString()), panel1);
             dt3.Dispose();
             dt4.Dispose();
@@ -122,16 +110,13 @@ namespace ReadingLightNovelApplication
                 {
                     c.Dispose();
                 }
-                foreach (Form f in panel1.Controls)
-                {
-                    f.Close();
-                    f.Dispose();
-                }
+                
                 dataload.openChildFormDockFill(formMain.getactive(), new FormMainReading(dt4.Rows[a + 1]["MaChapter"].ToString()), panel1);
             }
             else
             {
                 btnNext.Enabled = false;
+                btnNext1.Enabled = false;
                 MessageBox.Show("Không còn chương tiếp theo!");
             }
             
@@ -225,14 +210,22 @@ namespace ReadingLightNovelApplication
             if (a - 1 < 0)
             {
                 btnPre.Enabled = false;
+                btnPre1.Enabled = false;
+            }
+            else
+            {
+                btnPre.Enabled = true;
+                btnPre1.Enabled = true;
             }
             if ((a+1) < dt4.Rows.Count)
             {
                 btnNext.Enabled = true;
+                btnNext1.Enabled = true;
             }
             else
             {
                 btnNext.Enabled=false;
+                btnNext1.Enabled = false;
             }
             dt3.Dispose();
             dt4.Dispose();

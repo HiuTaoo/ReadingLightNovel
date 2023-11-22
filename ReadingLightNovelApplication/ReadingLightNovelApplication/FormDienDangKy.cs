@@ -45,8 +45,14 @@ namespace ReadingLightNovelApplication
                             "VALUES (N'"+tbUserName.Text+"', N'"+tbPassword.Text+"',0,'"+ ngayHomNay.ToString() +"', N'"+tbEmail.Text+"')");
                         FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
                         Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
+                        /*LayoutLogged lg = new LayoutLogged();
+                        SupportMethod.AddChildFormDockFill(lg, "panelNoiDung");*/
 
-                        SupportMethod.openChildFormDockFill(formMain.getactive(), new FormLayoutDangNhap(), panel1);
+                        LayoutLogged lg = new LayoutLogged();
+                        SupportMethod.openChildFormDockFill(formMain.getactive(), lg, panel1);
+                        Panel panel2 = SupportMethod.getPanel(lg, "panelNoiDung");
+
+                        SupportMethod.AddChildFormDockFill( new FormLayoutDangNhap(), panel2);
 
                     }
                     

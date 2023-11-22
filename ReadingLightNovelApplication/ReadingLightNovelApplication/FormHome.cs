@@ -64,7 +64,7 @@ namespace ReadingLightNovelApplication
 				"\r\nwhere LichSu.ThoiGian = (select MAX(l1.ThoiGian)" +
 				"\r\n\t\t\t\t\t\t\tfrom LichSu l1 inner join Chapter c1 on c1.MaChapter = l1.MaChapter" +
 				"\r\n\t\t\t\t\t\t\twhere c1.MaVolume = Volume.MaVolume)" +
-				"\r\n\t\tand LichSu.TenDangNhap = N'HiuTao'\t\t\t\t\t" +
+				"\r\n\t\tand LichSu.TenDangNhap = N'"+FormMain.TenDangNhap+"'\t\t\t\t\t" +
 				"\r\ngroup by TacPham.TenTacPham, Volume.TenVolume, Chapter.MaChapter, LichSu.ThoiGian" +
 				"\r\norder by LichSu.ThoiGian desc");
 			Stack<string> list = new Stack<string>();
@@ -192,22 +192,22 @@ namespace ReadingLightNovelApplication
 
 		private void btnTopThang_Click(object sender, EventArgs e)
 		{
-			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormHome(), this);	// thay thành form sắp xếp theo tháng		
+			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormSapXep(5), this);	// thay thành form sắp xếp theo tháng		
 		}
 
 		private void panelTopThoiGian_Click(object sender, EventArgs e)
 		{
-			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormHome(), this);//Thay thế thành form sắp xêp theo top full
+			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormSapXep(6), this);//Thay thế thành form sắp xêp theo top full
 		}
 
 		private void btnChuongMoiNhat_Click(object sender, EventArgs e)
 		{
-			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormHome(), this);//Thay thế thành form sắp xếp theo chương mới nhất
+			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormSapXep(3), this);//Thay thế thành form sắp xếp theo chương mới nhất
 		}
 
 		private void btnTruyenMoiNhat_Click(object sender, EventArgs e)
 		{
-			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormHome(), this);//Thay thế thành form sắp xếp theo truyện mới
+			SupportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormSapXep(2), this);//Thay thế thành form sắp xếp theo truyện mới
 		}
 
 		private void btnDaHoanThanh_Click(object sender, EventArgs e)

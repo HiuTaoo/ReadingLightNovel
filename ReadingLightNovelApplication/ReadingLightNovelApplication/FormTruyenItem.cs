@@ -31,8 +31,13 @@ namespace ReadingLightNovelApplication
 				"\r\nWHERE TacPham.MaTacPham = N'"+ maTacPham +"'");
 			btnTenTruyen.Text = data.Rows[0]["TenTacPham"].ToString();
 			btnTenChuong.Text = data.Rows[0]["TenChapter"].ToString();
-			panelAnh.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
-				+ data.Rows[0]["MaTacPham"].ToString() + "\\" + data.Rows[0]["Anh"].ToString());
+
+			try
+			{
+                panelAnh.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
+                + data.Rows[0]["MaTacPham"].ToString() + "\\" + data.Rows[0]["Anh"].ToString());
+            }
+			catch { }
 
 			this.maChapter = data.Rows[0]["MaChapter"].ToString();
 

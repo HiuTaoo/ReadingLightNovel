@@ -29,9 +29,17 @@ namespace ReadingLightNovelApplication
                 "\r\ninner join LichSu on LichSu.MaChapter = Chapter.MaChapter" +
                 "\r\nwhere TacPham.MaTacPham = N'" + matp + "'" +
                 "\r\norder by LichSu.ThoiGian desc");
-            System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
+            try
+            {
+                System.Drawing.Image image = System.Drawing.Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
                     + dt.Rows[0]["MaTacPham"].ToString() + "\\" + dt.Rows[0]["Anh"].ToString());
-            pbImg.Image = image;
+                pbImg.Image = image;
+            }
+            catch {
+                Image image = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\noLoadUser.png"
+                        );
+                pbImg.Image = image;
+            }
             lblTenTruyen.Text = dt.Rows[0]["TenTacPham"].ToString();
             lblChapter.Text = dt.Rows[0]["TenChapter"].ToString();
             lblVol.Text = dt.Rows[0]["TenVolume"].ToString();
