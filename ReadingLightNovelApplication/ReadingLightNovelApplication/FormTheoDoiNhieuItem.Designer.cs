@@ -83,6 +83,7 @@
 			this.btnTenTruyen.TabIndex = 5;
 			this.btnTenTruyen.Text = "guna2Button4";
 			this.btnTenTruyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.btnTenTruyen.Click += new System.EventHandler(this.btnTenTruyen_Click);
 			// 
 			// guna2Panel13
 			// 

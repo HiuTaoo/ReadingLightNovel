@@ -32,7 +32,6 @@
 			this.panelBinhLuan = new Guna.UI2.WinForms.Guna2Panel();
 			this.btnComment = new Guna.UI2.WinForms.Guna2Button();
 			this.guna2Panel133 = new Guna.UI2.WinForms.Guna2Panel();
-			this.btnThoiGian = new Guna.UI2.WinForms.Guna2Button();
 			this.btnUser = new Guna.UI2.WinForms.Guna2Button();
 			this.btnAvatar = new Guna.UI2.WinForms.Guna2CircleButton();
 			this.btnTenTruyen = new Guna.UI2.WinForms.Guna2Button();
@@ -83,7 +82,6 @@
 			// guna2Panel133
 			// 
 			this.guna2Panel133.BackColor = System.Drawing.Color.Transparent;
-			this.guna2Panel133.Controls.Add(this.btnThoiGian);
 			this.guna2Panel133.Controls.Add(this.btnUser);
 			this.guna2Panel133.Controls.Add(this.btnAvatar);
 			this.guna2Panel133.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -91,23 +89,6 @@
 			this.guna2Panel133.Name = "guna2Panel133";
 			this.guna2Panel133.Size = new System.Drawing.Size(271, 36);
 			this.guna2Panel133.TabIndex = 3;
-			// 
-			// btnThoiGian
-			// 
-			this.btnThoiGian.BackColor = System.Drawing.Color.Transparent;
-			this.btnThoiGian.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-			this.btnThoiGian.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-			this.btnThoiGian.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-			this.btnThoiGian.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-			this.btnThoiGian.Dock = System.Windows.Forms.DockStyle.Right;
-			this.btnThoiGian.FillColor = System.Drawing.Color.Transparent;
-			this.btnThoiGian.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.btnThoiGian.ForeColor = System.Drawing.Color.Black;
-			this.btnThoiGian.Location = new System.Drawing.Point(157, 0);
-			this.btnThoiGian.Name = "btnThoiGian";
-			this.btnThoiGian.Size = new System.Drawing.Size(114, 36);
-			this.btnThoiGian.TabIndex = 2;
-			this.btnThoiGian.Text = "guna2Button22";
 			// 
 			// btnUser
 			// 
@@ -197,7 +178,6 @@
 		private Guna.UI2.WinForms.Guna2Panel panelBinhLuan;
 		private Guna.UI2.WinForms.Guna2Button btnComment;
 		private Guna.UI2.WinForms.Guna2Panel guna2Panel133;
-		private Guna.UI2.WinForms.Guna2Button btnThoiGian;
 		private Guna.UI2.WinForms.Guna2Button btnUser;
 		private Guna.UI2.WinForms.Guna2CircleButton btnAvatar;
 		private Guna.UI2.WinForms.Guna2Button btnTenTruyen;

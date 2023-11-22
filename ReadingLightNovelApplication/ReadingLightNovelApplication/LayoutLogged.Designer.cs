@@ -42,8 +42,10 @@
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.panelNoiDung = new System.Windows.Forms.Panel();
+			this.panelUserButton = new Guna.UI2.WinForms.Guna2Panel();
 			this.panel1.SuspendLayout();
 			this.panelHeaderLayoutLogged.SuspendLayout();
+			this.panelNoiDung.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -115,6 +117,7 @@
 			this.btnTimKiem.Size = new System.Drawing.Size(48, 48);
 			this.btnTimKiem.TabIndex = 25;
 			this.btnTimKiem.Text = "guna2CircleButton4";
+			this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click_1);
 			// 
 			// panelLogin
 			// 
@@ -218,13 +221,22 @@
 			// 
 			// panelNoiDung
 			// 
-			this.panelNoiDung.AutoScroll = true;
+			this.panelNoiDung.Controls.Add(this.panelUserButton);
 			this.panelNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panelNoiDung.Location = new System.Drawing.Point(0, 72);
 			this.panelNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.panelNoiDung.Name = "panelNoiDung";
 			this.panelNoiDung.Size = new System.Drawing.Size(1418, 772);
 			this.panelNoiDung.TabIndex = 1;
+			// 
+			// panelUserButton
+			// 
+			this.panelUserButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.panelUserButton.BackColor = System.Drawing.SystemColors.Control;
+			this.panelUserButton.Location = new System.Drawing.Point(1221, 5);
+			this.panelUserButton.Name = "panelUserButton";
+			this.panelUserButton.Size = new System.Drawing.Size(197, 198);
+			this.panelUserButton.TabIndex = 0;
 			// 
 			// LayoutLogged
 			// 
@@ -241,49 +253,7 @@
 			this.panel1.ResumeLayout(false);
 			this.panelHeaderLayoutLogged.ResumeLayout(false);
 			this.panelHeaderLayoutLogged.PerformLayout();
-			this.ResumeLayout(false);
-			// 
-			this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel3.Location = new System.Drawing.Point(0, 60);
-			this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(1418, 12);
-			this.panel3.TabIndex = 1;
-			// 
-			// panel2
-			// 
-			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel2.Location = new System.Drawing.Point(0, 0);
-			this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(1418, 12);
-			this.panel2.TabIndex = 0;
-			// 
-			// panelNoiDung
-			// 
-			this.panelNoiDung.AutoScroll = true;
-			this.panelNoiDung.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panelNoiDung.Location = new System.Drawing.Point(0, 72);
-			this.panelNoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.panelNoiDung.Name = "panelNoiDung";
-			this.panelNoiDung.Size = new System.Drawing.Size(1418, 772);
-			this.panelNoiDung.TabIndex = 1;
-			// 
-			// LayoutLogged
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1418, 844);
-			this.Controls.Add(this.panelNoiDung);
-			this.Controls.Add(this.panel1);
-			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.Name = "LayoutLogged";
-			this.Text = "LayoutLogged";
-			this.Load += new System.EventHandler(this.LayoutLogged_Load);
-			this.panel1.ResumeLayout(false);
-			this.panelHeaderLayoutLogged.ResumeLayout(false);
-			this.panelHeaderLayoutLogged.PerformLayout();
+			this.panelNoiDung.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -303,5 +273,6 @@
 		private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
 		private Guna.UI2.WinForms.Guna2CircleButton btnTimKiem;
 		private Guna.UI2.WinForms.Guna2Panel panelLogin;
+		private Guna.UI2.WinForms.Guna2Panel panelUserButton;
 	}
 }

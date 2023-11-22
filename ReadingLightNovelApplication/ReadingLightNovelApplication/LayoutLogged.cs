@@ -38,6 +38,9 @@ namespace ReadingLightNovelApplication
             {
                 SupportMethod.AddChildFormDockFill(new FormLogout(), this.panelLogin);
             }
+
+            SupportMethod.AddChildFormDockTop(new FormUserButton(FormMain.TenDangNhap), panelUserButton);
+            panelUserButton.Visible = false;
         }
 
 		private void btnLogo_Click(object sender, EventArgs e)
@@ -51,9 +54,10 @@ namespace ReadingLightNovelApplication
 
 		private void btnDanhSach_Click(object sender, EventArgs e)
 		{
+            
 			foreach (Control control in this.panelNoiDung.Controls)
 			{
-				control.Dispose();
+				control.Visible = false;
 			}
 			SupportMethod.AddChildFormDockTop(new FormSapXep(0), this.panelNoiDung);
 		}
@@ -62,11 +66,28 @@ namespace ReadingLightNovelApplication
 		{
 			foreach (Control control in this.panelNoiDung.Controls)
 			{
-				control.Dispose();
+				control.Visible = false;
 			}
 			SupportMethod.AddChildFormDockTop(new FormTimKiem(txtTimKiem.Text), this.panelNoiDung);
 		}
 
-		
+		private void btnTimKiem_Click_1(object sender, EventArgs e)
+		{
+			foreach (Control control in this.panelNoiDung.Controls)
+			{
+				control.Visible = false;
+			}
+			SupportMethod.AddChildFormDockTop(new FormTimKiem(txtTimKiem.Text), this.panelNoiDung);
+		}
+
+        public void showUserButton()
+        {
+            if(panelUserButton.Visible == false)
+            {
+				panelUserButton.Visible = true;
+				panelUserButton.BringToFront();
+			}
+            else { panelUserButton.Visible = false; }
+        }
 	}
 }

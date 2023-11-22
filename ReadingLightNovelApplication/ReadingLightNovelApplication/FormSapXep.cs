@@ -16,12 +16,29 @@ namespace ReadingLightNovelApplication
 	public partial class FormSapXep : Form
 	{
 		private int cbLuaChonIndex = 0;
+		private string maTheLoai = string.Empty;
 		private SupportMethod supportMethod = new SupportMethod();
+		private int pageStart = 1;
+		private int pageEnd = 1;
+		private int pageSize = 7;
+		private int pageCurrent = 1;
+		private string commandTextForCount;
 		public FormSapXep(int cbLuaChonIndex)
 		{
 			InitializeComponent();
-			this.Load += btnApDung;
+			
 			this.cbLuaChonIndex = cbLuaChonIndex;
+		}
+
+		public FormSapXep()
+		{
+			InitializeComponent();
+		}
+
+		public FormSapXep(string maTheLoai)
+		{
+			InitializeComponent();
+			this.maTheLoai = maTheLoai;
 		}
 
 		public void setUpMacDinh()
@@ -34,6 +51,8 @@ namespace ReadingLightNovelApplication
 			checkboxTruyenDich.Checked = true;
 			checkboxTruyenSangTac.Checked = false;
 			checkboxConvert.Checked = false;
+
+			panelGhiChu.Visible = false;
 		}
 
 		private void loadEventClickChuCai()
@@ -54,15 +73,19 @@ namespace ReadingLightNovelApplication
 			foreach (Guna2Button btn in flpChuCai.Controls.OfType<Guna2Button>())
 			{
 				btn.FillColor = Color.Transparent;
+				btn.ForeColor = Color.LightSeaGreen;
+
 			}
 
 			foreach (Guna2CircleButton btn in flpChuCai.Controls.OfType<Guna2CircleButton>())
 			{
 				btn.FillColor = Color.Transparent;
+				btn.ForeColor = Color.LightSeaGreen;
+
 			}
 			Guna2Button button = sender as Guna2Button;
 			flpChuCai.Tag = button.Text;
-			button.FillColor = Color.Blue;
+			button.FillColor = Color.LightSeaGreen;
 		}
 
 		void eventClickChuCaiCircleButton(object sender, EventArgs e)
@@ -70,15 +93,30 @@ namespace ReadingLightNovelApplication
 			foreach (Guna2Button btn in flpChuCai.Controls.OfType<Guna2Button>())
 			{
 				btn.FillColor = Color.Transparent;
+				btn.ForeColor = Color.LightSeaGreen;
 			}
 
 			foreach (Guna2CircleButton btn in flpChuCai.Controls.OfType<Guna2CircleButton>())
 			{
 				btn.FillColor = Color.Transparent;
+				btn.ForeColor = Color.LightSeaGreen;
+
 			}
 			Guna2CircleButton button = sender as Guna2CircleButton;
 			flpChuCai.Tag = button.Text;
-			button.FillColor = Color.Blue;
+			button.FillColor = ColorTranslator.FromHtml("#36a189");
+			button.ForeColor = Color.White;
+		}
+
+		public void loadGhiChu()
+		{
+			if(this.maTheLoai != string.Empty)
+			{
+				DataTable data = supportMethod.DataReader("select *\r\nfrom TheLoai\r\nwhere TheLoai.MaTheLoai = N'" + maTheLoai + "'\r\n");
+
+				lbGhiChu.Text = data.Rows[0]["GhiChu"].ToString();
+				panelGhiChu.Visible = true;
+			}
 		}
 
 		private void FormSapXep_Load(object sender, EventArgs e)
@@ -93,8 +131,7 @@ namespace ReadingLightNovelApplication
 			btnPhanLoaiApDung.Click += btnApDung;
 			btnTinhTrangApDung.Click += btnApDung;
 			loadTheLoai();
-			
-		
+			//btnPhanLoaiApDung.PerformClick();		
 		}
 
 		private string getCommandText()
@@ -102,32 +139,97 @@ namespace ReadingLightNovelApplication
 			string commandText = string.Empty;
 			switch (cbLuaChon.SelectedIndex)
 			{
-				case 0:
-					commandText = "select *\r\nfrom (" +
+				case 0: // A-Z
+					commandText = "select sub.MaTacPham\r\nfrom (" +
 						"\r\nSELECT ROW_NUMBER() over(order by TacPham.TenTacPham) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
 						"\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
 						"\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
 						"\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-						"\r\n\t\t\t\t) as sub\r\nwhere rownuber between 0 and 20";
+						"\r\n\t\t\t\t) as sub ";
+					if(maTheLoai != string.Empty)
+					{
+						commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
+					}
+					commandText += "\r\nwhere (1 = 1) ";
 					break;
-				case 1:
-					commandText = "select *\r\nfrom (" +
+				case 1: //Z - A
+					commandText = "select sub.MaTacPham\r\nfrom (" +
 						"\r\nSELECT ROW_NUMBER() over(order by TacPham.TenTacPham desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
 						"\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
 						"\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
 						"\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-						"\r\n\t\t\t\t) as sub\r\nwhere rownuber between 0 and 20";
+						"\r\n\t\t\t\t) as sub ";
+					if (maTheLoai != string.Empty)
+					{
+						commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
+					}
+					commandText += "\r\nwhere (1 = 1) ";
 					break;
-				case 2:
-					commandText = "select *\r\nfrom (" +
+				case 2:		//Mới cập nhật
+					commandText = "select sub.MaTacPham\r\nfrom (" +
 						"\r\nSELECT ROW_NUMBER() over(order by Chapter.ThoiGianDang desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
 						"\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
 						"\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
 						"\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-						"\r\n\t\t\t\t) as sub\r\nwhere rownuber between 0 and 20";
+						"\r\n\t\t\t\t) as sub ";
+					if (maTheLoai != string.Empty)
+					{
+						commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
+					}
+					commandText += "\r\nwhere (1 = 1) ";
 					break;
-
-
+				case 3: // Truyện mới
+					commandText = "select *\r\nfrom (" +
+						"\r\nSELECT ROW_NUMBER() over(order by TacPham.ThoiGian desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
+						"\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
+						"\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
+						"\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
+						"\r\n\t\t\t\t) as sub ";
+					if (maTheLoai != string.Empty)
+					{
+						commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
+					}
+					commandText += "\r\nwhere (1 = 1) ";
+					break;
+				case 4: // Theo dõi
+					commandText = "select sub.MaTacPham\r\nfrom (" +
+						"\r\nSELECT ROW_NUMBER() over(order by Chapter.ThoiGianDang desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
+						"\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
+						"\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
+						"\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
+						"\r\n\t\t\t\t) as sub ";
+					if (maTheLoai != string.Empty)
+					{
+						commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
+					}
+					commandText += "\r\nwhere (1 = 1) ";
+					break;
+				case 5: // Top tháng
+					commandText = "select sub.MaTacPham\r\nfrom (" +
+						"\r\nSELECT ROW_NUMBER() over(order by Chapter.ThoiGianDang desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
+						"\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
+						"\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
+						"\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
+						"\r\n\t\t\t\t) as sub ";
+					if (maTheLoai != string.Empty)
+					{
+						commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
+					}
+					commandText += "\r\nwhere (1 = 1) ";
+					break;
+				case 6: // Top toàn thời gian
+					commandText = "select sub.MaTacPham\r\nfrom (" +
+						"\r\nSELECT ROW_NUMBER() over(order by Chapter.ThoiGianDang desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
+						"\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
+						"\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
+						"\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
+						"\r\n\t\t\t\t) as sub ";
+					if (maTheLoai != string.Empty)
+					{
+						commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
+					}
+					commandText += "\r\nwhere (1 = 1) ";
+					break;
 				default:
 					break;
 			}
@@ -189,9 +291,31 @@ namespace ReadingLightNovelApplication
 					else
 						commandText += " sub.TenTacPham like N'" + flpChuCai.Tag + "%'";
 				}
+				else commandText += " (1 = 1) ";
 			}
 
+			if(maTheLoai != string.Empty)
+			{
+				commandText += " and ChiTietTheLoai.MaTheLoai = N'" + maTheLoai + "'";
+			}
+
+			commandTextForCount = commandText;
+
+			commandText += " and  (rownuber between " + ((pageCurrent - 1) * pageSize) + " and " + (pageCurrent * pageSize) + ") group by sub.MaTacPham ";
+
 			return commandText;
+		}
+
+		public void getMaxPage()
+		{
+			DataTable data = supportMethod.DataReader(commandTextForCount);
+			int itemsCount = 0;
+			foreach(DataRow row in data.Rows)
+			{
+				itemsCount++;
+			}
+			pageEnd = (itemsCount / pageSize) + 1;
+			btnTrenSoTrang.Text = "/" + pageEnd.ToString(); 
 		}
 
 		private void guna2Button1_Click(object sender, EventArgs e)
@@ -201,6 +325,8 @@ namespace ReadingLightNovelApplication
 
 		void btnApDung(object sender, EventArgs e)
 		{
+			loadGhiChu();
+			//pageCurrent = 1;
 			DataTable data = supportMethod.DataReader(getCommandText());
 			foreach (Control control in flpKetQuaSapXep.Controls)
 			{
@@ -215,6 +341,8 @@ namespace ReadingLightNovelApplication
 			{
 				supportMethod.AddChildFormDockNone(new FormTruyenItem(item), flpKetQuaSapXep);
 			}
+
+			getMaxPage();
 		}
 
 		public void loadTheLoai()
@@ -237,7 +365,19 @@ namespace ReadingLightNovelApplication
 				button.ForeColor = Color.Black;
 				button.FillColor = Color.Transparent;
 				panelTheLoai.Controls.Add(button);
+				button.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+				button.Click += btnTheLoai_click;
 			}
+
+		}
+
+		public void btnTheLoai_click(object sender, EventArgs e)
+		{
+			Guna2Button btn = sender as Guna2Button;
+			this.maTheLoai = btn.Tag.ToString();
+			pageCurrent = 1;
+			setUpMacDinh();
+			btnChuCaiApDung.PerformClick();
 
 		}
 
@@ -256,6 +396,71 @@ namespace ReadingLightNovelApplication
 			foreach (string item in stack)
 			{
 				supportMethod.AddChildFormDockNone(new FormTruyenItem(item), flpKetQuaSapXep);
+			}
+		}
+
+		private void btnHuy_Click(object sender, EventArgs e)
+		{
+			this.maTheLoai = string.Empty;
+			panelGhiChu.Visible = false;
+			btnPhanLoaiApDung.PerformClick();
+		}
+
+		private void UpdatePaginationButtons()
+		{
+			txtSoTrang.Text = pageCurrent.ToString();
+			btnDau.Enabled = pageCurrent > 1;
+			btnCuoi.Enabled = pageCurrent < pageEnd;
+			btnGiam.Enabled = pageCurrent > 1;
+			btnTang.Enabled = pageCurrent < pageEnd;
+		}
+
+		private void btnDau_Click(object sender, EventArgs e)
+		{
+			pageCurrent = 1;
+			UpdatePaginationButtons();
+			btnChuCaiApDung.PerformClick();
+		}
+
+		private void btnGiam_Click(object sender, EventArgs e)
+		{
+			pageCurrent = 1;
+			UpdatePaginationButtons();
+			btnChuCaiApDung.PerformClick();
+		}
+
+		private void btnTrenSoTrang_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnTang_Click(object sender, EventArgs e)
+		{
+			pageCurrent++;
+			UpdatePaginationButtons();
+			btnChuCaiApDung.PerformClick();
+		}
+
+		private void btnCuoi_Click(object sender, EventArgs e)
+		{
+			pageCurrent = pageEnd;
+			UpdatePaginationButtons();
+			btnChuCaiApDung.PerformClick();
+		}
+
+		private void btnGo_Click(object sender, EventArgs e)
+		{
+			int enteredPage;
+			if (int.TryParse(txtSoTrang.Text, out enteredPage) && enteredPage >= 1 && enteredPage <= pageEnd)
+			{
+				pageCurrent = enteredPage;
+				UpdatePaginationButtons();
+				btnChuCaiApDung.PerformClick();
+			}
+			else
+			{
+				// Xử lý đầu vào số trang không hợp lệ
+				MessageBox.Show("Số trang không hợp lệ.");
 			}
 		}
 	}

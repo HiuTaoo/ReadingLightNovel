@@ -58,6 +58,7 @@
 			this.panelAnh.Name = "panelAnh";
 			this.panelAnh.Size = new System.Drawing.Size(172, 246);
 			this.panelAnh.TabIndex = 1;
+			this.panelAnh.Click += new System.EventHandler(this.panelAnh_Click);
 			// 
 			// guna2CustomGradientPanel1
 			// 
@@ -88,6 +89,7 @@
 			this.btnTenTruyen.Size = new System.Drawing.Size(172, 38);
 			this.btnTenTruyen.TabIndex = 1;
 			this.btnTenTruyen.Text = "guna2Button2";
+			this.btnTenTruyen.Click += new System.EventHandler(this.btnTenTruyen_Click);
 			// 
 			// btnTenChuong
 			// 
@@ -104,6 +106,7 @@
 			this.btnTenChuong.Size = new System.Drawing.Size(172, 32);
 			this.btnTenChuong.TabIndex = 0;
 			this.btnTenChuong.Text = "guna2Button1";
+			this.btnTenChuong.Click += new System.EventHandler(this.btnTenChuong_Click);
 			// 
 			// guna2Panel57
 			// 

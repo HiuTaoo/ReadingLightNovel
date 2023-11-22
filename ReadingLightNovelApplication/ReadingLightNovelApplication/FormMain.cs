@@ -30,6 +30,8 @@ namespace ReadingLightNovelApplication
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            
+
             if(TenDangNhap != string.Empty)
             {
 				SupportMethod.openChildFormDockFill(this.activeForm, new LayoutLogged(), this.panelMain);

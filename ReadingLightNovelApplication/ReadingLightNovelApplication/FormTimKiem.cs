@@ -18,11 +18,13 @@ namespace ReadingLightNovelApplication
 		Form activeForm = null;
 		private string keySearch = string.Empty;
 		private List<string> keys = new List<string>();
+
 		public FormTimKiem(string keySearch)
 		{
 			InitializeComponent();
 			this.keySearch = keySearch;
 		}
+
 
 		public FormTimKiem()
 		{
@@ -59,6 +61,7 @@ namespace ReadingLightNovelApplication
 			//supportMethod.AddChildFormDockTop(new FormTimKiemKetQua(), panelKetQua);
 			panelKetQua.Visible = false;
 			txtTimKiem.Text = keySearch;
+			btnTimKiem.PerformClick();
 		}
 
 
@@ -125,7 +128,7 @@ namespace ReadingLightNovelApplication
 			}
 			str += " group by sub.MaTacPham";
 			queryTxt += str;
-			txtTimKiem.Text = queryTxt;
+			//txtTimKiem.Text = queryTxt;
 			MessageBox.Show(queryTxt);
 			DataTable data = supportMethod.DataReader(queryTxt);
 
@@ -140,7 +143,7 @@ namespace ReadingLightNovelApplication
 			panelKetQua.Visible = true;
 			foreach (DataRow row in data.Rows) 
 			{
-				MessageBox.Show(row["MaTacPham"].ToString());
+				//MessageBox.Show(row["MaTacPham"].ToString());
 				list.Add(row["MaTacPham"].ToString());
 			}
 			supportMethod.AddChildFormDockTop(new FormTimKiemKetQua(list), panelKetQua);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,9 @@ namespace ReadingLightNovelApplication
 
 		private void FormTruyenMoiItem_Load(object sender, EventArgs e)
 		{
+			btnTenTruyen.MouseEnter += mouseEnter;
+			btnTenTruyen.MouseLeave += mouseLeave;
+
 			DataTable data = supportMethod.DataReader("select TacPham.MaTacPham, TacPham.TenTacPham, TacPham.TomTat, TacPham.Anh" +
 				"\r\nfrom TacPham" +
 				"\r\nwhere TacPham.MaTacPham = N'"+ maTacPham + "'");
@@ -45,5 +49,24 @@ namespace ReadingLightNovelApplication
 			btnTomTat.Text = data.Rows[0]["TomTat"].ToString();
 
 		}
+
+		private void btnTenTruyen_Click(object sender, EventArgs e)
+		{
+			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormContent(maTacPham), this);
+		}
+
+
+		public void mouseEnter(object sender, EventArgs e)
+		{
+			Guna2Button btn = sender as Guna2Button;
+			btn.ForeColor = Color.Green;
+		}
+
+		public void mouseLeave(object sender, EventArgs e)
+		{
+			Guna2Button btn = sender as Guna2Button;
+			btn.ForeColor = Color.Black;
+		}
+
 	}
 }

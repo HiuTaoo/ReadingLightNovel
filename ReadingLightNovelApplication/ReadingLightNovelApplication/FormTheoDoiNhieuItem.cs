@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,27 @@ namespace ReadingLightNovelApplication
 			btnSo.Text = top.ToString();
 			btnTenTruyen.Text = data.Rows[0]["TenTacPham"].ToString();
 			btnLuotTheoDoi.Text = data.Rows[0]["luotthich"].ToString() + " theo dõi";
+
+			btnTenTruyen.MouseEnter += mouseEnter;
+			btnTenTruyen.MouseLeave += mouseLeave;
+		}
+
+		private void btnTenTruyen_Click(object sender, EventArgs e)
+		{
+			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormContent(maTacPham), this);
+
+		}
+
+		public void mouseEnter(object sender, EventArgs e)
+		{
+			Guna2Button btn = sender as Guna2Button;
+			btn.ForeColor = Color.Green;
+		}
+
+		public void mouseLeave(object sender, EventArgs e)
+		{
+			Guna2Button btn = sender as Guna2Button;
+			btn.ForeColor = Color.Black;
 		}
 	}
 }
