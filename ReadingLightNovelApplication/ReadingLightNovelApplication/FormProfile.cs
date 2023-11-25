@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace ReadingLightNovelApplication
 {
     public partial class FormProfile : Form
     {
+        private string selectedImagePath;
         SupportMethod SupportMethod = new SupportMethod();
         string tendn;
         public FormProfile(string tendangnhap)
@@ -77,7 +79,45 @@ namespace ReadingLightNovelApplication
 
         private void pbAvt_Click(object sender, EventArgs e)
         {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp|All Files|*.*";
+                openFileDialog.Title = "Select an Image";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    selectedImagePath = openFileDialog.FileName;
 
+                    // Tên biến để lưu trữ tên của ảnh
+                    string imageName = Path.GetFileName(selectedImagePath);
+
+                    // Đường dẫn đến thư mục đích
+                    string destinationFolder = Path.Combine(Application.StartupPath, "Asset", "DataLightNovel", "User");
+
+                    try
+                    {
+                        // Kiểm tra xem thư mục đích có tồn tại không
+                        if (!Directory.Exists(destinationFolder))
+                        {
+                            Directory.CreateDirectory(destinationFolder);
+                        }
+
+                        // Đường dẫn đầy đủ đến file đích
+                        string destinationPath = Path.Combine(destinationFolder, imageName);
+
+                        // Sao chép ảnh đến vị trí đích
+                        File.Copy(selectedImagePath, destinationPath + "\\" + imageName, true);
+                        MessageBox.Show("Image copied successfully!");
+
+                        SupportMethod.DataChange("Update [User] set AnhDaiDien = '" + imageName + "' where TenDangNhap = N'" + FormMain.TenDangNhap + "'");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error copying image: {ex.Message}");
+                    }
+                }
+                
+            }
         }
     }
 }

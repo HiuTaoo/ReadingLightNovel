@@ -40,10 +40,6 @@ namespace ReadingLightNovelApplication
         {
             LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
             Panel panel1 = SupportMethod.getPanel(lg, "panelNoiDung");
-            foreach (Control c in panel1.Controls)
-            {
-                c.Dispose();
-            }
             SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormLichSu(), panel1);
         }
     }

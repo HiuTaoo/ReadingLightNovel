@@ -54,6 +54,7 @@ namespace ReadingLightNovelApplication
                 lblTomTat.Text = dtTruyen.Rows[0]["TomTat"].ToString();
                 lblTacGia.Text = dtTruyen.Rows[0]["TenTacGia"].ToString();
                 lblStatus.Text = dtTruyen.Rows[0]["TinhTrang"].ToString();
+                lblView.Text = dtTruyen.Rows[0]["LuotXem"].ToString();
 
                 DataTable dt1 = dataload.DataReader("DECLARE @StartDate DATE = (select top 1 ThoiGianDang" +
                     "\r\nfrom TacPham \r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
@@ -79,27 +80,6 @@ namespace ReadingLightNovelApplication
 
             }
 
-            DataTable dt3 = dataload.DataReader("SELECT ROUND(SUM(BinhChon.Diem) / COUNT(BinhChon.MaBinhChon), 2) AS DiemTrungBinh " +
-            "FROM TacPham INNER JOIN TacGia ON TacGia.MaTacGia = TacPham.MaTacGia " +
-            "INNER JOIN BinhChon ON TacPham.MaTacPham = BinhChon.MaTacPham " +
-            "WHERE TacPham.MaTacPham = '" + MaTp + "'");
-            lvlRating.Text = dt3.Rows[0][0].ToString() + "/5";
-            dt3.Dispose();
-
-            DataTable dt4 = dataload.DataReader("SELECT " +
-                "count(*)\r\nFROM     dbo.Chapter INNER JOIN" +
-                "\r\n dbo.LichSu ON dbo.Chapter.MaChapter = dbo.LichSu.MaChapter INNER JOIN\r\n " +
-                " dbo.Volume ON dbo.Chapter.MaVolume = dbo.Volume.MaVolume INNER JOIN\r\n " +
-                " dbo.TacPham ON dbo.Volume.MaTacPham = dbo.TacPham.MaTacPham" +
-                "\r\nwhere TacPham.MaTacPham = N'" + MaTp + "' \r\ngroup by TacPham.MaTacPham ");
-            try
-            {
-                lblView.Text = dt4.Rows[0][0].ToString();
-            }
-            catch {
-                lblView.Text = "0";
-            }
-            dt4.Dispose();
 
             DataTable dt5 = dataload.DataReader("select * \r\nfrom TacPham inner join TacGia on TacGia.MaTacGia =TacPham.MaTacGia" +
                 "\r\ninner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = TacPham.MaTacPham" +
@@ -242,6 +222,7 @@ namespace ReadingLightNovelApplication
 
                 else
                 {
+                    MessageBox.Show("Bạn chưa từng đọc truyện này nên không thể đọc tiếp!");
                     btnRead.Enabled = false;
                 }
                 dt.Dispose();
@@ -260,6 +241,12 @@ namespace ReadingLightNovelApplication
                 }
             }
         }
+
+       /* private void btnYeuThich_DoubleClick(object sender, EventArgs e)
+        {
+            dataload.DataChange("delete from YeuThich where TenDangNhap = N'"+FormMain.TenDangNhap+"'");
+            MessageBox.Show("Đã xóa truyện này khỏi danh sách yêu thích!");
+        }*/
     }
 }
 

@@ -83,8 +83,11 @@ namespace ReadingLightNovelApplication
                 MessageBox.Show("Bạn chưa đăng nhập");
                 FormMain formMain = dataload.getFormMain(this) as FormMain;
                 Panel panel1 = dataload.getPanel(formMain, "panelMain");
+                LayoutLogged lg = new LayoutLogged();
+                Panel panel2 = dataload.getPanel(lg, "panelNoiDung");
+                dataload.AddChildFormDockFill(lg, panel1);
 
-                dataload.openChildFormDockFill(formMain.getactive(), new FormLayoutDangNhap(), panel1);
+                dataload.openChildFormDockFill(formMain.getactive(), new FormLayoutDangNhap(), panel2);
             }
         }
     }

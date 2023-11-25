@@ -46,8 +46,7 @@ namespace ReadingLightNovelApplication
             }
             catch
             {
-                Image image = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\"
-                        + dtbase.Rows[0]["MaTacPham"].ToString() + "\\" + dtbase.Rows[0]["Anh"].ToString());
+                Image image = Image.FromFile(Application.StartupPath + "\\Asset\\User\\noLoadUser.png");
                 pbImg.Image = image;
             }
             btnLoaiTruyen.Text = dtbase.Rows[0]["LoaiTruyen"].ToString();
@@ -62,10 +61,7 @@ namespace ReadingLightNovelApplication
             LayoutLogged lg = new LayoutLogged();
             SupportMethod.openChildFormDockFill(formMain.getactive(), lg, panel1);
             Panel panel2 = SupportMethod.getPanel(lg, "panelNoiDung");
-            foreach (Control c in panel2.Controls)
-            {
-                c.Dispose();
-            }
+           
             SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormContent(matp), panel2);
         }
 
@@ -81,11 +77,7 @@ namespace ReadingLightNovelApplication
             LayoutLogged lg = new LayoutLogged();
             SupportMethod.openChildFormDockFill(formMain.getactive(), lg, panel1);
             Panel panel2 = SupportMethod.getPanel(lg, "panelNoiDung");
-            foreach (Control c in panel2.Controls)
-            {
-                c.Dispose();
-            }
-            
+           
             SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormContent(matp), panel2);
         }
     }

@@ -27,6 +27,14 @@ namespace ReadingLightNovelApplication
 
 		}
 
+        public void setColor()
+        {
+            btnDangNhap.BackColor = SystemColors.Control;
+            btnDangNhap.ForeColor = Color.Black;
+            btnDangKi.BackColor = Color.SeaGreen;
+            btnDangKi.ForeColor = Color.White;
+        }
+
 		private void FormLayoutDangNhap_Load(object sender, EventArgs e)
 		{
 			SupportMethod.openChildFormDockTop(this.activeForm, new FormDienDangNhap(), this.panelNoiDungDangNhap);

@@ -54,12 +54,6 @@ namespace ReadingLightNovelApplication
             LayoutLogged lg = new LayoutLogged();
             dataload.openChildFormDockFill(formMain.getactive(), lg, panel1);
             Panel panel2 = dataload.getPanel(lg, "panelNoiDung");
-            
-            foreach (Control c in panel2.Controls)
-            {
-                c.Dispose();
-            }
-            
 
             DataTable dt = dataload.DataReader("select TacPham.MaTacPham" +
                 "\r\nfrom TacPham \r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
@@ -193,11 +187,14 @@ namespace ReadingLightNovelApplication
                 "\r\nfrom TacPham\r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
                 "\r\ninner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
                 "\r\nwhere Chapter.MaChapter = '" + ma + "'");
+            dataload.DataChange("update TacPham\r\nset LuotXem = LuotXem + 1\r\nwhere TacPham.MaTacPham = N'" + dt3.Rows[0][0].ToString() + "'");
             DataTable dt4 = dataload.DataReader("select *" +
                 "\r\nfrom TacPham \r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
                 "\r\ninner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
-                "\r\nwhere TacPham.MaTacPham = '" + dt3.Rows[0][0] + "' ");
+                "\r\nwhere TacPham.MaTacPham = '" + dt3.Rows[0][0].ToString() + "' ");
+
             
+
             for (int i = 0; i < dt4.Rows.Count; i++)
             {
                 if (dt4.Rows[i]["MaChapter"].ToString() == ma)
@@ -237,6 +234,7 @@ namespace ReadingLightNovelApplication
                 dataload.DataChange("INSERT [dbo].[LichSu] ([MaLichSu], [TenDangNhap], [MaChapter], [ThoiGian]) " +
                     "\r\nVALUES (N'LS" + ((int)dt7.Rows[0][0]+2).ToString() + "', N'" + FormMain.TenDangNhap + "', N'" + ma + "', N'" + now.ToString() + "')");
             }
+            
         }
 
         

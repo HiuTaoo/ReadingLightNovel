@@ -50,10 +50,7 @@ namespace ReadingLightNovelApplication
             {
                 c.Dispose();
             }
-            foreach (Form c in panel1.Controls)
-            {
-                c.Dispose();
-            }
+            
             dataload.openChildFormDockFill(lg.getActiveForm(), new FormContent(MaTp), panel1);
         }
 

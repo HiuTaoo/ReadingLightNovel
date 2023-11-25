@@ -63,21 +63,35 @@ namespace ReadingLightNovelApplication
 
 		private void panelAnh_Click(object sender, EventArgs e)
 		{
-			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormProperties(maTacPham), this);
+			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormContent(maTacPham), this);
 
 		}
 
 		private void btnTenTruyen_Click(object sender, EventArgs e)
 		{
-			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormProperties(maTacPham), this);
-
+			supportMethod.openChildFormFromForm("LayoutLogged", "panelNoiDung", new FormContent(maTacPham), this);
 		}
 
 		private void btnTenChuong_Click(object sender, EventArgs e)
 		{
-			supportMethod.openChildFormFromForm("FormMain", "panelMain", new FormMainReading(maChapter), this);
+            DataTable dt2 = supportMethod.DataReader("select top 1 Volume.TenVolume, Chapter.TenChapter, Chapter.MaChapter, Chapter.ThoiGianDang" +
+                "\r\nfrom TacPham \r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
+                "\r\ninner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
+                "\r\nwhere TacPham.MaTacPham = '" + maTacPham + "'" +
+                "\r\norder by Chapter.ThoiGianDang desc");
+            FormMain formMain = supportMethod.getFormMain(this) as FormMain;
+            Panel panel1 = supportMethod.getPanel(formMain, "panelMain");
+            foreach (Control c in panel1.Controls)
+            {
+                c.Dispose();
+            }
+            foreach (Form c in panel1.Controls)
+            {
+                c.Dispose();
+            }
+            supportMethod.openChildFormDockFill(formMain.getActiveForm(), new FormMainReading(dt2.Rows[0]["MaChapter"].ToString()), panel1);
 
-		}
+        }
 
 		
 	}

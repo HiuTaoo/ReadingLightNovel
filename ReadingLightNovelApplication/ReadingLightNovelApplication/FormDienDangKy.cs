@@ -40,9 +40,9 @@ namespace ReadingLightNovelApplication
                         {
                             MessageBox.Show("Xác nhận mật khẩu không chính xác!");
                         }
-
                         SupportMethod.DataChange("INSERT [dbo].[User] ([TenDangNhap] ,[MatKhau],[TrangThai],[NgayTao], [Email]) " +
-                            "VALUES (N'"+tbUserName.Text+"', N'"+tbPassword.Text+"',0,'"+ ngayHomNay.ToString() +"', N'"+tbEmail.Text+"')");
+                            "VALUES (N'" + tbUserName.Text + "', N'" + tbPassword.Text + "',0,'" + ngayHomNay.ToString() + "', N'" + tbEmail.Text + "')");
+
                         FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
                         Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
                         /*LayoutLogged lg = new LayoutLogged();
@@ -52,7 +52,19 @@ namespace ReadingLightNovelApplication
                         SupportMethod.openChildFormDockFill(formMain.getactive(), lg, panel1);
                         Panel panel2 = SupportMethod.getPanel(lg, "panelNoiDung");
 
-                        SupportMethod.AddChildFormDockFill( new FormLayoutDangNhap(), panel2);
+                        SupportMethod.AddChildFormDockFill(new FormLayoutDangNhap(), panel2);
+
+                        /*FormLayoutDangNhap ldn = SupportMethod.getFormParent(this, "FormLayoutDangNhap") as FormLayoutDangNhap;
+                        Panel panel1 = SupportMethod.getPanel(ldn, "panelDangKi");
+                        ldn.setColor();
+                        this.Dispose();
+                        this.Close();
+                        SupportMethod.AddChildFormDockTop(new FormDienDangNhap(), panel1);*/
+
+
+
+
+
 
                     }
                     

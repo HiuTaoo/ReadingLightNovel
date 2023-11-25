@@ -25,15 +25,7 @@ namespace ReadingLightNovelApplication
             LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
             
             Panel panel1 = SupportMethod.getPanel(lg, "panelNoiDung");
-            foreach (Control c in panel1.Controls)
-            {
-                c.Dispose();
-            }
-            foreach (Form f in panel1.Controls)
-            {
-                f.Close();
-                f.Dispose();
-            }
+            
             SupportMethod.AddChildFormDockFill(new FormProfile(FormMain.TenDangNhap), panel1);
             lg.setVisible();
 
@@ -44,10 +36,7 @@ namespace ReadingLightNovelApplication
             LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
             
             Panel panel1 = SupportMethod.getPanel(lg, "panelNoiDung");
-            foreach (Control c in panel1.Controls)
-            {
-                c.Dispose();
-            }
+            
             SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormLichSu(), panel1);
             lg.setVisible();
         }
@@ -57,10 +46,7 @@ namespace ReadingLightNovelApplication
             LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
             
             Panel panel1 = SupportMethod.getPanel(lg, "panelNoiDung");
-            foreach (Control c in panel1.Controls)
-            {
-                c.Dispose();
-            }
+            
             SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormFollow(), panel1);
             lg.setVisible();
         }
@@ -71,9 +57,8 @@ namespace ReadingLightNovelApplication
             LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
             lg.setVisible();
             lg.LoadPanel();
-            
-
-
+            Panel panel1 = SupportMethod.getPanel(lg, "panelNoiDung");
+            SupportMethod.AddChildFormDockFill(new FormLayoutDangNhap(), panel1);
 
         }
 	}

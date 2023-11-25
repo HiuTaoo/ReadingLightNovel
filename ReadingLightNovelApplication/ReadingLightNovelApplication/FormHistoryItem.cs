@@ -84,7 +84,7 @@ namespace ReadingLightNovelApplication
             SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormContent(matp), panel1);
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        /*private void btnDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn xóa truyện này khỏi lịch sử không ? Nếu  có  ấn  nút  Yes, không  thì  ấn  nút  Hủy", "Xóa  lịch sử", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -95,12 +95,24 @@ namespace ReadingLightNovelApplication
                 "\r\n    WHERE TacPham.MaTacPham = N'" + matp + "' and LichSu.TenDangNhap = N'HiuTao'\r\n);");
                 LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
                 Panel panel1 = SupportMethod.getPanel(lg, "panelNoiDung");
-                foreach (Control c in panel1.Controls)
-                {
-                    c.Dispose();
-                }
                 SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormLichSu(), panel1);
             }
+        }*/
+
+        private void lblChapter_Click_1(object sender, EventArgs e)
+        {
+            DataTable dt2 = SupportMethod.DataReader("select top 1 Volume.TenVolume, Chapter.TenChapter, Chapter.MaChapter, Chapter.ThoiGianDang" +
+                "\r\nfrom TacPham \r\ninner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
+                "\r\ninner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
+                "\r\nwhere TacPham.MaTacPham = '" + matp + "'" +
+                "\r\norder by Chapter.ThoiGianDang desc");
+            FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
+            Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
+            foreach (Control c in panel1.Controls)
+            {
+                c.Dispose();
+            }
+            SupportMethod.openChildFormDockFill(formMain.getActiveForm(), new FormMainReading(dt2.Rows[0]["MaChapter"].ToString()), panel1);
         }
     }
 }
