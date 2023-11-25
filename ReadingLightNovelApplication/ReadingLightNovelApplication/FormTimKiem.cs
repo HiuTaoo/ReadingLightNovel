@@ -93,6 +93,22 @@ namespace ReadingLightNovelApplication
 				"\r\n\r\n) as sub inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham" +
 				"\r\nwhere (rownuber between 0 and 20) and sub.TenTacPham like N'%" + txtTimKiem.Text + "%' ";
 
+			queryTxt = "select sub.MaTacPham" +
+				"\r\nfrom (\r\nSELECT ROW_NUMBER() over(order by TacPham.TenTacPham) as rownuber, TacPham.MaTacPham, TacPham.TenTacPham," +
+				"\r\n\t\t\t\tTacGia.TenTacGia, HoaSi.TenHoaSi, TacPham.TinhTrang" +
+				"\r\nfrom TacPham inner join Volume on Volume.MaTacPham = TacPham.MaTacPham" +
+				"\r\n\tinner join Chapter on Chapter.MaVolume = Volume.MaVolume" +
+				"\r\n\tinner join ChiTietHoaSi on ChiTietHoaSi.MaTacPham = TacPham.MaTacPham" +
+				"\r\n\tinner join HoaSi on ChiTietHoaSi.MaHoaSi = HoaSi.MaHoaSi" +
+				"\r\n\tinner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = TacPham.MaTacPham" +
+				"\r\n\tinner join TacGia on TacGia.MaTacGia = TacPham.MaTacGia" +
+				"\r\nWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
+				"\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)" +
+				"\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham," +
+				"\r\n\t\t\t\tTacGia.TenTacGia, HoaSi.TenHoaSi, TacPham.TinhTrang" +
+				"\r\n\r\n) as sub inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham" +
+				"\r\nwhere (rownuber between 0 and 20) and sub.TenTacPham like N'%" + txtTimKiem.Text + "%' ";
+
 			FormTimKiemNangCao formTimKiemNangCao = this.panelTimKiemNangCao.Controls[0] as FormTimKiemNangCao;
 			keys = formTimKiemNangCao.getLoc();
 			
@@ -130,6 +146,7 @@ namespace ReadingLightNovelApplication
 			queryTxt += str;
 			//txtTimKiem.Text = queryTxt;
 			//MessageBox.Show(queryTxt);
+			Clipboard.SetText(queryTxt);
 			DataTable data = supportMethod.DataReader(queryTxt);
 
 			List<string> list = new List<string>();

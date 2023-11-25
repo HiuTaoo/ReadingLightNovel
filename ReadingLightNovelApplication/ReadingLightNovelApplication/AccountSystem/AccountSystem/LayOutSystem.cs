@@ -8,7 +8,7 @@ namespace ReadingLightNovelApplication
 	public partial class LayOutSystem : Form
 	{
 		private FormHomeSystem anotherForm;
-		SupportMethod sp = new SupportMethod();
+		SupportMethod supportMethod = new SupportMethod();
 		
 		public LayOutSystem()
 		{
@@ -64,7 +64,8 @@ namespace ReadingLightNovelApplication
 
 		private void btnThemTruyen_Click(object sender, EventArgs e)
 		{
-			openChildForm(new FormThemTruyen());
+			panelHienChiTiet.Controls.Clear();
+			supportMethod.AddChildFormDockTop(new FormThemTruyen("HiuTao"), panelHienChiTiet);
 		}
 
 		private void btnHome_Click(object sender, EventArgs e)

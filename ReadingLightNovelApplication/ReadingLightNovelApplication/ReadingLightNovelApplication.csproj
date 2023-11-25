@@ -62,11 +62,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountSystem\AccountSystem\FormAddChapter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormAddChapter.Designer.cs">
+      <DependentUpon>FormAddChapter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormAddVolume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormAddVolume.Designer.cs">
+      <DependentUpon>FormAddVolume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormChapterContain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormChapterContain.Designer.cs">
+      <DependentUpon>FormChapterContain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormEditTruyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormEditTruyen.Designer.cs">
+      <DependentUpon>FormEditTruyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="AccountSystem\AccountSystem\FormHomeSystem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AccountSystem\AccountSystem\FormHomeSystem.Designer.cs">
       <DependentUpon>FormHomeSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormSapXepVolume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormSapXepVolume.Designer.cs">
+      <DependentUpon>FormSapXepVolume.cs</DependentUpon>
     </Compile>
     <Compile Include="AccountSystem\AccountSystem\FormSuaChapter.cs">
       <SubType>Form</SubType>
@@ -79,6 +109,12 @@
     </Compile>
     <Compile Include="AccountSystem\AccountSystem\FormSuaTruyen.designer.cs">
       <DependentUpon>FormSuaTruyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormTheLoaiItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormTheLoaiItem.Designer.cs">
+      <DependentUpon>FormTheLoaiItem.cs</DependentUpon>
     </Compile>
     <Compile Include="AccountSystem\AccountSystem\FormThemChapter.cs">
       <SubType>Form</SubType>
@@ -109,6 +145,18 @@
     </Compile>
     <Compile Include="AccountSystem\AccountSystem\FormTruyenDaDang.Designer.cs">
       <DependentUpon>FormTruyenDaDang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormTruyenDaDich .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormTruyenDaDich .Designer.cs">
+      <DependentUpon>FormTruyenDaDich .cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormVolumeContain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSystem\AccountSystem\FormVolumeContain.Designer.cs">
+      <DependentUpon>FormVolumeContain.cs</DependentUpon>
     </Compile>
     <Compile Include="AccountSystem\AccountSystem\LayoutQuanLyTruyen.cs">
       <SubType>Form</SubType>
@@ -308,6 +356,12 @@
     <Compile Include="FormSuggest.Designer.cs">
       <DependentUpon>FormSuggest.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTheLoaiCbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTheLoaiCbox.Designer.cs">
+      <DependentUpon>FormTheLoaiCbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTheLoaiCheckbox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -388,14 +442,32 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SupportMethod.cs" />
+    <EmbeddedResource Include="AccountSystem\AccountSystem\FormAddChapter.resx">
+      <DependentUpon>FormAddChapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\AccountSystem\FormAddVolume.resx">
+      <DependentUpon>FormAddVolume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\AccountSystem\FormChapterContain.resx">
+      <DependentUpon>FormChapterContain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\AccountSystem\FormEditTruyen.resx">
+      <DependentUpon>FormEditTruyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AccountSystem\AccountSystem\FormHomeSystem.resx">
       <DependentUpon>FormHomeSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\AccountSystem\FormSapXepVolume.resx">
+      <DependentUpon>FormSapXepVolume.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountSystem\AccountSystem\FormSuaChapter.resx">
       <DependentUpon>FormSuaChapter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountSystem\AccountSystem\FormSuaTruyen.resx">
       <DependentUpon>FormSuaTruyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\AccountSystem\FormTheLoaiItem.resx">
+      <DependentUpon>FormTheLoaiItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountSystem\AccountSystem\FormThemChapter.resx">
       <DependentUpon>FormThemChapter.cs</DependentUpon>
@@ -411,6 +483,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AccountSystem\AccountSystem\FormTruyenDaDang.resx">
       <DependentUpon>FormTruyenDaDang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\AccountSystem\FormTruyenDaDich .resx">
+      <DependentUpon>FormTruyenDaDich .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSystem\AccountSystem\FormVolumeContain.resx">
+      <DependentUpon>FormVolumeContain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountSystem\AccountSystem\LayoutQuanLyTruyen.resx">
       <DependentUpon>LayoutQuanLyTruyen.cs</DependentUpon>
@@ -507,6 +585,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSuggest.resx">
       <DependentUpon>FormSuggest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTheLoaiCbox.resx">
+      <DependentUpon>FormTheLoaiCbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTheLoaiCheckbox.resx">
       <DependentUpon>FormTheLoaiCheckbox.cs</DependentUpon>
