@@ -37,9 +37,10 @@
             this.panelBangDangNhap = new Guna.UI2.WinForms.Guna2Panel();
             this.panelNoiDungDangNhap = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnDangNhap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangKi = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDangNhap = new Guna.UI2.WinForms.Guna2Button();
+            this.panelDangKi = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panelBangDangNhap.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -137,6 +138,26 @@
             this.guna2Panel1.Size = new System.Drawing.Size(674, 51);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnDangNhap.BorderColor = System.Drawing.Color.SeaGreen;
+            this.btnDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDangNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDangNhap.FillColor = System.Drawing.Color.Transparent;
+            this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.ForeColor = System.Drawing.Color.White;
+            this.btnDangNhap.Location = new System.Drawing.Point(220, 0);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(226, 51);
+            this.btnDangNhap.TabIndex = 9;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
             // guna2Button2
             // 
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -173,31 +194,21 @@
             this.btnDangKi.Text = "Đăng ký";
             this.btnDangKi.Click += new System.EventHandler(this.btnDangKi_Click);
             // 
-            // btnDangNhap
+            // panelDangKi
             // 
-            this.btnDangNhap.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnDangNhap.BorderColor = System.Drawing.Color.SeaGreen;
-            this.btnDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDangNhap.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnDangNhap.FillColor = System.Drawing.Color.Transparent;
-            this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(220, 0);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(226, 51);
-            this.btnDangNhap.TabIndex = 9;
-            this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.panelDangKi.AutoSize = true;
+            this.panelDangKi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelDangKi.Location = new System.Drawing.Point(293, 139);
+            this.panelDangKi.Name = "panelDangKi";
+            this.panelDangKi.Size = new System.Drawing.Size(674, 0);
+            this.panelDangKi.TabIndex = 5;
             // 
             // FormLayoutDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1260, 675);
+            this.Controls.Add(this.panelDangKi);
             this.Controls.Add(this.panelBangDangNhap);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -231,5 +242,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button btnDangKi;
         private Guna.UI2.WinForms.Guna2Button btnDangNhap;
+        private System.Windows.Forms.Panel panelDangKi;
     }
 }

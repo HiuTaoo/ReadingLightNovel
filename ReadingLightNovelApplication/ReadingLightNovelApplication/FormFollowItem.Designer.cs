@@ -31,18 +31,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblVol = new System.Windows.Forms.Label();
-            this.lblChapter = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.pbImg = new System.Windows.Forms.PictureBox();
             this.lblLoai = new System.Windows.Forms.Label();
             this.lblTenTruyen = new System.Windows.Forms.Label();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblVol = new System.Windows.Forms.Label();
+            this.lblChapter = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImg)).BeginInit();
+            this.guna2Panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,44 +67,13 @@
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.guna2Panel4);
+            this.guna2Panel1.Controls.Add(this.btnXoa);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 16);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(974, 70);
             this.guna2Panel1.TabIndex = 1;
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.guna2Panel4.Controls.Add(this.lblVol);
-            this.guna2Panel4.Controls.Add(this.lblChapter);
-            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel4.Location = new System.Drawing.Point(523, 0);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(451, 70);
-            this.guna2Panel4.TabIndex = 4;
-            // 
-            // lblVol
-            // 
-            this.lblVol.AutoSize = true;
-            this.lblVol.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVol.Location = new System.Drawing.Point(27, 41);
-            this.lblVol.Name = "lblVol";
-            this.lblVol.Size = new System.Drawing.Size(38, 15);
-            this.lblVol.TabIndex = 1;
-            this.lblVol.Text = "label4";
-            // 
-            // lblChapter
-            // 
-            this.lblChapter.AutoSize = true;
-            this.lblChapter.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChapter.Location = new System.Drawing.Point(26, 12);
-            this.lblChapter.Name = "lblChapter";
-            this.lblChapter.Size = new System.Drawing.Size(51, 20);
-            this.lblChapter.TabIndex = 0;
-            this.lblChapter.Text = "label3";
-            this.lblChapter.Click += new System.EventHandler(this.lblChapter_Click);
             // 
             // guna2Panel2
             // 
@@ -147,6 +117,54 @@
             this.lblTenTruyen.Text = "label1";
             this.lblTenTruyen.Click += new System.EventHandler(this.lblTenTruyen_Click);
             // 
+            // btnXoa
+            // 
+            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoa.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(161)))), ((int)(((byte)(137)))));
+            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(887, 0);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(87, 70);
+            this.btnXoa.TabIndex = 5;
+            this.btnXoa.Text = "X";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.guna2Panel4.Controls.Add(this.lblVol);
+            this.guna2Panel4.Controls.Add(this.lblChapter);
+            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel4.Location = new System.Drawing.Point(523, 0);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(364, 70);
+            this.guna2Panel4.TabIndex = 6;
+            // 
+            // lblVol
+            // 
+            this.lblVol.AutoSize = true;
+            this.lblVol.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVol.Location = new System.Drawing.Point(27, 41);
+            this.lblVol.Name = "lblVol";
+            this.lblVol.Size = new System.Drawing.Size(38, 15);
+            this.lblVol.TabIndex = 1;
+            this.lblVol.Text = "label4";
+            // 
+            // lblChapter
+            // 
+            this.lblChapter.AutoSize = true;
+            this.lblChapter.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChapter.Location = new System.Drawing.Point(26, 12);
+            this.lblChapter.Name = "lblChapter";
+            this.lblChapter.Size = new System.Drawing.Size(51, 20);
+            this.lblChapter.TabIndex = 0;
+            this.lblChapter.Text = "label3";
+            // 
             // FormFollowItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -160,11 +178,11 @@
             this.Load += new System.EventHandler(this.FormFollowItem_Load);
             this.panel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImg)).EndInit();
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -181,5 +199,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label lblVol;
         private System.Windows.Forms.Label lblChapter;
+        private Guna.UI2.WinForms.Guna2Button btnXoa;
     }
 }

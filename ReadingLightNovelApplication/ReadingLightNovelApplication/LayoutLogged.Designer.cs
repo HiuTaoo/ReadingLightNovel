@@ -278,7 +278,3 @@
 }
 
 
-
-anhbia.jpg
-
-vol.jpg

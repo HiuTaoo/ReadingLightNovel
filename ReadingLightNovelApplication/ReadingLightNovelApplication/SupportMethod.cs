@@ -16,7 +16,7 @@ namespace ReadingLightNovelApplication
 {
      class SupportMethod
     {
-		string strConnect = "Data Source=DESKTOP-EAAUDNC\\USERNAME;" +
+		string strConnect = "Data Source=DESKTOP-51MISFU\\HIUTAO;" +
 			"Initial Catalog=ReadingLightNovel;Integrated Security=True";
         SqlConnection sqlConnect = null;
         //Phương thức mở kết nối

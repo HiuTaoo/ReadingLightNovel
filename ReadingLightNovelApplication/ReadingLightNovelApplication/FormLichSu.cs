@@ -40,11 +40,11 @@ namespace ReadingLightNovelApplication
                     {
                         SupportMethod.AddChildFormDockTop(new FormHistoryItem(t["MaTacPham"].ToString()), this.panelListFollow);
                     }
-                    lblUserName.Text = FormMain.TenDangNhap;
+                    
                 }
-                
+                lblUserName.Text = FormMain.TenDangNhap;
 
-                
+
             }
             
         }

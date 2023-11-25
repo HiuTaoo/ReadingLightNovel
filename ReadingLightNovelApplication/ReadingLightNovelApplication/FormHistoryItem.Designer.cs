@@ -33,7 +33,6 @@
             this.pbImg = new System.Windows.Forms.PictureBox();
             this.lblLoai = new System.Windows.Forms.Label();
             this.lblTenTruyen = new System.Windows.Forms.Label();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblVol = new System.Windows.Forms.Label();
             this.lblChapter = new System.Windows.Forms.Label();
@@ -94,31 +93,13 @@
             this.lblTenTruyen.Text = "label1";
             this.lblTenTruyen.Click += new System.EventHandler(this.lblTenTruyen_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BorderThickness = 1;
-            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(161)))), ((int)(((byte)(137)))));
-            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(911, 17);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(63, 69);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "X";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // guna2Panel4
             // 
             this.guna2Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel4.Controls.Add(this.lblVol);
             this.guna2Panel4.Controls.Add(this.lblChapter);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel4.Location = new System.Drawing.Point(521, 17);
+            this.guna2Panel4.Location = new System.Drawing.Point(584, 17);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(390, 69);
             this.guna2Panel4.TabIndex = 8;
@@ -142,6 +123,7 @@
             this.lblChapter.Size = new System.Drawing.Size(51, 20);
             this.lblChapter.TabIndex = 0;
             this.lblChapter.Text = "label3";
+            this.lblChapter.Click += new System.EventHandler(this.lblChapter_Click_1);
             // 
             // FormHistoryItem
             // 
@@ -149,7 +131,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 86);
             this.Controls.Add(this.guna2Panel4);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -172,7 +153,6 @@
         private System.Windows.Forms.PictureBox pbImg;
         private System.Windows.Forms.Label lblLoai;
         private System.Windows.Forms.Label lblTenTruyen;
-        private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label lblVol;
         private System.Windows.Forms.Label lblChapter;

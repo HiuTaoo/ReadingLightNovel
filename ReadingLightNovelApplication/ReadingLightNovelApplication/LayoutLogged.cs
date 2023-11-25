@@ -31,7 +31,7 @@ namespace ReadingLightNovelApplication
         private void LayoutLogged_Load(object sender, EventArgs e)
         {
 
-            SupportMethod.openChildFormDockFill(this.activeForm, new FormHome(), this.panelNoiDung);
+            /*SupportMethod.openChildFormDockFill(this.activeForm, new FormHome(), this.panelNoiDung);*/
             if(FormMain.isLogin == true)
             {
                 SupportMethod.AddChildFormDockFill(new FormLogin(FormMain.TenDangNhap), this.panelLogin);
@@ -67,22 +67,16 @@ namespace ReadingLightNovelApplication
 
 		private void btnLogo_Click(object sender, EventArgs e)
 		{
-            foreach(Control control in this.panelNoiDung.Controls) 
-            {
-                control.Dispose();
-            }          
-            
+
             SupportMethod.AddChildFormDockFill(new FormHome(), this.panelNoiDung);
+            setClick(false);
 		}
 
 		private void btnDanhSach_Click(object sender, EventArgs e)
 		{
-            
-			foreach (Control control in this.panelNoiDung.Controls)
-			{
-				control.Dispose();
-			}
+
             SupportMethod.AddChildFormDockFill(new FormSapXep(0), this.panelNoiDung);
+            setClick(false);
         }
 
 		private void btnTimKiem_Click(object sender, EventArgs e)
@@ -92,7 +86,8 @@ namespace ReadingLightNovelApplication
 				control.Visible = false;
 			}
 			SupportMethod.AddChildFormDockFill(new FormTimKiem(txtTimKiem.Text), this.panelNoiDung);
-		}
+            setClick(false);
+        }
 
 		private void btnTimKiem_Click_1(object sender, EventArgs e)
 		{
@@ -101,7 +96,8 @@ namespace ReadingLightNovelApplication
 				control.Visible = false;
 			}
 			SupportMethod.AddChildFormDockFill(new FormTimKiem(txtTimKiem.Text), this.panelNoiDung);
-		}
+            setClick(false);
+        }
 
         public void showUserButton()
         {
@@ -116,7 +112,7 @@ namespace ReadingLightNovelApplication
         public void setVisible()
         {
             panelUserButton.Visible = false;
-            panelUserButton.SendToBack();
+/*            panelUserButton.SendToBack();*/
         }
 
         private void btnHuongDan_Click(object sender, EventArgs e)

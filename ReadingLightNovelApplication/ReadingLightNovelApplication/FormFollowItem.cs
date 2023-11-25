@@ -80,5 +80,18 @@ namespace ReadingLightNovelApplication
             }
             SupportMethod.openChildFormDockFill(formMain.getActiveForm(), new FormMainReading(dt2.Rows[0]["MaChapter"].ToString()), panel1);
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa truyện này khỏi danh sách yêu thích?", "Xóa truyện khỏi danh sách yêu thích", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                SupportMethod.DataChange("delete from YeuThich where MaTacPham = N'" + matp + "'");
+                MessageBox.Show("Đã xóa truyện này khỏi danh sách yêu thích!");
+                LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
+                Panel panel1 = SupportMethod.getPanel(lg, "panelNoiDung");
+                SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormFollow(), panel1);
+            }
+            
+        }
     }
 }

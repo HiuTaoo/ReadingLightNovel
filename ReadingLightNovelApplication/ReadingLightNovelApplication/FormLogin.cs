@@ -45,32 +45,14 @@ namespace ReadingLightNovelApplication
 
             LayoutLogged  lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
             Panel panel1 =  SupportMethod.getPanel(lg, "panelNoiDung");
-            foreach(Control c in panel1.Controls)
-            {
-                c.Dispose();    
-            }
             SupportMethod.openChildFormDockFill(lg.getActiveForm(), new FormFollow(), panel1);
         }
 
         private void btnAvt_Click(object sender, EventArgs e)
         {
-            /*FormMain formMain = SupportMethod.getFormMain(this) as FormMain;
-            Panel panel1 = SupportMethod.getPanel(formMain, "panelMain");
-            SupportMethod.openChildFormDockFill(formMain.getactive(), new FormProfile(tendn), panel1);*/
-
-            LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
-/*            Panel panel1 = SupportMethod.getPanel(lg, "panelUserButton");*/
-            
+            LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;           
             lg.showUserButton();
 
-            /*LayoutLogged lg = SupportMethod.getFormParent(this,"LayoutLogged") as LayoutLogged;
-            for (int i = 0; i < 5; i++)
-            {
-                Button button = new Button();
-                button.Name = "button" + (i + 1); // Đặt tên cho button
-                button.Dock = DockStyle.Top;
-                lg.getPanelMorong().Controls.Add(button);
-            }*/
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)

@@ -1146,7 +1146,7 @@
             // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(161)))), ((int)(((byte)(137)))));
             this.panel12.Controls.Add(this.label8);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
@@ -1156,7 +1156,6 @@
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(36, 11);
@@ -1200,7 +1199,7 @@
             // 
             // panelAnotherName1
             // 
-            this.panelAnotherName1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panelAnotherName1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(161)))), ((int)(((byte)(137)))));
             this.panelAnotherName1.Controls.Add(this.lblAnother1);
             this.panelAnotherName1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAnotherName1.Location = new System.Drawing.Point(0, 0);
@@ -1210,7 +1209,6 @@
             // 
             // lblAnother1
             // 
-            this.lblAnother1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAnother1.AutoSize = true;
             this.lblAnother1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnother1.Location = new System.Drawing.Point(36, 6);
@@ -1234,6 +1232,7 @@
             this.guna2Panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2Panel4.Controls.Add(this.label14);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(161)))), ((int)(((byte)(137)))));
             this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(952, 46);
@@ -1242,6 +1241,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(37, 13);
             this.label14.Name = "label14";

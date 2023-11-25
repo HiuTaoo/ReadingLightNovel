@@ -42,7 +42,7 @@ namespace ReadingLightNovelApplication
 			}
 			else
 			{
-				panelAnh.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel]\\NoUser.jpg");
+				panelAnh.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Asset\\DataLightNovel\\NoUser.png");
 			}
 			btnTenTruyen.Text = data.Rows[0]["TenTacPham"].ToString();
 			btnTomTat.Text = data.Rows[0]["TomTat"].ToString();
