@@ -39,8 +39,8 @@ namespace ReadingLightNovelApplication
 			Stack<string> list = new Stack<string>();
 
 			DataTable data = SupportMethod.DataReader("SELECT top 6 TacPham.MaTacPham, TacPham.TenTacPham, TacPham.Anh ,COUNT(LichSu.ThoiGian)\r\nFROM   dbo.Chapter INNER JOIN\r\n             dbo.LichSu ON dbo.Chapter.MaChapter = dbo.LichSu.MaChapter INNER JOIN\r\n             dbo.Volume ON dbo.Chapter.MaVolume = dbo.Volume.MaVolume INNER JOIN\r\n             dbo.TacPham ON dbo.Volume.MaTacPham = dbo.TacPham.MaTacPham\r\ngroup by TacPham.MaTacPham, TacPham.TenTacPham, TacPham.Anh");
-			
 
+			Clipboard.SetText("SELECT top 6 TacPham.MaTacPham, TacPham.TenTacPham, TacPham.Anh ,COUNT(LichSu.ThoiGian)\r\nFROM   dbo.Chapter INNER JOIN\r\n             dbo.LichSu ON dbo.Chapter.MaChapter = dbo.LichSu.MaChapter INNER JOIN\r\n             dbo.Volume ON dbo.Chapter.MaVolume = dbo.Volume.MaVolume INNER JOIN\r\n             dbo.TacPham ON dbo.Volume.MaTacPham = dbo.TacPham.MaTacPham\r\ngroup by TacPham.MaTacPham, TacPham.TenTacPham, TacPham.Anh");
 			foreach(DataRow row in data.Rows)
 			{
 				list.Push(row["MaTacPham"].ToString());
@@ -106,15 +106,13 @@ namespace ReadingLightNovelApplication
 
 		private void loadChuongMoi()
 		{
-			DataTable data = SupportMethod.DataReader("SELECT TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang" +
-				"\r\n" +
-				"FROM TacPham" +
-				"\r\nINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
+			DataTable data = SupportMethod.DataReader("SELECT TacPham.MaTacPham,  Chapter.ThoiGianDang FROM TacPham" +
+				" \r\nINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
 				"\r\nINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume" +
-				"\r\nWHERE Chapter.ThoiGianDang = (\r\n    SELECT MAX(c1.ThoiGianDang)" +
-				"\r\n    FROM Chapter c1\r\n    WHERE c1.MaVolume = Chapter.MaVolume\r\n)" +
-				"\r\nGROUP BY TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang" +
-				"\r\nORDER BY Chapter.ThoiGianDang\r\n");
+				"\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (SELECT MAX(c1.ThoiGianDang)" +
+				"\r\n\t\t\t\t   FROM Chapter c1\r\n\t\t\t\t   WHERE c1.MaVolume = Chapter.MaVolume)" +
+				"\r\n\t\t\t\tGROUP BY TacPham.MaTacPham,  Chapter.ThoiGianDang" +
+				"\r\n\t\t\t\tORDER BY Chapter.ThoiGianDang");
 			Stack<string> list = new Stack<string>();
 
 			foreach (DataRow row in data.Rows)

@@ -20,7 +20,7 @@ namespace ReadingLightNovelApplication
         private SupportMethod supportMethod = new SupportMethod();
         private int pageStart = 1;
         private int pageEnd = 1;
-        private int pageSize = 7;
+        private int pageSize = 10;
         private int pageCurrent = 1;
         private string commandTextForCount;
         public FormSapXep(int cbLuaChonIndex)
@@ -141,12 +141,7 @@ namespace ReadingLightNovelApplication
             switch (cbLuaChon.SelectedIndex)
             {
                 case 0: // A-Z
-                    commandText = "select sub.MaTacPham\r\nfrom (" +
-                        "\r\nSELECT ROW_NUMBER() over(order by TacPham.TenTacPham) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
-                        "\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
-                        "\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t) as sub ";
+                    commandText = "select sub.MaTacPham\r\nfrom (\r\nSELECT ROW_NUMBER() over(order by TacPham.TenTacPham) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen\r\n\t\t\t\t) as sub ";
                     if (maTheLoai != string.Empty)
                     {
                         commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
@@ -154,12 +149,7 @@ namespace ReadingLightNovelApplication
                     commandText += "\r\nwhere (1 = 1) ";
                     break;
                 case 1: //Z - A
-                    commandText = "select sub.MaTacPham\r\nfrom (" +
-                        "\r\nSELECT ROW_NUMBER() over(order by TacPham.TenTacPham desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
-                        "\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
-                        "\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t) as sub ";
+                    commandText = "select sub.MaTacPham\r\nfrom (\r\nSELECT ROW_NUMBER() over(order by TacPham.TenTacPham desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen\r\n\t\t\t\t) as sub  ";
                     if (maTheLoai != string.Empty)
                     {
                         commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
@@ -167,12 +157,7 @@ namespace ReadingLightNovelApplication
                     commandText += "\r\nwhere (1 = 1) ";
                     break;
                 case 2:     //Mới cập nhật
-                    commandText = "select sub.MaTacPham\r\nfrom (" +
-                        "\r\nSELECT ROW_NUMBER() over(order by Chapter.ThoiGianDang desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
-                        "\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
-                        "\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t) as sub ";
+                    commandText = "select sub.MaTacPham\r\nfrom (\r\nSELECT ROW_NUMBER() over(order by TacPham.ThoiGianTao)  as rownuber, TacPham.TenTacPham, TacPham.MaTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen, TacPham.ThoiGianTao\r\n\t\t\t\t) as sub  ";
                     if (maTheLoai != string.Empty)
                     {
                         commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
@@ -180,12 +165,7 @@ namespace ReadingLightNovelApplication
                     commandText += "\r\nwhere (1 = 1) ";
                     break;
                 case 3: // Truyện mới
-                    commandText = "select *\r\nfrom (" +
-                        "\r\nSELECT ROW_NUMBER() over(order by TacPham.ThoiGianTao desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
-                        "\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
-                        "\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen, TacPham.ThoiGianTao " +
-                        "\r\n\t\t\t\t) as sub ";
+                    commandText = "select sub.MaTacPham\r\nfrom (\r\nSELECT ROW_NUMBER() over(order by TacPham.ThoiGianTao)  as rownuber, TacPham.TenTacPham, TacPham.MaTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen, TacPham.ThoiGianTao\r\n\t\t\t\t) as sub \r\n ";
                     if (maTheLoai != string.Empty)
                     {
                         commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
@@ -193,12 +173,7 @@ namespace ReadingLightNovelApplication
                     commandText += "\r\nwhere (1 = 1) ";
                     break;
                 case 4: // Theo dõi
-                    commandText = "select sub.MaTacPham\r\nfrom (" +
-                        "\r\nSELECT ROW_NUMBER() over(order by Chapter.ThoiGianDang desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
-                        "\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
-                        "\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t) as sub ";
+                    commandText = "select sub.MaTacPham\r\nfrom (\r\nSELECT ROW_NUMBER() over(order by TacPham.ThoiGianTao)  as rownuber, TacPham.TenTacPham, TacPham.MaTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen, TacPham.ThoiGianTao\r\n\t\t\t\t) as sub  ";
                     if (maTheLoai != string.Empty)
                     {
                         commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
@@ -206,12 +181,7 @@ namespace ReadingLightNovelApplication
                     commandText += "\r\nwhere (1 = 1) ";
                     break;
                 case 5: // Top tháng
-                    commandText = "select sub.MaTacPham\r\nfrom (" +
-                        "\r\nSELECT ROW_NUMBER() over(order by Chapter.ThoiGianDang desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
-                        "\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
-                        "\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t) as sub ";
+                    commandText = "select sub.MaTacPham\r\nfrom (\r\nSELECT ROW_NUMBER() over(order by TacPham.ThoiGianTao)  as rownuber, TacPham.TenTacPham, TacPham.MaTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen, TacPham.ThoiGianTao\r\n\t\t\t\t) as sub  ";
                     if (maTheLoai != string.Empty)
                     {
                         commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
@@ -219,12 +189,7 @@ namespace ReadingLightNovelApplication
                     commandText += "\r\nwhere (1 = 1) ";
                     break;
                 case 6: // Top toàn thời gian
-                    commandText = "select sub.MaTacPham\r\nfrom (" +
-                        "\r\nSELECT ROW_NUMBER() over(order by Chapter.ThoiGianDang desc) as rownuber, TacPham.TenTacPham, TacPham.MaTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham" +
-                        "\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)" +
-                        "\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham, Volume.TenVolume, Chapter.TenChapter, Chapter.ThoiGianDang, TacPham.TinhTrang, TacPham.LoaiTruyen" +
-                        "\r\n\t\t\t\t) as sub ";
+                    commandText = "select sub.MaTacPham\r\nfrom (\r\nSELECT ROW_NUMBER() over(order by TacPham.ThoiGianTao)  as rownuber, TacPham.TenTacPham, TacPham.MaTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen\r\n\t\t\t\t\r\n\t\t\t\tFROM TacPham\r\n\t\t\t\tINNER JOIN Volume ON TacPham.MaTacPham = Volume.MaTacPham\r\n\t\t\t\tINNER JOIN Chapter ON Volume.MaVolume = Chapter.MaVolume\r\n\t\t\t\tWHERE Chapter.ThoiGianDang = (    SELECT MAX(c1.ThoiGianDang)\r\n\t\t\t\t\t\tFROM Chapter c1 WHERE c1.MaVolume = Chapter.MaVolume)\r\n\t\t\t\tGROUP BY TacPham.MaTacPham, TacPham.TenTacPham,  TacPham.TinhTrang, TacPham.LoaiTruyen, TacPham.ThoiGianTao\r\n\t\t\t\t) as sub  ";
                     if (maTheLoai != string.Empty)
                     {
                         commandText += " inner join ChiTietTheLoai on ChiTietTheLoai.MaTacPham = sub.MaTacPham ";
@@ -237,11 +202,11 @@ namespace ReadingLightNovelApplication
 
             if (checkboxTruyenDich.Checked || checkboxTruyenSangTac.Checked || checkboxConvert.Checked)
             {
-                commandText += " and ( (1 = 2) ";
+                commandText += " and ( (1 = 2) or";
 
                 if (checkboxTruyenDich.Checked)
                 {
-                    commandText += "or sub.LoaiTruyen = N'Truyện dịch' or ";
+                    commandText += " sub.LoaiTruyen = N'Truyện dịch' or ";
 
                 }
 
@@ -252,7 +217,7 @@ namespace ReadingLightNovelApplication
 
                 }
                 if (checkboxTruyenDich.Checked)
-                    commandText += " sub.LoaiTruyen = N'Truyện Convert' or ";
+                    commandText += " sub.LoaiTruyen = N'Truyện convert' or ";
 
                 commandText += " (1 = 2) )";
 
@@ -303,7 +268,7 @@ namespace ReadingLightNovelApplication
             commandTextForCount = commandText;
 
             commandText += " and  (rownuber between " + ((pageCurrent - 1) * pageSize) + " and " + (pageCurrent * pageSize) + ")  ";/*group by sub.MaTacPham*/
-
+            Clipboard.SetText(commandText);
             return commandText;
         }
 
@@ -416,7 +381,7 @@ namespace ReadingLightNovelApplication
 
         private void btnGiam_Click(object sender, EventArgs e)
         {
-            pageCurrent = 1;
+            pageCurrent--;
             UpdatePaginationButtons();
             btnChuCaiApDung.PerformClick();
         }
