@@ -83,41 +83,59 @@ namespace ReadingLightNovelApplication
             {
                 openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp|All Files|*.*";
                 openFileDialog.Title = "Select an Image";
+
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    selectedImagePath = openFileDialog.FileName;
-
-                    // Tên biến để lưu trữ tên của ảnh
-                    string imageName = Path.GetFileName(selectedImagePath);
-
-                    // Đường dẫn đến thư mục đích
-                    string destinationFolder = Path.Combine(Application.StartupPath, "Asset", "DataLightNovel", "User");
+                    string selectedImagePath = openFileDialog.FileName;
 
                     try
                     {
-                        // Kiểm tra xem thư mục đích có tồn tại không
+                        // Get the image name from the selected path
+                        string imageName = Path.GetFileName(selectedImagePath);
+
+                        // Specify the destination folder
+                        string destinationFolder = Path.Combine(Application.StartupPath, "Asset", "User");
+
+                        // Check if the destination folder exists, and create it if not
                         if (!Directory.Exists(destinationFolder))
                         {
                             Directory.CreateDirectory(destinationFolder);
                         }
 
-                        // Đường dẫn đầy đủ đến file đích
+                        // Combine the destination folder and image name to get the full destination path
                         string destinationPath = Path.Combine(destinationFolder, imageName);
 
-                        // Sao chép ảnh đến vị trí đích
-                        File.Copy(selectedImagePath, destinationPath + "\\" + imageName, true);
-                        MessageBox.Show("Image copied successfully!");
+                        // Check if the destination file already exists
+                        /*if (File.Exists(destinationPath))
+                        {
+                            // You may want to handle the case where the file already exists, for example by renaming or asking the user
+                            MessageBox.Show("The file already exists in the destination folder.");
+                            return;
+                        }*/
 
+                        // Copy the image to the destination folder
+                        File.Copy(selectedImagePath, destinationPath, true);
+
+                        // Update the database with the new image name
                         SupportMethod.DataChange("Update [User] set AnhDaiDien = '" + imageName + "' where TenDangNhap = N'" + FormMain.TenDangNhap + "'");
 
+                        MessageBox.Show("Bạn đã đổi ảnh đại diện thành công!");
+                        
+                        LayoutLogged lg = SupportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
+
+                        Panel panel1 = SupportMethod.getPanel(lg, "panelNoiDung");
+
+                        SupportMethod.AddChildFormDockFill(new FormProfile(FormMain.TenDangNhap), panel1);
+                        lg.setVisible();
+                        this.Close();
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show($"Error copying image: {ex.Message}");
                     }
                 }
-                
             }
+
         }
     }
 }

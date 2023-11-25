@@ -216,8 +216,7 @@ namespace ReadingLightNovelApplication
 					// Lưu ảnh vào thư mục chỉ định
 					File.Copy(filePath, newFilePath, true);
 				}
-				MessageBox.Show(this.Parent.Name);
-				MessageBox.Show("ok");
+
 
 				//LayOutSystem layOutSystem = supportMethod.getFormParent(this, "LayOutSystem") as LayOutSystem;
 				Panel panel = supportMethod.getPanel(this.ParentForm, "panelHienChiTiet");
