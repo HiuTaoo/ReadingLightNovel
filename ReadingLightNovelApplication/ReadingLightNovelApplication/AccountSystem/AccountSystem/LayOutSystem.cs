@@ -1,4 +1,5 @@
 ﻿using ReadingLightNovelApplication.AccountSystem;
+using ReadingLightNovelApplication.AccountSystem.AccountSystem;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -43,7 +44,10 @@ namespace ReadingLightNovelApplication
 
 		private void btnTruyenDich_Click(object sender, EventArgs e)
 		{
-			showPanel(panelTruyendich);
+			//showPanel(panelTruyendich);
+			panelHienChiTiet.Controls.Clear();
+			supportMethod.AddChildFormDockTop(new FormTruyenDaDich(), panelHienChiTiet);
+
 		}
 		public Form activeForm = null;
 		public void openChildForm(Form childForm)

@@ -81,6 +81,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
+			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.ClientSize = new System.Drawing.Size(380, 45);
 			this.Controls.Add(this.btnTenChapter);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

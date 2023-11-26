@@ -340,7 +340,7 @@
 			this.flpTruyenMoi.Location = new System.Drawing.Point(0, 68);
 			this.flpTruyenMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.flpTruyenMoi.Name = "flpTruyenMoi";
-			this.flpTruyenMoi.Size = new System.Drawing.Size(1121, 772);
+			this.flpTruyenMoi.Size = new System.Drawing.Size(1121, 763);
 			this.flpTruyenMoi.TabIndex = 4;
 			// 
 			// guna2Panel119

@@ -38,7 +38,7 @@
 			this.panelNoiDung = new Guna.UI2.WinForms.Guna2Panel();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.btnSuaTruyen = new System.Windows.Forms.ToolStripMenuItem();
-			this.btnSapXepVolume = new System.Windows.Forms.ToolStripMenuItem();
+			this.btnXoaTruyen = new System.Windows.Forms.ToolStripMenuItem();
 			this.btnThemVolume = new System.Windows.Forms.ToolStripMenuItem();
 			this.panelBar.SuspendLayout();
 			this.contextMenuStrip1.SuspendLayout();
@@ -46,6 +46,7 @@
 			// 
 			// panelBar
 			// 
+			this.panelBar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.panelBar.Controls.Add(this.panelVolumeContain);
 			this.panelBar.Controls.Add(this.btnTenTruyen);
 			this.panelBar.Controls.Add(this.guna2Panel8);
@@ -108,6 +109,7 @@
 			// 
 			// panelNoiDung
 			// 
+			this.panelNoiDung.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.panelNoiDung.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panelNoiDung.Location = new System.Drawing.Point(469, 0);
 			this.panelNoiDung.Name = "panelNoiDung";
@@ -119,27 +121,27 @@
 			this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
 			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnSuaTruyen,
-            this.btnSapXepVolume,
+            this.btnXoaTruyen,
             this.btnThemVolume});
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
-			this.contextMenuStrip1.Size = new System.Drawing.Size(212, 100);
+			this.contextMenuStrip1.Size = new System.Drawing.Size(193, 100);
 			// 
 			// btnSuaTruyen
 			// 
 			this.btnSuaTruyen.Name = "btnSuaTruyen";
-			this.btnSuaTruyen.Size = new System.Drawing.Size(211, 32);
+			this.btnSuaTruyen.Size = new System.Drawing.Size(192, 32);
 			this.btnSuaTruyen.Text = "Sửa truyện";
 			// 
-			// btnSapXepVolume
+			// btnXoaTruyen
 			// 
-			this.btnSapXepVolume.Name = "btnSapXepVolume";
-			this.btnSapXepVolume.Size = new System.Drawing.Size(211, 32);
-			this.btnSapXepVolume.Text = "Sắp xếp volume";
+			this.btnXoaTruyen.Name = "btnXoaTruyen";
+			this.btnXoaTruyen.Size = new System.Drawing.Size(192, 32);
+			this.btnXoaTruyen.Text = "Xóa truyện";
 			// 
 			// btnThemVolume
 			// 
 			this.btnThemVolume.Name = "btnThemVolume";
-			this.btnThemVolume.Size = new System.Drawing.Size(211, 32);
+			this.btnThemVolume.Size = new System.Drawing.Size(192, 32);
 			this.btnThemVolume.Text = "Thêm volume";
 			// 
 			// FormEditTruyen
@@ -173,7 +175,7 @@
 		private Guna.UI2.WinForms.Guna2Panel panelVolumeContain;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem btnSuaTruyen;
-		private System.Windows.Forms.ToolStripMenuItem btnSapXepVolume;
+		private System.Windows.Forms.ToolStripMenuItem btnXoaTruyen;
 		private System.Windows.Forms.ToolStripMenuItem btnThemVolume;
 	}
 }

@@ -50,7 +50,7 @@ namespace ReadingLightNovelApplication.AccountSystem.AccountSystem
 
 			txtTenVolume.Text = string.Empty;
 			picAnh.Image = null;
-			MessageBox.Show("ok");
+			//MessageBox.Show("ok");
 		}
 
 		private void btnThemAnh_Click(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace ReadingLightNovelApplication.AccountSystem.AccountSystem
 			{
 				panelThem.Visible = false;
 			}
-
+			
 
 		}
 
@@ -108,7 +108,7 @@ namespace ReadingLightNovelApplication.AccountSystem.AccountSystem
 				}
 			}
 
-			DataTable sttMax = supportMethod.DataReader("select MAX(Volume.Stt) as stt\r\nfrom Volume inner join TacPham on TacPham.MaTacPham = Volume.MaTacPham\r\nwhere TacPham.MaTacPham = N'TP005' ");
+			DataTable sttMax = supportMethod.DataReader("select MAX(Volume.Stt) as stt\r\nfrom Volume inner join TacPham on TacPham.MaTacPham = Volume.MaTacPham\r\nwhere TacPham.MaTacPham = N'" + maTacPham +"' ");
 
 			if(namePicture == string.Empty)
 			{
@@ -138,5 +138,7 @@ namespace ReadingLightNovelApplication.AccountSystem.AccountSystem
 			filePath = null;
 			namePicture = string.Empty;
 		}
+
+		
 	}
 }

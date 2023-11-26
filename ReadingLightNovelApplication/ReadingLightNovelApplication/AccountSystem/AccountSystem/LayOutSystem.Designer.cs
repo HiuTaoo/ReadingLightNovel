@@ -44,13 +44,14 @@
 			// 
 			// panelHienChiTiet
 			// 
+			this.panelHienChiTiet.AutoSize = true;
 			this.panelHienChiTiet.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.panelHienChiTiet.Controls.Add(this.panelTruyendich);
 			this.panelHienChiTiet.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panelHienChiTiet.Location = new System.Drawing.Point(0, 76);
 			this.panelHienChiTiet.Margin = new System.Windows.Forms.Padding(2);
 			this.panelHienChiTiet.Name = "panelHienChiTiet";
-			this.panelHienChiTiet.Size = new System.Drawing.Size(1444, 738);
+			this.panelHienChiTiet.Size = new System.Drawing.Size(1470, 0);
 			this.panelHienChiTiet.TabIndex = 1;
 			// 
 			// panelTruyendich
@@ -61,7 +62,7 @@
 			this.panelTruyendich.Location = new System.Drawing.Point(0, 0);
 			this.panelTruyendich.Margin = new System.Windows.Forms.Padding(2);
 			this.panelTruyendich.Name = "panelTruyendich";
-			this.panelTruyendich.Size = new System.Drawing.Size(1444, 0);
+			this.panelTruyendich.Size = new System.Drawing.Size(1470, 0);
 			this.panelTruyendich.TabIndex = 2;
 			// 
 			// btnThemTruyen
@@ -97,9 +98,9 @@
 			this.btnTruyenDich.Location = new System.Drawing.Point(424, 0);
 			this.btnTruyenDich.Margin = new System.Windows.Forms.Padding(2);
 			this.btnTruyenDich.Name = "btnTruyenDich";
-			this.btnTruyenDich.Size = new System.Drawing.Size(122, 76);
+			this.btnTruyenDich.Size = new System.Drawing.Size(148, 76);
 			this.btnTruyenDich.TabIndex = 4;
-			this.btnTruyenDich.Text = "Truyện dịch";
+			this.btnTruyenDich.Text = "Truyện đã đăng";
 			this.btnTruyenDich.Click += new System.EventHandler(this.btnTruyenDich_Click);
 			// 
 			// btnTienIch
@@ -113,7 +114,7 @@
 			this.btnTienIch.FillColor = System.Drawing.SystemColors.ControlLight;
 			this.btnTienIch.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
 			this.btnTienIch.ForeColor = System.Drawing.Color.MediumBlue;
-			this.btnTienIch.Location = new System.Drawing.Point(546, 0);
+			this.btnTienIch.Location = new System.Drawing.Point(572, 0);
 			this.btnTienIch.Margin = new System.Windows.Forms.Padding(2);
 			this.btnTienIch.Name = "btnTienIch";
 			this.btnTienIch.Size = new System.Drawing.Size(93, 76);
@@ -131,7 +132,7 @@
 			this.btnBinhLuan.FillColor = System.Drawing.SystemColors.ControlLight;
 			this.btnBinhLuan.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
 			this.btnBinhLuan.ForeColor = System.Drawing.Color.DimGray;
-			this.btnBinhLuan.Location = new System.Drawing.Point(639, 0);
+			this.btnBinhLuan.Location = new System.Drawing.Point(665, 0);
 			this.btnBinhLuan.Margin = new System.Windows.Forms.Padding(2);
 			this.btnBinhLuan.Name = "btnBinhLuan";
 			this.btnBinhLuan.Size = new System.Drawing.Size(125, 76);
@@ -154,7 +155,7 @@
 			this.PanelChung.Location = new System.Drawing.Point(0, 0);
 			this.PanelChung.Margin = new System.Windows.Forms.Padding(2);
 			this.PanelChung.Name = "PanelChung";
-			this.PanelChung.Size = new System.Drawing.Size(1444, 76);
+			this.PanelChung.Size = new System.Drawing.Size(1470, 76);
 			this.PanelChung.TabIndex = 0;
 			// 
 			// btnProfile
@@ -169,7 +170,7 @@
 			this.btnProfile.ForeColor = System.Drawing.Color.White;
 			this.btnProfile.Image = global::ReadingLightNovelApplication.Properties.Resources.Ảnh_chụp_màn_hình_2023_08_11_204349;
 			this.btnProfile.ImageSize = new System.Drawing.Size(60, 60);
-			this.btnProfile.Location = new System.Drawing.Point(1380, 0);
+			this.btnProfile.Location = new System.Drawing.Point(1406, 0);
 			this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
 			this.btnProfile.Name = "btnProfile";
 			this.btnProfile.Size = new System.Drawing.Size(64, 76);
@@ -235,6 +236,7 @@
 			this.PanelChung.ResumeLayout(false);
 			this.PanelChung.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
