@@ -1133,7 +1133,6 @@
             // 
             // lblTomTat
             // 
-            this.lblTomTat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTomTat.AutoSize = true;
             this.lblTomTat.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTomTat.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1187,7 +1186,6 @@
             // 
             // lblAnotherName
             // 
-            this.lblAnotherName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAnotherName.AutoSize = true;
             this.lblAnotherName.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnotherName.Location = new System.Drawing.Point(19, 37);

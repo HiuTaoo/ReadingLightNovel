@@ -33,8 +33,6 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnUserName = new System.Windows.Forms.Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pbAvt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pbImg = new Guna.UI2.WinForms.Guna2PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -52,10 +50,9 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCount = new System.Windows.Forms.Button();
+            this.pbAvt = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImg)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -63,12 +60,13 @@
             this.panel2.SuspendLayout();
             this.panelTruyenDaDang.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2Panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.btnUserName);
@@ -93,44 +91,31 @@
             // guna2Panel2
             // 
             this.guna2Panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderColor = System.Drawing.Color.Silver;
             this.guna2Panel2.BorderRadius = 1;
-            this.guna2Panel2.Controls.Add(this.panel1);
+            this.guna2Panel2.Controls.Add(this.pbAvt);
             this.guna2Panel2.Controls.Add(this.pbImg);
             this.guna2Panel2.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1154, 364);
             this.guna2Panel2.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pbAvt);
-            this.panel1.Location = new System.Drawing.Point(488, 226);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(185, 179);
-            this.panel1.TabIndex = 0;
-            // 
-            // pbAvt
-            // 
-            this.pbAvt.ImageRotate = 0F;
-            this.pbAvt.Location = new System.Drawing.Point(23, 10);
-            this.pbAvt.Name = "pbAvt";
-            this.pbAvt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pbAvt.Size = new System.Drawing.Size(140, 125);
-            this.pbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAvt.TabIndex = 0;
-            this.pbAvt.TabStop = false;
-            this.pbAvt.Click += new System.EventHandler(this.pbAvt_Click);
-            // 
             // pbImg
             // 
+            this.pbImg.BackColor = System.Drawing.Color.Transparent;
             this.pbImg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbImg.ErrorImage = null;
+            this.pbImg.FillColor = System.Drawing.Color.Transparent;
             this.pbImg.ImageRotate = 0F;
+            this.pbImg.InitialImage = null;
             this.pbImg.Location = new System.Drawing.Point(0, 0);
             this.pbImg.Name = "pbImg";
             this.pbImg.Size = new System.Drawing.Size(1154, 364);
+            this.pbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbImg.TabIndex = 1;
             this.pbImg.TabStop = false;
+            this.pbImg.DoubleClick += new System.EventHandler(this.pbImg_DoubleClick);
             // 
             // imageList1
             // 
@@ -311,11 +296,26 @@
             this.btnCount.Text = "0";
             this.btnCount.UseVisualStyleBackColor = false;
             // 
+            // pbAvt
+            // 
+            this.pbAvt.BackColor = System.Drawing.Color.Transparent;
+            this.pbAvt.FillColor = System.Drawing.Color.Transparent;
+            this.pbAvt.ImageRotate = 0F;
+            this.pbAvt.Location = new System.Drawing.Point(507, 239);
+            this.pbAvt.Name = "pbAvt";
+            this.pbAvt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbAvt.Size = new System.Drawing.Size(140, 125);
+            this.pbAvt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAvt.TabIndex = 2;
+            this.pbAvt.TabStop = false;
+            this.pbAvt.Click += new System.EventHandler(this.pbAvt_Click);
+            // 
             // FormProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1260, 1102);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panelTruyenDaDang);
@@ -326,8 +326,6 @@
             this.Load += new System.EventHandler(this.FormProfile_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImg)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -336,6 +334,7 @@
             this.panelTruyenDaDang.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,7 +346,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button btnUserName;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Button btnDate;
         private System.Windows.Forms.Panel panel4;
