@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ReadingLightNovelApplication.AccountSystem.AccountSystem
 {
@@ -25,6 +26,7 @@ namespace ReadingLightNovelApplication.AccountSystem.AccountSystem
 			btnThemVolume.Click += btnThemVolume_Click;
 
 			loadData();
+			btnXoaTruyen.Click += xoaTruyen;
 		}
 
 		private void loadData()
@@ -58,6 +60,44 @@ namespace ReadingLightNovelApplication.AccountSystem.AccountSystem
 		{
 			panelNoiDung.Controls.Clear();
 			supportMethod.AddChildFormDockTop(new FormAddVolume(maTacPham, true), panelNoiDung);
+		}
+
+		private void xoaTruyen(object sender, EventArgs e)
+		{
+			DialogResult result = MessageBox.Show("Bạn có muốn tiếp tục xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+			// Kiểm tra kết quả từ MessageBox
+			if (result == DialogResult.Yes)
+			{
+				DataTable volumelist = supportMethod.DataReader("select Volume.MaVolume\r\nfrom TacPham inner join Volume on Volume.MaTacPham = TacPham.MaTacPham\r\nwhere TacPham.MaTacPham = N'" + maTacPham + "'");
+				foreach(DataRow volume in volumelist.Rows)
+				{
+					DataTable chapterList = supportMethod.DataReader("select Chapter.MaChapter\r\nfrom Volume inner join Chapter on Chapter.MaVolume = Volume.MaVolume\r\nwhere Volume.MaVolume = N'"+ volume["MaVolume"].ToString() +"'");
+					foreach(DataRow chapter in chapterList.Rows)
+					{
+						supportMethod.DataChange("delete LichSu\r\nwhere LichSu.MaChapter = N'" + chapter["MaChapter"] + "'");
+						supportMethod.DataChange("delete BinhLuan\r\nwhere BinhLuan.MaChapter = N'" + chapter["MaChapter"] + "'");
+					}
+
+					supportMethod.DataChange("\r\ndelete Volume\r\nwhere Volume.MaVolume = N'" + volume["MaVolume"].ToString() + "'");
+				}
+
+				supportMethod.DataChange("delete ChiTietHoaSi\r\nwhere ChiTietHoaSi.MaTacPham = N'" + maTacPham + "'");
+				supportMethod.DataChange("delete ChiTietTheLoai\r\nwhere ChiTietTheLoai.MaTacPham = N'" + maTacPham + "'");
+				supportMethod.DataChange("delete YeuThich\r\nwhere YeuThich.MaTacPham = N'" + maTacPham + "'");
+				supportMethod.DataChange("delete BinhChon\r\nwhere BinhChon.MaTacPham = N'" + maTacPham + "'");
+				supportMethod.DataChange("delete BinhLuanTacPham\r\nwhere BinhLuanTacPham.MaTacPham = N'" + maTacPham + "'");
+				MessageBox.Show("Đã xóa thành công");
+				LayOutSystem layOutSystem = this.ParentForm as LayOutSystem;
+				Panel panel = supportMethod.getPanel(layOutSystem, "panelHienChiTiet");
+				panel.Controls.Clear();
+				supportMethod.AddChildFormDockTop(new FormTruyenDaDich(), panel);
+			}
+			else
+			{
+				// Người dùng chọn "No"
+				//MessageBox.Show("Bạn đã chọn No!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
 		}
 	}
 }
