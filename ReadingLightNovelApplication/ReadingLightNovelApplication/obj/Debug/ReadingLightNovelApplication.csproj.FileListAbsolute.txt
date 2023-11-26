@@ -187,9 +187,7 @@ D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelAp
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.AccountSystem.FormChapterContain.resources
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.AccountSystem.FormAddChapter.resources
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.AccountSystem.FormSapXepVolume.resources
-<<<<<<< HEAD
 D:\Tạp nham\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.AccountSystem.FormTruyenDaDichItem.resources
-=======
 D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.AccountSystem.FormAddChapter.resources
 D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.AccountSystem.FormAddVolume.resources
 D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.AccountSystem.FormChapterContain.resources
@@ -200,3 +198,4 @@ D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\Re
 D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.AccountSystem.FormVolumeContain.resources
 D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.FormTheLoaiCbox.resources
 >>>>>>> 21cec64fd5559871cf7288046b7b9e90c470e5ff
+D:\Workspace\BTL-2023\LTTQ\Git\ReadingLightNovel\ReadingLightNovelApplication\ReadingLightNovelApplication\obj\Debug\ReadingLightNovelApplication.AccountSystem.AccountSystem.FormTruyenDaDichItem.resources

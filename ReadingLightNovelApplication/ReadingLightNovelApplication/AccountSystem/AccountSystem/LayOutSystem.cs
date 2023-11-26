@@ -46,7 +46,7 @@ namespace ReadingLightNovelApplication
 		{
 			//showPanel(panelTruyendich);
 			panelHienChiTiet.Controls.Clear();
-			supportMethod.AddChildFormDockTop(new FormTruyenDaDich(), panelHienChiTiet);
+			supportMethod.AddChildFormDockFill(new FormTruyenDaDich(), panelHienChiTiet);
 
 		}
 		public Form activeForm = null;
@@ -69,17 +69,24 @@ namespace ReadingLightNovelApplication
 		private void btnThemTruyen_Click(object sender, EventArgs e)
 		{
 			panelHienChiTiet.Controls.Clear();
-			supportMethod.AddChildFormDockTop(new FormThemTruyen("HiuTao"), panelHienChiTiet);
+			supportMethod.AddChildFormDockFill(new FormThemTruyen("HiuTao"), panelHienChiTiet);
 		}
 
 		private void btnHome_Click(object sender, EventArgs e)
 		{
 
-			FormMainReading formMainReading = new FormMainReading("TP001");
-			this.Visible = false;
-			formMainReading.Show();
-			
-		}
+            FormMain formMain = supportMethod.getFormMain(this) as FormMain;
+            Panel panel1 = supportMethod.getPanel(formMain, "panelMain");
+            foreach (Control c in panel1.Controls)
+            {
+                c.Dispose();
+            }
+
+
+            LayoutLogged lg = new LayoutLogged();
+            supportMethod.openChildFormDockFill(formMain.getactive(), lg, panel1);
+
+        }
 
 
 		private void btnBangDieuKhien_Click(object sender, EventArgs e)
@@ -89,10 +96,13 @@ namespace ReadingLightNovelApplication
 
 		private void btnProfile_Click(object sender, EventArgs e)
 		{
-			FormProfile FormProfile = new FormProfile(FormMain.TenDangNhap);
-			this.Visible = false;
-			FormProfile.Show();
-		}
+            LayoutLogged lg = supportMethod.getFormParent(this, "LayoutLogged") as LayoutLogged;
+
+            Panel panel1 = supportMethod.getPanel(lg, "panelNoiDung");
+
+            supportMethod.AddChildFormDockFill(new FormProfile(FormMain.TenDangNhap), panel1);
+            lg.setVisible();
+        }
 
 		private void btnTruyendadang_Click(object sender, EventArgs e)
 		{
@@ -103,6 +113,7 @@ namespace ReadingLightNovelApplication
 		private void btnTienIch_Click(object sender, EventArgs e)
 		{
 			openChildForm(new FormTienIch());
+
 		}
 
 		private void btnBinhLuan_Click(object sender, EventArgs e)
