@@ -35,10 +35,6 @@ Note: Your can register new account or Use an existing account
 Name account: HiuTao
 
 Password: 123
- 
-## Build
-
-The process of generating a .jar executable is guided by your IDE.
 
 ## Authors
 
